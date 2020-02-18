@@ -1,0 +1,304 @@
+"page fig",nozzle,solution,"Ubar_0 (cm/s)","L_b (cm)","regime L_b"
+"table IVa",1,1,148.721,11.3,Rayleigh
+"table IVa",1,1,175.685,13.3,Rayleigh
+"table IVa",1,1,213.981,16.2,Rayleigh
+"table IVa",1,1,233.008,17.8,Rayleigh
+"table IVa",1,1,289.759,21.7,Rayleigh
+"table IVa",1,1,345.945,25.8,Rayleigh
+"table IVa",1,1,438.373,31.2,Rayleigh
+"table IVa",1,1,529.34,37.1,Rayleigh
+"table IVa",1,1,619.005,43.1,Rayleigh
+"table IVa",1,1,728.308,48.4,Rayleigh
+"table IVa",1,1,828.83,51.4,Rayleigh
+"table IVa",1,1,903.913,56,Rayleigh
+"table IVa",1,1,1196,64,R2F
+"table IVa",1,1,1359.49,64.3,R2F
+"table IVa",1,1,1632.39,65,R2F
+"table IVa",1,1,1696.13,67.3,R2F
+"table IVd",1,2,126.428,6.7,Rayleigh
+"table IVd",1,2,149.575,7.9,Rayleigh
+"table IVd",1,2,174.755,9.8,Rayleigh
+"table IVd",1,2,200.453,11.2,Rayleigh
+"table IVd",1,2,221.579,12.2,Rayleigh
+"table IVd",1,2,269.11,15.4,Rayleigh
+"table IVd",1,2,332.807,18.4,Rayleigh
+"table IVd",1,2,367.631,21,Rayleigh
+"table IVd",1,2,402.078,22,Rayleigh
+"table IVd",1,2,469.838,25.5,Rayleigh
+"table IVd",1,2,536.237,28.5,Rayleigh
+"table IVd",1,2,601.325,31.25,R2F
+"table IVd",1,2,728.039,34.2,R2F
+"table IVd",1,2,844.161,35,R2F
+"table IVd",1,2,939.309,32.4,R2F
+"table IVd",1,2,1083.08,28,"first wind-induced"
+"table IVd",1,2,665.285,34.1,R2F
+"table IVd",1,2,765.082,35.7,R2F
+"table IVd",1,2,715.577,35,R2F
+"table IVd",1,2,746.652,35.85,R2F
+"table IVd",1,2,1139.27,28,"first wind-induced"
+"table IVd",1,2,1313.59,23.8,"first wind-induced"
+"table IVd",1,2,1413.53,22.2,"first wind-induced"
+"table IVd",1,2,1606.9,16.8,"first wind-induced"
+"table IVd",1,2,1710.17,16.35,"first wind-induced"
+"table IVd",1,2,1796.84,15.65,"first wind-induced"
+"table IVd",1,2,1924.09,15,"first wind-induced"
+"table IVe",2,2,157.478,2.35,Rayleigh
+"table IVe",2,2,169.452,2.6,Rayleigh
+"table IVe",2,2,184.392,2.9,Rayleigh
+"table IVe",2,2,223.097,3.5,Rayleigh
+"table IVe",2,2,229.912,4.4,Rayleigh
+"table IVe",2,2,387.522,5.5,Rayleigh
+"table IVe",2,2,456.905,6.4,Rayleigh
+"table IVe",2,2,562.643,8,Rayleigh
+"table IVe",2,2,630.456,8.95,Rayleigh
+"table IVe",2,2,703.253,9.9,Rayleigh
+"table IVe",2,2,800.297,11.1,Rayleigh
+"table IVe",2,2,844.241,11.6,Rayleigh
+"table IVe",2,2,906.993,12.3,Rayleigh
+"table IVe",2,2,963.867,13,Rayleigh
+"table IVe",2,2,1014.99,13.69,Rayleigh
+"table IVe",2,2,1068.46,14.1,Rayleigh
+"table IVe",2,2,1148.03,14.9,Rayleigh
+"table IVe",2,2,1187.39,15.35,Rayleigh
+"table IVe",2,2,1229.3,15.9,Rayleigh
+"table IVe",2,2,1278.79,16.35,Rayleigh
+"table IVe",2,2,1333.16,16.9,Rayleigh
+"table IVe",2,2,1394.86,17.55,Rayleigh
+"table IVh",1,3,344.509,7.8,"first wind-induced"
+"table IVh",1,3,413.537,7.4,"first wind-induced"
+"table IVh",1,3,272.366,11.6,"first wind-induced"
+"table IVh",1,3,148.985,10.45,Rayleigh
+"table IVh",1,3,181.961,12.4,Rayleigh
+"table IVh",1,3,167.527,11.4,Rayleigh
+"table IVh",1,3,129.924,9.5,Rayleigh
+"table IVh",1,3,206.546,14.2,R2F
+"table IVh",1,3,236.884,14.25,R2F
+"table IVh",1,3,220.174,14.6,R2F
+"table IVh",1,3,253.234,13.85,R2F
+"table IVh",1,3,287.948,11,"first wind-induced"
+"table IVh",1,3,309.226,9.4,"first wind-induced"
+"table IVh",1,3,332.893,8.2,"first wind-induced"
+"table IVh",1,3,344.509,7.9,"first wind-induced"
+"table IVh",1,3,386.541,7.3,"first wind-induced"
+"table IVh",1,3,416.148,7.3,"first wind-induced"
+"table IVi",2,3,170.523,2.5,Rayleigh
+"table IVi",2,3,220.248,3.4,Rayleigh
+"table IVi",2,3,260.432,4.05,Rayleigh
+"table IVi",2,3,291.859,4.65,Rayleigh
+"table IVi",2,3,337.778,5.3,Rayleigh
+"table IVi",2,3,375.053,5.85,Rayleigh
+"table IVi",2,3,411.537,6.1,R2F
+"table IVi",2,3,435.883,6.2,R2F
+"table IVi",2,3,454.215,6.1,R2F
+"table IVi",2,3,482.088,6.1,R2F
+"table IVi",2,3,468.209,6.05,R2F
+"table IVi",2,3,549.917,5.4,"first wind-induced"
+"table IVi",2,3,615.272,5.1,"first wind-induced"
+"table IVi",2,3,665.952,4.8,"first wind-induced"
+"table IVi",2,3,739.608,4.4,"first wind-induced"
+"table IVi",2,3,798.842,4.1,"first wind-induced"
+"table IVi",2,3,867.913,3.9,"first wind-induced"
+"table IVi",2,3,912.577,3.8,"first wind-induced"
+"table IVi",2,3,967.257,3.65,"first wind-induced"
+"table IVi",2,3,1020.62,3.4,"first wind-induced"
+"table IVi",2,3,1072.86,3.25,"first wind-induced"
+"table IVm",1,5,146.744,8.4,Rayleigh
+"table IVm",1,5,212.913,12.1,Rayleigh
+"table IVm",1,5,276.815,15.6,Rayleigh
+"table IVm",1,5,345.32,19.4,Rayleigh
+"table IVm",1,5,446.634,24,R2F
+"table IVm",1,5,549.285,24.2,R2F
+"table IVm",1,5,579.186,23.35,R2F
+"table IVm",1,5,647.356,21.25,R2F
+"table IVm",1,5,741.505,19.25,"first wind-induced"
+"table IVm",1,5,805.366,18.2,"first wind-induced"
+"table IVm",1,5,371.679,20.6,"first wind-induced"
+"table IVm",1,5,414.836,23,"first wind-induced"
+"table IVm",1,5,467.513,24.6,"first wind-induced"
+"table IVm",1,5,498.515,25,"first wind-induced"
+"table IVm",1,5,518.936,25,"first wind-induced"
+"table IVm",1,5,569.262,24.3,"first wind-induced"
+"table IVm",1,5,893.644,16.7,"first wind-induced"
+"table IVm",1,5,1142.12,12.2,"first wind-induced"
+"table IVm",1,5,1442.91,10.3,"first wind-induced"
+"table IVm",1,5,1478.34,9.9,"first wind-induced"
+"table IVm",1,5,1181.55,11.9,"first wind-induced"
+"table IVm",1,5,1296.25,10.9,"first wind-induced"
+"table IVn",2,5,113.019,1.4,Rayleigh
+"table IVn",2,5,137.801,1.8,Rayleigh
+"table IVn",2,5,153.408,2.1,Rayleigh
+"table IVn",2,5,203.365,2.85,Rayleigh
+"table IVn",2,5,252.78,3.6,Rayleigh
+"table IVn",2,5,301.66,4.35,Rayleigh
+"table IVn",2,5,350.022,4.9,Rayleigh
+"table IVn",2,5,397.88,5.6,Rayleigh
+"table IVn",2,5,445.297,6.2,Rayleigh
+"table IVn",2,5,510.855,6.75,Rayleigh
+"table IVn",2,5,584.704,7.7,Rayleigh
+"table IVn",2,5,670.983,8.7,Rayleigh
+"table IVn",2,5,830.334,10.5,Rayleigh
+"table IVn",2,5,1048.13,12.55,R2F
+"table IVn",2,5,1176.15,13.2,R2F
+"table IVn",2,5,1245.12,13.2,R2F
+"table IVn",2,5,1368.84,12.9,R2F
+"table IVn",2,5,1493.73,12.25,"first wind-induced"
+"table IVn",2,5,1627.1,11.3,"first wind-induced"
+"table IVn",2,5,1713.37,10.8,"first wind-induced"
+"table IVn",2,5,1816.64,10.3,"first wind-induced"
+"table IVn",2,5,1925.1,9.8,"first wind-induced"
+"table IVn",2,5,2109.12,9.25,"first wind-induced"
+"table IVn",2,5,1106.38,13,R2F
+"table IVn",2,5,1212.77,13.4,R2F
+"table IVn",2,5,1228.997,13.6,R2F
+"table IVn",2,5,1253.17,13.7,R2F
+"table IVq",1,6,162.553,10,Rayleigh
+"table IVq",1,6,180.769,10.8,Rayleigh
+"table IVq",1,6,196.471,12.25,Rayleigh
+"table IVq",1,6,218.48,13.3,Rayleigh
+"table IVq",1,6,235.736,14.4,Rayleigh
+"table IVq",1,6,256.943,15.2,R2F
+"table IVq",1,6,302.238,15.5,R2F
+"table IVq",1,6,316.271,15.3,R2F
+"table IVq",1,6,338.021,14.6,R2F
+"table IVq",1,6,361.248,13.95,"first wind-induced"
+"table IVq",1,6,389.721,12.8,"first wind-induced"
+"table IVq",1,6,435.729,11.6,"first wind-induced"
+"table IVq",1,6,471.374,11,"first wind-induced"
+"table IVq",1,6,548.238,10.05,"first wind-induced"
+"table IVq",1,6,597.201,9.85,"first wind-induced"
+"table IVq",1,6,267.421,15.35,R2F
+"table IVq",1,6,281.9,15.85,R2F
+"table IVq",1,6,294.165,15.9,R2F
+"table IVq",1,6,621.067,9.5,"first wind-induced"
+"table IVq",1,6,682.818,7.9,"first wind-induced"
+"table IVq",1,6,756.83,7.5,"first wind-induced"
+"table IVq",1,6,1663.47,6.75,"first wind-induced"
+"table IVr",2,6,124.963,1.85,Rayleigh
+"table IVr",2,6,140.104,2.1,Rayleigh
+"table IVr",2,6,155.145,2.4,Rayleigh
+"table IVr",2,6,170.089,2.7,Rayleigh
+"table IVr",2,6,186.908,3,Rayleigh
+"table IVr",2,6,204.585,3.3,Rayleigh
+"table IVr",2,6,224.094,3.65,Rayleigh
+"table IVr",2,6,248.239,4,Rayleigh
+"table IVr",2,6,272.144,4.35,Rayleigh
+"table IVr",2,6,300.525,4.8,Rayleigh
+"table IVr",2,6,300.525,4.95,Rayleigh
+"table IVr",2,6,347.084,5.7,Rayleigh
+"table IVr",2,6,401.848,6.4,Rayleigh
+"table IVr",2,6,437.71,7,Rayleigh
+"table IVr",2,6,481.899,7.8,Rayleigh
+"table IVr",2,6,533.939,8.3,R2F
+"table IVr",2,6,568.086,8.7,R2F
+"table IVr",2,6,610.1,8.9,R2F
+"table IVr",2,6,651.527,8.95,R2F
+"table IVr",2,6,692.422,8.8,R2F
+"table IVr",2,6,732.698,8.7,R2F
+"table IVr",2,6,772.348,8.3,R2F
+"table IVr",2,6,850.235,7.65,"first wind-induced"
+"table IVr",2,6,926.053,7.15,"first wind-induced"
+"table IVr",2,6,948.443,6.95,"first wind-induced"
+"table IVr",2,6,1108.1,6.05,"first wind-induced"
+"table IVr",2,6,1246.57,5.45,"first wind-induced"
+"table IVr",2,6,1360.07,5.05,"first wind-induced"
+"table IVr",2,6,1558.24,4.15,"first wind-induced"
+"table IVv",1,8,233.042,27.9,Rayleigh
+"table IVv",1,8,255.134,30.9,Rayleigh
+"table IVv",1,8,273.53,32.7,Rayleigh
+"table IVv",1,8,299.265,36.85,Rayleigh
+"table IVv",1,8,321.304,40.4,Rayleigh
+"table IVv",1,8,343.325,48.1,Rayleigh
+"table IVv",1,8,372.66,51.4,Rayleigh
+"table IVv",1,8,216.093,29.4,Rayleigh
+"table IVv",1,8,258.078,32.4,Rayleigh
+"table IVv",1,8,291.915,37.3,Rayleigh
+"table IVv",1,8,310.287,40.25,Rayleigh
+"table IVv",1,8,336.721,44.7,Rayleigh
+"table IVv",1,8,374.126,50.4,Rayleigh
+"table IVv",1,8,262.494,38.5,Rayleigh
+"table IVv",1,8,302.939,42.5,Rayleigh
+"table IVv",1,8,244.827,31,Rayleigh
+"table IVv",1,8,255.87,32.5,Rayleigh
+"table IVv",1,8,292.65,37.6,Rayleigh
+"table IVv",1,8,333.785,42.5,Rayleigh
+"table IVv",1,8,361.663,47.4,Rayleigh
+"table IVv",1,8,322.038,45.1,Rayleigh
+"table IVv",1,8,361.663,51,Rayleigh
+"table IVv",1,8,258.814,32.9,Rayleigh
+"table IVy",1,9,184.684,17,Rayleigh
+"table IVy",1,9,208.327,18.4,Rayleigh
+"table IVy",1,9,302.33,25.8,Rayleigh
+"table IVy",1,9,420.644,33.2,Rayleigh
+"table IVy",1,9,491.799,39.1,Rayleigh
+"table IVy",1,9,595.52,45.9,Rayleigh
+"table IVy",1,9,702.259,53.4,Rayleigh
+"table IVy",1,9,789.678,50.8,Rayleigh
+"table IVy",1,9,904.409,56.8,Rayleigh
+"table IVy",1,9,1010.07,62,Rayleigh
+"table IVy",1,9,828.066,51.8,Rayleigh
+"table IVy",1,9,930.396,58.6,Rayleigh
+"table IVy",1,9,1035.81,63.2,Rayleigh
+"table IVy",1,9,464.653,32,Rayleigh
+"table IVy",1,9,583.13,38.75,Rayleigh
+"table IVy",1,9,791.702,51.3,Rayleigh
+"table IVy",1,9,900.405,57.8,Rayleigh
+"table IVz",2,9,204.877,5,Rayleigh
+"table IVz",2,9,249.04,6,Rayleigh
+"table IVz",2,9,277.026,6.65,Rayleigh
+"table IVz",2,9,309.212,7.35,Rayleigh
+"table IVz",2,9,346.428,8.2,Rayleigh
+"table IVz",2,9,376.836,8.8,Rayleigh
+"table IVz",2,9,397.93,9.2,Rayleigh
+"table IVz",2,9,440.065,10,Rayleigh
+"table IVz",2,9,198.075,4.9,Rayleigh
+"table IVz",2,9,249.04,5.9,Rayleigh
+"table IVz",2,9,291.42,6.9,Rayleigh
+"table IVz",2,9,337.13,7.9,Rayleigh
+"table IVz",2,9,371.771,8.6,Rayleigh
+"table IVz",2,9,413.107,9.4,Rayleigh
+"table IVcc",3,10,187.5,5.59,R2F
+"table IVcc",3,10,243.447,3.74,"first wind-induced"
+"table IVcc",3,10,288.752,2.94,"first wind-induced"
+"table IVcc",3,10,258.603,3.95,"first wind-induced"
+"table IVcc",3,10,207.914,6.81,R2F
+"table IVcc",3,10,233.319,4.57,R2F
+"table IVcc",3,10,263.645,3.79,"first wind-induced"
+"table IVcc",3,10,288.752,3.12,"first wind-induced"
+"table IVcc",3,10,318.749,2.66,"first wind-induced"
+"table IVcc",3,10,373.301,2.69,"first wind-induced"
+"table IVcc",3,10,167.005,5.38,Rayleigh
+"table IVcc",3,10,182.384,6.44,Rayleigh
+"table IVcc",3,10,197.717,6.94,R2F
+"table IVcc",3,10,192.611,6.71,R2F
+"table IVcc",3,10,213.005,6.72,R2F
+"table IVcc",3,10,96.7026,2.02,Rayleigh
+"table IVcc",3,10,105.024,2.48,Rayleigh
+"table IVcc",3,10,93.5785,1.98,Rayleigh
+"table IVcc",3,10,101.385,2.3,Rayleigh
+"table IVcc",3,10,112.813,2.8,Rayleigh
+"table IVcc",3,10,126.803,3.43,Rayleigh
+"table IVcc",3,10,145.397,4.38,Rayleigh
+"table IVcc",3,10,155.698,4.91,Rayleigh
+"table IVdd",3,11,234.79,6.32,Rayleigh
+"table IVdd",3,11,212.266,5.72,Rayleigh
+"table IVdd",3,11,186.447,5.13,Rayleigh
+"table IVdd",3,11,150.809,4.75,Rayleigh
+"table IVdd",3,11,115.009,3.45,Rayleigh
+"table IVdd",3,11,98.0194,2.41,Rayleigh
+"table IVee",3,12,93.1362,2.26,Rayleigh
+"table IVee",3,12,103.607,2.75,Rayleigh
+"table IVee",3,12,110.576,3.25,Rayleigh
+"table IVee",3,12,126.473,4.11,Rayleigh
+"table IVee",3,12,137.87,4.78,Rayleigh
+"table IVee",3,12,150.231,5.45,Rayleigh
+"table IVee",3,12,174.869,6.59,Rayleigh
+"table IVee",3,12,194.502,7.85,R2F
+"table IVee",3,12,209.18,6.09,R2F
+"table IVee",3,12,189.6,7.81,R2F
+"table IVee",3,12,204.292,7.39,R2F
+"table IVee",3,12,257.832,3.56,"first wind-induced"
+"table IVee",3,12,282.001,2.7,"first wind-induced"
+"table IVee",3,12,320.419,2.5,"first wind-induced"
+"table IVee",3,12,306.034,2.58,"first wind-induced"
+"table IVee",3,12,272.345,3.16,"first wind-induced"
+"table IVee",3,12,233.559,4.65,"first wind-induced"

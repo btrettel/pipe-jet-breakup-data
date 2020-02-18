@@ -1,0 +1,9 @@
+liquid,"page fig","d_0 (in)",L_0/d_0,"Ubar_0 (ft/s)",Re_l0,trip,L_r/d_0,eps_r/d_0,"regime turb","regime photo",x_trans/d_0,"x_trans/d_0 resolution","photo filename"
+"77% by weight glycerin in water","p. 12, fig. 4",0.12,200,50.4,1395,FALSE,0,,laminar,"first wind-induced",43.2506887052493,0.06887052341667,rupe_dynamic_1962_fig_4c.jpg
+"77% by weight glycerin in water","p. 12, fig. 4",0.12,200,76.91,2128,FALSE,0,,laminar,bursting,42.0798898071667,0.06887052341667,rupe_dynamic_1962_fig_4d.jpg
+water,"p. 12, fig. 4",0.12,200,50.15,52789,FALSE,0,,turbulent,"second wind-induced",,,rupe_dynamic_1962_fig_4e.jpg
+water,"p. 12, fig. 4",0.12,200,100.31,105589,FALSE,0,,turbulent,"second wind-induced",,,rupe_dynamic_1962_fig_4f.jpg
+water,"p. 23, fig. 15",0.12,42.5,,40000,TRUE,5,0,turbulent,"second wind-induced",,,rupe_dynamic_1962_fig_15a.jpg
+water,"p. 23, fig. 15",0.12,42.5,,40000,TRUE,5,0.333,turbulent,"second wind-induced",,,rupe_dynamic_1962_fig_15b.jpg
+water,"p. 23, fig. 15",0.12,42.5,,80000,TRUE,5,0,turbulent,"second wind-induced",,,rupe_dynamic_1962_fig_15c.jpg
+water,"p. 23, fig. 15",0.12,42.5,,80000,TRUE,5,0.333,turbulent,"second wind-induced",,,rupe_dynamic_1962_fig_15d.jpg

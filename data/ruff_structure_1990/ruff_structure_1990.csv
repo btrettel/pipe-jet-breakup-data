@@ -1,0 +1,7 @@
+key,"alt key","page fig",liquid,L_0/d_0,"d (mm)","mdot (kg/s)",Re_l0,We_l0,We_g0,Oh_l0,"regime photo","theta (deg)","P_atm (kPa)","dP (KPa)"
+ruff_structure_1990,sallam_properties_2002,"p. 130, tab. B.1",water,41,9.5,0.39,52000,3900,4.6,0.00121,"second wind-induced",1,98.8,80
+ruff_structure_1990,sallam_properties_2002,"p. 130, tab. B.1",water,41,9.5,1.55,207000,62100,72.9,0.00121,atomization,4.8,98.8,420
+ruff_structure_1990,sallam_properties_2002,"p. 130, tab. B.1",water,41,9.5,3.99,534000,411500,492.8,0.00121,atomization,6,98.8,2520
+ruff_structure_1990,sallam_properties_2002,"p. 130, tab. B.1",water,41,19.1,1.32,88000,5600,6.6,0.00121,"second wind-induced",1,98.8,30
+ruff_structure_1990,sallam_properties_2002,"p. 130, tab. B.1",water,41,19.1,4.5,300000,65400,76.7,0.00121,atomization,4,98.8,360
+ruff_structure_1990,sallam_properties_2002,"p. 130, tab. B.1",water,41,19.1,11,732000,390700,458.6,0.00121,atomization,6.6,98.8,2070

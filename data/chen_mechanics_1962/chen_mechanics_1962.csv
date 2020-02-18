@@ -1,0 +1,23 @@
+"nominal diameter",d_0,Ubar_0,L_b/d_0,n,mu_l,rho_l,sigma,liquid,"Re reported","We reported",D_10,"std dev A",regime,"photo filename","photo page fig","old photo filename"
+0.25,0.302,28,149,161,1.8E-05,1.93,0.00492,water,82400,92,0.79,0.306,"second wind-induced",,,
+0.25,0.302,37.1,171,150,1.8E-05,1.93,0.00492,water,104000,117,0.81,0.307,"second wind-induced",chen_disintegration_1964_fig_20c.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20c.jpg
+0.25,0.302,39.7,190,294,1.8E-05,1.93,0.00492,water,111500,125,0.74,0.38,"second wind-induced",,,
+0.25,0.302,40.1,183,103,1.8E-05,1.93,0.00492,water,112500,126,0.7,0.32,"second wind-induced",,,
+0.25,0.302,44.1,209,180,1.8E-05,1.93,0.00492,water,124000,139,0.96,0.369,"second wind-induced",,,
+0.25,0.302,50.4,232,112,1.8E-05,1.93,0.00492,water,141000,159,1.02,0.343,"second wind-induced",chen_disintegration_1964_fig_20e.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20e.jpg
+0.375,0.423,21.9,131,154,1.8E-05,1.93,0.00492,water,86000,82,1.1,0.336,"second wind-induced",,,
+0.375,0.423,30.2,169,157,1.8E-05,1.93,0.00492,water,119000,113,1.11,0.36,"second wind-induced",,,
+0.375,0.423,39.3,204,151,1.8E-05,1.93,0.00492,water,154000,146,1.21,0.318,"second wind-induced",,,
+0.5,0.5,24.8,158,152,1.85E-05,1.93,0.00493,water,115000,100,1.05,0.08,"second wind-induced",,,
+0.5,0.5,33.4,192,146,1.85E-05,1.93,0.00493,water,155000,135,1.21,0.324,"second wind-induced",,,
+0.5,0.5,42.1,230,153,1.85E-05,1.93,0.00493,water,196000,170,1.54,0.324,"second wind-induced",,,
+0.5,0.5,49.5,260,138,1.85E-05,1.93,0.00493,water,230000,200,2.15,0.263,"second wind-induced",,,
+0.75,0.71,33,193,145,1.99E-05,1.93,0.00493,water,215000,160,,,"second wind-induced",chen_disintegration_1964_fig_20b.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20b.jpg
+0.75,0.71,41.2,273,139,1.99E-05,1.94,0.00496,water,272000,200,,,"second wind-induced",chen_disintegration_1964_fig_20f.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20f.jpg
+0.75,0.71,50,317,176,1.99E-05,1.94,0.00496,water,329000,243,,,"second wind-induced",chen_disintegration_1964_fig_20h.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20h.jpg
+0.375,0.423,41.2,272,155,2.1E-05,1.94,0.00327,"soapy water",136000,189,,,"second wind-induced",,,
+0.375,0.423,35,221,156,2.1E-05,1.94,0.00327,"soapy water",115500,160,1.14,0.306,"second wind-induced",,,
+0.375,0.423,21,140,185,2.1E-05,1.94,0.00327,"soapy water",69200,96,,,"second wind-induced",chen_disintegration_1964_fig_20a.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20a.jpg
+0.375,0.423,22.5,139,137,1.22E-05,1.92,0.00469,"heated water",125000,85.5,,,"second wind-induced",,,
+0.375,0.423,35.9,186,138,1.3E-05,1.93,0.00473,"heated water",188000,136,,,"second wind-induced",chen_disintegration_1964_fig_20g.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20g.jpg
+0.375,0.423,44.2,236,160,1.25E-05,1.92,0.0047,"heated water",241000,168,,,"second wind-induced",chen_disintegration_1964_fig_20d.jpg,"p. 71, fig. 20",chen_mechanics_1962_fig_20d.jpg

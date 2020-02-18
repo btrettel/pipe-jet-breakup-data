@@ -1,0 +1,11 @@
+fluid,"nu_l (m^2/s)","sigma (mN/mm)",rho_g/rho_l,"We (r)","Re (r)","Re' (r)",B,"Z (r)","page fig",regime,"photo filename","photo page fig"
+"Dow 1 cs",1E-06,17.5,0.0014,40,,,,,"p. 33, tab. III","second wind-induced",betchov_breakup_1955_fig_19d.png,"fig. 19"
+"Dow 1 cs",1E-06,17.5,0.014,50,,,,,"p. 33, tab. III","second wind-induced",betchov_breakup_1955_fig_19c.png,"fig. 19"
+"Dow 1 cs",1E-06,17.5,0.014,100,,,,,"p. 33, tab. III",atomization,betchov_breakup_1955_fig_19b.png,"fig. 19"
+"Dow 1 cs",1E-06,17.5,0.014,700,,,,,"p. 33, tab. III",atomization,betchov_breakup_1955_fig_19a.png,"fig. 19"
+water,1E-06,74,0.0036,50,15000,3000,6.7,0.0082,"p. 36, tab. V",,,
+water,1E-06,74,0.012,70,10000,5000,9.4,0.0082,"p. 36, tab. V",,,
+unknown,1E-06,20,0.0007,27,15000,500,4,,"p. 36, tab. V",,,
+unknown,1E-06,20,0.0014,28,10000,700,4.1,,"p. 36, tab. V",,,
+unknown,1E-06,20,0.007,40,5000,1800,5.9,,"p. 36, tab. V",,,
+unknown,1E-06,20,0.014,50,3000,3000,7.3,,"p. 36, tab. V",,,

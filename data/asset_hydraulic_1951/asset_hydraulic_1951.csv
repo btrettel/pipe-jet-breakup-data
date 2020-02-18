@@ -1,0 +1,11 @@
+liquid,d_0,Ubar_0,Re_l0,We_l0,Fr_0,t/d_0,L_b/d_0,"sigma L_b/d_0","photo regime","turb regime",D_10,"sigma D_10",x_low,x_mid/L_b,"photo page fig","photo filename"
+"benzyl alcohol",0.000462,2.86,240,104.04,1797.76,,161,5.6,Rayleigh,laminar,0.000821,11,0,,"p. 9, fig. 7",asset_hydraulic_1951_fig_7.jpg
+"tide solution",0.000462,2.63,1320,106.09,1497.69,4,76.4,14,Rayleigh,laminar,0.0009,10,0,,"p. 9, fig. 8",asset_hydraulic_1951_fig_8.jpg
+water,0.00112,2.61,3150,108.16,615.04,,69.2,8.3,Rayleigh,transitional,0.00166,33,0,,"p. 9, fig. 9",asset_hydraulic_1951_fig_9.jpg
+water,0.00284,1.62,5050,105.308644,96.04,0.97,101,6.6,Rayleigh,turbulent,0.00366,21,0,,"p. 9, fig. 10",asset_hydraulic_1951_fig_10.jpg
+water,0.00981,0.891,8910,108.16,8.41,0.098,80,8.2,Rayleigh,turbulent,0.00988,8.5,0,,"p. 10, fig. 11",asset_hydraulic_1951_fig_11a.jpg
+water,0.00981,0.891,8910,108.16,8.41,,,,Rayleigh,turbulent,,,,0.5,"p. 10, fig. 11",asset_hydraulic_1951_fig_11b.jpg
+water,0.00981,0.891,8910,108.16,8.41,,,,Rayleigh,turbulent,,,,,"p. 10, fig. 11",asset_hydraulic_1951_fig_11c.jpg
+water,0.00981,0.891,8910,108.16,8.41,,,,Rayleigh,turbulent,,,,1,"p. 10, fig. 11",asset_hydraulic_1951_fig_11d.jpg
+,,,,,,,,,Rayleigh,,,,,,"p. 1, fig. 1",asset_hydraulic_1951_fig_1.jpg
+,,,,,,,,,Rayleigh,,,,,,"p. 1, fig. 2",asset_hydraulic_1951_fig_2.jpg

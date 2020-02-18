@@ -1,0 +1,1931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="35" Full="1.12.35"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2020-02-18T05:44:58Z</dc:date>
+      <meta:creation-date>2017-04-30T23:09:05Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet1</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="679" Height="462"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet1</gnm:Name>
+      <gnm:MaxCol>5</gnm:MaxCol>
+      <gnm:MaxRow>303</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet1&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="0" Unit="51.75"/>
+        <gnm:ColInfo No="3" Unit="48.75"/>
+        <gnm:ColInfo No="5" Unit="87"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="304"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="1" CursorRow="204">
+        <gnm:Selection startCol="1" startRow="204" endCol="1" endRow="204"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">page fig</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">nozzle</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">solution</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">Ubar_0 (cm/s)</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">L_b (cm)</gnm:Cell>
+        <gnm:Cell Row="0" Col="5" ValueType="60">regime L_b</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ValueType="40">148.721</gnm:Cell>
+        <gnm:Cell Row="1" Col="4" ValueType="40">11.300000000000001</gnm:Cell>
+        <gnm:Cell Row="1" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ValueType="40">175.685</gnm:Cell>
+        <gnm:Cell Row="2" Col="4" ValueType="40">13.300000000000001</gnm:Cell>
+        <gnm:Cell Row="2" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ValueType="40">213.98099999999999</gnm:Cell>
+        <gnm:Cell Row="3" Col="4" ValueType="40">16.199999999999999</gnm:Cell>
+        <gnm:Cell Row="3" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ValueType="40">233.00800000000001</gnm:Cell>
+        <gnm:Cell Row="4" Col="4" ValueType="40">17.800000000000001</gnm:Cell>
+        <gnm:Cell Row="4" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="5" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ValueType="40">289.75900000000001</gnm:Cell>
+        <gnm:Cell Row="5" Col="4" ValueType="40">21.699999999999999</gnm:Cell>
+        <gnm:Cell Row="5" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="6" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ValueType="40">345.94499999999999</gnm:Cell>
+        <gnm:Cell Row="6" Col="4" ValueType="40">25.800000000000001</gnm:Cell>
+        <gnm:Cell Row="6" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="7" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ValueType="40">438.37299999999999</gnm:Cell>
+        <gnm:Cell Row="7" Col="4" ValueType="40">31.199999999999999</gnm:Cell>
+        <gnm:Cell Row="7" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="8" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="8" Col="3" ValueType="40">529.34000000000003</gnm:Cell>
+        <gnm:Cell Row="8" Col="4" ValueType="40">37.100000000000001</gnm:Cell>
+        <gnm:Cell Row="8" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="9" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="9" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="9" Col="3" ValueType="40">619.005</gnm:Cell>
+        <gnm:Cell Row="9" Col="4" ValueType="40">43.100000000000001</gnm:Cell>
+        <gnm:Cell Row="9" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="10" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="10" Col="3" ValueType="40">728.30799999999999</gnm:Cell>
+        <gnm:Cell Row="10" Col="4" ValueType="40">48.399999999999999</gnm:Cell>
+        <gnm:Cell Row="10" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="11" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="11" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="11" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="11" Col="3" ValueType="40">828.83000000000004</gnm:Cell>
+        <gnm:Cell Row="11" Col="4" ValueType="40">51.399999999999999</gnm:Cell>
+        <gnm:Cell Row="11" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="12" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="12" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="12" Col="3" ValueType="40">903.91300000000001</gnm:Cell>
+        <gnm:Cell Row="12" Col="4" ValueType="40">56</gnm:Cell>
+        <gnm:Cell Row="12" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="13" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="13" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="13" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="13" Col="3" ValueType="40">1196</gnm:Cell>
+        <gnm:Cell Row="13" Col="4" ValueType="40">64</gnm:Cell>
+        <gnm:Cell Row="13" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="14" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="14" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="14" Col="3" ValueType="40">1359.49</gnm:Cell>
+        <gnm:Cell Row="14" Col="4" ValueType="40">64.299999999999997</gnm:Cell>
+        <gnm:Cell Row="14" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="15" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="15" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="15" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="15" Col="3" ValueType="40">1632.3900000000001</gnm:Cell>
+        <gnm:Cell Row="15" Col="4" ValueType="40">65</gnm:Cell>
+        <gnm:Cell Row="15" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="16" Col="0" ValueType="60">table IVa</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="16" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="16" Col="3" ValueType="40">1696.1300000000001</gnm:Cell>
+        <gnm:Cell Row="16" Col="4" ValueType="40">67.299999999999997</gnm:Cell>
+        <gnm:Cell Row="16" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="17" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="17" Col="3" ValueType="40">126.428</gnm:Cell>
+        <gnm:Cell Row="17" Col="4" ValueType="40">6.7000000000000002</gnm:Cell>
+        <gnm:Cell Row="17" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="18" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="18" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ValueType="40">149.57499999999999</gnm:Cell>
+        <gnm:Cell Row="18" Col="4" ValueType="40">7.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="18" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="19" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="19" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ValueType="40">174.755</gnm:Cell>
+        <gnm:Cell Row="19" Col="4" ValueType="40">9.8000000000000007</gnm:Cell>
+        <gnm:Cell Row="19" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="20" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="20" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ValueType="40">200.453</gnm:Cell>
+        <gnm:Cell Row="20" Col="4" ValueType="40">11.199999999999999</gnm:Cell>
+        <gnm:Cell Row="20" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="21" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="21" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="21" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="21" Col="3" ValueType="40">221.57900000000001</gnm:Cell>
+        <gnm:Cell Row="21" Col="4" ValueType="40">12.199999999999999</gnm:Cell>
+        <gnm:Cell Row="21" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="22" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="22" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="22" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="22" Col="3" ValueType="40">269.11000000000001</gnm:Cell>
+        <gnm:Cell Row="22" Col="4" ValueType="40">15.4</gnm:Cell>
+        <gnm:Cell Row="22" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="23" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="23" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="23" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="23" Col="3" ValueType="40">332.80700000000002</gnm:Cell>
+        <gnm:Cell Row="23" Col="4" ValueType="40">18.399999999999999</gnm:Cell>
+        <gnm:Cell Row="23" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="24" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="24" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="24" Col="3" ValueType="40">367.63099999999997</gnm:Cell>
+        <gnm:Cell Row="24" Col="4" ValueType="40">21</gnm:Cell>
+        <gnm:Cell Row="24" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="25" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="25" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="25" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="25" Col="3" ValueType="40">402.07799999999997</gnm:Cell>
+        <gnm:Cell Row="25" Col="4" ValueType="40">22</gnm:Cell>
+        <gnm:Cell Row="25" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="26" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="26" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="26" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="26" Col="3" ValueType="40">469.83800000000002</gnm:Cell>
+        <gnm:Cell Row="26" Col="4" ValueType="40">25.5</gnm:Cell>
+        <gnm:Cell Row="26" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="27" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="27" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="27" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="27" Col="3" ValueType="40">536.23699999999997</gnm:Cell>
+        <gnm:Cell Row="27" Col="4" ValueType="40">28.5</gnm:Cell>
+        <gnm:Cell Row="27" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="28" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="28" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="28" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="28" Col="3" ValueType="40">601.32500000000005</gnm:Cell>
+        <gnm:Cell Row="28" Col="4" ValueType="40">31.25</gnm:Cell>
+        <gnm:Cell Row="28" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="29" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="29" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="29" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="29" Col="3" ValueType="40">728.03899999999999</gnm:Cell>
+        <gnm:Cell Row="29" Col="4" ValueType="40">34.200000000000003</gnm:Cell>
+        <gnm:Cell Row="29" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="30" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="30" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="30" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="30" Col="3" ValueType="40">844.16099999999994</gnm:Cell>
+        <gnm:Cell Row="30" Col="4" ValueType="40">35</gnm:Cell>
+        <gnm:Cell Row="30" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="31" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="31" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="31" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="31" Col="3" ValueType="40">939.30899999999997</gnm:Cell>
+        <gnm:Cell Row="31" Col="4" ValueType="40">32.399999999999999</gnm:Cell>
+        <gnm:Cell Row="31" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="32" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="32" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="32" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="32" Col="3" ValueType="40">1083.0799999999999</gnm:Cell>
+        <gnm:Cell Row="32" Col="4" ValueType="40">28</gnm:Cell>
+        <gnm:Cell Row="32" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="33" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="33" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="33" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="33" Col="3" ValueType="40">665.28499999999997</gnm:Cell>
+        <gnm:Cell Row="33" Col="4" ValueType="40">34.100000000000001</gnm:Cell>
+        <gnm:Cell Row="33" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="34" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="34" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="34" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="34" Col="3" ValueType="40">765.08199999999999</gnm:Cell>
+        <gnm:Cell Row="34" Col="4" ValueType="40">35.700000000000003</gnm:Cell>
+        <gnm:Cell Row="34" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="35" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="35" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="35" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="35" Col="3" ValueType="40">715.577</gnm:Cell>
+        <gnm:Cell Row="35" Col="4" ValueType="40">35</gnm:Cell>
+        <gnm:Cell Row="35" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="36" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="36" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="36" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="36" Col="3" ValueType="40">746.65200000000004</gnm:Cell>
+        <gnm:Cell Row="36" Col="4" ValueType="40">35.850000000000001</gnm:Cell>
+        <gnm:Cell Row="36" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="37" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="37" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="37" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="37" Col="3" ValueType="40">1139.27</gnm:Cell>
+        <gnm:Cell Row="37" Col="4" ValueType="40">28</gnm:Cell>
+        <gnm:Cell Row="37" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="38" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="38" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="38" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="38" Col="3" ValueType="40">1313.5899999999999</gnm:Cell>
+        <gnm:Cell Row="38" Col="4" ValueType="40">23.800000000000001</gnm:Cell>
+        <gnm:Cell Row="38" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="39" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="39" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="39" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="39" Col="3" ValueType="40">1413.53</gnm:Cell>
+        <gnm:Cell Row="39" Col="4" ValueType="40">22.199999999999999</gnm:Cell>
+        <gnm:Cell Row="39" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="40" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="40" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="40" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="40" Col="3" ValueType="40">1606.9000000000001</gnm:Cell>
+        <gnm:Cell Row="40" Col="4" ValueType="40">16.800000000000001</gnm:Cell>
+        <gnm:Cell Row="40" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="41" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="41" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="41" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="41" Col="3" ValueType="40">1710.1700000000001</gnm:Cell>
+        <gnm:Cell Row="41" Col="4" ValueType="40">16.350000000000001</gnm:Cell>
+        <gnm:Cell Row="41" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="42" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="42" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="42" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="42" Col="3" ValueType="40">1796.8399999999999</gnm:Cell>
+        <gnm:Cell Row="42" Col="4" ValueType="40">15.65</gnm:Cell>
+        <gnm:Cell Row="42" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="43" Col="0" ValueType="60">table IVd</gnm:Cell>
+        <gnm:Cell Row="43" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="43" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="43" Col="3" ValueType="40">1924.0899999999999</gnm:Cell>
+        <gnm:Cell Row="43" Col="4" ValueType="40">15</gnm:Cell>
+        <gnm:Cell Row="43" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="44" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="44" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="44" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="44" Col="3" ValueType="40">157.47800000000001</gnm:Cell>
+        <gnm:Cell Row="44" Col="4" ValueType="40">2.3500000000000001</gnm:Cell>
+        <gnm:Cell Row="44" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="45" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="45" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="45" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="45" Col="3" ValueType="40">169.452</gnm:Cell>
+        <gnm:Cell Row="45" Col="4" ValueType="40">2.6000000000000001</gnm:Cell>
+        <gnm:Cell Row="45" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="46" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="46" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="46" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="46" Col="3" ValueType="40">184.392</gnm:Cell>
+        <gnm:Cell Row="46" Col="4" ValueType="40">2.8999999999999999</gnm:Cell>
+        <gnm:Cell Row="46" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="47" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="47" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="47" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="47" Col="3" ValueType="40">223.09700000000001</gnm:Cell>
+        <gnm:Cell Row="47" Col="4" ValueType="40">3.5</gnm:Cell>
+        <gnm:Cell Row="47" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="48" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="48" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="48" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="48" Col="3" ValueType="40">229.91200000000001</gnm:Cell>
+        <gnm:Cell Row="48" Col="4" ValueType="40">4.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="48" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="49" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="49" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="49" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="49" Col="3" ValueType="40">387.52199999999999</gnm:Cell>
+        <gnm:Cell Row="49" Col="4" ValueType="40">5.5</gnm:Cell>
+        <gnm:Cell Row="49" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="50" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="50" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="50" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="50" Col="3" ValueType="40">456.90499999999997</gnm:Cell>
+        <gnm:Cell Row="50" Col="4" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="50" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="51" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="51" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="51" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="51" Col="3" ValueType="40">562.64300000000003</gnm:Cell>
+        <gnm:Cell Row="51" Col="4" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="51" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="52" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="52" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="52" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="52" Col="3" ValueType="40">630.45600000000002</gnm:Cell>
+        <gnm:Cell Row="52" Col="4" ValueType="40">8.9499999999999993</gnm:Cell>
+        <gnm:Cell Row="52" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="53" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="53" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="53" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="53" Col="3" ValueType="40">703.25300000000004</gnm:Cell>
+        <gnm:Cell Row="53" Col="4" ValueType="40">9.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="53" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="54" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="54" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="54" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="54" Col="3" ValueType="40">800.29700000000003</gnm:Cell>
+        <gnm:Cell Row="54" Col="4" ValueType="40">11.1</gnm:Cell>
+        <gnm:Cell Row="54" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="55" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="55" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="55" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="55" Col="3" ValueType="40">844.24099999999999</gnm:Cell>
+        <gnm:Cell Row="55" Col="4" ValueType="40">11.6</gnm:Cell>
+        <gnm:Cell Row="55" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="56" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="56" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="56" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="56" Col="3" ValueType="40">906.99300000000005</gnm:Cell>
+        <gnm:Cell Row="56" Col="4" ValueType="40">12.300000000000001</gnm:Cell>
+        <gnm:Cell Row="56" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="57" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="57" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="57" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="57" Col="3" ValueType="40">963.86699999999996</gnm:Cell>
+        <gnm:Cell Row="57" Col="4" ValueType="40">13</gnm:Cell>
+        <gnm:Cell Row="57" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="58" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="58" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="58" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="58" Col="3" ValueType="40">1014.99</gnm:Cell>
+        <gnm:Cell Row="58" Col="4" ValueType="40">13.69</gnm:Cell>
+        <gnm:Cell Row="58" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="59" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="59" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="59" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="59" Col="3" ValueType="40">1068.46</gnm:Cell>
+        <gnm:Cell Row="59" Col="4" ValueType="40">14.1</gnm:Cell>
+        <gnm:Cell Row="59" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="60" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="60" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="60" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="60" Col="3" ValueType="40">1148.03</gnm:Cell>
+        <gnm:Cell Row="60" Col="4" ValueType="40">14.9</gnm:Cell>
+        <gnm:Cell Row="60" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="61" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="61" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="61" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="61" Col="3" ValueType="40">1187.3900000000001</gnm:Cell>
+        <gnm:Cell Row="61" Col="4" ValueType="40">15.35</gnm:Cell>
+        <gnm:Cell Row="61" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="62" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="62" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="62" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="62" Col="3" ValueType="40">1229.3</gnm:Cell>
+        <gnm:Cell Row="62" Col="4" ValueType="40">15.9</gnm:Cell>
+        <gnm:Cell Row="62" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="63" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="63" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="63" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="63" Col="3" ValueType="40">1278.79</gnm:Cell>
+        <gnm:Cell Row="63" Col="4" ValueType="40">16.350000000000001</gnm:Cell>
+        <gnm:Cell Row="63" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="64" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="64" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="64" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="64" Col="3" ValueType="40">1333.1600000000001</gnm:Cell>
+        <gnm:Cell Row="64" Col="4" ValueType="40">16.899999999999999</gnm:Cell>
+        <gnm:Cell Row="64" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="65" Col="0" ValueType="60">table IVe</gnm:Cell>
+        <gnm:Cell Row="65" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="65" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="65" Col="3" ValueType="40">1394.8599999999999</gnm:Cell>
+        <gnm:Cell Row="65" Col="4" ValueType="40">17.550000000000001</gnm:Cell>
+        <gnm:Cell Row="65" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="66" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="66" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="66" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="66" Col="3" ValueType="40">344.50900000000001</gnm:Cell>
+        <gnm:Cell Row="66" Col="4" ValueType="40">7.7999999999999998</gnm:Cell>
+        <gnm:Cell Row="66" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="67" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="67" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="67" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="67" Col="3" ValueType="40">413.53699999999998</gnm:Cell>
+        <gnm:Cell Row="67" Col="4" ValueType="40">7.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="67" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="68" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="68" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="68" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="68" Col="3" ValueType="40">272.36599999999999</gnm:Cell>
+        <gnm:Cell Row="68" Col="4" ValueType="40">11.6</gnm:Cell>
+        <gnm:Cell Row="68" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="69" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="69" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="69" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="69" Col="3" ValueType="40">148.98500000000001</gnm:Cell>
+        <gnm:Cell Row="69" Col="4" ValueType="40">10.449999999999999</gnm:Cell>
+        <gnm:Cell Row="69" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="70" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="70" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="70" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="70" Col="3" ValueType="40">181.96100000000001</gnm:Cell>
+        <gnm:Cell Row="70" Col="4" ValueType="40">12.4</gnm:Cell>
+        <gnm:Cell Row="70" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="71" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="71" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="71" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="71" Col="3" ValueType="40">167.52699999999999</gnm:Cell>
+        <gnm:Cell Row="71" Col="4" ValueType="40">11.4</gnm:Cell>
+        <gnm:Cell Row="71" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="72" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="72" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="72" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="72" Col="3" ValueType="40">129.92400000000001</gnm:Cell>
+        <gnm:Cell Row="72" Col="4" ValueType="40">9.5</gnm:Cell>
+        <gnm:Cell Row="72" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="73" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="73" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="73" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="73" Col="3" ValueType="40">206.54599999999999</gnm:Cell>
+        <gnm:Cell Row="73" Col="4" ValueType="40">14.199999999999999</gnm:Cell>
+        <gnm:Cell Row="73" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="74" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="74" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="74" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="74" Col="3" ValueType="40">236.88399999999999</gnm:Cell>
+        <gnm:Cell Row="74" Col="4" ValueType="40">14.25</gnm:Cell>
+        <gnm:Cell Row="74" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="75" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="75" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="75" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="75" Col="3" ValueType="40">220.17400000000001</gnm:Cell>
+        <gnm:Cell Row="75" Col="4" ValueType="40">14.6</gnm:Cell>
+        <gnm:Cell Row="75" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="76" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="76" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="76" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="76" Col="3" ValueType="40">253.23400000000001</gnm:Cell>
+        <gnm:Cell Row="76" Col="4" ValueType="40">13.85</gnm:Cell>
+        <gnm:Cell Row="76" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="77" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="77" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="77" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="77" Col="3" ValueType="40">287.94799999999998</gnm:Cell>
+        <gnm:Cell Row="77" Col="4" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="77" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="78" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="78" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="78" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="78" Col="3" ValueType="40">309.226</gnm:Cell>
+        <gnm:Cell Row="78" Col="4" ValueType="40">9.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="78" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="79" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="79" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="79" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="79" Col="3" ValueType="40">332.89299999999997</gnm:Cell>
+        <gnm:Cell Row="79" Col="4" ValueType="40">8.1999999999999993</gnm:Cell>
+        <gnm:Cell Row="79" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="80" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="80" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="80" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="80" Col="3" ValueType="40">344.50900000000001</gnm:Cell>
+        <gnm:Cell Row="80" Col="4" ValueType="40">7.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="80" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="81" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="81" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="81" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="81" Col="3" ValueType="40">386.541</gnm:Cell>
+        <gnm:Cell Row="81" Col="4" ValueType="40">7.2999999999999998</gnm:Cell>
+        <gnm:Cell Row="81" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="82" Col="0" ValueType="60">table IVh</gnm:Cell>
+        <gnm:Cell Row="82" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="82" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="82" Col="3" ValueType="40">416.14800000000002</gnm:Cell>
+        <gnm:Cell Row="82" Col="4" ValueType="40">7.2999999999999998</gnm:Cell>
+        <gnm:Cell Row="82" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="83" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="83" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="83" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="83" Col="3" ValueType="40">170.523</gnm:Cell>
+        <gnm:Cell Row="83" Col="4" ValueType="40">2.5</gnm:Cell>
+        <gnm:Cell Row="83" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="84" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="84" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="84" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="84" Col="3" ValueType="40">220.24799999999999</gnm:Cell>
+        <gnm:Cell Row="84" Col="4" ValueType="40">3.3999999999999999</gnm:Cell>
+        <gnm:Cell Row="84" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="85" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="85" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="85" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="85" Col="3" ValueType="40">260.43200000000002</gnm:Cell>
+        <gnm:Cell Row="85" Col="4" ValueType="40">4.0499999999999998</gnm:Cell>
+        <gnm:Cell Row="85" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="86" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="86" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="86" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="86" Col="3" ValueType="40">291.85899999999998</gnm:Cell>
+        <gnm:Cell Row="86" Col="4" ValueType="40">4.6500000000000004</gnm:Cell>
+        <gnm:Cell Row="86" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="87" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="87" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="87" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="87" Col="3" ValueType="40">337.77800000000002</gnm:Cell>
+        <gnm:Cell Row="87" Col="4" ValueType="40">5.2999999999999998</gnm:Cell>
+        <gnm:Cell Row="87" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="88" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="88" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="88" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="88" Col="3" ValueType="40">375.053</gnm:Cell>
+        <gnm:Cell Row="88" Col="4" ValueType="40">5.8499999999999996</gnm:Cell>
+        <gnm:Cell Row="88" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="89" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="89" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="89" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="89" Col="3" ValueType="40">411.53699999999998</gnm:Cell>
+        <gnm:Cell Row="89" Col="4" ValueType="40">6.0999999999999996</gnm:Cell>
+        <gnm:Cell Row="89" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="90" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="90" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="90" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="90" Col="3" ValueType="40">435.88299999999998</gnm:Cell>
+        <gnm:Cell Row="90" Col="4" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="90" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="91" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="91" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="91" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="91" Col="3" ValueType="40">454.21499999999997</gnm:Cell>
+        <gnm:Cell Row="91" Col="4" ValueType="40">6.0999999999999996</gnm:Cell>
+        <gnm:Cell Row="91" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="92" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="92" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="92" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="92" Col="3" ValueType="40">482.08800000000002</gnm:Cell>
+        <gnm:Cell Row="92" Col="4" ValueType="40">6.0999999999999996</gnm:Cell>
+        <gnm:Cell Row="92" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="93" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="93" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="93" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="93" Col="3" ValueType="40">468.209</gnm:Cell>
+        <gnm:Cell Row="93" Col="4" ValueType="40">6.0499999999999998</gnm:Cell>
+        <gnm:Cell Row="93" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="94" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="94" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="94" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="94" Col="3" ValueType="40">549.91700000000003</gnm:Cell>
+        <gnm:Cell Row="94" Col="4" ValueType="40">5.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="94" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="95" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="95" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="95" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="95" Col="3" ValueType="40">615.27200000000005</gnm:Cell>
+        <gnm:Cell Row="95" Col="4" ValueType="40">5.0999999999999996</gnm:Cell>
+        <gnm:Cell Row="95" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="96" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="96" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="96" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="96" Col="3" ValueType="40">665.952</gnm:Cell>
+        <gnm:Cell Row="96" Col="4" ValueType="40">4.7999999999999998</gnm:Cell>
+        <gnm:Cell Row="96" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="97" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="97" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="97" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="97" Col="3" ValueType="40">739.60799999999995</gnm:Cell>
+        <gnm:Cell Row="97" Col="4" ValueType="40">4.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="97" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="98" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="98" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="98" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="98" Col="3" ValueType="40">798.84199999999998</gnm:Cell>
+        <gnm:Cell Row="98" Col="4" ValueType="40">4.0999999999999996</gnm:Cell>
+        <gnm:Cell Row="98" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="99" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="99" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="99" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="99" Col="3" ValueType="40">867.91300000000001</gnm:Cell>
+        <gnm:Cell Row="99" Col="4" ValueType="40">3.8999999999999999</gnm:Cell>
+        <gnm:Cell Row="99" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="100" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="100" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="100" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="100" Col="3" ValueType="40">912.577</gnm:Cell>
+        <gnm:Cell Row="100" Col="4" ValueType="40">3.7999999999999998</gnm:Cell>
+        <gnm:Cell Row="100" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="101" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="101" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="101" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="101" Col="3" ValueType="40">967.25699999999995</gnm:Cell>
+        <gnm:Cell Row="101" Col="4" ValueType="40">3.6499999999999999</gnm:Cell>
+        <gnm:Cell Row="101" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="102" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="102" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="102" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="102" Col="3" ValueType="40">1020.62</gnm:Cell>
+        <gnm:Cell Row="102" Col="4" ValueType="40">3.3999999999999999</gnm:Cell>
+        <gnm:Cell Row="102" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="103" Col="0" ValueType="60">table IVi</gnm:Cell>
+        <gnm:Cell Row="103" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="103" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="103" Col="3" ValueType="40">1072.8599999999999</gnm:Cell>
+        <gnm:Cell Row="103" Col="4" ValueType="40">3.25</gnm:Cell>
+        <gnm:Cell Row="103" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="104" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="104" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="104" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="104" Col="3" ValueType="40">146.744</gnm:Cell>
+        <gnm:Cell Row="104" Col="4" ValueType="40">8.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="104" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="105" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="105" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="105" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="105" Col="3" ValueType="40">212.91300000000001</gnm:Cell>
+        <gnm:Cell Row="105" Col="4" ValueType="40">12.1</gnm:Cell>
+        <gnm:Cell Row="105" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="106" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="106" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="106" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="106" Col="3" ValueType="40">276.815</gnm:Cell>
+        <gnm:Cell Row="106" Col="4" ValueType="40">15.6</gnm:Cell>
+        <gnm:Cell Row="106" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="107" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="107" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="107" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="107" Col="3" ValueType="40">345.31999999999999</gnm:Cell>
+        <gnm:Cell Row="107" Col="4" ValueType="40">19.399999999999999</gnm:Cell>
+        <gnm:Cell Row="107" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="108" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="108" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="108" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="108" Col="3" ValueType="40">446.63400000000001</gnm:Cell>
+        <gnm:Cell Row="108" Col="4" ValueType="40">24</gnm:Cell>
+        <gnm:Cell Row="108" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="109" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="109" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="109" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="109" Col="3" ValueType="40">549.28499999999997</gnm:Cell>
+        <gnm:Cell Row="109" Col="4" ValueType="40">24.199999999999999</gnm:Cell>
+        <gnm:Cell Row="109" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="110" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="110" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="110" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="110" Col="3" ValueType="40">579.18600000000004</gnm:Cell>
+        <gnm:Cell Row="110" Col="4" ValueType="40">23.350000000000001</gnm:Cell>
+        <gnm:Cell Row="110" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="111" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="111" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="111" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="111" Col="3" ValueType="40">647.35599999999999</gnm:Cell>
+        <gnm:Cell Row="111" Col="4" ValueType="40">21.25</gnm:Cell>
+        <gnm:Cell Row="111" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="112" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="112" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="112" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="112" Col="3" ValueType="40">741.505</gnm:Cell>
+        <gnm:Cell Row="112" Col="4" ValueType="40">19.25</gnm:Cell>
+        <gnm:Cell Row="112" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="113" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="113" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="113" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="113" Col="3" ValueType="40">805.36599999999999</gnm:Cell>
+        <gnm:Cell Row="113" Col="4" ValueType="40">18.199999999999999</gnm:Cell>
+        <gnm:Cell Row="113" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="114" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="114" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="114" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="114" Col="3" ValueType="40">371.67899999999997</gnm:Cell>
+        <gnm:Cell Row="114" Col="4" ValueType="40">20.600000000000001</gnm:Cell>
+        <gnm:Cell Row="114" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="115" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="115" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="115" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="115" Col="3" ValueType="40">414.83600000000001</gnm:Cell>
+        <gnm:Cell Row="115" Col="4" ValueType="40">23</gnm:Cell>
+        <gnm:Cell Row="115" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="116" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="116" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="116" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="116" Col="3" ValueType="40">467.51299999999998</gnm:Cell>
+        <gnm:Cell Row="116" Col="4" ValueType="40">24.600000000000001</gnm:Cell>
+        <gnm:Cell Row="116" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="117" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="117" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="117" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="117" Col="3" ValueType="40">498.51499999999999</gnm:Cell>
+        <gnm:Cell Row="117" Col="4" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="117" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="118" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="118" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="118" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="118" Col="3" ValueType="40">518.93600000000004</gnm:Cell>
+        <gnm:Cell Row="118" Col="4" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="118" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="119" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="119" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="119" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="119" Col="3" ValueType="40">569.26199999999994</gnm:Cell>
+        <gnm:Cell Row="119" Col="4" ValueType="40">24.300000000000001</gnm:Cell>
+        <gnm:Cell Row="119" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="120" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="120" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="120" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="120" Col="3" ValueType="40">893.64400000000001</gnm:Cell>
+        <gnm:Cell Row="120" Col="4" ValueType="40">16.699999999999999</gnm:Cell>
+        <gnm:Cell Row="120" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="121" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="121" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="121" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="121" Col="3" ValueType="40">1142.1199999999999</gnm:Cell>
+        <gnm:Cell Row="121" Col="4" ValueType="40">12.199999999999999</gnm:Cell>
+        <gnm:Cell Row="121" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="122" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="122" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="122" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="122" Col="3" ValueType="40">1442.9100000000001</gnm:Cell>
+        <gnm:Cell Row="122" Col="4" ValueType="40">10.300000000000001</gnm:Cell>
+        <gnm:Cell Row="122" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="123" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="123" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="123" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="123" Col="3" ValueType="40">1478.3399999999999</gnm:Cell>
+        <gnm:Cell Row="123" Col="4" ValueType="40">9.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="123" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="124" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="124" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="124" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="124" Col="3" ValueType="40">1181.55</gnm:Cell>
+        <gnm:Cell Row="124" Col="4" ValueType="40">11.9</gnm:Cell>
+        <gnm:Cell Row="124" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="125" Col="0" ValueType="60">table IVm</gnm:Cell>
+        <gnm:Cell Row="125" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="125" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="125" Col="3" ValueType="40">1296.25</gnm:Cell>
+        <gnm:Cell Row="125" Col="4" ValueType="40">10.9</gnm:Cell>
+        <gnm:Cell Row="125" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="126" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="126" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="126" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="126" Col="3" ValueType="40">113.01900000000001</gnm:Cell>
+        <gnm:Cell Row="126" Col="4" ValueType="40">1.3999999999999999</gnm:Cell>
+        <gnm:Cell Row="126" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="127" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="127" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="127" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="127" Col="3" ValueType="40">137.80099999999999</gnm:Cell>
+        <gnm:Cell Row="127" Col="4" ValueType="40">1.8</gnm:Cell>
+        <gnm:Cell Row="127" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="128" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="128" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="128" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="128" Col="3" ValueType="40">153.40799999999999</gnm:Cell>
+        <gnm:Cell Row="128" Col="4" ValueType="40">2.1000000000000001</gnm:Cell>
+        <gnm:Cell Row="128" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="129" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="129" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="129" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="129" Col="3" ValueType="40">203.36500000000001</gnm:Cell>
+        <gnm:Cell Row="129" Col="4" ValueType="40">2.8500000000000001</gnm:Cell>
+        <gnm:Cell Row="129" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="130" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="130" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="130" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="130" Col="3" ValueType="40">252.78</gnm:Cell>
+        <gnm:Cell Row="130" Col="4" ValueType="40">3.6000000000000001</gnm:Cell>
+        <gnm:Cell Row="130" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="131" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="131" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="131" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="131" Col="3" ValueType="40">301.66000000000003</gnm:Cell>
+        <gnm:Cell Row="131" Col="4" ValueType="40">4.3499999999999996</gnm:Cell>
+        <gnm:Cell Row="131" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="132" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="132" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="132" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="132" Col="3" ValueType="40">350.02199999999999</gnm:Cell>
+        <gnm:Cell Row="132" Col="4" ValueType="40">4.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="132" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="133" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="133" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="133" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="133" Col="3" ValueType="40">397.88</gnm:Cell>
+        <gnm:Cell Row="133" Col="4" ValueType="40">5.5999999999999996</gnm:Cell>
+        <gnm:Cell Row="133" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="134" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="134" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="134" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="134" Col="3" ValueType="40">445.29700000000003</gnm:Cell>
+        <gnm:Cell Row="134" Col="4" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="134" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="135" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="135" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="135" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="135" Col="3" ValueType="40">510.85500000000002</gnm:Cell>
+        <gnm:Cell Row="135" Col="4" ValueType="40">6.75</gnm:Cell>
+        <gnm:Cell Row="135" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="136" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="136" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="136" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="136" Col="3" ValueType="40">584.70399999999995</gnm:Cell>
+        <gnm:Cell Row="136" Col="4" ValueType="40">7.7000000000000002</gnm:Cell>
+        <gnm:Cell Row="136" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="137" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="137" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="137" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="137" Col="3" ValueType="40">670.98299999999995</gnm:Cell>
+        <gnm:Cell Row="137" Col="4" ValueType="40">8.6999999999999993</gnm:Cell>
+        <gnm:Cell Row="137" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="138" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="138" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="138" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="138" Col="3" ValueType="40">830.33399999999995</gnm:Cell>
+        <gnm:Cell Row="138" Col="4" ValueType="40">10.5</gnm:Cell>
+        <gnm:Cell Row="138" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="139" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="139" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="139" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="139" Col="3" ValueType="40">1048.1300000000001</gnm:Cell>
+        <gnm:Cell Row="139" Col="4" ValueType="40">12.550000000000001</gnm:Cell>
+        <gnm:Cell Row="139" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="140" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="140" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="140" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="140" Col="3" ValueType="40">1176.1500000000001</gnm:Cell>
+        <gnm:Cell Row="140" Col="4" ValueType="40">13.199999999999999</gnm:Cell>
+        <gnm:Cell Row="140" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="141" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="141" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="141" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="141" Col="3" ValueType="40">1245.1199999999999</gnm:Cell>
+        <gnm:Cell Row="141" Col="4" ValueType="40">13.199999999999999</gnm:Cell>
+        <gnm:Cell Row="141" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="142" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="142" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="142" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="142" Col="3" ValueType="40">1368.8399999999999</gnm:Cell>
+        <gnm:Cell Row="142" Col="4" ValueType="40">12.9</gnm:Cell>
+        <gnm:Cell Row="142" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="143" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="143" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="143" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="143" Col="3" ValueType="40">1493.73</gnm:Cell>
+        <gnm:Cell Row="143" Col="4" ValueType="40">12.25</gnm:Cell>
+        <gnm:Cell Row="143" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="144" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="144" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="144" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="144" Col="3" ValueType="40">1627.0999999999999</gnm:Cell>
+        <gnm:Cell Row="144" Col="4" ValueType="40">11.300000000000001</gnm:Cell>
+        <gnm:Cell Row="144" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="145" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="145" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="145" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="145" Col="3" ValueType="40">1713.3699999999999</gnm:Cell>
+        <gnm:Cell Row="145" Col="4" ValueType="40">10.800000000000001</gnm:Cell>
+        <gnm:Cell Row="145" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="146" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="146" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="146" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="146" Col="3" ValueType="40">1816.6400000000001</gnm:Cell>
+        <gnm:Cell Row="146" Col="4" ValueType="40">10.300000000000001</gnm:Cell>
+        <gnm:Cell Row="146" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="147" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="147" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="147" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="147" Col="3" ValueType="40">1925.0999999999999</gnm:Cell>
+        <gnm:Cell Row="147" Col="4" ValueType="40">9.8000000000000007</gnm:Cell>
+        <gnm:Cell Row="147" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="148" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="148" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="148" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="148" Col="3" ValueType="40">2109.1199999999999</gnm:Cell>
+        <gnm:Cell Row="148" Col="4" ValueType="40">9.25</gnm:Cell>
+        <gnm:Cell Row="148" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="149" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="149" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="149" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="149" Col="3" ValueType="40">1106.3800000000001</gnm:Cell>
+        <gnm:Cell Row="149" Col="4" ValueType="40">13</gnm:Cell>
+        <gnm:Cell Row="149" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="150" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="150" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="150" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="150" Col="3" ValueType="40">1212.77</gnm:Cell>
+        <gnm:Cell Row="150" Col="4" ValueType="40">13.4</gnm:Cell>
+        <gnm:Cell Row="150" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="151" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="151" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="151" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="151" Col="3" ValueType="40">1228.9970000000001</gnm:Cell>
+        <gnm:Cell Row="151" Col="4" ValueType="40">13.6</gnm:Cell>
+        <gnm:Cell Row="151" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="152" Col="0" ValueType="60">table IVn</gnm:Cell>
+        <gnm:Cell Row="152" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="152" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="152" Col="3" ValueType="40">1253.1700000000001</gnm:Cell>
+        <gnm:Cell Row="152" Col="4" ValueType="40">13.699999999999999</gnm:Cell>
+        <gnm:Cell Row="152" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="153" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="153" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="153" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="153" Col="3" ValueType="40">162.553</gnm:Cell>
+        <gnm:Cell Row="153" Col="4" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="153" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="154" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="154" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="154" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="154" Col="3" ValueType="40">180.76900000000001</gnm:Cell>
+        <gnm:Cell Row="154" Col="4" ValueType="40">10.800000000000001</gnm:Cell>
+        <gnm:Cell Row="154" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="155" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="155" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="155" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="155" Col="3" ValueType="40">196.471</gnm:Cell>
+        <gnm:Cell Row="155" Col="4" ValueType="40">12.25</gnm:Cell>
+        <gnm:Cell Row="155" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="156" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="156" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="156" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="156" Col="3" ValueType="40">218.47999999999999</gnm:Cell>
+        <gnm:Cell Row="156" Col="4" ValueType="40">13.300000000000001</gnm:Cell>
+        <gnm:Cell Row="156" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="157" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="157" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="157" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="157" Col="3" ValueType="40">235.73599999999999</gnm:Cell>
+        <gnm:Cell Row="157" Col="4" ValueType="40">14.4</gnm:Cell>
+        <gnm:Cell Row="157" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="158" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="158" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="158" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="158" Col="3" ValueType="40">256.94299999999998</gnm:Cell>
+        <gnm:Cell Row="158" Col="4" ValueType="40">15.199999999999999</gnm:Cell>
+        <gnm:Cell Row="158" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="159" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="159" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="159" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="159" Col="3" ValueType="40">302.238</gnm:Cell>
+        <gnm:Cell Row="159" Col="4" ValueType="40">15.5</gnm:Cell>
+        <gnm:Cell Row="159" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="160" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="160" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="160" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="160" Col="3" ValueType="40">316.27100000000002</gnm:Cell>
+        <gnm:Cell Row="160" Col="4" ValueType="40">15.300000000000001</gnm:Cell>
+        <gnm:Cell Row="160" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="161" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="161" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="161" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="161" Col="3" ValueType="40">338.02100000000002</gnm:Cell>
+        <gnm:Cell Row="161" Col="4" ValueType="40">14.6</gnm:Cell>
+        <gnm:Cell Row="161" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="162" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="162" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="162" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="162" Col="3" ValueType="40">361.24799999999999</gnm:Cell>
+        <gnm:Cell Row="162" Col="4" ValueType="40">13.949999999999999</gnm:Cell>
+        <gnm:Cell Row="162" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="163" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="163" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="163" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="163" Col="3" ValueType="40">389.721</gnm:Cell>
+        <gnm:Cell Row="163" Col="4" ValueType="40">12.800000000000001</gnm:Cell>
+        <gnm:Cell Row="163" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="164" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="164" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="164" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="164" Col="3" ValueType="40">435.72899999999998</gnm:Cell>
+        <gnm:Cell Row="164" Col="4" ValueType="40">11.6</gnm:Cell>
+        <gnm:Cell Row="164" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="165" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="165" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="165" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="165" Col="3" ValueType="40">471.37400000000002</gnm:Cell>
+        <gnm:Cell Row="165" Col="4" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="165" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="166" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="166" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="166" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="166" Col="3" ValueType="40">548.23800000000006</gnm:Cell>
+        <gnm:Cell Row="166" Col="4" ValueType="40">10.050000000000001</gnm:Cell>
+        <gnm:Cell Row="166" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="167" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="167" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="167" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="167" Col="3" ValueType="40">597.20100000000002</gnm:Cell>
+        <gnm:Cell Row="167" Col="4" ValueType="40">9.8499999999999996</gnm:Cell>
+        <gnm:Cell Row="167" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="168" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="168" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="168" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="168" Col="3" ValueType="40">267.42099999999999</gnm:Cell>
+        <gnm:Cell Row="168" Col="4" ValueType="40">15.35</gnm:Cell>
+        <gnm:Cell Row="168" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="169" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="169" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="169" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="169" Col="3" ValueType="40">281.89999999999998</gnm:Cell>
+        <gnm:Cell Row="169" Col="4" ValueType="40">15.85</gnm:Cell>
+        <gnm:Cell Row="169" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="170" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="170" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="170" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="170" Col="3" ValueType="40">294.16500000000002</gnm:Cell>
+        <gnm:Cell Row="170" Col="4" ValueType="40">15.9</gnm:Cell>
+        <gnm:Cell Row="170" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="171" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="171" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="171" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="171" Col="3" ValueType="40">621.06700000000001</gnm:Cell>
+        <gnm:Cell Row="171" Col="4" ValueType="40">9.5</gnm:Cell>
+        <gnm:Cell Row="171" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="172" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="172" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="172" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="172" Col="3" ValueType="40">682.81799999999998</gnm:Cell>
+        <gnm:Cell Row="172" Col="4" ValueType="40">7.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="172" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="173" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="173" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="173" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="173" Col="3" ValueType="40">756.83000000000004</gnm:Cell>
+        <gnm:Cell Row="173" Col="4" ValueType="40">7.5</gnm:Cell>
+        <gnm:Cell Row="173" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="174" Col="0" ValueType="60">table IVq</gnm:Cell>
+        <gnm:Cell Row="174" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="174" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="174" Col="3" ValueType="40">1663.47</gnm:Cell>
+        <gnm:Cell Row="174" Col="4" ValueType="40">6.75</gnm:Cell>
+        <gnm:Cell Row="174" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="175" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="175" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="175" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="175" Col="3" ValueType="40">124.96299999999999</gnm:Cell>
+        <gnm:Cell Row="175" Col="4" ValueType="40">1.8500000000000001</gnm:Cell>
+        <gnm:Cell Row="175" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="176" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="176" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="176" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="176" Col="3" ValueType="40">140.10400000000001</gnm:Cell>
+        <gnm:Cell Row="176" Col="4" ValueType="40">2.1000000000000001</gnm:Cell>
+        <gnm:Cell Row="176" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="177" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="177" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="177" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="177" Col="3" ValueType="40">155.14500000000001</gnm:Cell>
+        <gnm:Cell Row="177" Col="4" ValueType="40">2.3999999999999999</gnm:Cell>
+        <gnm:Cell Row="177" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="178" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="178" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="178" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="178" Col="3" ValueType="40">170.089</gnm:Cell>
+        <gnm:Cell Row="178" Col="4" ValueType="40">2.7000000000000002</gnm:Cell>
+        <gnm:Cell Row="178" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="179" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="179" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="179" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="179" Col="3" ValueType="40">186.90799999999999</gnm:Cell>
+        <gnm:Cell Row="179" Col="4" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="179" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="180" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="180" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="180" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="180" Col="3" ValueType="40">204.58500000000001</gnm:Cell>
+        <gnm:Cell Row="180" Col="4" ValueType="40">3.2999999999999998</gnm:Cell>
+        <gnm:Cell Row="180" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="181" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="181" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="181" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="181" Col="3" ValueType="40">224.09399999999999</gnm:Cell>
+        <gnm:Cell Row="181" Col="4" ValueType="40">3.6499999999999999</gnm:Cell>
+        <gnm:Cell Row="181" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="182" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="182" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="182" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="182" Col="3" ValueType="40">248.239</gnm:Cell>
+        <gnm:Cell Row="182" Col="4" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="182" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="183" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="183" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="183" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="183" Col="3" ValueType="40">272.14400000000001</gnm:Cell>
+        <gnm:Cell Row="183" Col="4" ValueType="40">4.3499999999999996</gnm:Cell>
+        <gnm:Cell Row="183" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="184" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="184" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="184" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="184" Col="3" ValueType="40">300.52499999999998</gnm:Cell>
+        <gnm:Cell Row="184" Col="4" ValueType="40">4.7999999999999998</gnm:Cell>
+        <gnm:Cell Row="184" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="185" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="185" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="185" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="185" Col="3" ValueType="40">300.52499999999998</gnm:Cell>
+        <gnm:Cell Row="185" Col="4" ValueType="40">4.9500000000000002</gnm:Cell>
+        <gnm:Cell Row="185" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="186" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="186" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="186" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="186" Col="3" ValueType="40">347.084</gnm:Cell>
+        <gnm:Cell Row="186" Col="4" ValueType="40">5.7000000000000002</gnm:Cell>
+        <gnm:Cell Row="186" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="187" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="187" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="187" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="187" Col="3" ValueType="40">401.84800000000001</gnm:Cell>
+        <gnm:Cell Row="187" Col="4" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="187" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="188" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="188" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="188" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="188" Col="3" ValueType="40">437.70999999999998</gnm:Cell>
+        <gnm:Cell Row="188" Col="4" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="188" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="189" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="189" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="189" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="189" Col="3" ValueType="40">481.899</gnm:Cell>
+        <gnm:Cell Row="189" Col="4" ValueType="40">7.7999999999999998</gnm:Cell>
+        <gnm:Cell Row="189" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="190" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="190" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="190" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="190" Col="3" ValueType="40">533.93899999999996</gnm:Cell>
+        <gnm:Cell Row="190" Col="4" ValueType="40">8.3000000000000007</gnm:Cell>
+        <gnm:Cell Row="190" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="191" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="191" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="191" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="191" Col="3" ValueType="40">568.08600000000001</gnm:Cell>
+        <gnm:Cell Row="191" Col="4" ValueType="40">8.6999999999999993</gnm:Cell>
+        <gnm:Cell Row="191" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="192" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="192" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="192" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="192" Col="3" ValueType="40">610.10000000000002</gnm:Cell>
+        <gnm:Cell Row="192" Col="4" ValueType="40">8.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="192" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="193" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="193" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="193" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="193" Col="3" ValueType="40">651.52700000000004</gnm:Cell>
+        <gnm:Cell Row="193" Col="4" ValueType="40">8.9499999999999993</gnm:Cell>
+        <gnm:Cell Row="193" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="194" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="194" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="194" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="194" Col="3" ValueType="40">692.42200000000003</gnm:Cell>
+        <gnm:Cell Row="194" Col="4" ValueType="40">8.8000000000000007</gnm:Cell>
+        <gnm:Cell Row="194" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="195" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="195" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="195" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="195" Col="3" ValueType="40">732.69799999999998</gnm:Cell>
+        <gnm:Cell Row="195" Col="4" ValueType="40">8.6999999999999993</gnm:Cell>
+        <gnm:Cell Row="195" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="196" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="196" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="196" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="196" Col="3" ValueType="40">772.34799999999996</gnm:Cell>
+        <gnm:Cell Row="196" Col="4" ValueType="40">8.3000000000000007</gnm:Cell>
+        <gnm:Cell Row="196" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="197" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="197" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="197" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="197" Col="3" ValueType="40">850.23500000000001</gnm:Cell>
+        <gnm:Cell Row="197" Col="4" ValueType="40">7.6500000000000004</gnm:Cell>
+        <gnm:Cell Row="197" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="198" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="198" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="198" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="198" Col="3" ValueType="40">926.053</gnm:Cell>
+        <gnm:Cell Row="198" Col="4" ValueType="40">7.1500000000000004</gnm:Cell>
+        <gnm:Cell Row="198" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="199" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="199" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="199" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="199" Col="3" ValueType="40">948.44299999999998</gnm:Cell>
+        <gnm:Cell Row="199" Col="4" ValueType="40">6.9500000000000002</gnm:Cell>
+        <gnm:Cell Row="199" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="200" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="200" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="200" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="200" Col="3" ValueType="40">1108.0999999999999</gnm:Cell>
+        <gnm:Cell Row="200" Col="4" ValueType="40">6.0499999999999998</gnm:Cell>
+        <gnm:Cell Row="200" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="201" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="201" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="201" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="201" Col="3" ValueType="40">1246.5699999999999</gnm:Cell>
+        <gnm:Cell Row="201" Col="4" ValueType="40">5.4500000000000002</gnm:Cell>
+        <gnm:Cell Row="201" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="202" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="202" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="202" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="202" Col="3" ValueType="40">1360.0699999999999</gnm:Cell>
+        <gnm:Cell Row="202" Col="4" ValueType="40">5.0499999999999998</gnm:Cell>
+        <gnm:Cell Row="202" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="203" Col="0" ValueType="60">table IVr</gnm:Cell>
+        <gnm:Cell Row="203" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="203" Col="2" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="203" Col="3" ValueType="40">1558.24</gnm:Cell>
+        <gnm:Cell Row="203" Col="4" ValueType="40">4.1500000000000004</gnm:Cell>
+        <gnm:Cell Row="203" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="204" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="204" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="204" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="204" Col="3" ValueType="40">233.042</gnm:Cell>
+        <gnm:Cell Row="204" Col="4" ValueType="40">27.899999999999999</gnm:Cell>
+        <gnm:Cell Row="204" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="205" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="205" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="205" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="205" Col="3" ValueType="40">255.13399999999999</gnm:Cell>
+        <gnm:Cell Row="205" Col="4" ValueType="40">30.899999999999999</gnm:Cell>
+        <gnm:Cell Row="205" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="206" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="206" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="206" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="206" Col="3" ValueType="40">273.52999999999997</gnm:Cell>
+        <gnm:Cell Row="206" Col="4" ValueType="40">32.700000000000003</gnm:Cell>
+        <gnm:Cell Row="206" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="207" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="207" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="207" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="207" Col="3" ValueType="40">299.26499999999999</gnm:Cell>
+        <gnm:Cell Row="207" Col="4" ValueType="40">36.850000000000001</gnm:Cell>
+        <gnm:Cell Row="207" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="208" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="208" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="208" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="208" Col="3" ValueType="40">321.30399999999997</gnm:Cell>
+        <gnm:Cell Row="208" Col="4" ValueType="40">40.399999999999999</gnm:Cell>
+        <gnm:Cell Row="208" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="209" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="209" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="209" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="209" Col="3" ValueType="40">343.32499999999999</gnm:Cell>
+        <gnm:Cell Row="209" Col="4" ValueType="40">48.100000000000001</gnm:Cell>
+        <gnm:Cell Row="209" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="210" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="210" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="210" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="210" Col="3" ValueType="40">372.66000000000003</gnm:Cell>
+        <gnm:Cell Row="210" Col="4" ValueType="40">51.399999999999999</gnm:Cell>
+        <gnm:Cell Row="210" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="211" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="211" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="211" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="211" Col="3" ValueType="40">216.09299999999999</gnm:Cell>
+        <gnm:Cell Row="211" Col="4" ValueType="40">29.399999999999999</gnm:Cell>
+        <gnm:Cell Row="211" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="212" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="212" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="212" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="212" Col="3" ValueType="40">258.07799999999997</gnm:Cell>
+        <gnm:Cell Row="212" Col="4" ValueType="40">32.399999999999999</gnm:Cell>
+        <gnm:Cell Row="212" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="213" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="213" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="213" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="213" Col="3" ValueType="40">291.91500000000002</gnm:Cell>
+        <gnm:Cell Row="213" Col="4" ValueType="40">37.299999999999997</gnm:Cell>
+        <gnm:Cell Row="213" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="214" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="214" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="214" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="214" Col="3" ValueType="40">310.28699999999998</gnm:Cell>
+        <gnm:Cell Row="214" Col="4" ValueType="40">40.25</gnm:Cell>
+        <gnm:Cell Row="214" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="215" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="215" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="215" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="215" Col="3" ValueType="40">336.721</gnm:Cell>
+        <gnm:Cell Row="215" Col="4" ValueType="40">44.700000000000003</gnm:Cell>
+        <gnm:Cell Row="215" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="216" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="216" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="216" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="216" Col="3" ValueType="40">374.12599999999998</gnm:Cell>
+        <gnm:Cell Row="216" Col="4" ValueType="40">50.399999999999999</gnm:Cell>
+        <gnm:Cell Row="216" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="217" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="217" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="217" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="217" Col="3" ValueType="40">262.49400000000003</gnm:Cell>
+        <gnm:Cell Row="217" Col="4" ValueType="40">38.5</gnm:Cell>
+        <gnm:Cell Row="217" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="218" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="218" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="218" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="218" Col="3" ValueType="40">302.93900000000002</gnm:Cell>
+        <gnm:Cell Row="218" Col="4" ValueType="40">42.5</gnm:Cell>
+        <gnm:Cell Row="218" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="219" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="219" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="219" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="219" Col="3" ValueType="40">244.827</gnm:Cell>
+        <gnm:Cell Row="219" Col="4" ValueType="40">31</gnm:Cell>
+        <gnm:Cell Row="219" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="220" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="220" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="220" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="220" Col="3" ValueType="40">255.87</gnm:Cell>
+        <gnm:Cell Row="220" Col="4" ValueType="40">32.5</gnm:Cell>
+        <gnm:Cell Row="220" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="221" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="221" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="221" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="221" Col="3" ValueType="40">292.64999999999998</gnm:Cell>
+        <gnm:Cell Row="221" Col="4" ValueType="40">37.600000000000001</gnm:Cell>
+        <gnm:Cell Row="221" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="222" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="222" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="222" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="222" Col="3" ValueType="40">333.78500000000003</gnm:Cell>
+        <gnm:Cell Row="222" Col="4" ValueType="40">42.5</gnm:Cell>
+        <gnm:Cell Row="222" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="223" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="223" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="223" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="223" Col="3" ValueType="40">361.66300000000001</gnm:Cell>
+        <gnm:Cell Row="223" Col="4" ValueType="40">47.399999999999999</gnm:Cell>
+        <gnm:Cell Row="223" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="224" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="224" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="224" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="224" Col="3" ValueType="40">322.03800000000001</gnm:Cell>
+        <gnm:Cell Row="224" Col="4" ValueType="40">45.100000000000001</gnm:Cell>
+        <gnm:Cell Row="224" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="225" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="225" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="225" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="225" Col="3" ValueType="40">361.66300000000001</gnm:Cell>
+        <gnm:Cell Row="225" Col="4" ValueType="40">51</gnm:Cell>
+        <gnm:Cell Row="225" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="226" Col="0" ValueType="60">table IVv</gnm:Cell>
+        <gnm:Cell Row="226" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="226" Col="2" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="226" Col="3" ValueType="40">258.81400000000002</gnm:Cell>
+        <gnm:Cell Row="226" Col="4" ValueType="40">32.899999999999999</gnm:Cell>
+        <gnm:Cell Row="226" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="227" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="227" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="227" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="227" Col="3" ValueType="40">184.684</gnm:Cell>
+        <gnm:Cell Row="227" Col="4" ValueType="40">17</gnm:Cell>
+        <gnm:Cell Row="227" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="228" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="228" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="228" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="228" Col="3" ValueType="40">208.327</gnm:Cell>
+        <gnm:Cell Row="228" Col="4" ValueType="40">18.399999999999999</gnm:Cell>
+        <gnm:Cell Row="228" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="229" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="229" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="229" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="229" Col="3" ValueType="40">302.32999999999998</gnm:Cell>
+        <gnm:Cell Row="229" Col="4" ValueType="40">25.800000000000001</gnm:Cell>
+        <gnm:Cell Row="229" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="230" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="230" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="230" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="230" Col="3" ValueType="40">420.64400000000001</gnm:Cell>
+        <gnm:Cell Row="230" Col="4" ValueType="40">33.200000000000003</gnm:Cell>
+        <gnm:Cell Row="230" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="231" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="231" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="231" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="231" Col="3" ValueType="40">491.79899999999998</gnm:Cell>
+        <gnm:Cell Row="231" Col="4" ValueType="40">39.100000000000001</gnm:Cell>
+        <gnm:Cell Row="231" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="232" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="232" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="232" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="232" Col="3" ValueType="40">595.51999999999998</gnm:Cell>
+        <gnm:Cell Row="232" Col="4" ValueType="40">45.899999999999999</gnm:Cell>
+        <gnm:Cell Row="232" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="233" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="233" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="233" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="233" Col="3" ValueType="40">702.25900000000001</gnm:Cell>
+        <gnm:Cell Row="233" Col="4" ValueType="40">53.399999999999999</gnm:Cell>
+        <gnm:Cell Row="233" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="234" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="234" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="234" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="234" Col="3" ValueType="40">789.678</gnm:Cell>
+        <gnm:Cell Row="234" Col="4" ValueType="40">50.799999999999997</gnm:Cell>
+        <gnm:Cell Row="234" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="235" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="235" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="235" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="235" Col="3" ValueType="40">904.40899999999999</gnm:Cell>
+        <gnm:Cell Row="235" Col="4" ValueType="40">56.799999999999997</gnm:Cell>
+        <gnm:Cell Row="235" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="236" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="236" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="236" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="236" Col="3" ValueType="40">1010.0700000000001</gnm:Cell>
+        <gnm:Cell Row="236" Col="4" ValueType="40">62</gnm:Cell>
+        <gnm:Cell Row="236" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="237" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="237" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="237" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="237" Col="3" ValueType="40">828.06600000000003</gnm:Cell>
+        <gnm:Cell Row="237" Col="4" ValueType="40">51.799999999999997</gnm:Cell>
+        <gnm:Cell Row="237" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="238" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="238" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="238" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="238" Col="3" ValueType="40">930.39599999999996</gnm:Cell>
+        <gnm:Cell Row="238" Col="4" ValueType="40">58.600000000000001</gnm:Cell>
+        <gnm:Cell Row="238" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="239" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="239" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="239" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="239" Col="3" ValueType="40">1035.8099999999999</gnm:Cell>
+        <gnm:Cell Row="239" Col="4" ValueType="40">63.200000000000003</gnm:Cell>
+        <gnm:Cell Row="239" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="240" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="240" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="240" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="240" Col="3" ValueType="40">464.65300000000002</gnm:Cell>
+        <gnm:Cell Row="240" Col="4" ValueType="40">32</gnm:Cell>
+        <gnm:Cell Row="240" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="241" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="241" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="241" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="241" Col="3" ValueType="40">583.13</gnm:Cell>
+        <gnm:Cell Row="241" Col="4" ValueType="40">38.75</gnm:Cell>
+        <gnm:Cell Row="241" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="242" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="242" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="242" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="242" Col="3" ValueType="40">791.702</gnm:Cell>
+        <gnm:Cell Row="242" Col="4" ValueType="40">51.299999999999997</gnm:Cell>
+        <gnm:Cell Row="242" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="243" Col="0" ValueType="60">table IVy</gnm:Cell>
+        <gnm:Cell Row="243" Col="1" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="243" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="243" Col="3" ValueType="40">900.40499999999997</gnm:Cell>
+        <gnm:Cell Row="243" Col="4" ValueType="40">57.799999999999997</gnm:Cell>
+        <gnm:Cell Row="243" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="244" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="244" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="244" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="244" Col="3" ValueType="40">204.87700000000001</gnm:Cell>
+        <gnm:Cell Row="244" Col="4" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="244" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="245" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="245" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="245" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="245" Col="3" ValueType="40">249.03999999999999</gnm:Cell>
+        <gnm:Cell Row="245" Col="4" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="245" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="246" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="246" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="246" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="246" Col="3" ValueType="40">277.02600000000001</gnm:Cell>
+        <gnm:Cell Row="246" Col="4" ValueType="40">6.6500000000000004</gnm:Cell>
+        <gnm:Cell Row="246" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="247" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="247" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="247" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="247" Col="3" ValueType="40">309.21199999999999</gnm:Cell>
+        <gnm:Cell Row="247" Col="4" ValueType="40">7.3499999999999996</gnm:Cell>
+        <gnm:Cell Row="247" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="248" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="248" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="248" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="248" Col="3" ValueType="40">346.428</gnm:Cell>
+        <gnm:Cell Row="248" Col="4" ValueType="40">8.1999999999999993</gnm:Cell>
+        <gnm:Cell Row="248" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="249" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="249" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="249" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="249" Col="3" ValueType="40">376.83600000000001</gnm:Cell>
+        <gnm:Cell Row="249" Col="4" ValueType="40">8.8000000000000007</gnm:Cell>
+        <gnm:Cell Row="249" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="250" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="250" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="250" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="250" Col="3" ValueType="40">397.93000000000001</gnm:Cell>
+        <gnm:Cell Row="250" Col="4" ValueType="40">9.1999999999999993</gnm:Cell>
+        <gnm:Cell Row="250" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="251" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="251" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="251" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="251" Col="3" ValueType="40">440.065</gnm:Cell>
+        <gnm:Cell Row="251" Col="4" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="251" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="252" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="252" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="252" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="252" Col="3" ValueType="40">198.07499999999999</gnm:Cell>
+        <gnm:Cell Row="252" Col="4" ValueType="40">4.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="252" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="253" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="253" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="253" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="253" Col="3" ValueType="40">249.03999999999999</gnm:Cell>
+        <gnm:Cell Row="253" Col="4" ValueType="40">5.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="253" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="254" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="254" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="254" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="254" Col="3" ValueType="40">291.42000000000002</gnm:Cell>
+        <gnm:Cell Row="254" Col="4" ValueType="40">6.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="254" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="255" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="255" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="255" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="255" Col="3" ValueType="40">337.13</gnm:Cell>
+        <gnm:Cell Row="255" Col="4" ValueType="40">7.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="255" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="256" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="256" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="256" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="256" Col="3" ValueType="40">371.77100000000002</gnm:Cell>
+        <gnm:Cell Row="256" Col="4" ValueType="40">8.5999999999999996</gnm:Cell>
+        <gnm:Cell Row="256" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="257" Col="0" ValueType="60">table IVz</gnm:Cell>
+        <gnm:Cell Row="257" Col="1" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="257" Col="2" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="257" Col="3" ValueType="40">413.10700000000003</gnm:Cell>
+        <gnm:Cell Row="257" Col="4" ValueType="40">9.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="257" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="258" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="258" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="258" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="258" Col="3" ValueType="40">187.5</gnm:Cell>
+        <gnm:Cell Row="258" Col="4" ValueType="40">5.5899999999999999</gnm:Cell>
+        <gnm:Cell Row="258" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="259" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="259" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="259" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="259" Col="3" ValueType="40">243.447</gnm:Cell>
+        <gnm:Cell Row="259" Col="4" ValueType="40">3.7400000000000002</gnm:Cell>
+        <gnm:Cell Row="259" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="260" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="260" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="260" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="260" Col="3" ValueType="40">288.75200000000001</gnm:Cell>
+        <gnm:Cell Row="260" Col="4" ValueType="40">2.9399999999999999</gnm:Cell>
+        <gnm:Cell Row="260" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="261" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="261" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="261" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="261" Col="3" ValueType="40">258.60300000000001</gnm:Cell>
+        <gnm:Cell Row="261" Col="4" ValueType="40">3.9500000000000002</gnm:Cell>
+        <gnm:Cell Row="261" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="262" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="262" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="262" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="262" Col="3" ValueType="40">207.91399999999999</gnm:Cell>
+        <gnm:Cell Row="262" Col="4" ValueType="40">6.8099999999999996</gnm:Cell>
+        <gnm:Cell Row="262" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="263" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="263" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="263" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="263" Col="3" ValueType="40">233.31899999999999</gnm:Cell>
+        <gnm:Cell Row="263" Col="4" ValueType="40">4.5700000000000003</gnm:Cell>
+        <gnm:Cell Row="263" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="264" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="264" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="264" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="264" Col="3" ValueType="40">263.64499999999998</gnm:Cell>
+        <gnm:Cell Row="264" Col="4" ValueType="40">3.79</gnm:Cell>
+        <gnm:Cell Row="264" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="265" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="265" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="265" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="265" Col="3" ValueType="40">288.75200000000001</gnm:Cell>
+        <gnm:Cell Row="265" Col="4" ValueType="40">3.1200000000000001</gnm:Cell>
+        <gnm:Cell Row="265" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="266" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="266" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="266" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="266" Col="3" ValueType="40">318.74900000000002</gnm:Cell>
+        <gnm:Cell Row="266" Col="4" ValueType="40">2.6600000000000001</gnm:Cell>
+        <gnm:Cell Row="266" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="267" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="267" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="267" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="267" Col="3" ValueType="40">373.30099999999999</gnm:Cell>
+        <gnm:Cell Row="267" Col="4" ValueType="40">2.6899999999999999</gnm:Cell>
+        <gnm:Cell Row="267" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="268" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="268" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="268" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="268" Col="3" ValueType="40">167.005</gnm:Cell>
+        <gnm:Cell Row="268" Col="4" ValueType="40">5.3799999999999999</gnm:Cell>
+        <gnm:Cell Row="268" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="269" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="269" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="269" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="269" Col="3" ValueType="40">182.38399999999999</gnm:Cell>
+        <gnm:Cell Row="269" Col="4" ValueType="40">6.4400000000000004</gnm:Cell>
+        <gnm:Cell Row="269" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="270" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="270" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="270" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="270" Col="3" ValueType="40">197.71700000000001</gnm:Cell>
+        <gnm:Cell Row="270" Col="4" ValueType="40">6.9400000000000004</gnm:Cell>
+        <gnm:Cell Row="270" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="271" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="271" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="271" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="271" Col="3" ValueType="40">192.61099999999999</gnm:Cell>
+        <gnm:Cell Row="271" Col="4" ValueType="40">6.71</gnm:Cell>
+        <gnm:Cell Row="271" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="272" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="272" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="272" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="272" Col="3" ValueType="40">213.005</gnm:Cell>
+        <gnm:Cell Row="272" Col="4" ValueType="40">6.7199999999999998</gnm:Cell>
+        <gnm:Cell Row="272" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="273" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="273" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="273" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="273" Col="3" ValueType="40">96.702600000000004</gnm:Cell>
+        <gnm:Cell Row="273" Col="4" ValueType="40">2.02</gnm:Cell>
+        <gnm:Cell Row="273" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="274" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="274" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="274" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="274" Col="3" ValueType="40">105.024</gnm:Cell>
+        <gnm:Cell Row="274" Col="4" ValueType="40">2.48</gnm:Cell>
+        <gnm:Cell Row="274" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="275" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="275" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="275" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="275" Col="3" ValueType="40">93.578500000000005</gnm:Cell>
+        <gnm:Cell Row="275" Col="4" ValueType="40">1.98</gnm:Cell>
+        <gnm:Cell Row="275" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="276" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="276" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="276" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="276" Col="3" ValueType="40">101.38500000000001</gnm:Cell>
+        <gnm:Cell Row="276" Col="4" ValueType="40">2.2999999999999998</gnm:Cell>
+        <gnm:Cell Row="276" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="277" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="277" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="277" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="277" Col="3" ValueType="40">112.813</gnm:Cell>
+        <gnm:Cell Row="277" Col="4" ValueType="40">2.7999999999999998</gnm:Cell>
+        <gnm:Cell Row="277" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="278" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="278" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="278" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="278" Col="3" ValueType="40">126.803</gnm:Cell>
+        <gnm:Cell Row="278" Col="4" ValueType="40">3.4300000000000002</gnm:Cell>
+        <gnm:Cell Row="278" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="279" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="279" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="279" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="279" Col="3" ValueType="40">145.39699999999999</gnm:Cell>
+        <gnm:Cell Row="279" Col="4" ValueType="40">4.3799999999999999</gnm:Cell>
+        <gnm:Cell Row="279" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="280" Col="0" ValueType="60">table IVcc</gnm:Cell>
+        <gnm:Cell Row="280" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="280" Col="2" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="280" Col="3" ValueType="40">155.69800000000001</gnm:Cell>
+        <gnm:Cell Row="280" Col="4" ValueType="40">4.9100000000000001</gnm:Cell>
+        <gnm:Cell Row="280" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="281" Col="0" ValueType="60">table IVdd</gnm:Cell>
+        <gnm:Cell Row="281" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="281" Col="2" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="281" Col="3" ValueType="40">234.78999999999999</gnm:Cell>
+        <gnm:Cell Row="281" Col="4" ValueType="40">6.3200000000000003</gnm:Cell>
+        <gnm:Cell Row="281" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="282" Col="0" ValueType="60">table IVdd</gnm:Cell>
+        <gnm:Cell Row="282" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="282" Col="2" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="282" Col="3" ValueType="40">212.26599999999999</gnm:Cell>
+        <gnm:Cell Row="282" Col="4" ValueType="40">5.7199999999999998</gnm:Cell>
+        <gnm:Cell Row="282" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="283" Col="0" ValueType="60">table IVdd</gnm:Cell>
+        <gnm:Cell Row="283" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="283" Col="2" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="283" Col="3" ValueType="40">186.447</gnm:Cell>
+        <gnm:Cell Row="283" Col="4" ValueType="40">5.1299999999999999</gnm:Cell>
+        <gnm:Cell Row="283" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="284" Col="0" ValueType="60">table IVdd</gnm:Cell>
+        <gnm:Cell Row="284" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="284" Col="2" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="284" Col="3" ValueType="40">150.809</gnm:Cell>
+        <gnm:Cell Row="284" Col="4" ValueType="40">4.75</gnm:Cell>
+        <gnm:Cell Row="284" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="285" Col="0" ValueType="60">table IVdd</gnm:Cell>
+        <gnm:Cell Row="285" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="285" Col="2" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="285" Col="3" ValueType="40">115.009</gnm:Cell>
+        <gnm:Cell Row="285" Col="4" ValueType="40">3.4500000000000002</gnm:Cell>
+        <gnm:Cell Row="285" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="286" Col="0" ValueType="60">table IVdd</gnm:Cell>
+        <gnm:Cell Row="286" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="286" Col="2" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="286" Col="3" ValueType="40">98.019400000000005</gnm:Cell>
+        <gnm:Cell Row="286" Col="4" ValueType="40">2.4100000000000001</gnm:Cell>
+        <gnm:Cell Row="286" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="287" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="287" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="287" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="287" Col="3" ValueType="40">93.136200000000002</gnm:Cell>
+        <gnm:Cell Row="287" Col="4" ValueType="40">2.2599999999999998</gnm:Cell>
+        <gnm:Cell Row="287" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="288" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="288" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="288" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="288" Col="3" ValueType="40">103.607</gnm:Cell>
+        <gnm:Cell Row="288" Col="4" ValueType="40">2.75</gnm:Cell>
+        <gnm:Cell Row="288" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="289" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="289" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="289" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="289" Col="3" ValueType="40">110.57599999999999</gnm:Cell>
+        <gnm:Cell Row="289" Col="4" ValueType="40">3.25</gnm:Cell>
+        <gnm:Cell Row="289" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="290" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="290" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="290" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="290" Col="3" ValueType="40">126.473</gnm:Cell>
+        <gnm:Cell Row="290" Col="4" ValueType="40">4.1100000000000003</gnm:Cell>
+        <gnm:Cell Row="290" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="291" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="291" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="291" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="291" Col="3" ValueType="40">137.87</gnm:Cell>
+        <gnm:Cell Row="291" Col="4" ValueType="40">4.7800000000000002</gnm:Cell>
+        <gnm:Cell Row="291" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="292" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="292" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="292" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="292" Col="3" ValueType="40">150.23099999999999</gnm:Cell>
+        <gnm:Cell Row="292" Col="4" ValueType="40">5.4500000000000002</gnm:Cell>
+        <gnm:Cell Row="292" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="293" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="293" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="293" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="293" Col="3" ValueType="40">174.869</gnm:Cell>
+        <gnm:Cell Row="293" Col="4" ValueType="40">6.5899999999999999</gnm:Cell>
+        <gnm:Cell Row="293" Col="5" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="294" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="294" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="294" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="294" Col="3" ValueType="40">194.50200000000001</gnm:Cell>
+        <gnm:Cell Row="294" Col="4" ValueType="40">7.8499999999999996</gnm:Cell>
+        <gnm:Cell Row="294" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="295" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="295" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="295" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="295" Col="3" ValueType="40">209.18000000000001</gnm:Cell>
+        <gnm:Cell Row="295" Col="4" ValueType="40">6.0899999999999999</gnm:Cell>
+        <gnm:Cell Row="295" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="296" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="296" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="296" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="296" Col="3" ValueType="40">189.59999999999999</gnm:Cell>
+        <gnm:Cell Row="296" Col="4" ValueType="40">7.8099999999999996</gnm:Cell>
+        <gnm:Cell Row="296" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="297" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="297" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="297" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="297" Col="3" ValueType="40">204.292</gnm:Cell>
+        <gnm:Cell Row="297" Col="4" ValueType="40">7.3899999999999997</gnm:Cell>
+        <gnm:Cell Row="297" Col="5" ValueType="60">R2F</gnm:Cell>
+        <gnm:Cell Row="298" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="298" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="298" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="298" Col="3" ValueType="40">257.83199999999999</gnm:Cell>
+        <gnm:Cell Row="298" Col="4" ValueType="40">3.5600000000000001</gnm:Cell>
+        <gnm:Cell Row="298" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="299" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="299" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="299" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="299" Col="3" ValueType="40">282.00099999999998</gnm:Cell>
+        <gnm:Cell Row="299" Col="4" ValueType="40">2.7000000000000002</gnm:Cell>
+        <gnm:Cell Row="299" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="300" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="300" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="300" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="300" Col="3" ValueType="40">320.41899999999998</gnm:Cell>
+        <gnm:Cell Row="300" Col="4" ValueType="40">2.5</gnm:Cell>
+        <gnm:Cell Row="300" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="301" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="301" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="301" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="301" Col="3" ValueType="40">306.03399999999999</gnm:Cell>
+        <gnm:Cell Row="301" Col="4" ValueType="40">2.5800000000000001</gnm:Cell>
+        <gnm:Cell Row="301" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="302" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="302" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="302" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="302" Col="3" ValueType="40">272.34500000000003</gnm:Cell>
+        <gnm:Cell Row="302" Col="4" ValueType="40">3.1600000000000001</gnm:Cell>
+        <gnm:Cell Row="302" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="303" Col="0" ValueType="60">table IVee</gnm:Cell>
+        <gnm:Cell Row="303" Col="1" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="303" Col="2" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="303" Col="3" ValueType="40">233.559</gnm:Cell>
+        <gnm:Cell Row="303" Col="4" ValueType="40">4.6500000000000004</gnm:Cell>
+        <gnm:Cell Row="303" Col="5" ValueType="60">first wind-induced</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A195"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="0"/>
+</gnm:Workbook>

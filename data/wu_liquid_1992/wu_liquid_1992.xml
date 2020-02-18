@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2019-11-20T23:26:17Z</dc:date>
+      <meta:creation-date>2019-05-26T16:41:35Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">wu_liquid_1992.csv</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="1366" Height="494"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>wu_liquid_1992.csv</gnm:Name>
+      <gnm:MaxCol>25</gnm:MaxCol>
+      <gnm:MaxRow>52</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;wu_liquid_1992.csv&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="13" Unit="48.75"/>
+        <gnm:ColInfo No="17" Unit="96.75" Count="3"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5"/>
+        <gnm:RowInfo No="10" Unit="13.5"/>
+        <gnm:RowInfo No="48" Unit="13.5" Count="5"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="0" CursorRow="10">
+        <gnm:Selection startCol="0" startRow="10" endCol="0" endRow="10"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">key</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">alt key</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">x_i graph page fig</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">symbol</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">SMD_i graph page fig</gnm:Cell>
+        <gnm:Cell Row="0" Col="5" ValueType="60">table page fig</gnm:Cell>
+        <gnm:Cell Row="0" Col="6" ValueType="60">liquid</gnm:Cell>
+        <gnm:Cell Row="0" Col="7" ValueType="60">gas</gnm:Cell>
+        <gnm:Cell Row="0" Col="8" ValueType="60">L_0/d_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="9" ValueType="60">d (mm)</gnm:Cell>
+        <gnm:Cell Row="0" Col="10" ValueType="60">P_atm (atm)</gnm:Cell>
+        <gnm:Cell Row="0" Col="11" ValueType="60">rho_l/rho_g</gnm:Cell>
+        <gnm:Cell Row="0" Col="12" ValueType="60">rho_l</gnm:Cell>
+        <gnm:Cell Row="0" Col="13" ValueType="60">mu_l</gnm:Cell>
+        <gnm:Cell Row="0" Col="14" ValueType="60">sigma</gnm:Cell>
+        <gnm:Cell Row="0" Col="15" ValueType="60">rho_g</gnm:Cell>
+        <gnm:Cell Row="0" Col="16" ValueType="60">Ubar_0 (m/s)</gnm:Cell>
+        <gnm:Cell Row="0" Col="17" ValueType="60">We_l0</gnm:Cell>
+        <gnm:Cell Row="0" Col="18" ValueType="60">x_i/d_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="19" ValueType="60">D_{32,i}/d_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="20" ValueType="60">utilde_p/Ubar_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="21" ValueType="60">vtilde_p/Ubar_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="22" ValueType="60">D_{30,i}/D_{32,i}</gnm:Cell>
+        <gnm:Cell Row="0" Col="23" ValueType="60">e_p</gnm:Cell>
+        <gnm:Cell Row="0" Col="24" ValueType="60">regime photo</gnm:Cell>
+        <gnm:Cell Row="0" Col="25" ValueType="60">photo filename</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="1" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="1" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="1" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="1" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="1" Col="9" ValueType="40">9.5</gnm:Cell>
+        <gnm:Cell Row="1" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="1" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="1" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="1" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="1" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="1" Col="17" ValueType="40">58996.207627118602</gnm:Cell>
+        <gnm:Cell Row="1" Col="18" ValueType="40">1.1799999999999999</gnm:Cell>
+        <gnm:Cell Row="1" Col="19" ValueType="40">0.02052631578947</gnm:Cell>
+        <gnm:Cell Row="1" Col="20" ValueType="40">0.72999999999999998</gnm:Cell>
+        <gnm:Cell Row="1" Col="21" ValueType="40">0.050000000000000003</gnm:Cell>
+        <gnm:Cell Row="1" Col="23" ValueType="40">1.23</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="2" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="2" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="2" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="2" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="2" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="2" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="2" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="2" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="2" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="2" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="2" Col="17" ValueType="40">23071.819209039499</gnm:Cell>
+        <gnm:Cell Row="2" Col="18" ValueType="40">4.4874999999999998</gnm:Cell>
+        <gnm:Cell Row="2" Col="19" ValueType="40">0.05078125</gnm:Cell>
+        <gnm:Cell Row="2" Col="20" ValueType="40">0.72999999999999998</gnm:Cell>
+        <gnm:Cell Row="2" Col="21" ValueType="40">0.080000000000000002</gnm:Cell>
+        <gnm:Cell Row="2" Col="22" ValueType="40">1.04</gnm:Cell>
+        <gnm:Cell Row="2" Col="23" ValueType="40">1.48</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="3" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="3" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="3" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="3" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="3" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="3" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="3" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="3" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="3" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="3" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="3" Col="17" ValueType="40">32534.870056497199</gnm:Cell>
+        <gnm:Cell Row="3" Col="18" ValueType="40">2.4125000000000001</gnm:Cell>
+        <gnm:Cell Row="3" Col="19" ValueType="40">0.052187499999999998</gnm:Cell>
+        <gnm:Cell Row="3" Col="20" ValueType="40">0.68999999999999995</gnm:Cell>
+        <gnm:Cell Row="3" Col="21" ValueType="40">0.10000000000000001</gnm:Cell>
+        <gnm:Cell Row="3" Col="22" ValueType="40">1.1799999999999999</gnm:Cell>
+        <gnm:Cell Row="3" Col="23" ValueType="40">1.55</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="4" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="4" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="4" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="4" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="4" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="4" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="4" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="4" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="4" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="4" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="4" Col="17" ValueType="40">43620.158192090399</gnm:Cell>
+        <gnm:Cell Row="4" Col="18" ValueType="40">1.9750000000000001</gnm:Cell>
+        <gnm:Cell Row="4" Col="19" ValueType="40">0.024531250000000001</gnm:Cell>
+        <gnm:Cell Row="4" Col="20" ValueType="40">0.71999999999999997</gnm:Cell>
+        <gnm:Cell Row="4" Col="21" ValueType="40">0.059999999999999998</gnm:Cell>
+        <gnm:Cell Row="4" Col="22" ValueType="40">1.1200000000000001</gnm:Cell>
+        <gnm:Cell Row="4" Col="23" ValueType="40">1.1899999999999999</gnm:Cell>
+        <gnm:Cell Row="5" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="5" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="5" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="5" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="5" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="5" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="5" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="5" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="5" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="5" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="5" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="5" Col="17" ValueType="40">70657.446327683603</gnm:Cell>
+        <gnm:Cell Row="5" Col="18" ValueType="40">1.23</gnm:Cell>
+        <gnm:Cell Row="5" Col="19" ValueType="40">0.016718750000000001</gnm:Cell>
+        <gnm:Cell Row="5" Col="20" ValueType="40">0.66000000000000003</gnm:Cell>
+        <gnm:Cell Row="5" Col="21" ValueType="40">0.040000000000000001</gnm:Cell>
+        <gnm:Cell Row="5" Col="22" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="5" Col="23" ValueType="40">1.21</gnm:Cell>
+        <gnm:Cell Row="6" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="6" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="6" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="6" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="6" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="6" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="6" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="6" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="6" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="6" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="6" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="6" Col="17" ValueType="40">144198.87005649699</gnm:Cell>
+        <gnm:Cell Row="6" Col="18" ValueType="40">0.63</gnm:Cell>
+        <gnm:Cell Row="6" Col="19" ValueType="40">0.0121875</gnm:Cell>
+        <gnm:Cell Row="6" Col="20" ValueType="40">0.60999999999999999</gnm:Cell>
+        <gnm:Cell Row="6" Col="21" ValueType="40">0.089999999999999997</gnm:Cell>
+        <gnm:Cell Row="6" Col="22" ValueType="40">1.0700000000000001</gnm:Cell>
+        <gnm:Cell Row="6" Col="23" ValueType="40">1.1599999999999999</gnm:Cell>
+        <gnm:Cell Row="7" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="7" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="7" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="7" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="7" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="7" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="7" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="7" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="7" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="7" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="7" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="7" Col="17" ValueType="40">303178.12429378502</gnm:Cell>
+        <gnm:Cell Row="7" Col="18" ValueType="40">0.37</gnm:Cell>
+        <gnm:Cell Row="7" Col="19" ValueType="40">0.006875</gnm:Cell>
+        <gnm:Cell Row="7" Col="20" ValueType="40">0.51000000000000001</gnm:Cell>
+        <gnm:Cell Row="7" Col="21" ValueType="40">0.080000000000000002</gnm:Cell>
+        <gnm:Cell Row="7" Col="22" ValueType="40">1.0900000000000001</gnm:Cell>
+        <gnm:Cell Row="7" Col="23" ValueType="40">1.0900000000000001</gnm:Cell>
+        <gnm:Cell Row="8" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="8" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="8" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="8" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="8" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="8" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="8" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="8" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="8" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="8" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="8" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="8" Col="17" ValueType="40">591305.49152542395</gnm:Cell>
+        <gnm:Cell Row="8" Col="18" ValueType="40">0.27000000000000002</gnm:Cell>
+        <gnm:Cell Row="8" Col="19" ValueType="40">0.00390625</gnm:Cell>
+        <gnm:Cell Row="8" Col="20" ValueType="40">0.32000000000000001</gnm:Cell>
+        <gnm:Cell Row="8" Col="21" ValueType="40">0.040000000000000001</gnm:Cell>
+        <gnm:Cell Row="8" Col="22" ValueType="40">1.05</gnm:Cell>
+        <gnm:Cell Row="8" Col="23" ValueType="40">1.04</gnm:Cell>
+        <gnm:Cell Row="9" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="9" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="9" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="9" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="9" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="9" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="9" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="9" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="9" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="9" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="9" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="9" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="9" Col="17" ValueType="40">1070766.7344632801</gnm:Cell>
+        <gnm:Cell Row="9" Col="18" ValueType="40">0.20000000000000001</gnm:Cell>
+        <gnm:Cell Row="9" Col="19" ValueType="40">0.0026562500000000002</gnm:Cell>
+        <gnm:Cell Row="9" Col="20" ValueType="40">0.52000000000000002</gnm:Cell>
+        <gnm:Cell Row="9" Col="21" ValueType="40">0.12</gnm:Cell>
+        <gnm:Cell Row="9" Col="22" ValueType="40">1.0700000000000001</gnm:Cell>
+        <gnm:Cell Row="9" Col="23" ValueType="40">1.02</gnm:Cell>
+        <gnm:Cell Row="10" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="60">wu_effects_1995</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="10" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="10" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="10" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="10" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="10" Col="9" ValueType="40">3.6000000000000001</gnm:Cell>
+        <gnm:Cell Row="10" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="10" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="10" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="10" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="10" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="10" Col="17" ValueType="40">62101.271186440703</gnm:Cell>
+        <gnm:Cell Row="10" Col="18" ValueType="40">0.79000000000000004</gnm:Cell>
+        <gnm:Cell Row="10" Col="19" ValueType="40">0.017500000000000002</gnm:Cell>
+        <gnm:Cell Row="10" Col="20" ValueType="40">0.56999999999999995</gnm:Cell>
+        <gnm:Cell Row="10" Col="21" ValueType="40">0.11</gnm:Cell>
+        <gnm:Cell Row="10" Col="22" ValueType="40">1.0700000000000001</gnm:Cell>
+        <gnm:Cell Row="10" Col="23" ValueType="40">1.1799999999999999</gnm:Cell>
+        <gnm:Cell Row="10" Col="24" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="10" Col="25" ValueType="60">wu_effects_1995_fig_5c.jpg</gnm:Cell>
+        <gnm:Cell Row="11" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="11" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="11" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="11" Col="6" ValueType="60">glycerol 42%</gnm:Cell>
+        <gnm:Cell Row="11" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="11" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="11" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="11" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="11" Col="12" ValueType="40">1101</gnm:Cell>
+        <gnm:Cell Row="11" Col="13" ValueType="40">0.0034659999999999999</gnm:Cell>
+        <gnm:Cell Row="11" Col="14" ValueType="40">0.063</gnm:Cell>
+        <gnm:Cell Row="11" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="11" Col="17" ValueType="40">114531.96190476201</gnm:Cell>
+        <gnm:Cell Row="11" Col="18" ValueType="40">0.95999999999999996</gnm:Cell>
+        <gnm:Cell Row="11" Col="19" ValueType="40">0.0153125</gnm:Cell>
+        <gnm:Cell Row="11" Col="20" ValueType="40">0.60999999999999999</gnm:Cell>
+        <gnm:Cell Row="11" Col="21" ValueType="40">0.050000000000000003</gnm:Cell>
+        <gnm:Cell Row="11" Col="22" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="11" Col="23" ValueType="40">1.1799999999999999</gnm:Cell>
+        <gnm:Cell Row="12" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="12" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="12" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="12" Col="6" ValueType="60">glycerol 42%</gnm:Cell>
+        <gnm:Cell Row="12" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="12" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="12" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="12" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="12" Col="12" ValueType="40">1101</gnm:Cell>
+        <gnm:Cell Row="12" Col="13" ValueType="40">0.0034659999999999999</gnm:Cell>
+        <gnm:Cell Row="12" Col="14" ValueType="40">0.063</gnm:Cell>
+        <gnm:Cell Row="12" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="12" Col="17" ValueType="40">206806.24761904799</gnm:Cell>
+        <gnm:Cell Row="12" Col="18" ValueType="40">0.71999999999999997</gnm:Cell>
+        <gnm:Cell Row="12" Col="19" ValueType="40">0.010781249999999999</gnm:Cell>
+        <gnm:Cell Row="12" Col="20" ValueType="40">0.56999999999999995</gnm:Cell>
+        <gnm:Cell Row="12" Col="21" ValueType="40">0.059999999999999998</gnm:Cell>
+        <gnm:Cell Row="12" Col="22" ValueType="40">1.0800000000000001</gnm:Cell>
+        <gnm:Cell Row="12" Col="23" ValueType="40">1.0900000000000001</gnm:Cell>
+        <gnm:Cell Row="13" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="13" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="13" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="13" Col="6" ValueType="60">glycerol 42%</gnm:Cell>
+        <gnm:Cell Row="13" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="13" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="13" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="13" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="13" Col="12" ValueType="40">1101</gnm:Cell>
+        <gnm:Cell Row="13" Col="13" ValueType="40">0.0034659999999999999</gnm:Cell>
+        <gnm:Cell Row="13" Col="14" ValueType="40">0.063</gnm:Cell>
+        <gnm:Cell Row="13" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="13" Col="17" ValueType="40">363392.91428571398</gnm:Cell>
+        <gnm:Cell Row="13" Col="18" ValueType="40">0.57999999999999996</gnm:Cell>
+        <gnm:Cell Row="13" Col="19" ValueType="40">0.0074999999999999997</gnm:Cell>
+        <gnm:Cell Row="13" Col="20" ValueType="40">0.52000000000000002</gnm:Cell>
+        <gnm:Cell Row="13" Col="21" ValueType="40">0.080000000000000002</gnm:Cell>
+        <gnm:Cell Row="13" Col="22" ValueType="40">0.97999999999999998</gnm:Cell>
+        <gnm:Cell Row="13" Col="23" ValueType="40">1.1299999999999999</gnm:Cell>
+        <gnm:Cell Row="14" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="14" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="14" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="14" Col="6" ValueType="60">glycerol 42%</gnm:Cell>
+        <gnm:Cell Row="14" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="14" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="14" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="14" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="14" Col="12" ValueType="40">1101</gnm:Cell>
+        <gnm:Cell Row="14" Col="13" ValueType="40">0.0034659999999999999</gnm:Cell>
+        <gnm:Cell Row="14" Col="14" ValueType="40">0.063</gnm:Cell>
+        <gnm:Cell Row="14" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="14" Col="17" ValueType="40">698040.99047619104</gnm:Cell>
+        <gnm:Cell Row="14" Col="18" ValueType="40">0.37</gnm:Cell>
+        <gnm:Cell Row="14" Col="19" ValueType="40">0.0034375</gnm:Cell>
+        <gnm:Cell Row="14" Col="20" ValueType="40">0.46999999999999997</gnm:Cell>
+        <gnm:Cell Row="14" Col="21" ValueType="40">0.11</gnm:Cell>
+        <gnm:Cell Row="14" Col="22" ValueType="40">1.1699999999999999</gnm:Cell>
+        <gnm:Cell Row="14" Col="23" ValueType="40">1.05</gnm:Cell>
+        <gnm:Cell Row="15" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="15" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="15" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="15" Col="6" ValueType="60">glycerol 42%</gnm:Cell>
+        <gnm:Cell Row="15" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="15" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="15" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="15" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="15" Col="12" ValueType="40">1101</gnm:Cell>
+        <gnm:Cell Row="15" Col="13" ValueType="40">0.0034659999999999999</gnm:Cell>
+        <gnm:Cell Row="15" Col="14" ValueType="40">0.063</gnm:Cell>
+        <gnm:Cell Row="15" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="15" Col="17" ValueType="40">1096218.5142857099</gnm:Cell>
+        <gnm:Cell Row="15" Col="18" ValueType="40">0.23999999999999999</gnm:Cell>
+        <gnm:Cell Row="15" Col="19" ValueType="40">0.0028124999999999999</gnm:Cell>
+        <gnm:Cell Row="15" Col="20" ValueType="40">0.45000000000000001</gnm:Cell>
+        <gnm:Cell Row="15" Col="21" ValueType="40">0.10000000000000001</gnm:Cell>
+        <gnm:Cell Row="15" Col="22" ValueType="40">1.0600000000000001</gnm:Cell>
+        <gnm:Cell Row="15" Col="23" ValueType="40">1.02</gnm:Cell>
+        <gnm:Cell Row="16" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="16" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="16" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="16" Col="6" ValueType="60">n-heptane</gnm:Cell>
+        <gnm:Cell Row="16" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="16" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="16" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="16" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="16" Col="12" ValueType="40">683</gnm:Cell>
+        <gnm:Cell Row="16" Col="13" ValueType="40">0.000397</gnm:Cell>
+        <gnm:Cell Row="16" Col="14" ValueType="40">0.02</gnm:Cell>
+        <gnm:Cell Row="16" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="16" Col="17" ValueType="40">442584</gnm:Cell>
+        <gnm:Cell Row="16" Col="18" ValueType="40">0.42999999999999999</gnm:Cell>
+        <gnm:Cell Row="16" Col="19" ValueType="40">0.0098437500000000001</gnm:Cell>
+        <gnm:Cell Row="16" Col="20" ValueType="40">0.70999999999999996</gnm:Cell>
+        <gnm:Cell Row="16" Col="21" ValueType="40">0.040000000000000001</gnm:Cell>
+        <gnm:Cell Row="16" Col="22" ValueType="40">1.24</gnm:Cell>
+        <gnm:Cell Row="16" Col="23" ValueType="40">2.2400000000000002</gnm:Cell>
+        <gnm:Cell Row="17" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
+        <gnm:Cell Row="17" Col="5" ValueType="60">p. 137, tab. B.5</gnm:Cell>
+        <gnm:Cell Row="17" Col="6" ValueType="60">n-heptane</gnm:Cell>
+        <gnm:Cell Row="17" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="17" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="17" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="17" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="17" Col="12" ValueType="40">683</gnm:Cell>
+        <gnm:Cell Row="17" Col="13" ValueType="40">0.000397</gnm:Cell>
+        <gnm:Cell Row="17" Col="14" ValueType="40">0.02</gnm:Cell>
+        <gnm:Cell Row="17" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="17" Col="17" ValueType="40">1890325.4399999999</gnm:Cell>
+        <gnm:Cell Row="17" Col="18" ValueType="40">0.20000000000000001</gnm:Cell>
+        <gnm:Cell Row="17" Col="19" ValueType="40">0.0032812499999999999</gnm:Cell>
+        <gnm:Cell Row="17" Col="20" ValueType="40">0.40999999999999998</gnm:Cell>
+        <gnm:Cell Row="17" Col="21" ValueType="40">0.089999999999999997</gnm:Cell>
+        <gnm:Cell Row="17" Col="22" ValueType="40">1.0600000000000001</gnm:Cell>
+        <gnm:Cell Row="17" Col="23" ValueType="40">1.05</gnm:Cell>
+        <gnm:Cell Row="18" Col="0" ValueType="60">wu_effects_1995</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="18" Col="2" ValueType="60">p. 192, fig. 9</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ValueType="60">down white triangle</gnm:Cell>
+        <gnm:Cell Row="18" Col="4" ValueType="60">p. 191, fig. 8</gnm:Cell>
+        <gnm:Cell Row="18" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="18" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="18" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="18" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="18" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="18" Col="11" ValueType="40">867</gnm:Cell>
+        <gnm:Cell Row="18" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="18" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="18" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="18" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="18" Col="17" ValueType="40">83543.290876800005</gnm:Cell>
+        <gnm:Cell Row="18" Col="18" ValueType="40">0.79922333557625003</gnm:Cell>
+        <gnm:Cell Row="18" Col="19" ValueType="40">0.013447214439879999</gnm:Cell>
+        <gnm:Cell Row="19" Col="0" ValueType="60">wu_effects_1995</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="19" Col="2" ValueType="60">p. 192, fig. 9</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ValueType="60">down white triangle</gnm:Cell>
+        <gnm:Cell Row="19" Col="4" ValueType="60">p. 191, fig. 8</gnm:Cell>
+        <gnm:Cell Row="19" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="19" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="19" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="19" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="19" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="19" Col="11" ValueType="40">867</gnm:Cell>
+        <gnm:Cell Row="19" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="19" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="19" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="19" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="19" Col="17" ValueType="40">207989.4840928</gnm:Cell>
+        <gnm:Cell Row="19" Col="18" ValueType="40">0.43284992766875002</gnm:Cell>
+        <gnm:Cell Row="19" Col="19" ValueType="40">0.0076824151705099999</gnm:Cell>
+        <gnm:Cell Row="20" Col="0" ValueType="60">wu_effects_1995</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="20" Col="2" ValueType="60">p. 192, fig. 9</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ValueType="60">down white triangle</gnm:Cell>
+        <gnm:Cell Row="20" Col="4" ValueType="60">p. 191, fig. 8</gnm:Cell>
+        <gnm:Cell Row="20" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="20" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="20" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="20" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="20" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="20" Col="11" ValueType="40">867</gnm:Cell>
+        <gnm:Cell Row="20" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="20" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="20" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="20" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="20" Col="17" ValueType="40">390057.77066719998</gnm:Cell>
+        <gnm:Cell Row="20" Col="18" ValueType="40">0.28236208854625</gnm:Cell>
+        <gnm:Cell Row="20" Col="19" ValueType="40">0.0055837024375300004</gnm:Cell>
+        <gnm:Cell Row="21" Col="0" ValueType="60">wu_effects_1995</gnm:Cell>
+        <gnm:Cell Row="21" Col="1" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="21" Col="2" ValueType="60">p. 192, fig. 9</gnm:Cell>
+        <gnm:Cell Row="21" Col="3" ValueType="60">down white triangle with line</gnm:Cell>
+        <gnm:Cell Row="21" Col="4" ValueType="60">p. 191, fig. 8</gnm:Cell>
+        <gnm:Cell Row="21" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="21" Col="7" ValueType="60">helium</gnm:Cell>
+        <gnm:Cell Row="21" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="21" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="21" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="21" Col="11" ValueType="40">6230</gnm:Cell>
+        <gnm:Cell Row="21" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="21" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="21" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="21" Col="15" ValueType="40">0.16</gnm:Cell>
+        <gnm:Cell Row="21" Col="17" ValueType="40">73765.212261840003</gnm:Cell>
+        <gnm:Cell Row="21" Col="18" ValueType="40">0.78839870970375003</gnm:Cell>
+        <gnm:Cell Row="21" Col="19" ValueType="40">0.012733646515</gnm:Cell>
+        <gnm:Cell Row="22" Col="0" ValueType="60">wu_effects_1995</gnm:Cell>
+        <gnm:Cell Row="22" Col="1" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="22" Col="2" ValueType="60">p. 192, fig. 9</gnm:Cell>
+        <gnm:Cell Row="22" Col="3" ValueType="60">down white triangle with line</gnm:Cell>
+        <gnm:Cell Row="22" Col="4" ValueType="60">p. 191, fig. 8</gnm:Cell>
+        <gnm:Cell Row="22" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="22" Col="7" ValueType="60">helium</gnm:Cell>
+        <gnm:Cell Row="22" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="22" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="22" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="22" Col="11" ValueType="40">6230</gnm:Cell>
+        <gnm:Cell Row="22" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="22" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="22" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="22" Col="15" ValueType="40">0.16</gnm:Cell>
+        <gnm:Cell Row="22" Col="17" ValueType="40">186213.56891440001</gnm:Cell>
+        <gnm:Cell Row="22" Col="18" ValueType="40">0.45114222262124998</gnm:Cell>
+        <gnm:Cell Row="22" Col="19" ValueType="40">0.0068352138099300004</gnm:Cell>
+        <gnm:Cell Row="23" Col="0" ValueType="60">wu_effects_1995</gnm:Cell>
+        <gnm:Cell Row="23" Col="1" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="23" Col="2" ValueType="60">p. 192, fig. 9</gnm:Cell>
+        <gnm:Cell Row="23" Col="3" ValueType="60">down white triangle with line</gnm:Cell>
+        <gnm:Cell Row="23" Col="4" ValueType="60">p. 191, fig. 8</gnm:Cell>
+        <gnm:Cell Row="23" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="23" Col="7" ValueType="60">helium</gnm:Cell>
+        <gnm:Cell Row="23" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="23" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="23" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="23" Col="11" ValueType="40">6230</gnm:Cell>
+        <gnm:Cell Row="23" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="23" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="23" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="23" Col="15" ValueType="40">0.16</gnm:Cell>
+        <gnm:Cell Row="23" Col="17" ValueType="40">392712.84321279998</gnm:Cell>
+        <gnm:Cell Row="23" Col="18" ValueType="40">0.24775962942874999</gnm:Cell>
+        <gnm:Cell Row="23" Col="19" ValueType="40">0.0064505431200199996</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="24" Col="2" ValueType="60">p. 280, fig. 6</gnm:Cell>
+        <gnm:Cell Row="24" Col="3" ValueType="60">left half circle</gnm:Cell>
+        <gnm:Cell Row="24" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="24" Col="7" ValueType="60">freon 12</gnm:Cell>
+        <gnm:Cell Row="24" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="24" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="24" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="24" Col="11" ValueType="40">213</gnm:Cell>
+        <gnm:Cell Row="24" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="24" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="24" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="24" Col="15" ValueType="40">4.6799999999999997</gnm:Cell>
+        <gnm:Cell Row="24" Col="17" ValueType="40">72407.00377368</gnm:Cell>
+        <gnm:Cell Row="24" Col="18" ValueType="40">0.67767200000000005</gnm:Cell>
+        <gnm:Cell Row="24" Col="19" ValueType="40">0.012793000000000001</gnm:Cell>
+        <gnm:Cell Row="25" Col="0" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="25" Col="2" ValueType="60">p. 280, fig. 6</gnm:Cell>
+        <gnm:Cell Row="25" Col="3" ValueType="60">left half circle</gnm:Cell>
+        <gnm:Cell Row="25" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="25" Col="7" ValueType="60">freon 12</gnm:Cell>
+        <gnm:Cell Row="25" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="25" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="25" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="25" Col="11" ValueType="40">213</gnm:Cell>
+        <gnm:Cell Row="25" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="25" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="25" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="25" Col="15" ValueType="40">4.6799999999999997</gnm:Cell>
+        <gnm:Cell Row="25" Col="17" ValueType="40">194266.76247039999</gnm:Cell>
+        <gnm:Cell Row="25" Col="18" ValueType="40">0.44940380000000002</gnm:Cell>
+        <gnm:Cell Row="25" Col="19" ValueType="40">0.0062167999999999998</gnm:Cell>
+        <gnm:Cell Row="26" Col="0" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="26" Col="2" ValueType="60">p. 280, fig. 6</gnm:Cell>
+        <gnm:Cell Row="26" Col="3" ValueType="60">left half circle</gnm:Cell>
+        <gnm:Cell Row="26" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="26" Col="7" ValueType="60">freon 12</gnm:Cell>
+        <gnm:Cell Row="26" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="26" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="26" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="26" Col="11" ValueType="40">213</gnm:Cell>
+        <gnm:Cell Row="26" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="26" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="26" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="26" Col="15" ValueType="40">4.6799999999999997</gnm:Cell>
+        <gnm:Cell Row="26" Col="17" ValueType="40">387246.64890919998</gnm:Cell>
+        <gnm:Cell Row="26" Col="18" ValueType="40">0.2519091</gnm:Cell>
+        <gnm:Cell Row="26" Col="19" ValueType="40">0.0052228999999999999</gnm:Cell>
+        <gnm:Cell Row="27" Col="0" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="27" Col="2" ValueType="60">p. 280, fig. 6</gnm:Cell>
+        <gnm:Cell Row="27" Col="3" ValueType="60">black circle</gnm:Cell>
+        <gnm:Cell Row="27" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="27" Col="7" ValueType="60">freon 12</gnm:Cell>
+        <gnm:Cell Row="27" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="27" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="27" Col="10" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="27" Col="11" ValueType="40">104</gnm:Cell>
+        <gnm:Cell Row="27" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="27" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="27" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="27" Col="15" ValueType="40">9.6300000000000008</gnm:Cell>
+        <gnm:Cell Row="27" Col="17" ValueType="40">75504.590885519996</gnm:Cell>
+        <gnm:Cell Row="27" Col="18" ValueType="40">0.61519900000000005</gnm:Cell>
+        <gnm:Cell Row="27" Col="19" ValueType="40">0.016041</gnm:Cell>
+        <gnm:Cell Row="28" Col="0" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="28" Col="2" ValueType="60">p. 280, fig. 6</gnm:Cell>
+        <gnm:Cell Row="28" Col="3" ValueType="60">black circle</gnm:Cell>
+        <gnm:Cell Row="28" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="28" Col="7" ValueType="60">freon 12</gnm:Cell>
+        <gnm:Cell Row="28" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="28" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="28" Col="10" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="28" Col="11" ValueType="40">104</gnm:Cell>
+        <gnm:Cell Row="28" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="28" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="28" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="28" Col="15" ValueType="40">9.6300000000000008</gnm:Cell>
+        <gnm:Cell Row="28" Col="17" ValueType="40">198729.03707960001</gnm:Cell>
+        <gnm:Cell Row="28" Col="18" ValueType="40">0.41392879999999999</gnm:Cell>
+        <gnm:Cell Row="28" Col="19" ValueType="40">0.0089242000000000002</gnm:Cell>
+        <gnm:Cell Row="29" Col="0" ValueType="60">wu_aerodynamic_1993</gnm:Cell>
+        <gnm:Cell Row="29" Col="2" ValueType="60">p. 280, fig. 6</gnm:Cell>
+        <gnm:Cell Row="29" Col="3" ValueType="60">black circle</gnm:Cell>
+        <gnm:Cell Row="29" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="29" Col="7" ValueType="60">freon 12</gnm:Cell>
+        <gnm:Cell Row="29" Col="8" ValueType="40">121</gnm:Cell>
+        <gnm:Cell Row="29" Col="9" ValueType="40">6.2000000000000002</gnm:Cell>
+        <gnm:Cell Row="29" Col="10" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="29" Col="11" ValueType="40">104</gnm:Cell>
+        <gnm:Cell Row="29" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="29" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="29" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="29" Col="15" ValueType="40">9.6300000000000008</gnm:Cell>
+        <gnm:Cell Row="29" Col="17" ValueType="40">400067.39916079998</gnm:Cell>
+        <gnm:Cell Row="29" Col="18" ValueType="40">0.3483253</gnm:Cell>
+        <gnm:Cell Row="29" Col="19" ValueType="40">0.0059509000000000003</gnm:Cell>
+        <gnm:Cell Row="30" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="30" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="30" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="30" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="30" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="30" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="30" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="30" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="30" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="30" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="30" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="30" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="30" Col="17" ValueType="40">7230.1600473799999</gnm:Cell>
+        <gnm:Cell Row="30" Col="18" ValueType="40">17.1234288512</gnm:Cell>
+        <gnm:Cell Row="31" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="31" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="31" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="31" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="31" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="31" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="31" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="31" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="31" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="31" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="31" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="31" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="31" Col="17" ValueType="40">9100.5382846600005</gnm:Cell>
+        <gnm:Cell Row="31" Col="18" ValueType="40">8.9881012005900001</gnm:Cell>
+        <gnm:Cell Row="32" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="32" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="32" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="32" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="32" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="32" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="32" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="32" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="32" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="32" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="32" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="32" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="32" Col="17" ValueType="40">11476.520737999999</gnm:Cell>
+        <gnm:Cell Row="32" Col="18" ValueType="40">6.43991757579</gnm:Cell>
+        <gnm:Cell Row="33" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="33" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="33" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="33" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="33" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="33" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="33" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="33" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="33" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="33" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="33" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="33" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="33" Col="17" ValueType="40">15521.135913300001</gnm:Cell>
+        <gnm:Cell Row="33" Col="18" ValueType="40">4.4135458722000003</gnm:Cell>
+        <gnm:Cell Row="34" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="34" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="34" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="34" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="34" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="34" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="34" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="34" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="34" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="34" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="34" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="34" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="34" Col="17" ValueType="40">73679.165207099999</gnm:Cell>
+        <gnm:Cell Row="34" Col="18" ValueType="40">0.81507375859700004</gnm:Cell>
+        <gnm:Cell Row="35" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="35" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="35" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="35" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="35" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="35" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="35" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="35" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="35" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="35" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="35" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="35" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="35" Col="17" ValueType="40">78983.8351654</gnm:Cell>
+        <gnm:Cell Row="35" Col="18" ValueType="40">0.72934727207600003</gnm:Cell>
+        <gnm:Cell Row="36" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="36" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="36" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="36" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="36" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="36" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="36" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="36" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="36" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="36" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="36" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="36" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="36" Col="17" ValueType="40">182801.31426700001</gnm:Cell>
+        <gnm:Cell Row="36" Col="18" ValueType="40">0.427832853565</gnm:Cell>
+        <gnm:Cell Row="37" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="37" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="37" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="37" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="37" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="37" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="37" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="37" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="37" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="37" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="37" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="37" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="37" Col="17" ValueType="40">187256.19710600001</gnm:Cell>
+        <gnm:Cell Row="37" Col="18" ValueType="40">0.47811974536399998</gnm:Cell>
+        <gnm:Cell Row="38" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="38" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="38" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="38" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="38" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="38" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="38" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="38" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="38" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="38" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="38" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="38" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="38" Col="17" ValueType="40">351229.06783499999</gnm:Cell>
+        <gnm:Cell Row="38" Col="18" ValueType="40">0.299801621086</gnm:Cell>
+        <gnm:Cell Row="39" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="39" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="39" Col="3" ValueType="60">left half-dark circle</gnm:Cell>
+        <gnm:Cell Row="39" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="39" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="39" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="39" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="39" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="39" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="39" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="39" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="39" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="39" Col="17" ValueType="40">367658.660171</gnm:Cell>
+        <gnm:Cell Row="39" Col="18" ValueType="40">0.250965428401</gnm:Cell>
+        <gnm:Cell Row="40" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="40" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="40" Col="3" ValueType="60">left half-dark triangle</gnm:Cell>
+        <gnm:Cell Row="40" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="40" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="40" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="40" Col="9" ValueType="40">3.1000000000000001</gnm:Cell>
+        <gnm:Cell Row="40" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="40" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="40" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="40" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="40" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="40" Col="17" ValueType="40">5946.7849763200002</gnm:Cell>
+        <gnm:Cell Row="40" Col="18" ValueType="40">14.924955450500001</gnm:Cell>
+        <gnm:Cell Row="41" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="41" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="41" Col="3" ValueType="60">left half-dark triangle</gnm:Cell>
+        <gnm:Cell Row="41" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="41" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="41" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="41" Col="9" ValueType="40">3.1000000000000001</gnm:Cell>
+        <gnm:Cell Row="41" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="41" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="41" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="41" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="41" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="41" Col="17" ValueType="40">7677.7902542399997</gnm:Cell>
+        <gnm:Cell Row="41" Col="18" ValueType="40">10.2249651331</gnm:Cell>
+        <gnm:Cell Row="42" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="42" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="42" Col="3" ValueType="60">left half-dark triangle</gnm:Cell>
+        <gnm:Cell Row="42" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="42" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="42" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="42" Col="9" ValueType="40">3.1000000000000001</gnm:Cell>
+        <gnm:Cell Row="42" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="42" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="42" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="42" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="42" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="42" Col="17" ValueType="40">9903.7004071400006</gnm:Cell>
+        <gnm:Cell Row="42" Col="18" ValueType="40">5.8629466459200001</gnm:Cell>
+        <gnm:Cell Row="43" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="43" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="43" Col="3" ValueType="60">left half-dark triangle</gnm:Cell>
+        <gnm:Cell Row="43" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="43" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="43" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="43" Col="9" ValueType="40">3.1000000000000001</gnm:Cell>
+        <gnm:Cell Row="43" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="43" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="43" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="43" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="43" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="43" Col="17" ValueType="40">17745.041516099998</gnm:Cell>
+        <gnm:Cell Row="43" Col="18" ValueType="40">4.1070176575700001</gnm:Cell>
+        <gnm:Cell Row="44" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="44" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="44" Col="3" ValueType="60">left half-dark triangle</gnm:Cell>
+        <gnm:Cell Row="44" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="44" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="44" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="44" Col="9" ValueType="40">3.1000000000000001</gnm:Cell>
+        <gnm:Cell Row="44" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="44" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="44" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="44" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="44" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="44" Col="17" ValueType="40">28937.4771435</gnm:Cell>
+        <gnm:Cell Row="44" Col="18" ValueType="40">2.5741154384699998</gnm:Cell>
+        <gnm:Cell Row="45" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="45" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="45" Col="3" ValueType="60">down half-dark triangle with line</gnm:Cell>
+        <gnm:Cell Row="45" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="45" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="45" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="45" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="45" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="45" Col="12" ValueType="40">1044</gnm:Cell>
+        <gnm:Cell Row="45" Col="13" ValueType="40">0.0015900000000000001</gnm:Cell>
+        <gnm:Cell Row="45" Col="14" ValueType="40">0.064299999999999996</gnm:Cell>
+        <gnm:Cell Row="45" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="45" Col="17" ValueType="40">7872.0196772500003</gnm:Cell>
+        <gnm:Cell Row="45" Col="18" ValueType="40">13.9613539086</gnm:Cell>
+        <gnm:Cell Row="46" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="46" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="46" Col="3" ValueType="60">down half-dark triangle with line</gnm:Cell>
+        <gnm:Cell Row="46" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="46" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="46" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="46" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="46" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="46" Col="12" ValueType="40">1044</gnm:Cell>
+        <gnm:Cell Row="46" Col="13" ValueType="40">0.0015900000000000001</gnm:Cell>
+        <gnm:Cell Row="46" Col="14" ValueType="40">0.064299999999999996</gnm:Cell>
+        <gnm:Cell Row="46" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="46" Col="17" ValueType="40">9910.4200513899996</gnm:Cell>
+        <gnm:Cell Row="46" Col="18" ValueType="40">6.7001875035099996</gnm:Cell>
+        <gnm:Cell Row="47" Col="0" ValueType="60">wu_onset_1995</gnm:Cell>
+        <gnm:Cell Row="47" Col="2" ValueType="60">p. 2917, fig. 5</gnm:Cell>
+        <gnm:Cell Row="47" Col="3" ValueType="60">down half-dark triangle with line</gnm:Cell>
+        <gnm:Cell Row="47" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="47" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="47" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="47" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="47" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="47" Col="12" ValueType="40">1044</gnm:Cell>
+        <gnm:Cell Row="47" Col="13" ValueType="40">0.0015900000000000001</gnm:Cell>
+        <gnm:Cell Row="47" Col="14" ValueType="40">0.064299999999999996</gnm:Cell>
+        <gnm:Cell Row="47" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="47" Col="17" ValueType="40">12527.5274408</gnm:Cell>
+        <gnm:Cell Row="47" Col="18" ValueType="40">7.1626291156899997</gnm:Cell>
+        <gnm:Cell Row="48" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="48" Col="2" ValueType="60">p. 68, fig. 4.2</gnm:Cell>
+        <gnm:Cell Row="48" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="48" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="48" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="48" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="48" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="48" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="48" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="48" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="48" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="48" Col="16" ValueType="40">19</gnm:Cell>
+        <gnm:Cell Row="48" Col="24" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="48" Col="25" ValueType="60">wu_liquid_1992_fig_4_2a.jpg</gnm:Cell>
+        <gnm:Cell Row="49" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="49" Col="2" ValueType="60">p. 68, fig. 4.2</gnm:Cell>
+        <gnm:Cell Row="49" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="49" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="49" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="49" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="49" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="49" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="49" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="49" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="49" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="49" Col="16" ValueType="40">28</gnm:Cell>
+        <gnm:Cell Row="49" Col="24" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="49" Col="25" ValueType="60">wu_liquid_1992_fig_4_2b.jpg</gnm:Cell>
+        <gnm:Cell Row="50" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="50" Col="2" ValueType="60">p. 68, fig. 4.2</gnm:Cell>
+        <gnm:Cell Row="50" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="50" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="50" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="50" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="50" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="50" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="50" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="50" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="50" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="50" Col="16" ValueType="40">40</gnm:Cell>
+        <gnm:Cell Row="50" Col="24" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="50" Col="25" ValueType="60">wu_liquid_1992_fig_4_2c.jpg</gnm:Cell>
+        <gnm:Cell Row="51" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="51" Col="2" ValueType="60">p. 68, fig. 4.2</gnm:Cell>
+        <gnm:Cell Row="51" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="51" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="51" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="51" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="51" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="51" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="51" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="51" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="51" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="51" Col="16" ValueType="40">58</gnm:Cell>
+        <gnm:Cell Row="51" Col="24" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="51" Col="25" ValueType="60">wu_liquid_1992_fig_4_2d.jpg</gnm:Cell>
+        <gnm:Cell Row="52" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
+        <gnm:Cell Row="52" Col="2" ValueType="60">p. 68, fig. 4.2</gnm:Cell>
+        <gnm:Cell Row="52" Col="6" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="52" Col="7" ValueType="60">air</gnm:Cell>
+        <gnm:Cell Row="52" Col="8" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="52" Col="9" ValueType="40">6.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="52" Col="10" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="52" Col="12" ValueType="40">997</gnm:Cell>
+        <gnm:Cell Row="52" Col="13" ValueType="40">0.00089400000000000005</gnm:Cell>
+        <gnm:Cell Row="52" Col="14" ValueType="40">0.070800000000000002</gnm:Cell>
+        <gnm:Cell Row="52" Col="15" ValueType="40">1.1499999999999999</gnm:Cell>
+        <gnm:Cell Row="52" Col="16" ValueType="40">81</gnm:Cell>
+        <gnm:Cell Row="52" Col="24" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="52" Col="25" ValueType="60">wu_liquid_1992_fig_4_2e.jpg</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A2">
+        <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="A2"/>
+      </gnm:SheetLayout>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="0"/>
+</gnm:Workbook>

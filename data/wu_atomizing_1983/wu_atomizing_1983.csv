@@ -1,0 +1,2 @@
+series,data,nozzle,"P_g (MPa)","rho_g (kg/m^3)",liquid,"dP (MPa)",K,"V_ideal (m/s)","Vbar_inj (m/s)",C_D,Re_l0,We_l0,"theta (deg.)",rho_g/rho_l
+54,4,330-50,2,23,n-hexane,11,5.5,182,139,0.76,95000,230000,11,0.0346

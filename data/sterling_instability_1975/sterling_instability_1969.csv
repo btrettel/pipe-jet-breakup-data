@@ -1,0 +1,107 @@
+liquid,"surface tension (dynes/cm)","density (g/cc)","viscosity (cp)","d_0 (cm)",L_0/d_0,"Ubar_0 (cm/s)","xbavg (cm)","corrected for contraction",table,page,"regime L_b"
+water,72.3,0.997,0.93,0.238,0.25,140,27,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,150,30,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,200,43,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,276,49,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,303,61,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,346,70,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,438,83,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,460,90,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,500,110,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,585,123,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,720,152,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,760,155,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,779,163,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,0.25,810,164,,IV,99,R2F
+water,72.3,0.997,0.93,0.238,0.25,821,166,,IV,99,R2F
+water,72.3,0.997,0.93,0.238,0.25,858,168,,IV,99,R2F
+water,72.3,0.997,0.93,0.238,0.25,882,163,,IV,99,R2F
+water,72.3,0.997,0.93,0.238,0.25,900,160,,IV,99,R2F
+water,72.3,0.997,0.93,0.238,0.25,930,150,,IV,99,R2F
+water,72.3,0.997,0.93,0.238,96,37,9,TRUE,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.238,96,49,12,TRUE,IV,99,R2F
+water,72.3,0.997,0.93,0.238,96,63,15,TRUE,IV,99,R2F
+water,72.3,0.997,0.93,0.238,96,81,18,TRUE,IV,99,R2F
+water,72.3,0.997,0.93,0.238,96,106,19,TRUE,IV,99,R2F
+water,72.3,0.997,0.93,0.238,96,119,18,TRUE,IV,99,R2F
+water,72.3,0.997,0.93,0.238,96,150,14,TRUE,IV,99,"first wind-induced"
+water,72.3,0.997,0.93,0.238,96,201,14,TRUE,IV,99,"first wind-induced"
+water,72.3,0.997,0.93,0.238,96,246,7,TRUE,IV,99,"first wind-induced"
+water,72.3,0.997,0.93,0.167,0.25,364,43,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.167,0.25,566,70,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.167,0.25,730,92,,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.167,0.25,850,106,,IV,99,R2F
+water,72.3,0.997,0.93,0.167,0.25,947,113,,IV,99,R2F
+water,72.3,0.997,0.93,0.167,0.25,1000,107,,IV,99,R2F
+water,72.3,0.997,0.93,0.167,0.25,1050,107,,IV,99,R2F
+water,72.3,0.997,0.93,0.167,0.25,1248,100,,IV,99,R2F
+water,72.3,0.997,0.93,0.16,49,95,12,TRUE,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.16,49,109,14,TRUE,IV,99,Rayleigh
+water,72.3,0.997,0.93,0.16,49,157,16,TRUE,IV,99,R2F
+water,72.3,0.997,0.93,0.16,49,200,17,TRUE,IV,99,R2F
+water,72.3,0.997,0.93,0.16,49,260,13,TRUE,IV,99,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,200,69,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,275,92,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,298,101,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,372,118,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,400,126,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,405,128,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,481,140,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,560,175,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,667,182,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,742,197,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,770,195,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,820,197,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,850,175,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,0.25,858,172,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,106,61,TRUE,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,185,73,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,188,77,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,216,79,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,268,93,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,291,90,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,300,80,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.238,96,329,50,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,311,57,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,378,69,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,438,79,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,538,96,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,599,110,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,685,116,,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,751,127,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,810,135,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,823,132,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,971,142,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,1066,140,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,1200,148,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,1258,137,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,1361,142,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.167,0.25,1430,136,,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.16,49,71,19,TRUE,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.16,49,192,37,TRUE,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.16,49,249,47,TRUE,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.16,49,286,49,TRUE,V,100,Rayleigh
+"isopropyl alcohol",21.7,0.784,2.13,0.16,49,353,58,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.16,49,380,64,TRUE,V,100,R2F
+"isopropyl alcohol",21.7,0.784,2.13,0.16,49,414,33,TRUE,V,100,R2F
+"mineral oil",29.4,0.868,31,0.167,0.25,375,76,,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.167,0.25,600,117,,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.167,0.25,803,137,,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.167,0.25,1010,153,,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.167,0.25,1140,156,,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.167,0.25,1240,163,,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.167,0.25,1330,157,,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.167,0.25,1450,156,,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.16,49,542,85,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,607,89,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,666,98,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,693,101,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,780,111,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,806,112,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,858,115,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,866,117,TRUE,VI,101,Rayleigh
+"mineral oil",29.4,0.868,31,0.16,49,1114,130,TRUE,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.16,49,1341,143,TRUE,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.16,49,1425,145,TRUE,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.16,49,1533,146,TRUE,VI,101,R2F
+"mineral oil",29.4,0.868,31,0.16,49,1645,143,TRUE,VI,101,R2F

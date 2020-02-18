@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2019-10-06T22:35:28Z</dc:date>
+      <meta:creation-date>2019-05-26T01:21:42Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet1</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="1366" Height="494"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet1</gnm:Name>
+      <gnm:MaxCol>15</gnm:MaxCol>
+      <gnm:MaxRow>10</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet1&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="9" Unit="62.25"/>
+        <gnm:ColInfo No="13" Unit="96.75" Count="3"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="11"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="10" CursorRow="3">
+        <gnm:Selection startCol="10" startRow="3" endCol="10" endRow="3"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">fluid</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">nu_l (m^2/s)</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">sigma (mN/mm)</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">rho_g/rho_l</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">We (r)</gnm:Cell>
+        <gnm:Cell Row="0" Col="5" ValueType="60">Re (r)</gnm:Cell>
+        <gnm:Cell Row="0" Col="6" ValueType="60">Re' (r)</gnm:Cell>
+        <gnm:Cell Row="0" Col="7" ValueType="60">B</gnm:Cell>
+        <gnm:Cell Row="0" Col="8" ValueType="60">Z (r)</gnm:Cell>
+        <gnm:Cell Row="0" Col="9" ValueType="60">page fig</gnm:Cell>
+        <gnm:Cell Row="0" Col="10" ValueType="60">regime</gnm:Cell>
+        <gnm:Cell Row="0" Col="11" ValueType="60">photo filename</gnm:Cell>
+        <gnm:Cell Row="0" Col="12" ValueType="60">photo page fig</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">Dow 1 cs</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="40">17.5</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ValueType="40">0.0014</gnm:Cell>
+        <gnm:Cell Row="1" Col="4" ValueType="40">40</gnm:Cell>
+        <gnm:Cell Row="1" Col="9" ValueType="60">p. 33, tab. III</gnm:Cell>
+        <gnm:Cell Row="1" Col="10" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="1" Col="11" ValueType="60">betchov_breakup_1955_fig_19d.png</gnm:Cell>
+        <gnm:Cell Row="1" Col="12" ValueType="60">fig. 19</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="60">Dow 1 cs</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="40">17.5</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ValueType="40">0.014</gnm:Cell>
+        <gnm:Cell Row="2" Col="4" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="2" Col="9" ValueType="60">p. 33, tab. III</gnm:Cell>
+        <gnm:Cell Row="2" Col="10" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="2" Col="11" ValueType="60">betchov_breakup_1955_fig_19c.png</gnm:Cell>
+        <gnm:Cell Row="2" Col="12" ValueType="60">fig. 19</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="60">Dow 1 cs</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="40">17.5</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ValueType="40">0.014</gnm:Cell>
+        <gnm:Cell Row="3" Col="4" ValueType="40">100</gnm:Cell>
+        <gnm:Cell Row="3" Col="9" ValueType="60">p. 33, tab. III</gnm:Cell>
+        <gnm:Cell Row="3" Col="10" ValueType="60">atomization</gnm:Cell>
+        <gnm:Cell Row="3" Col="11" ValueType="60">betchov_breakup_1955_fig_19b.png</gnm:Cell>
+        <gnm:Cell Row="3" Col="12" ValueType="60">fig. 19</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="60">Dow 1 cs</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="40">17.5</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ValueType="40">0.014</gnm:Cell>
+        <gnm:Cell Row="4" Col="4" ValueType="40">700</gnm:Cell>
+        <gnm:Cell Row="4" Col="9" ValueType="60">p. 33, tab. III</gnm:Cell>
+        <gnm:Cell Row="4" Col="10" ValueType="60">atomization</gnm:Cell>
+        <gnm:Cell Row="4" Col="11" ValueType="60">betchov_breakup_1955_fig_19a.png</gnm:Cell>
+        <gnm:Cell Row="4" Col="12" ValueType="60">fig. 19</gnm:Cell>
+        <gnm:Cell Row="5" Col="0" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="40">74</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ValueType="40">0.0035999999999999999</gnm:Cell>
+        <gnm:Cell Row="5" Col="4" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="5" Col="5" ValueType="40">15000</gnm:Cell>
+        <gnm:Cell Row="5" Col="6" ValueType="40">3000</gnm:Cell>
+        <gnm:Cell Row="5" Col="7" ValueType="40">6.7000000000000002</gnm:Cell>
+        <gnm:Cell Row="5" Col="8" ValueType="40">0.0082000000000000007</gnm:Cell>
+        <gnm:Cell Row="5" Col="9" ValueType="60">p. 36, tab. V</gnm:Cell>
+        <gnm:Cell Row="6" Col="0" ValueType="60">water</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="40">74</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ValueType="40">0.012</gnm:Cell>
+        <gnm:Cell Row="6" Col="4" ValueType="40">70</gnm:Cell>
+        <gnm:Cell Row="6" Col="5" ValueType="40">10000</gnm:Cell>
+        <gnm:Cell Row="6" Col="6" ValueType="40">5000</gnm:Cell>
+        <gnm:Cell Row="6" Col="7" ValueType="40">9.4000000000000004</gnm:Cell>
+        <gnm:Cell Row="6" Col="8" ValueType="40">0.0082000000000000007</gnm:Cell>
+        <gnm:Cell Row="6" Col="9" ValueType="60">p. 36, tab. V</gnm:Cell>
+        <gnm:Cell Row="7" Col="0" ValueType="60">unknown</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ValueType="40">0.00069999999999999999</gnm:Cell>
+        <gnm:Cell Row="7" Col="4" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="7" Col="5" ValueType="40">15000</gnm:Cell>
+        <gnm:Cell Row="7" Col="6" ValueType="40">500</gnm:Cell>
+        <gnm:Cell Row="7" Col="7" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="7" Col="9" ValueType="60">p. 36, tab. V</gnm:Cell>
+        <gnm:Cell Row="8" Col="0" ValueType="60">unknown</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="8" Col="3" ValueType="40">0.0014</gnm:Cell>
+        <gnm:Cell Row="8" Col="4" ValueType="40">28</gnm:Cell>
+        <gnm:Cell Row="8" Col="5" ValueType="40">10000</gnm:Cell>
+        <gnm:Cell Row="8" Col="6" ValueType="40">700</gnm:Cell>
+        <gnm:Cell Row="8" Col="7" ValueType="40">4.0999999999999996</gnm:Cell>
+        <gnm:Cell Row="8" Col="9" ValueType="60">p. 36, tab. V</gnm:Cell>
+        <gnm:Cell Row="9" Col="0" ValueType="60">unknown</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="9" Col="2" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="9" Col="3" ValueType="40">0.0070000000000000001</gnm:Cell>
+        <gnm:Cell Row="9" Col="4" ValueType="40">40</gnm:Cell>
+        <gnm:Cell Row="9" Col="5" ValueType="40">5000</gnm:Cell>
+        <gnm:Cell Row="9" Col="6" ValueType="40">1800</gnm:Cell>
+        <gnm:Cell Row="9" Col="7" ValueType="40">5.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="9" Col="9" ValueType="60">p. 36, tab. V</gnm:Cell>
+        <gnm:Cell Row="10" Col="0" ValueType="60">unknown</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="40">9.9999999999999995e-07</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="10" Col="3" ValueType="40">0.014</gnm:Cell>
+        <gnm:Cell Row="10" Col="4" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="10" Col="5" ValueType="40">3000</gnm:Cell>
+        <gnm:Cell Row="10" Col="6" ValueType="40">3000</gnm:Cell>
+        <gnm:Cell Row="10" Col="7" ValueType="40">7.2999999999999998</gnm:Cell>
+        <gnm:Cell Row="10" Col="9" ValueType="60">p. 36, tab. V</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="0"/>
+</gnm:Workbook>

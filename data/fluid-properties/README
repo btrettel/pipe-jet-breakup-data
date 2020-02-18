@@ -1,0 +1,13 @@
+All data from http://webbook.nist.gov/.
+
+water:            http://webbook.nist.gov/cgi/inchi/InChI%3D1S/H2O/h1H2
+
+Instructions:
+
+1. Go to: http://webbook.nist.gov/chemistry/name-ser.html
+
+2. Type in name of chemical species desired. Check off "Condensed phase" and "Phase change" under "Thermodynamic Data".
+
+3. Click on "Fluid Properties" under "Other data available:".
+
+4. TODO: Add remaining steps later.

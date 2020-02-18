@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="35" Full="1.12.35"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2020-02-13T18:56:34Z</dc:date>
+      <meta:creation-date>2017-03-31T08:15:36Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">raw data</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">pipe thickness estimate</gnm:SheetName>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">removed</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="1366" Height="464"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>raw data</gnm:Name>
+      <gnm:MaxCol>18</gnm:MaxCol>
+      <gnm:MaxRow>82</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;raw data&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_NONE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="7" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="8" startRow="0" endCol="255" endRow="2">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="8" startRow="3" endCol="11" endRow="36">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="8" startRow="37" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="12" startRow="3" endCol="12" endRow="36">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="13" startRow="3" endCol="255" endRow="36">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="1" Unit="42"/>
+        <gnm:ColInfo No="7" Unit="78.75"/>
+        <gnm:ColInfo No="18" Unit="162"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="83"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="12" CursorRow="37">
+        <gnm:Selection startCol="12" startRow="37" endCol="12" endRow="37"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">page</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">page fig</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">tube</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">d_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">L_0/d_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="5" ValueType="60">dP</gnm:Cell>
+        <gnm:Cell Row="0" Col="6" ValueType="60">Q</gnm:Cell>
+        <gnm:Cell Row="0" Col="7" ValueType="60">Re_l0</gnm:Cell>
+        <gnm:Cell Row="0" Col="8" ValueType="60">Ubar_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="9" ValueType="60">f</gnm:Cell>
+        <gnm:Cell Row="0" Col="10" ValueType="60">trip</gnm:Cell>
+        <gnm:Cell Row="0" Col="11" ValueType="60">x_i</gnm:Cell>
+        <gnm:Cell Row="0" Col="12" ValueType="60">x_trans</gnm:Cell>
+        <gnm:Cell Row="0" Col="13" ValueType="60">P_atm</gnm:Cell>
+        <gnm:Cell Row="0" Col="14" ValueType="60">transcription method</gnm:Cell>
+        <gnm:Cell Row="0" Col="15" ValueType="60">regime turb</gnm:Cell>
+        <gnm:Cell Row="0" Col="16" ValueType="60">regime photo</gnm:Cell>
+        <gnm:Cell Row="0" Col="17" ValueType="60">photo page fig</gnm:Cell>
+        <gnm:Cell Row="0" Col="18" ValueType="60">photo filename</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ValueType="60">m</gnm:Cell>
+        <gnm:Cell Row="1" Col="5" ValueType="60">psi</gnm:Cell>
+        <gnm:Cell Row="1" Col="6" ValueType="60">g/min</gnm:Cell>
+        <gnm:Cell Row="1" Col="8" ValueType="60">m/s</gnm:Cell>
+        <gnm:Cell Row="1" Col="11" ValueType="60">m</gnm:Cell>
+        <gnm:Cell Row="1" Col="12" ValueType="60">m</gnm:Cell>
+        <gnm:Cell Row="1" Col="13" ValueType="60">mm Hg</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="2" Col="4" ValueType="40">360</gnm:Cell>
+        <gnm:Cell Row="2" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="2" Col="6" ValueType="40">57</gnm:Cell>
+        <gnm:Cell Row="2" Col="7" ValueType="40">2291</gnm:Cell>
+        <gnm:Cell Row="2" Col="8" ValueType="40">4.8399999999999999</gnm:Cell>
+        <gnm:Cell Row="2" Col="9" ValueType="40">0.0037000000000000002</gnm:Cell>
+        <gnm:Cell Row="2" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="2" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="3" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="3" Col="4" ValueType="40">360</gnm:Cell>
+        <gnm:Cell Row="3" Col="5" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="3" Col="6" ValueType="40">117</gnm:Cell>
+        <gnm:Cell Row="3" Col="7" ValueType="40">4703</gnm:Cell>
+        <gnm:Cell Row="3" Col="8" ValueType="40">9.9399999999999995</gnm:Cell>
+        <gnm:Cell Row="3" Col="9" ValueType="40">0.0022000000000000001</gnm:Cell>
+        <gnm:Cell Row="3" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="3" Col="11" ValueType="40">0.01</gnm:Cell>
+        <gnm:Cell Row="3" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="3" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="3" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="3" Col="17" ValueType="60">fig. 7</gnm:Cell>
+        <gnm:Cell Row="3" Col="18" ValueType="60">eisenklam_flow_1958_fig_7a.jpg</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="4" Col="4" ValueType="40">360</gnm:Cell>
+        <gnm:Cell Row="4" Col="5" ValueType="40">80</gnm:Cell>
+        <gnm:Cell Row="4" Col="6" ValueType="40">164</gnm:Cell>
+        <gnm:Cell Row="4" Col="7" ValueType="40">6592</gnm:Cell>
+        <gnm:Cell Row="4" Col="8" ValueType="40">13.94</gnm:Cell>
+        <gnm:Cell Row="4" Col="9" ValueType="40">0.0018</gnm:Cell>
+        <gnm:Cell Row="4" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="4" Col="11" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="4" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="4" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="4" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="4" Col="17" ValueType="60">fig. 7</gnm:Cell>
+        <gnm:Cell Row="4" Col="18" ValueType="60">eisenklam_flow_1958_fig_7b.jpg</gnm:Cell>
+        <gnm:Cell Row="5" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="5" Col="4" ValueType="40">360</gnm:Cell>
+        <gnm:Cell Row="5" Col="5" ValueType="40">110</gnm:Cell>
+        <gnm:Cell Row="5" Col="6" ValueType="40">202</gnm:Cell>
+        <gnm:Cell Row="5" Col="7" ValueType="40">8120</gnm:Cell>
+        <gnm:Cell Row="5" Col="8" ValueType="40">17.170000000000002</gnm:Cell>
+        <gnm:Cell Row="5" Col="9" ValueType="40">0.0016000000000000001</gnm:Cell>
+        <gnm:Cell Row="5" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="5" Col="11" ValueType="40">0.0094999999999999998</gnm:Cell>
+        <gnm:Cell Row="5" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="5" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="5" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="5" Col="17" ValueType="60">fig. 7</gnm:Cell>
+        <gnm:Cell Row="5" Col="18" ValueType="60">eisenklam_flow_1958_fig_7c.jpg</gnm:Cell>
+        <gnm:Cell Row="6" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="6" Col="4" ValueType="40">360</gnm:Cell>
+        <gnm:Cell Row="6" Col="5" ValueType="40">140</gnm:Cell>
+        <gnm:Cell Row="6" Col="6" ValueType="40">227</gnm:Cell>
+        <gnm:Cell Row="6" Col="7" ValueType="40">9125</gnm:Cell>
+        <gnm:Cell Row="6" Col="8" ValueType="40">19.300000000000001</gnm:Cell>
+        <gnm:Cell Row="6" Col="9" ValueType="40">0.0016100000000000001</gnm:Cell>
+        <gnm:Cell Row="6" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="6" Col="11" ValueType="40">0.0080000000000000002</gnm:Cell>
+        <gnm:Cell Row="6" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="6" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="6" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="6" Col="17" ValueType="60">fig. 7</gnm:Cell>
+        <gnm:Cell Row="6" Col="18" ValueType="60">eisenklam_flow_1958_fig_7d.jpg</gnm:Cell>
+        <gnm:Cell Row="7" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="7" Col="4" ValueType="40">360</gnm:Cell>
+        <gnm:Cell Row="7" Col="5" ValueType="40">170</gnm:Cell>
+        <gnm:Cell Row="7" Col="6" ValueType="40">228</gnm:Cell>
+        <gnm:Cell Row="7" Col="7" ValueType="40">9165</gnm:Cell>
+        <gnm:Cell Row="7" Col="8" ValueType="40">19.379999999999999</gnm:Cell>
+        <gnm:Cell Row="7" Col="9" ValueType="40">0.0019400000000000001</gnm:Cell>
+        <gnm:Cell Row="7" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="7" Col="11" ValueType="40">0.0080000000000000002</gnm:Cell>
+        <gnm:Cell Row="7" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="7" Col="15" ValueType="60">turbulent</gnm:Cell>
+        <gnm:Cell Row="7" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="7" Col="17" ValueType="60">fig. 7</gnm:Cell>
+        <gnm:Cell Row="7" Col="18" ValueType="60">eisenklam_flow_1958_fig_7e.jpg</gnm:Cell>
+        <gnm:Cell Row="8" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="8" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="8" Col="4" ValueType="40">360</gnm:Cell>
+        <gnm:Cell Row="8" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="8" Col="6" ValueType="40">227</gnm:Cell>
+        <gnm:Cell Row="8" Col="7" ValueType="40">9165</gnm:Cell>
+        <gnm:Cell Row="8" Col="8" ValueType="40">19.300000000000001</gnm:Cell>
+        <gnm:Cell Row="8" Col="9" ValueType="40">0.0023</gnm:Cell>
+        <gnm:Cell Row="8" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="8" Col="11" ValueType="40">0.040500000000000001</gnm:Cell>
+        <gnm:Cell Row="8" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="8" Col="15" ValueType="60">turbulent</gnm:Cell>
+        <gnm:Cell Row="8" Col="16" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="8" Col="17" ValueType="60">fig. 7</gnm:Cell>
+        <gnm:Cell Row="8" Col="18" ValueType="60">eisenklam_flow_1958_fig_7f.jpg</gnm:Cell>
+        <gnm:Cell Row="9" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="9" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="9" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="9" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="9" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="9" Col="6" ValueType="40">54</gnm:Cell>
+        <gnm:Cell Row="9" Col="7" ValueType="40">2170</gnm:Cell>
+        <gnm:Cell Row="9" Col="8" ValueType="40">4.5899999999999999</gnm:Cell>
+        <gnm:Cell Row="9" Col="9" ValueType="40">0.0041000000000000003</gnm:Cell>
+        <gnm:Cell Row="9" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="9" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="10" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="10" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="10" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="10" Col="5" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="10" Col="6" ValueType="40">112</gnm:Cell>
+        <gnm:Cell Row="10" Col="7" ValueType="40">4502</gnm:Cell>
+        <gnm:Cell Row="10" Col="8" ValueType="40">9.5199999999999996</gnm:Cell>
+        <gnm:Cell Row="10" Col="9" ValueType="40">0.0023999999999999998</gnm:Cell>
+        <gnm:Cell Row="10" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="10" Col="11" ValueType="40">0.0101</gnm:Cell>
+        <gnm:Cell Row="10" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="10" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="10" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="10" Col="17" ValueType="60">fig. 6</gnm:Cell>
+        <gnm:Cell Row="10" Col="18" ValueType="60">eisenklam_flow_1958_fig_6a.jpg</gnm:Cell>
+        <gnm:Cell Row="11" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="11" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="11" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="11" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="11" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="11" Col="5" ValueType="40">80</gnm:Cell>
+        <gnm:Cell Row="11" Col="6" ValueType="40">158</gnm:Cell>
+        <gnm:Cell Row="11" Col="7" ValueType="40">6351</gnm:Cell>
+        <gnm:Cell Row="11" Col="8" ValueType="40">13.43</gnm:Cell>
+        <gnm:Cell Row="11" Col="9" ValueType="40">0.0019</gnm:Cell>
+        <gnm:Cell Row="11" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="11" Col="11" ValueType="40">0.010500000000000001</gnm:Cell>
+        <gnm:Cell Row="11" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="11" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="11" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="11" Col="17" ValueType="60">fig. 6</gnm:Cell>
+        <gnm:Cell Row="11" Col="18" ValueType="60">eisenklam_flow_1958_fig_6b.jpg</gnm:Cell>
+        <gnm:Cell Row="12" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="12" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="12" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="12" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="12" Col="5" ValueType="40">110</gnm:Cell>
+        <gnm:Cell Row="12" Col="6" ValueType="40">198</gnm:Cell>
+        <gnm:Cell Row="12" Col="7" ValueType="40">7959</gnm:Cell>
+        <gnm:Cell Row="12" Col="8" ValueType="40">16.829999999999998</gnm:Cell>
+        <gnm:Cell Row="12" Col="9" ValueType="40">0.0016999999999999999</gnm:Cell>
+        <gnm:Cell Row="12" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="12" Col="11" ValueType="40">0.01</gnm:Cell>
+        <gnm:Cell Row="12" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="12" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="12" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="12" Col="17" ValueType="60">fig. 6</gnm:Cell>
+        <gnm:Cell Row="12" Col="18" ValueType="60">eisenklam_flow_1958_fig_6c.jpg</gnm:Cell>
+        <gnm:Cell Row="13" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="13" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="13" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="13" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="13" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="13" Col="5" ValueType="40">140</gnm:Cell>
+        <gnm:Cell Row="13" Col="6" ValueType="40">236</gnm:Cell>
+        <gnm:Cell Row="13" Col="7" ValueType="40">9487</gnm:Cell>
+        <gnm:Cell Row="13" Col="8" ValueType="40">20.059999999999999</gnm:Cell>
+        <gnm:Cell Row="13" Col="9" ValueType="40">0.0015</gnm:Cell>
+        <gnm:Cell Row="13" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="13" Col="11" ValueType="40">0.0094999999999999998</gnm:Cell>
+        <gnm:Cell Row="13" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="13" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="13" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="13" Col="17" ValueType="60">fig. 6</gnm:Cell>
+        <gnm:Cell Row="13" Col="18" ValueType="60">eisenklam_flow_1958_fig_6d.jpg</gnm:Cell>
+        <gnm:Cell Row="14" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="14" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="14" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="14" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="14" Col="5" ValueType="40">170</gnm:Cell>
+        <gnm:Cell Row="14" Col="6" ValueType="40">271</gnm:Cell>
+        <gnm:Cell Row="14" Col="7" ValueType="40">10894</gnm:Cell>
+        <gnm:Cell Row="14" Col="8" ValueType="40">23.030000000000001</gnm:Cell>
+        <gnm:Cell Row="14" Col="9" ValueType="40">0.0014</gnm:Cell>
+        <gnm:Cell Row="14" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="14" Col="11" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="14" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="14" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="14" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="14" Col="17" ValueType="60">fig. 6</gnm:Cell>
+        <gnm:Cell Row="14" Col="18" ValueType="60">eisenklam_flow_1958_fig_6e.jpg</gnm:Cell>
+        <gnm:Cell Row="15" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="15" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="15" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="15" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="15" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="15" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="15" Col="6" ValueType="40">303</gnm:Cell>
+        <gnm:Cell Row="15" Col="7" ValueType="40">12180</gnm:Cell>
+        <gnm:Cell Row="15" Col="8" ValueType="40">25.859999999999999</gnm:Cell>
+        <gnm:Cell Row="15" Col="9" ValueType="40">0.0012999999999999999</gnm:Cell>
+        <gnm:Cell Row="15" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="15" Col="11" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="15" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="15" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="15" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="15" Col="17" ValueType="60">fig. 6</gnm:Cell>
+        <gnm:Cell Row="15" Col="18" ValueType="60">eisenklam_flow_1958_fig_6f.jpg</gnm:Cell>
+        <gnm:Cell Row="16" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="16" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="16" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="16" Col="4" ValueType="40">408</gnm:Cell>
+        <gnm:Cell Row="16" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="16" Col="6" ValueType="40">54</gnm:Cell>
+        <gnm:Cell Row="16" Col="7" ValueType="40">2170</gnm:Cell>
+        <gnm:Cell Row="16" Col="8" ValueType="40">4.5899999999999999</gnm:Cell>
+        <gnm:Cell Row="16" Col="9" ValueType="40">0.0041000000000000003</gnm:Cell>
+        <gnm:Cell Row="16" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="16" Col="11" ValueType="40">0.012</gnm:Cell>
+        <gnm:Cell Row="16" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="17" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="17" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="17" Col="4" ValueType="40">408</gnm:Cell>
+        <gnm:Cell Row="17" Col="5" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="17" Col="6" ValueType="40">112</gnm:Cell>
+        <gnm:Cell Row="17" Col="7" ValueType="40">4502</gnm:Cell>
+        <gnm:Cell Row="17" Col="8" ValueType="40">9.5199999999999996</gnm:Cell>
+        <gnm:Cell Row="17" Col="9" ValueType="40">0.0023999999999999998</gnm:Cell>
+        <gnm:Cell Row="17" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="17" Col="11" ValueType="40">0.010500000000000001</gnm:Cell>
+        <gnm:Cell Row="17" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="18" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="18" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="18" Col="4" ValueType="40">408</gnm:Cell>
+        <gnm:Cell Row="18" Col="5" ValueType="40">80</gnm:Cell>
+        <gnm:Cell Row="18" Col="6" ValueType="40">159</gnm:Cell>
+        <gnm:Cell Row="18" Col="7" ValueType="40">6392</gnm:Cell>
+        <gnm:Cell Row="18" Col="8" ValueType="40">13.51</gnm:Cell>
+        <gnm:Cell Row="18" Col="9" ValueType="40">0.0019</gnm:Cell>
+        <gnm:Cell Row="18" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="18" Col="11" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="18" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="19" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="19" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="19" Col="4" ValueType="40">408</gnm:Cell>
+        <gnm:Cell Row="19" Col="5" ValueType="40">110</gnm:Cell>
+        <gnm:Cell Row="19" Col="6" ValueType="40">201</gnm:Cell>
+        <gnm:Cell Row="19" Col="7" ValueType="40">8080</gnm:Cell>
+        <gnm:Cell Row="19" Col="8" ValueType="40">17.079999999999998</gnm:Cell>
+        <gnm:Cell Row="19" Col="9" ValueType="40">0.0016000000000000001</gnm:Cell>
+        <gnm:Cell Row="19" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="19" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="20" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="20" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="20" Col="4" ValueType="40">408</gnm:Cell>
+        <gnm:Cell Row="20" Col="5" ValueType="40">140</gnm:Cell>
+        <gnm:Cell Row="20" Col="6" ValueType="40">239</gnm:Cell>
+        <gnm:Cell Row="20" Col="7" ValueType="40">9608</gnm:Cell>
+        <gnm:Cell Row="20" Col="8" ValueType="40">20.309999999999999</gnm:Cell>
+        <gnm:Cell Row="20" Col="9" ValueType="40">0.0015</gnm:Cell>
+        <gnm:Cell Row="20" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="20" Col="11" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="20" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="21" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="21" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="21" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="21" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="21" Col="4" ValueType="40">408</gnm:Cell>
+        <gnm:Cell Row="21" Col="5" ValueType="40">170</gnm:Cell>
+        <gnm:Cell Row="21" Col="6" ValueType="40">252</gnm:Cell>
+        <gnm:Cell Row="21" Col="7" ValueType="40">10130</gnm:Cell>
+        <gnm:Cell Row="21" Col="8" ValueType="40">21.420000000000002</gnm:Cell>
+        <gnm:Cell Row="21" Col="9" ValueType="40">0.0016000000000000001</gnm:Cell>
+        <gnm:Cell Row="21" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="21" Col="11" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="21" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="22" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="22" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="22" Col="2" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="22" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="22" Col="4" ValueType="40">408</gnm:Cell>
+        <gnm:Cell Row="22" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="22" Col="6" ValueType="40">230</gnm:Cell>
+        <gnm:Cell Row="22" Col="7" ValueType="40">9246</gnm:Cell>
+        <gnm:Cell Row="22" Col="8" ValueType="40">19.550000000000001</gnm:Cell>
+        <gnm:Cell Row="22" Col="9" ValueType="40">0.0022000000000000001</gnm:Cell>
+        <gnm:Cell Row="22" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="22" Col="11" ValueType="40">0.042000000000000003</gnm:Cell>
+        <gnm:Cell Row="22" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="22" Col="15" ValueType="60">transitional</gnm:Cell>
+        <gnm:Cell Row="22" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="22" Col="17" ValueType="60">fig. 8</gnm:Cell>
+        <gnm:Cell Row="22" Col="18" ValueType="60">eisenklam_flow_1958_fig_8.jpg</gnm:Cell>
+        <gnm:Cell Row="23" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="23" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="23" Col="2" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="23" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="23" Col="4" ValueType="40">368</gnm:Cell>
+        <gnm:Cell Row="23" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="23" Col="6" ValueType="40">55</gnm:Cell>
+        <gnm:Cell Row="23" Col="7" ValueType="40">2211</gnm:Cell>
+        <gnm:Cell Row="23" Col="8" ValueType="40">4.6699999999999999</gnm:Cell>
+        <gnm:Cell Row="23" Col="9" ValueType="40">0.0038999999999999998</gnm:Cell>
+        <gnm:Cell Row="23" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="23" Col="11" ValueType="40">0.014</gnm:Cell>
+        <gnm:Cell Row="23" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="23" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="24" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="24" Col="2" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="24" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="24" Col="4" ValueType="40">368</gnm:Cell>
+        <gnm:Cell Row="24" Col="5" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="24" Col="6" ValueType="40">117</gnm:Cell>
+        <gnm:Cell Row="24" Col="7" ValueType="40">4703</gnm:Cell>
+        <gnm:Cell Row="24" Col="8" ValueType="40">9.9399999999999995</gnm:Cell>
+        <gnm:Cell Row="24" Col="9" ValueType="40">0.0022000000000000001</gnm:Cell>
+        <gnm:Cell Row="24" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="24" Col="11" ValueType="40">0.01</gnm:Cell>
+        <gnm:Cell Row="24" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="24" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="25" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="25" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="25" Col="2" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="25" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="25" Col="4" ValueType="40">368</gnm:Cell>
+        <gnm:Cell Row="25" Col="5" ValueType="40">80</gnm:Cell>
+        <gnm:Cell Row="25" Col="6" ValueType="40">165</gnm:Cell>
+        <gnm:Cell Row="25" Col="7" ValueType="40">6633</gnm:Cell>
+        <gnm:Cell Row="25" Col="8" ValueType="40">14.02</gnm:Cell>
+        <gnm:Cell Row="25" Col="9" ValueType="40">0.0018</gnm:Cell>
+        <gnm:Cell Row="25" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="25" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="25" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="26" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="26" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="26" Col="2" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="26" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="26" Col="4" ValueType="40">368</gnm:Cell>
+        <gnm:Cell Row="26" Col="5" ValueType="40">110</gnm:Cell>
+        <gnm:Cell Row="26" Col="6" ValueType="40">207</gnm:Cell>
+        <gnm:Cell Row="26" Col="7" ValueType="40">8321</gnm:Cell>
+        <gnm:Cell Row="26" Col="8" ValueType="40">17.600000000000001</gnm:Cell>
+        <gnm:Cell Row="26" Col="9" ValueType="40">0.0015</gnm:Cell>
+        <gnm:Cell Row="26" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="26" Col="11" ValueType="40">0.01</gnm:Cell>
+        <gnm:Cell Row="26" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="26" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="27" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="27" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="27" Col="2" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="27" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="27" Col="4" ValueType="40">368</gnm:Cell>
+        <gnm:Cell Row="27" Col="5" ValueType="40">140</gnm:Cell>
+        <gnm:Cell Row="27" Col="6" ValueType="40">246</gnm:Cell>
+        <gnm:Cell Row="27" Col="7" ValueType="40">9889</gnm:Cell>
+        <gnm:Cell Row="27" Col="8" ValueType="40">20.91</gnm:Cell>
+        <gnm:Cell Row="27" Col="9" ValueType="40">0.0014</gnm:Cell>
+        <gnm:Cell Row="27" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="27" Col="11" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="27" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="27" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="28" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="28" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="28" Col="2" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="28" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="28" Col="4" ValueType="40">368</gnm:Cell>
+        <gnm:Cell Row="28" Col="5" ValueType="40">170</gnm:Cell>
+        <gnm:Cell Row="28" Col="6" ValueType="40">279</gnm:Cell>
+        <gnm:Cell Row="28" Col="7" ValueType="40">11216</gnm:Cell>
+        <gnm:Cell Row="28" Col="8" ValueType="40">23.710000000000001</gnm:Cell>
+        <gnm:Cell Row="28" Col="9" ValueType="40">0.0012999999999999999</gnm:Cell>
+        <gnm:Cell Row="28" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="28" Col="11" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="28" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="28" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="29" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="29" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="29" Col="2" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="29" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="29" Col="4" ValueType="40">368</gnm:Cell>
+        <gnm:Cell Row="29" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="29" Col="6" ValueType="40">311</gnm:Cell>
+        <gnm:Cell Row="29" Col="7" ValueType="40">12500</gnm:Cell>
+        <gnm:Cell Row="29" Col="8" ValueType="40">26.43</gnm:Cell>
+        <gnm:Cell Row="29" Col="9" ValueType="40">0.0011999999999999999</gnm:Cell>
+        <gnm:Cell Row="29" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="29" Col="11" ValueType="40">0.0074999999999999997</gnm:Cell>
+        <gnm:Cell Row="29" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="29" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="30" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="30" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="30" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="30" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="30" Col="4" ValueType="40">372</gnm:Cell>
+        <gnm:Cell Row="30" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="30" Col="6" ValueType="40">56</gnm:Cell>
+        <gnm:Cell Row="30" Col="7" ValueType="40">2251</gnm:Cell>
+        <gnm:Cell Row="30" Col="8" ValueType="40">4.7599999999999998</gnm:Cell>
+        <gnm:Cell Row="30" Col="9" ValueType="40">0.0038</gnm:Cell>
+        <gnm:Cell Row="30" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="30" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="31" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="31" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="31" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="31" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="31" Col="4" ValueType="40">372</gnm:Cell>
+        <gnm:Cell Row="31" Col="5" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="31" Col="6" ValueType="40">115</gnm:Cell>
+        <gnm:Cell Row="31" Col="7" ValueType="40">4623</gnm:Cell>
+        <gnm:Cell Row="31" Col="8" ValueType="40">9.8699999999999992</gnm:Cell>
+        <gnm:Cell Row="31" Col="9" ValueType="40">0.0023</gnm:Cell>
+        <gnm:Cell Row="31" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="31" Col="11" ValueType="40">0.012500000000000001</gnm:Cell>
+        <gnm:Cell Row="31" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="32" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="32" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="32" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="32" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="32" Col="4" ValueType="40">372</gnm:Cell>
+        <gnm:Cell Row="32" Col="5" ValueType="40">80</gnm:Cell>
+        <gnm:Cell Row="32" Col="6" ValueType="40">164</gnm:Cell>
+        <gnm:Cell Row="32" Col="7" ValueType="40">6593</gnm:Cell>
+        <gnm:Cell Row="32" Col="8" ValueType="40">13.94</gnm:Cell>
+        <gnm:Cell Row="32" Col="9" ValueType="40">0.0018</gnm:Cell>
+        <gnm:Cell Row="32" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="32" Col="11" ValueType="40">0.01</gnm:Cell>
+        <gnm:Cell Row="32" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="33" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="33" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="33" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="33" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="33" Col="4" ValueType="40">372</gnm:Cell>
+        <gnm:Cell Row="33" Col="5" ValueType="40">110</gnm:Cell>
+        <gnm:Cell Row="33" Col="6" ValueType="40">205</gnm:Cell>
+        <gnm:Cell Row="33" Col="7" ValueType="40">8341</gnm:Cell>
+        <gnm:Cell Row="33" Col="8" ValueType="40">17.43</gnm:Cell>
+        <gnm:Cell Row="33" Col="9" ValueType="40">0.0016000000000000001</gnm:Cell>
+        <gnm:Cell Row="33" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="33" Col="11" ValueType="40">0.01</gnm:Cell>
+        <gnm:Cell Row="33" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="34" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="34" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="34" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="34" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="34" Col="4" ValueType="40">372</gnm:Cell>
+        <gnm:Cell Row="34" Col="5" ValueType="40">140</gnm:Cell>
+        <gnm:Cell Row="34" Col="6" ValueType="40">246</gnm:Cell>
+        <gnm:Cell Row="34" Col="7" ValueType="40">9889</gnm:Cell>
+        <gnm:Cell Row="34" Col="8" ValueType="40">20.91</gnm:Cell>
+        <gnm:Cell Row="34" Col="9" ValueType="40">0.0014</gnm:Cell>
+        <gnm:Cell Row="34" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="34" Col="11" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="34" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="35" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="35" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="35" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="35" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="35" Col="4" ValueType="40">372</gnm:Cell>
+        <gnm:Cell Row="35" Col="5" ValueType="40">170</gnm:Cell>
+        <gnm:Cell Row="35" Col="6" ValueType="40">279</gnm:Cell>
+        <gnm:Cell Row="35" Col="7" ValueType="40">11216</gnm:Cell>
+        <gnm:Cell Row="35" Col="8" ValueType="40">23.710000000000001</gnm:Cell>
+        <gnm:Cell Row="35" Col="9" ValueType="40">0.0012999999999999999</gnm:Cell>
+        <gnm:Cell Row="35" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="35" Col="11" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="35" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="36" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="36" Col="1" ValueType="60">tab. 2</gnm:Cell>
+        <gnm:Cell Row="36" Col="2" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="36" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="36" Col="4" ValueType="40">372</gnm:Cell>
+        <gnm:Cell Row="36" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="36" Col="6" ValueType="40">311</gnm:Cell>
+        <gnm:Cell Row="36" Col="7" ValueType="40">12502</gnm:Cell>
+        <gnm:Cell Row="36" Col="8" ValueType="40">26.440000000000001</gnm:Cell>
+        <gnm:Cell Row="36" Col="9" ValueType="40">0.0011999999999999999</gnm:Cell>
+        <gnm:Cell Row="36" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="36" Col="11" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="36" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="37" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="37" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="37" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="37" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="37" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="37" Col="6" ValueType="40">46</gnm:Cell>
+        <gnm:Cell Row="37" Col="7" ValueType="40">1849</gnm:Cell>
+        <gnm:Cell Row="37" Col="8" ValueType="40">3.8999999999999999</gnm:Cell>
+        <gnm:Cell Row="37" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="37" Col="12" ValueType="40">0.017000000000000001</gnm:Cell>
+        <gnm:Cell Row="37" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="37" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="37" Col="16" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="37" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="37" Col="18" ValueType="60">eisenklam_flow_1958_fig_10a.jpg</gnm:Cell>
+        <gnm:Cell Row="38" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="38" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="38" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="38" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="38" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="38" Col="6" ValueType="40">189</gnm:Cell>
+        <gnm:Cell Row="38" Col="7" ValueType="40">7598</gnm:Cell>
+        <gnm:Cell Row="38" Col="8" ValueType="40">16.039999999999999</gnm:Cell>
+        <gnm:Cell Row="38" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="38" Col="12" ValueType="40">0.010500000000000001</gnm:Cell>
+        <gnm:Cell Row="38" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="38" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="38" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="38" Col="18" ValueType="60">eisenklam_flow_1958_fig_10b.jpg</gnm:Cell>
+        <gnm:Cell Row="39" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="39" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="39" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="39" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="39" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="39" Col="6" ValueType="40">300</gnm:Cell>
+        <gnm:Cell Row="39" Col="7" ValueType="40">12060</gnm:Cell>
+        <gnm:Cell Row="39" Col="8" ValueType="40">25.469999999999999</gnm:Cell>
+        <gnm:Cell Row="39" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="39" Col="12" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="39" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="39" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="39" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="39" Col="18" ValueType="60">eisenklam_flow_1958_fig_10c.jpg</gnm:Cell>
+        <gnm:Cell Row="40" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="40" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="40" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="40" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="40" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="40" Col="6" ValueType="40">386</gnm:Cell>
+        <gnm:Cell Row="40" Col="7" ValueType="40">15510</gnm:Cell>
+        <gnm:Cell Row="40" Col="8" ValueType="40">32.770000000000003</gnm:Cell>
+        <gnm:Cell Row="40" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="40" Col="12" ValueType="40">0.0070000000000000001</gnm:Cell>
+        <gnm:Cell Row="40" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="40" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="40" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="40" Col="18" ValueType="60">eisenklam_flow_1958_fig_10d.jpg</gnm:Cell>
+        <gnm:Cell Row="41" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="41" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="41" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="41" Col="4" ValueType="40">366</gnm:Cell>
+        <gnm:Cell Row="41" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="41" Col="6" ValueType="40">48</gnm:Cell>
+        <gnm:Cell Row="41" Col="7" ValueType="40">1929</gnm:Cell>
+        <gnm:Cell Row="41" Col="8" ValueType="40">4.0700000000000003</gnm:Cell>
+        <gnm:Cell Row="41" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="41" Col="12" ValueType="40">13</gnm:Cell>
+        <gnm:Cell Row="41" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="42" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="42" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="42" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="42" Col="4" ValueType="40">366</gnm:Cell>
+        <gnm:Cell Row="42" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="42" Col="6" ValueType="40">198</gnm:Cell>
+        <gnm:Cell Row="42" Col="7" ValueType="40">1760</gnm:Cell>
+        <gnm:Cell Row="42" Col="8" ValueType="40">16.809999999999999</gnm:Cell>
+        <gnm:Cell Row="42" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="42" Col="12" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="42" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="43" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="43" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="43" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="43" Col="4" ValueType="40">366</gnm:Cell>
+        <gnm:Cell Row="43" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="43" Col="6" ValueType="40">312</gnm:Cell>
+        <gnm:Cell Row="43" Col="7" ValueType="40">12540</gnm:Cell>
+        <gnm:Cell Row="43" Col="8" ValueType="40">26.489999999999998</gnm:Cell>
+        <gnm:Cell Row="43" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="43" Col="12" ValueType="40">8.5</gnm:Cell>
+        <gnm:Cell Row="43" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="44" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="44" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="44" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="44" Col="4" ValueType="40">366</gnm:Cell>
+        <gnm:Cell Row="44" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="44" Col="6" ValueType="40">400</gnm:Cell>
+        <gnm:Cell Row="44" Col="7" ValueType="40">16080</gnm:Cell>
+        <gnm:Cell Row="44" Col="8" ValueType="40">33.960000000000001</gnm:Cell>
+        <gnm:Cell Row="44" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="44" Col="12" ValueType="40">6.5</gnm:Cell>
+        <gnm:Cell Row="44" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="45" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="45" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="45" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="45" Col="4" ValueType="40">324</gnm:Cell>
+        <gnm:Cell Row="45" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="45" Col="6" ValueType="40">55</gnm:Cell>
+        <gnm:Cell Row="45" Col="7" ValueType="40">2210</gnm:Cell>
+        <gnm:Cell Row="45" Col="8" ValueType="40">4.6699999999999999</gnm:Cell>
+        <gnm:Cell Row="45" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="45" Col="12" ValueType="40">0.010999999999999999</gnm:Cell>
+        <gnm:Cell Row="45" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="46" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="46" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="46" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="46" Col="4" ValueType="40">324</gnm:Cell>
+        <gnm:Cell Row="46" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="46" Col="6" ValueType="40">216</gnm:Cell>
+        <gnm:Cell Row="46" Col="7" ValueType="40">8680</gnm:Cell>
+        <gnm:Cell Row="46" Col="8" ValueType="40">8.3399999999999999</gnm:Cell>
+        <gnm:Cell Row="46" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="46" Col="12" ValueType="40">0.0094999999999999998</gnm:Cell>
+        <gnm:Cell Row="46" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="47" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="47" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="47" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="47" Col="4" ValueType="40">324</gnm:Cell>
+        <gnm:Cell Row="47" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="47" Col="6" ValueType="40">322</gnm:Cell>
+        <gnm:Cell Row="47" Col="7" ValueType="40">12940</gnm:Cell>
+        <gnm:Cell Row="47" Col="8" ValueType="40">27.34</gnm:Cell>
+        <gnm:Cell Row="47" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="47" Col="12" ValueType="40">0.0080000000000000002</gnm:Cell>
+        <gnm:Cell Row="47" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="48" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="48" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="48" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="48" Col="4" ValueType="40">324</gnm:Cell>
+        <gnm:Cell Row="48" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="48" Col="6" ValueType="40">415</gnm:Cell>
+        <gnm:Cell Row="48" Col="7" ValueType="40">16680</gnm:Cell>
+        <gnm:Cell Row="48" Col="8" ValueType="40">35.229999999999997</gnm:Cell>
+        <gnm:Cell Row="48" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="48" Col="12" ValueType="40">0.0060000000000000001</gnm:Cell>
+        <gnm:Cell Row="48" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="49" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="49" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="49" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="49" Col="4" ValueType="40">282</gnm:Cell>
+        <gnm:Cell Row="49" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="49" Col="6" ValueType="40">61</gnm:Cell>
+        <gnm:Cell Row="49" Col="7" ValueType="40">2450</gnm:Cell>
+        <gnm:Cell Row="49" Col="8" ValueType="40">5.1799999999999997</gnm:Cell>
+        <gnm:Cell Row="49" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="49" Col="12" ValueType="40">0.012</gnm:Cell>
+        <gnm:Cell Row="49" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="50" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="50" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="50" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="50" Col="4" ValueType="40">282</gnm:Cell>
+        <gnm:Cell Row="50" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="50" Col="6" ValueType="40">223</gnm:Cell>
+        <gnm:Cell Row="50" Col="7" ValueType="40">8960</gnm:Cell>
+        <gnm:Cell Row="50" Col="8" ValueType="40">18.93</gnm:Cell>
+        <gnm:Cell Row="50" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="50" Col="12" ValueType="40">0.0080000000000000002</gnm:Cell>
+        <gnm:Cell Row="50" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="51" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="51" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="51" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="51" Col="4" ValueType="40">282</gnm:Cell>
+        <gnm:Cell Row="51" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="51" Col="6" ValueType="40">335</gnm:Cell>
+        <gnm:Cell Row="51" Col="7" ValueType="40">13470</gnm:Cell>
+        <gnm:Cell Row="51" Col="8" ValueType="40">28.440000000000001</gnm:Cell>
+        <gnm:Cell Row="51" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="51" Col="12" ValueType="40">0.0054999999999999997</gnm:Cell>
+        <gnm:Cell Row="51" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="52" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="52" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="52" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="52" Col="4" ValueType="40">282</gnm:Cell>
+        <gnm:Cell Row="52" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="52" Col="6" ValueType="40">434</gnm:Cell>
+        <gnm:Cell Row="52" Col="7" ValueType="40">17450</gnm:Cell>
+        <gnm:Cell Row="52" Col="8" ValueType="40">36.840000000000003</gnm:Cell>
+        <gnm:Cell Row="52" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="52" Col="12" ValueType="40">0.0040000000000000001</gnm:Cell>
+        <gnm:Cell Row="52" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="53" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="53" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="53" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="53" Col="4" ValueType="40">242</gnm:Cell>
+        <gnm:Cell Row="53" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="53" Col="6" ValueType="40">64</gnm:Cell>
+        <gnm:Cell Row="53" Col="7" ValueType="40">2570</gnm:Cell>
+        <gnm:Cell Row="53" Col="8" ValueType="40">5.4299999999999997</gnm:Cell>
+        <gnm:Cell Row="53" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="53" Col="12" ValueType="40">0.01</gnm:Cell>
+        <gnm:Cell Row="53" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="54" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="54" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="54" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="54" Col="4" ValueType="40">242</gnm:Cell>
+        <gnm:Cell Row="54" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="54" Col="6" ValueType="40">240</gnm:Cell>
+        <gnm:Cell Row="54" Col="7" ValueType="40">9650</gnm:Cell>
+        <gnm:Cell Row="54" Col="8" ValueType="40">20.379999999999999</gnm:Cell>
+        <gnm:Cell Row="54" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="54" Col="12" ValueType="40">0.0080000000000000002</gnm:Cell>
+        <gnm:Cell Row="54" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="55" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="55" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="55" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="55" Col="4" ValueType="40">242</gnm:Cell>
+        <gnm:Cell Row="55" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="55" Col="6" ValueType="40">350</gnm:Cell>
+        <gnm:Cell Row="55" Col="7" ValueType="40">14070</gnm:Cell>
+        <gnm:Cell Row="55" Col="8" ValueType="40">29.710000000000001</gnm:Cell>
+        <gnm:Cell Row="55" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="55" Col="12" ValueType="40">0.0050000000000000001</gnm:Cell>
+        <gnm:Cell Row="55" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="56" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="56" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="56" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="56" Col="4" ValueType="40">242</gnm:Cell>
+        <gnm:Cell Row="56" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="56" Col="6" ValueType="40">446</gnm:Cell>
+        <gnm:Cell Row="56" Col="7" ValueType="40">17930</gnm:Cell>
+        <gnm:Cell Row="56" Col="8" ValueType="40">37.859999999999999</gnm:Cell>
+        <gnm:Cell Row="56" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="56" Col="12" ValueType="40">0.0040000000000000001</gnm:Cell>
+        <gnm:Cell Row="56" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="57" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="57" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="57" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="57" Col="4" ValueType="40">202</gnm:Cell>
+        <gnm:Cell Row="57" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="57" Col="6" ValueType="40">74</gnm:Cell>
+        <gnm:Cell Row="57" Col="7" ValueType="40">2970</gnm:Cell>
+        <gnm:Cell Row="57" Col="8" ValueType="40">6.2800000000000002</gnm:Cell>
+        <gnm:Cell Row="57" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="57" Col="12" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="57" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="58" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="58" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="58" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="58" Col="4" ValueType="40">202</gnm:Cell>
+        <gnm:Cell Row="58" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="58" Col="6" ValueType="40">253</gnm:Cell>
+        <gnm:Cell Row="58" Col="7" ValueType="40">10170</gnm:Cell>
+        <gnm:Cell Row="58" Col="8" ValueType="40">21.48</gnm:Cell>
+        <gnm:Cell Row="58" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="58" Col="12" ValueType="40">0.0064999999999999997</gnm:Cell>
+        <gnm:Cell Row="58" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="59" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="59" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="59" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="59" Col="4" ValueType="40">202</gnm:Cell>
+        <gnm:Cell Row="59" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="59" Col="6" ValueType="40">370</gnm:Cell>
+        <gnm:Cell Row="59" Col="7" ValueType="40">14870</gnm:Cell>
+        <gnm:Cell Row="59" Col="8" ValueType="40">31.41</gnm:Cell>
+        <gnm:Cell Row="59" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="59" Col="12" ValueType="40">0.0050000000000000001</gnm:Cell>
+        <gnm:Cell Row="59" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="60" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="60" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="60" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="60" Col="4" ValueType="40">202</gnm:Cell>
+        <gnm:Cell Row="60" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="60" Col="6" ValueType="40">469</gnm:Cell>
+        <gnm:Cell Row="60" Col="7" ValueType="40">18850</gnm:Cell>
+        <gnm:Cell Row="60" Col="8" ValueType="40">39.82</gnm:Cell>
+        <gnm:Cell Row="60" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="60" Col="12" ValueType="40">0.0040000000000000001</gnm:Cell>
+        <gnm:Cell Row="60" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="61" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="61" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="61" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="61" Col="4" ValueType="40">160</gnm:Cell>
+        <gnm:Cell Row="61" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="61" Col="6" ValueType="40">80</gnm:Cell>
+        <gnm:Cell Row="61" Col="7" ValueType="40">3216</gnm:Cell>
+        <gnm:Cell Row="61" Col="8" ValueType="40">6.79</gnm:Cell>
+        <gnm:Cell Row="61" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="61" Col="12" ValueType="40">0.012</gnm:Cell>
+        <gnm:Cell Row="61" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="62" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="62" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="62" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="62" Col="4" ValueType="40">160</gnm:Cell>
+        <gnm:Cell Row="62" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="62" Col="6" ValueType="40">265</gnm:Cell>
+        <gnm:Cell Row="62" Col="7" ValueType="40">10656</gnm:Cell>
+        <gnm:Cell Row="62" Col="8" ValueType="40">22.5</gnm:Cell>
+        <gnm:Cell Row="62" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="62" Col="12" ValueType="40">0.0060000000000000001</gnm:Cell>
+        <gnm:Cell Row="62" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="63" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="63" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="63" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="63" Col="4" ValueType="40">160</gnm:Cell>
+        <gnm:Cell Row="63" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="63" Col="6" ValueType="40">389</gnm:Cell>
+        <gnm:Cell Row="63" Col="7" ValueType="40">15640</gnm:Cell>
+        <gnm:Cell Row="63" Col="8" ValueType="40">33.020000000000003</gnm:Cell>
+        <gnm:Cell Row="63" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="63" Col="12" ValueType="40">0.0044999999999999997</gnm:Cell>
+        <gnm:Cell Row="63" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="64" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="64" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="64" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="64" Col="4" ValueType="40">160</gnm:Cell>
+        <gnm:Cell Row="64" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="64" Col="6" ValueType="40">492</gnm:Cell>
+        <gnm:Cell Row="64" Col="7" ValueType="40">19780</gnm:Cell>
+        <gnm:Cell Row="64" Col="8" ValueType="40">41.799999999999997</gnm:Cell>
+        <gnm:Cell Row="64" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="64" Col="12" ValueType="40">0.0030000000000000001</gnm:Cell>
+        <gnm:Cell Row="64" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="65" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="65" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="65" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="65" Col="4" ValueType="40">138</gnm:Cell>
+        <gnm:Cell Row="65" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="65" Col="6" ValueType="40">93</gnm:Cell>
+        <gnm:Cell Row="65" Col="7" ValueType="40">3739</gnm:Cell>
+        <gnm:Cell Row="65" Col="8" ValueType="40">7.9000000000000004</gnm:Cell>
+        <gnm:Cell Row="65" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="65" Col="12" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="65" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="66" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="66" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="66" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="66" Col="4" ValueType="40">138</gnm:Cell>
+        <gnm:Cell Row="66" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="66" Col="6" ValueType="40">286</gnm:Cell>
+        <gnm:Cell Row="66" Col="7" ValueType="40">11497</gnm:Cell>
+        <gnm:Cell Row="66" Col="8" ValueType="40">24.280000000000001</gnm:Cell>
+        <gnm:Cell Row="66" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="66" Col="12" ValueType="40">0.0044999999999999997</gnm:Cell>
+        <gnm:Cell Row="66" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="67" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="67" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="67" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="67" Col="4" ValueType="40">138</gnm:Cell>
+        <gnm:Cell Row="67" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="67" Col="6" ValueType="40">419</gnm:Cell>
+        <gnm:Cell Row="67" Col="7" ValueType="40">16840</gnm:Cell>
+        <gnm:Cell Row="67" Col="8" ValueType="40">35.57</gnm:Cell>
+        <gnm:Cell Row="67" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="67" Col="12" ValueType="40">0.0040000000000000001</gnm:Cell>
+        <gnm:Cell Row="67" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="68" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="68" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="68" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="68" Col="4" ValueType="40">138</gnm:Cell>
+        <gnm:Cell Row="68" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="68" Col="6" ValueType="40">522</gnm:Cell>
+        <gnm:Cell Row="68" Col="7" ValueType="40">20980</gnm:Cell>
+        <gnm:Cell Row="68" Col="8" ValueType="40">44.32</gnm:Cell>
+        <gnm:Cell Row="68" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="68" Col="12" ValueType="40">0.0030000000000000001</gnm:Cell>
+        <gnm:Cell Row="68" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="69" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="69" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="69" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="69" Col="4" ValueType="40">76</gnm:Cell>
+        <gnm:Cell Row="69" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="69" Col="6" ValueType="40">106</gnm:Cell>
+        <gnm:Cell Row="69" Col="7" ValueType="40">4261</gnm:Cell>
+        <gnm:Cell Row="69" Col="8" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="69" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="69" Col="12" ValueType="40">0.0070000000000000001</gnm:Cell>
+        <gnm:Cell Row="69" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="69" Col="16" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="69" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="69" Col="18" ValueType="60">eisenklam_flow_1958_fig_10e.jpg</gnm:Cell>
+        <gnm:Cell Row="70" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="70" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="70" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="70" Col="4" ValueType="40">76</gnm:Cell>
+        <gnm:Cell Row="70" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="70" Col="6" ValueType="40">318</gnm:Cell>
+        <gnm:Cell Row="70" Col="7" ValueType="40">12780</gnm:Cell>
+        <gnm:Cell Row="70" Col="8" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="70" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="70" Col="12" ValueType="40">0.0030000000000000001</gnm:Cell>
+        <gnm:Cell Row="70" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="70" Col="16" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="70" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="70" Col="18" ValueType="60">eisenklam_flow_1958_fig_10f.jpg</gnm:Cell>
+        <gnm:Cell Row="71" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="71" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="71" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="71" Col="4" ValueType="40">76</gnm:Cell>
+        <gnm:Cell Row="71" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="71" Col="6" ValueType="40">456</gnm:Cell>
+        <gnm:Cell Row="71" Col="7" ValueType="40">18330</gnm:Cell>
+        <gnm:Cell Row="71" Col="8" ValueType="40">38.700000000000003</gnm:Cell>
+        <gnm:Cell Row="71" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="71" Col="12" ValueType="40">0.0025000000000000001</gnm:Cell>
+        <gnm:Cell Row="71" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="71" Col="16" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="71" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="71" Col="18" ValueType="60">eisenklam_flow_1958_fig_10g.jpg</gnm:Cell>
+        <gnm:Cell Row="72" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="72" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="72" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="72" Col="4" ValueType="40">76</gnm:Cell>
+        <gnm:Cell Row="72" Col="5" ValueType="40">295</gnm:Cell>
+        <gnm:Cell Row="72" Col="6" ValueType="40">570</gnm:Cell>
+        <gnm:Cell Row="72" Col="7" ValueType="40">22910</gnm:Cell>
+        <gnm:Cell Row="72" Col="8" ValueType="40">48.399999999999999</gnm:Cell>
+        <gnm:Cell Row="72" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="72" Col="12" ValueType="40">0.002</gnm:Cell>
+        <gnm:Cell Row="72" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="72" Col="16" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="72" Col="17" ValueType="60">fig. 10</gnm:Cell>
+        <gnm:Cell Row="72" Col="18" ValueType="60">eisenklam_flow_1958_fig_10h.jpg</gnm:Cell>
+        <gnm:Cell Row="73" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="73" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="73" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="73" Col="4" ValueType="40">44</gnm:Cell>
+        <gnm:Cell Row="73" Col="5" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="73" Col="6" ValueType="40">130</gnm:Cell>
+        <gnm:Cell Row="73" Col="7" ValueType="40">5230</gnm:Cell>
+        <gnm:Cell Row="73" Col="8" ValueType="40">11.039999999999999</gnm:Cell>
+        <gnm:Cell Row="73" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="73" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="74" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="74" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="74" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="74" Col="4" ValueType="40">44</gnm:Cell>
+        <gnm:Cell Row="74" Col="5" ValueType="40">105</gnm:Cell>
+        <gnm:Cell Row="74" Col="6" ValueType="40">365</gnm:Cell>
+        <gnm:Cell Row="74" Col="7" ValueType="40">14670</gnm:Cell>
+        <gnm:Cell Row="74" Col="8" ValueType="40">30.989999999999998</gnm:Cell>
+        <gnm:Cell Row="74" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="74" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="75" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="75" Col="1" ValueType="60">tab. 3</gnm:Cell>
+        <gnm:Cell Row="75" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="75" Col="4" ValueType="40">44</gnm:Cell>
+        <gnm:Cell Row="75" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="75" Col="6" ValueType="40">510</gnm:Cell>
+        <gnm:Cell Row="75" Col="7" ValueType="40">20500</gnm:Cell>
+        <gnm:Cell Row="75" Col="8" ValueType="40">43.299999999999997</gnm:Cell>
+        <gnm:Cell Row="75" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="75" Col="14" ValueType="60">table</gnm:Cell>
+        <gnm:Cell Row="76" Col="1" ValueType="60">fig. 13</gnm:Cell>
+        <gnm:Cell Row="76" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="76" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="76" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="76" Col="5" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="76" Col="7" ValueType="40">4500</gnm:Cell>
+        <gnm:Cell Row="76" Col="9" ValueType="40">0.0023999999999999998</gnm:Cell>
+        <gnm:Cell Row="76" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="76" Col="12" ValueType="40">0.0115</gnm:Cell>
+        <gnm:Cell Row="76" Col="13" ValueType="40">29</gnm:Cell>
+        <gnm:Cell Row="76" Col="14" ValueType="60">figure</gnm:Cell>
+        <gnm:Cell Row="76" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="76" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="76" Col="17" ValueType="60">fig. 9</gnm:Cell>
+        <gnm:Cell Row="76" Col="18" ValueType="60">eisenklam_flow_1958_fig_9a.jpg</gnm:Cell>
+        <gnm:Cell Row="77" Col="1" ValueType="60">fig. 13</gnm:Cell>
+        <gnm:Cell Row="77" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="77" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="77" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="77" Col="5" ValueType="40">80</gnm:Cell>
+        <gnm:Cell Row="77" Col="7" ValueType="40">6400</gnm:Cell>
+        <gnm:Cell Row="77" Col="9" ValueType="40">0.0019</gnm:Cell>
+        <gnm:Cell Row="77" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="77" Col="12" ValueType="40">0.010500000000000001</gnm:Cell>
+        <gnm:Cell Row="77" Col="13" ValueType="40">29</gnm:Cell>
+        <gnm:Cell Row="77" Col="14" ValueType="60">figure</gnm:Cell>
+        <gnm:Cell Row="77" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="77" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="77" Col="17" ValueType="60">fig. 9</gnm:Cell>
+        <gnm:Cell Row="77" Col="18" ValueType="60">eisenklam_flow_1958_fig_9b.jpg</gnm:Cell>
+        <gnm:Cell Row="78" Col="1" ValueType="60">fig. 13</gnm:Cell>
+        <gnm:Cell Row="78" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="78" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="78" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="78" Col="5" ValueType="40">110</gnm:Cell>
+        <gnm:Cell Row="78" Col="7" ValueType="40">8000</gnm:Cell>
+        <gnm:Cell Row="78" Col="9" ValueType="40">0.0016999999999999999</gnm:Cell>
+        <gnm:Cell Row="78" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="78" Col="12" ValueType="40">0.0089999999999999993</gnm:Cell>
+        <gnm:Cell Row="78" Col="13" ValueType="40">29</gnm:Cell>
+        <gnm:Cell Row="78" Col="14" ValueType="60">figure</gnm:Cell>
+        <gnm:Cell Row="78" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="78" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="78" Col="17" ValueType="60">fig. 9</gnm:Cell>
+        <gnm:Cell Row="78" Col="18" ValueType="60">eisenklam_flow_1958_fig_9c.jpg</gnm:Cell>
+        <gnm:Cell Row="79" Col="1" ValueType="60">fig. 13</gnm:Cell>
+        <gnm:Cell Row="79" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="79" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="79" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="79" Col="5" ValueType="40">140</gnm:Cell>
+        <gnm:Cell Row="79" Col="7" ValueType="40">9500</gnm:Cell>
+        <gnm:Cell Row="79" Col="9" ValueType="40">0.0015</gnm:Cell>
+        <gnm:Cell Row="79" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="79" Col="12" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="79" Col="13" ValueType="40">29</gnm:Cell>
+        <gnm:Cell Row="79" Col="14" ValueType="60">figure</gnm:Cell>
+        <gnm:Cell Row="79" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="79" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="79" Col="17" ValueType="60">fig. 9</gnm:Cell>
+        <gnm:Cell Row="79" Col="18" ValueType="60">eisenklam_flow_1958_fig_9d.jpg</gnm:Cell>
+        <gnm:Cell Row="80" Col="1" ValueType="60">fig. 13</gnm:Cell>
+        <gnm:Cell Row="80" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="80" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="80" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="80" Col="5" ValueType="40">170</gnm:Cell>
+        <gnm:Cell Row="80" Col="7" ValueType="40">10800</gnm:Cell>
+        <gnm:Cell Row="80" Col="9" ValueType="40">0.0014</gnm:Cell>
+        <gnm:Cell Row="80" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="80" Col="12" ValueType="40">0.0094999999999999998</gnm:Cell>
+        <gnm:Cell Row="80" Col="13" ValueType="40">29</gnm:Cell>
+        <gnm:Cell Row="80" Col="14" ValueType="60">figure</gnm:Cell>
+        <gnm:Cell Row="80" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="80" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="80" Col="17" ValueType="60">fig. 9</gnm:Cell>
+        <gnm:Cell Row="80" Col="18" ValueType="60">eisenklam_flow_1958_fig_9e.jpg</gnm:Cell>
+        <gnm:Cell Row="81" Col="1" ValueType="60">fig. 13</gnm:Cell>
+        <gnm:Cell Row="81" Col="2" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="81" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="81" Col="4" ValueType="40">406</gnm:Cell>
+        <gnm:Cell Row="81" Col="5" ValueType="40">200</gnm:Cell>
+        <gnm:Cell Row="81" Col="7" ValueType="40">12200</gnm:Cell>
+        <gnm:Cell Row="81" Col="9" ValueType="40">0.0012999999999999999</gnm:Cell>
+        <gnm:Cell Row="81" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="81" Col="12" ValueType="40">0.0085000000000000006</gnm:Cell>
+        <gnm:Cell Row="81" Col="13" ValueType="40">29</gnm:Cell>
+        <gnm:Cell Row="81" Col="14" ValueType="60">figure</gnm:Cell>
+        <gnm:Cell Row="81" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="81" Col="16" ValueType="60">bursting</gnm:Cell>
+        <gnm:Cell Row="81" Col="17" ValueType="60">fig. 9</gnm:Cell>
+        <gnm:Cell Row="81" Col="18" ValueType="60">eisenklam_flow_1958_fig_9f.jpg</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A28">
+        <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="A3"/>
+      </gnm:SheetLayout>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>pipe thickness estimate</gnm:Name>
+      <gnm:MaxCol>4</gnm:MaxCol>
+      <gnm:MaxRow>24</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;pipe thickness estimate&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_NONE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="0" Unit="162"/>
+        <gnm:ColInfo No="4" Unit="96.75"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="24"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="0" CursorRow="25">
+        <gnm:Selection startCol="0" startRow="25" endCol="0" endRow="25"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="1" ValueType="60">d_0</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">d_0o</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">t</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">t/d_0</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="60">eisenklam_flow_1958_fig_4a.jpg</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="40">82</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ExprID="1">=(C2-B2)/2</gnm:Cell>
+        <gnm:Cell Row="1" Col="4" ExprID="2">=D2/B2</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="60">eisenklam_flow_1958_fig_4b.jpg</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="40">82</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ExprID="1"/>
+        <gnm:Cell Row="2" Col="4" ExprID="2"/>
+        <gnm:Cell Row="3" Col="0" ValueType="60">eisenklam_flow_1958_fig_6a.jpg</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ExprID="1"/>
+        <gnm:Cell Row="3" Col="4" ExprID="2"/>
+        <gnm:Cell Row="4" Col="0" ValueType="60">eisenklam_flow_1958_fig_6b.jpg</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ExprID="1"/>
+        <gnm:Cell Row="4" Col="4" ExprID="2"/>
+        <gnm:Cell Row="5" Col="0" ValueType="60">eisenklam_flow_1958_fig_6c.jpg</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ExprID="1"/>
+        <gnm:Cell Row="5" Col="4" ExprID="2"/>
+        <gnm:Cell Row="6" Col="0" ValueType="60">eisenklam_flow_1958_fig_6d.jpg</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ExprID="1"/>
+        <gnm:Cell Row="6" Col="4" ExprID="2"/>
+        <gnm:Cell Row="7" Col="0" ValueType="60">eisenklam_flow_1958_fig_6e.jpg</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ExprID="1"/>
+        <gnm:Cell Row="7" Col="4" ExprID="2"/>
+        <gnm:Cell Row="8" Col="0" ValueType="60">eisenklam_flow_1958_fig_6f.jpg</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="8" Col="3" ExprID="1"/>
+        <gnm:Cell Row="8" Col="4" ExprID="2"/>
+        <gnm:Cell Row="9" Col="0" ValueType="60">eisenklam_flow_1958_fig_7a.jpg</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="9" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="9" Col="3" ExprID="1"/>
+        <gnm:Cell Row="9" Col="4" ExprID="2"/>
+        <gnm:Cell Row="10" Col="0" ValueType="60">eisenklam_flow_1958_fig_7b.jpg</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="10" Col="3" ExprID="1"/>
+        <gnm:Cell Row="10" Col="4" ExprID="2"/>
+        <gnm:Cell Row="11" Col="0" ValueType="60">eisenklam_flow_1958_fig_7c.jpg</gnm:Cell>
+        <gnm:Cell Row="11" Col="1" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="11" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="11" Col="3" ExprID="1"/>
+        <gnm:Cell Row="11" Col="4" ExprID="2"/>
+        <gnm:Cell Row="12" Col="0" ValueType="60">eisenklam_flow_1958_fig_7d.jpg</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="12" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="12" Col="3" ExprID="1"/>
+        <gnm:Cell Row="12" Col="4" ExprID="2"/>
+        <gnm:Cell Row="13" Col="0" ValueType="60">eisenklam_flow_1958_fig_7e.jpg</gnm:Cell>
+        <gnm:Cell Row="13" Col="1" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="13" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="13" Col="3" ExprID="1"/>
+        <gnm:Cell Row="13" Col="4" ExprID="2"/>
+        <gnm:Cell Row="14" Col="0" ValueType="60">eisenklam_flow_1958_fig_7f.jpg</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="14" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="14" Col="3" ExprID="1"/>
+        <gnm:Cell Row="14" Col="4" ExprID="2"/>
+        <gnm:Cell Row="15" Col="0" ValueType="60">eisenklam_flow_1958_fig_9a.jpg</gnm:Cell>
+        <gnm:Cell Row="15" Col="1" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="15" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="15" Col="3" ExprID="1"/>
+        <gnm:Cell Row="15" Col="4" ExprID="2"/>
+        <gnm:Cell Row="16" Col="0" ValueType="60">eisenklam_flow_1958_fig_9b.jpg</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="16" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="16" Col="3" ExprID="1"/>
+        <gnm:Cell Row="16" Col="4" ExprID="2"/>
+        <gnm:Cell Row="17" Col="0" ValueType="60">eisenklam_flow_1958_fig_9c.jpg</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="17" Col="3" ExprID="1"/>
+        <gnm:Cell Row="17" Col="4" ExprID="2"/>
+        <gnm:Cell Row="18" Col="0" ValueType="60">eisenklam_flow_1958_fig_9d.jpg</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="18" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ExprID="1"/>
+        <gnm:Cell Row="18" Col="4" ExprID="2"/>
+        <gnm:Cell Row="19" Col="0" ValueType="60">eisenklam_flow_1958_fig_9e.jpg</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="19" Col="2" ValueType="40">72</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ExprID="1"/>
+        <gnm:Cell Row="19" Col="4" ExprID="2"/>
+        <gnm:Cell Row="20" Col="0" ValueType="60">eisenklam_flow_1958_fig_9f.jpg</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="20" Col="2" ValueType="40">73</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ExprID="1"/>
+        <gnm:Cell Row="20" Col="4" ExprID="2"/>
+        <gnm:Cell Row="21" Col="4">=average(E2:E21)</gnm:Cell>
+        <gnm:Cell Row="22" Col="4">=stdev(E2:E21)</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="60">Fig. 10 not included due to lack of resolution, and also that the tube outer surface did not appear to be smooth.</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>removed</gnm:Name>
+      <gnm:MaxCol>18</gnm:MaxCol>
+      <gnm:MaxRow>1</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;removed&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="13.5" Count="2"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="0" CursorRow="3">
+        <gnm:Selection startCol="0" startRow="3" endCol="0" endRow="3"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="40">400</gnm:Cell>
+        <gnm:Cell Row="0" Col="5" ValueType="40">70</gnm:Cell>
+        <gnm:Cell Row="0" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="0" Col="15" ValueType="60">laminar</gnm:Cell>
+        <gnm:Cell Row="0" Col="16" ValueType="60">first wind-induced</gnm:Cell>
+        <gnm:Cell Row="0" Col="17" ValueType="60">fig. 4</gnm:Cell>
+        <gnm:Cell Row="0" Col="18" ValueType="60">eisenklam_flow_1958_fig_4a.jpg</gnm:Cell>
+        <gnm:Cell Row="1" Col="3" ValueType="40">0.00050000000000000001</gnm:Cell>
+        <gnm:Cell Row="1" Col="4" ValueType="40">400</gnm:Cell>
+        <gnm:Cell Row="1" Col="5" ValueType="40">70</gnm:Cell>
+        <gnm:Cell Row="1" Col="10" ValueType="20">FALSE</gnm:Cell>
+        <gnm:Cell Row="1" Col="15" ValueType="60">turbulent</gnm:Cell>
+        <gnm:Cell Row="1" Col="16" ValueType="60">Rayleigh</gnm:Cell>
+        <gnm:Cell Row="1" Col="17" ValueType="60">fig. 4</gnm:Cell>
+        <gnm:Cell Row="1" Col="18" ValueType="60">eisenklam_flow_1958_fig_4b.jpg</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="0"/>
+</gnm:Workbook>

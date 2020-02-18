@@ -1,0 +1,82 @@
+page,"page fig",tube,d_0,L_0/d_0,dP,Q,Re_l0,Ubar_0,f,trip,x_i,x_trans,P_atm,"transcription method","regime turb","regime photo","photo page fig","photo filename"
+,,,m,,psi,g/min,,m/s,,,m,m,"mm Hg",,,,,
+25,"tab. 2",1,0.0005,360,20,57,2291,4.84,0.0037,FALSE,,,,table,,,,
+25,"tab. 2",1,0.0005,360,50,117,4703,9.94,0.0022,FALSE,0.01,,,table,laminar,bursting,"fig. 7",eisenklam_flow_1958_fig_7a.jpg
+25,"tab. 2",1,0.0005,360,80,164,6592,13.94,0.0018,FALSE,0.0085,,,table,laminar,bursting,"fig. 7",eisenklam_flow_1958_fig_7b.jpg
+25,"tab. 2",1,0.0005,360,110,202,8120,17.17,0.0016,FALSE,0.0095,,,table,laminar,bursting,"fig. 7",eisenklam_flow_1958_fig_7c.jpg
+25,"tab. 2",1,0.0005,360,140,227,9125,19.3,0.00161,FALSE,0.008,,,table,laminar,bursting,"fig. 7",eisenklam_flow_1958_fig_7d.jpg
+25,"tab. 2",1,0.0005,360,170,228,9165,19.38,0.00194,FALSE,0.008,,,table,turbulent,bursting,"fig. 7",eisenklam_flow_1958_fig_7e.jpg
+25,"tab. 2",1,0.0005,360,200,227,9165,19.3,0.0023,FALSE,0.0405,,,table,turbulent,Rayleigh,"fig. 7",eisenklam_flow_1958_fig_7f.jpg
+25,"tab. 2",2,0.0005,406,20,54,2170,4.59,0.0041,FALSE,,,,table,,,,
+25,"tab. 2",2,0.0005,406,50,112,4502,9.52,0.0024,FALSE,0.0101,,,table,laminar,bursting,"fig. 6",eisenklam_flow_1958_fig_6a.jpg
+25,"tab. 2",2,0.0005,406,80,158,6351,13.43,0.0019,FALSE,0.0105,,,table,laminar,bursting,"fig. 6",eisenklam_flow_1958_fig_6b.jpg
+25,"tab. 2",2,0.0005,406,110,198,7959,16.83,0.0017,FALSE,0.01,,,table,laminar,bursting,"fig. 6",eisenklam_flow_1958_fig_6c.jpg
+25,"tab. 2",2,0.0005,406,140,236,9487,20.06,0.0015,FALSE,0.0095,,,table,laminar,bursting,"fig. 6",eisenklam_flow_1958_fig_6d.jpg
+25,"tab. 2",2,0.0005,406,170,271,10894,23.03,0.0014,FALSE,0.009,,,table,laminar,bursting,"fig. 6",eisenklam_flow_1958_fig_6e.jpg
+25,"tab. 2",2,0.0005,406,200,303,12180,25.86,0.0013,FALSE,0.0085,,,table,laminar,bursting,"fig. 6",eisenklam_flow_1958_fig_6f.jpg
+25,"tab. 2",3,0.0005,408,20,54,2170,4.59,0.0041,FALSE,0.012,,,table,,,,
+25,"tab. 2",3,0.0005,408,50,112,4502,9.52,0.0024,FALSE,0.0105,,,table,,,,
+25,"tab. 2",3,0.0005,408,80,159,6392,13.51,0.0019,FALSE,0.009,,,table,,,,
+25,"tab. 2",3,0.0005,408,110,201,8080,17.08,0.0016,FALSE,,,,table,,,,
+25,"tab. 2",3,0.0005,408,140,239,9608,20.31,0.0015,FALSE,0.009,,,table,,,,
+25,"tab. 2",3,0.0005,408,170,252,10130,21.42,0.0016,FALSE,0.0085,,,table,,,,
+25,"tab. 2",3,0.0005,408,200,230,9246,19.55,0.0022,FALSE,0.042,,,table,transitional,bursting,"fig. 8",eisenklam_flow_1958_fig_8.jpg
+25,"tab. 2",4,0.0005,368,20,55,2211,4.67,0.0039,FALSE,0.014,,,table,laminar,,,
+25,"tab. 2",4,0.0005,368,50,117,4703,9.94,0.0022,FALSE,0.01,,,table,laminar,,,
+25,"tab. 2",4,0.0005,368,80,165,6633,14.02,0.0018,FALSE,,,,table,laminar,,,
+25,"tab. 2",4,0.0005,368,110,207,8321,17.6,0.0015,FALSE,0.01,,,table,laminar,,,
+25,"tab. 2",4,0.0005,368,140,246,9889,20.91,0.0014,FALSE,0.009,,,table,laminar,,,
+25,"tab. 2",4,0.0005,368,170,279,11216,23.71,0.0013,FALSE,0.009,,,table,laminar,,,
+25,"tab. 2",4,0.0005,368,200,311,12500,26.43,0.0012,FALSE,0.0075,,,table,laminar,,,
+25,"tab. 2",5,0.0005,372,20,56,2251,4.76,0.0038,FALSE,,,,table,,,,
+25,"tab. 2",5,0.0005,372,50,115,4623,9.87,0.0023,FALSE,0.0125,,,table,,,,
+25,"tab. 2",5,0.0005,372,80,164,6593,13.94,0.0018,FALSE,0.01,,,table,,,,
+25,"tab. 2",5,0.0005,372,110,205,8341,17.43,0.0016,FALSE,0.01,,,table,,,,
+25,"tab. 2",5,0.0005,372,140,246,9889,20.91,0.0014,FALSE,0.0085,,,table,,,,
+25,"tab. 2",5,0.0005,372,170,279,11216,23.71,0.0013,FALSE,0.0085,,,table,,,,
+25,"tab. 2",5,0.0005,372,200,311,12502,26.44,0.0012,FALSE,0.0085,,,table,,,,
+26,"tab. 3",,0.0005,406,20,46,1849,3.9,,FALSE,,0.017,,table,laminar,Rayleigh,"fig. 10",eisenklam_flow_1958_fig_10a.jpg
+26,"tab. 3",,0.0005,406,105,189,7598,16.04,,FALSE,,0.0105,,table,,bursting,"fig. 10",eisenklam_flow_1958_fig_10b.jpg
+26,"tab. 3",,0.0005,406,200,300,12060,25.47,,FALSE,,0.0085,,table,,bursting,"fig. 10",eisenklam_flow_1958_fig_10c.jpg
+26,"tab. 3",,0.0005,406,295,386,15510,32.77,,FALSE,,0.007,,table,,bursting,"fig. 10",eisenklam_flow_1958_fig_10d.jpg
+26,"tab. 3",,0.0005,366,20,48,1929,4.07,,FALSE,,13,,table,,,,
+26,"tab. 3",,0.0005,366,105,198,1760,16.81,,FALSE,,10,,table,,,,
+26,"tab. 3",,0.0005,366,200,312,12540,26.49,,FALSE,,8.5,,table,,,,
+26,"tab. 3",,0.0005,366,295,400,16080,33.96,,FALSE,,6.5,,table,,,,
+26,"tab. 3",,0.0005,324,20,55,2210,4.67,,FALSE,,0.011,,table,,,,
+26,"tab. 3",,0.0005,324,105,216,8680,8.34,,FALSE,,0.0095,,table,,,,
+26,"tab. 3",,0.0005,324,200,322,12940,27.34,,FALSE,,0.008,,table,,,,
+26,"tab. 3",,0.0005,324,295,415,16680,35.23,,FALSE,,0.006,,table,,,,
+26,"tab. 3",,0.0005,282,20,61,2450,5.18,,FALSE,,0.012,,table,,,,
+26,"tab. 3",,0.0005,282,105,223,8960,18.93,,FALSE,,0.008,,table,,,,
+26,"tab. 3",,0.0005,282,200,335,13470,28.44,,FALSE,,0.0055,,table,,,,
+26,"tab. 3",,0.0005,282,295,434,17450,36.84,,FALSE,,0.004,,table,,,,
+26,"tab. 3",,0.0005,242,20,64,2570,5.43,,FALSE,,0.01,,table,,,,
+26,"tab. 3",,0.0005,242,105,240,9650,20.38,,FALSE,,0.008,,table,,,,
+26,"tab. 3",,0.0005,242,200,350,14070,29.71,,FALSE,,0.005,,table,,,,
+26,"tab. 3",,0.0005,242,295,446,17930,37.86,,FALSE,,0.004,,table,,,,
+26,"tab. 3",,0.0005,202,20,74,2970,6.28,,FALSE,,0.009,,table,,,,
+26,"tab. 3",,0.0005,202,105,253,10170,21.48,,FALSE,,0.0065,,table,,,,
+26,"tab. 3",,0.0005,202,200,370,14870,31.41,,FALSE,,0.005,,table,,,,
+26,"tab. 3",,0.0005,202,295,469,18850,39.82,,FALSE,,0.004,,table,,,,
+27,"tab. 3",,0.0005,160,20,80,3216,6.79,,FALSE,,0.012,,table,,,,
+27,"tab. 3",,0.0005,160,105,265,10656,22.5,,FALSE,,0.006,,table,,,,
+27,"tab. 3",,0.0005,160,200,389,15640,33.02,,FALSE,,0.0045,,table,,,,
+27,"tab. 3",,0.0005,160,295,492,19780,41.8,,FALSE,,0.003,,table,,,,
+27,"tab. 3",,0.0005,138,20,93,3739,7.9,,FALSE,,0.009,,table,,,,
+27,"tab. 3",,0.0005,138,105,286,11497,24.28,,FALSE,,0.0045,,table,,,,
+27,"tab. 3",,0.0005,138,200,419,16840,35.57,,FALSE,,0.004,,table,,,,
+27,"tab. 3",,0.0005,138,295,522,20980,44.32,,FALSE,,0.003,,table,,,,
+27,"tab. 3",,0.0005,76,20,106,4261,9,,FALSE,,0.007,,table,,Rayleigh,"fig. 10",eisenklam_flow_1958_fig_10e.jpg
+27,"tab. 3",,0.0005,76,105,318,12780,27,,FALSE,,0.003,,table,,"second wind-induced","fig. 10",eisenklam_flow_1958_fig_10f.jpg
+27,"tab. 3",,0.0005,76,200,456,18330,38.7,,FALSE,,0.0025,,table,,"second wind-induced","fig. 10",eisenklam_flow_1958_fig_10g.jpg
+27,"tab. 3",,0.0005,76,295,570,22910,48.4,,FALSE,,0.002,,table,,"second wind-induced","fig. 10",eisenklam_flow_1958_fig_10h.jpg
+27,"tab. 3",,0.0005,44,20,130,5230,11.04,,FALSE,,,,table,,,,
+27,"tab. 3",,0.0005,44,105,365,14670,30.99,,FALSE,,,,table,,,,
+27,"tab. 3",,0.0005,44,200,510,20500,43.3,,FALSE,,,,table,,,,
+,"fig. 13",2,0.0005,406,50,,4500,,0.0024,FALSE,,0.0115,29,figure,laminar,bursting,"fig. 9",eisenklam_flow_1958_fig_9a.jpg
+,"fig. 13",2,0.0005,406,80,,6400,,0.0019,FALSE,,0.0105,29,figure,laminar,bursting,"fig. 9",eisenklam_flow_1958_fig_9b.jpg
+,"fig. 13",2,0.0005,406,110,,8000,,0.0017,FALSE,,0.009,29,figure,laminar,bursting,"fig. 9",eisenklam_flow_1958_fig_9c.jpg
+,"fig. 13",2,0.0005,406,140,,9500,,0.0015,FALSE,,0.0085,29,figure,laminar,bursting,"fig. 9",eisenklam_flow_1958_fig_9d.jpg
+,"fig. 13",2,0.0005,406,170,,10800,,0.0014,FALSE,,0.0095,29,figure,laminar,bursting,"fig. 9",eisenklam_flow_1958_fig_9e.jpg
+,"fig. 13",2,0.0005,406,200,,12200,,0.0013,FALSE,,0.0085,29,figure,laminar,bursting,"fig. 9",eisenklam_flow_1958_fig_9f.jpg

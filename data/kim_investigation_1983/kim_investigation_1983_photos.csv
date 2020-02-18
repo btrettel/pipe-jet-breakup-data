@@ -1,0 +1,5 @@
+fluid,"pipe material",roughness,"page fig",U_0,x_low,x_high,f,"f page fig","T_l (C)","d_0 (m)","L_0 (m)","x_i (m)","photo filename","alt key","alt page fig"
+water,glass,smooth,"p. 67, fig. 5.7a",6,0,0.1,,,4.5,0.004,,,kin_investigation_1983_fig_5.7a.jpg,kim_condensation_1989,"p. 1071, fig. 4a"
+water,glass,smooth,"p. 67, fig. 5.7b",12,0.05,0.15,,,4.5,0.004,,0.07749,kin_investigation_1983_fig_5.7b.jpg,kim_condensation_1989,"p. 1071, fig. 4b"
+water,glass,rough,"p. 68, fig. 5.8a",12,0.05,0.15,0.054,"p. 98",4.5,0.0054,0.103,0.0656,kin_investigation_1983_fig_5.7c.jpg,kim_condensation_1989,"p. 1071, fig. 4c"
+ethanol,glass,smooth,"p. 68, fig. 5.8b",6,0,0.1,,,21,0.004,,0.024094,kin_investigation_1983_fig_5.7d.jpg,kim_condensation_1989,"p. 1071, fig. 4d"

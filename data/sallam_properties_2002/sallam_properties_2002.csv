@@ -1,0 +1,21 @@
+"theta page fig","x_i page fig","xbavg page fig",liquid,"d (mm)",We_l0,"theta (deg)",x_i/d_0,xbavg/d_0,"regime L_b","photo page fig",sigma_b
+"p. 130, tab. B.1",,,water,1.9,26565,2.8,,,,,
+"p. 130, tab. B.1","p. 133, tab. B.4","p. 145, tab. B.15",water,4.8,18169,2.4,7.0125,204.7,"second wind-induced",,0.0564244348025
+"p. 130, tab. B.1","p. 133, tab. B.4","p. 145, tab. B.15",water,4.8,33116,3.4,2.495,255.3,S2A,"p. 103, fig. 4.4",0.0281550966868
+"p. 130, tab. B.1","p. 133, tab. B.4","p. 145, tab. B.15",water,4.8,67113,5.4,1.5575,261,atomization,"pp. 104--105, figs. 4.5--4.6",0.0466132553232
+"p. 130, tab. B.1","p. 133, tab. B.4",,water,8,55193,5,1.28125,,,,
+"p. 130, tab. B.1","p. 133, tab. B.4",,water,8,111855,7.8,0.484375,,,,
+,,"p. 145, tab. B.15",water,1.9,235,,,52.51,Rayleigh,"p. 101, fig. 4.2",0.113483556972
+,,"p. 145, tab. B.15",water,1.9,676,,,47.51,R2S,,0.143481088396
+,,"p. 145, tab. B.15",water,1.9,1364,,,61.71,R2S,,0.176010007714
+,,"p. 145, tab. B.15",water,1.9,1666,,,76.26,"second wind-induced","p. 102, fig. 4.3",0.105739536727
+,,"p. 145, tab. B.15",water,1.9,2353,,,87.48,"second wind-induced",,0.089953912419
+,,"p. 145, tab. B.15",water,1.9,3424,,,114.4,"second wind-induced",,0.0237686913809
+,,"p. 145, tab. B.15",water,1.9,7220,,,153.1,"second wind-induced",,0.0567302588889
+,,"p. 145, tab. B.15",water,1.9,10087,,,162.2,"second wind-induced",,0.0395965079972
+,,"p. 145, tab. B.15",water,1.9,13689,,,196.4,"second wind-induced",,0.0775190836275
+,,"p. 145, tab. B.15",water,4.8,4208,,,144.1,"second wind-induced",,0.0798187118341
+,,"p. 145, tab. B.15",ethanol,4.8,51142,,,254,atomization,,0.033916513434
+,,"p. 145, tab. B.15",ethanol,4.8,93355,,,263.3,atomization,,0.0963178011946
+,,"p. 145, tab. B.15",ethanol,4.8,163083,,,278.8,atomization,,0.0148376885484
+,,"p. 145, tab. B.15",ethanol,4.8,270976,,,282.7,atomization,"p. 106, fig. 4.7",0.052916133704
