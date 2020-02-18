@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from waterjets import *
+from jetbreakup import *
 
 lastchangedby       = '$LastChangedBy: $'
 lastchangedrevision = '$LastChangedRevision: $'

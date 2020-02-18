@@ -1,15 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from waterjets import *
+from jetbreakup import *
 from string import join
 import scipy.stats
+from git import Repo
 
-lastchangedby       = '$LastChangedBy: $'
-lastchangedrevision = '$LastChangedRevision: $'
-lastchangeddate     = '$LastChangedDate: $'
-headurl             = '$HeadURL: $'
-metadata = [lastchangedby, lastchangedrevision, lastchangeddate, headurl]
+repo = Repo('../')
+headcommit = repo.head.commit
+
+lastchangedby       = headcommit.committer.name
+lastchangedrevision = headcommit.hexsha
+lastchangeddate     = headcommit.authored_date
+
+metadata = [lastchangedby, lastchangedrevision, lastchangeddate]
 
 print
 
@@ -200,7 +204,7 @@ cols = ['key', 'alt key',
 
 # DONE: Add transitional regimes (R2F, F2S, S2A).
 
-asset_hydraulic_1951_csv = pd.read_csv('../../../data/asset_hydraulic_1951/asset_hydraulic_1951.csv', sep=',', header=0)
+asset_hydraulic_1951_csv = pd.read_csv('../data/asset_hydraulic_1951/asset_hydraulic_1951.csv', sep=',', header=0)
 
 fluid_asset_hydraulic_1951          = asset_hydraulic_1951_csv['liquid']
 Re_l0_asset_hydraulic_1951          = asset_hydraulic_1951_csv['Re_l0']
@@ -454,7 +458,7 @@ df_jet_breakup = df_asset_hydraulic_1951
 # Definition of W? Based on air density
 # Table V (p. 36, pdf p. 77)
 
-betchov_breakup_1955_csv = pd.read_csv('../../../data/betchov_breakup_1955/betchov_breakup_1955.csv', sep=',', header=0)
+betchov_breakup_1955_csv = pd.read_csv('../data/betchov_breakup_1955/betchov_breakup_1955.csv', sep=',', header=0)
 
 liquid_betchov_breakup_1955         = betchov_breakup_1955_csv['fluid']
 nu_l_betchov_breakup_1955           = betchov_breakup_1955_csv['nu_l (m^2/s)']
@@ -663,7 +667,7 @@ j = None
 # DONE: Evaluate t/d_0 for eisenklam_flow_1958 based on the photos of the tube.
 # DONE: t/d_0 photos: error analysis
 
-eisenklam_flow_1958_csv = pd.read_csv('../../../data/eisenklam_flow_1958/eisenklam_flow_1958.csv', sep=',', header=0, skiprows=[1])
+eisenklam_flow_1958_csv = pd.read_csv('../data/eisenklam_flow_1958/eisenklam_flow_1958.csv', sep=',', header=0, skiprows=[1])
 
 page_fig_eisenklam_flow_1958                     = 'p. '+str(eisenklam_flow_1958_csv['page'])+', '+eisenklam_flow_1958_csv['page fig']
 tube_eisenklam_flow_1958                         = eisenklam_flow_1958_csv['tube']
@@ -960,7 +964,7 @@ j = None
 
 # p. 31 \S c.: > maximum differences of 1:1.72 in the viscosity, and 1:1.52 in the surface tension were obtained
 
-chen_mechanics_1962_f_csv = pd.read_csv('../../../data/chen_mechanics_1962/chen_mechanics_1962_fig_23.csv', sep=',', header=0)
+chen_mechanics_1962_f_csv = pd.read_csv('../data/chen_mechanics_1962/chen_mechanics_1962_fig_23.csv', sep=',', header=0)
 
 # pp. 27-28: > In Figure 23 the comparative smoothness of the test pipe is shown indicating that the pipes were not perfectly smooth
 
@@ -1006,7 +1010,7 @@ d_0_array = np.array(d_0_array) * 0.3048 / 12
                                     #'preexponential': preexponential,
                                     #'exponent': exponent})
 
-chen_mechanics_1962_csv = pd.read_csv('../../../data/chen_mechanics_1962/chen_mechanics_1962.csv', sep=',', header=0)
+chen_mechanics_1962_csv = pd.read_csv('../data/chen_mechanics_1962/chen_mechanics_1962.csv', sep=',', header=0)
 
 d_0_chen_mechanics_1962            = chen_mechanics_1962_csv['d_0'] * 0.3048 / 12 # m
 Ubar_0_chen_mechanics_1962         = chen_mechanics_1962_csv['Ubar_0'] * 0.3048 # m/s
@@ -1207,7 +1211,7 @@ j = None
 # Issues with this data:
 # 1. Page 11R says the glycerin-water mix is 79% by weight glycerin, but figure 4 says 77% by weight glycerin. I'll use the properties listed in the text, and assume 79% by weight glycerin for the surface tension (which is not given).
 
-rupe_dynamic_1962_csv = pd.read_csv('../../../data/rupe_dynamic_1962/rupe_dynamic_1962.csv', sep=',', header=0)
+rupe_dynamic_1962_csv = pd.read_csv('../data/rupe_dynamic_1962/rupe_dynamic_1962.csv', sep=',', header=0)
 
 liquid_rupe_dynamic_1962         = rupe_dynamic_1962_csv['liquid']
 page_fig_rupe_dynamic_1962       = rupe_dynamic_1962_csv['page fig']
@@ -1434,7 +1438,7 @@ d_0 = None
 i = None
 j = None
 
-skrebkov_turbulentnyye_1963_csv = pd.read_csv('../../../data/skrebkov_turbulentnyye_1963/skrebkov_turbulentnyye_1963_fig_1.csv', sep=',', header=0)
+skrebkov_turbulentnyye_1963_csv = pd.read_csv('../data/skrebkov_turbulentnyye_1963/skrebkov_turbulentnyye_1963_fig_1.csv', sep=',', header=0)
 
 # Based on fig. 2, the spray angle given in this paper is the full angle.
 
@@ -1634,7 +1638,7 @@ T_atm = 25 # Assuming the air is at or near the same temperature.
 # nozzles 1, 4, 5, 8, 9
 # photos: pp. 83-84 (nozzle 1), 94-95 (nozzle 8), 101 (nozzle 8), 114 (nozzle 4)
 
-grant_newtonian_1965_csv = pd.read_csv('../../../data/grant_newtonian_1965/grant_newtonian_1965.csv', sep=',', header=0)
+grant_newtonian_1965_csv = pd.read_csv('../data/grant_newtonian_1965/grant_newtonian_1965.csv', sep=',', header=0)
 
 page_grant_newtonian_1965           = grant_newtonian_1965_csv['page']
 table_grant_newtonian_1965          = grant_newtonian_1965_csv['table']
@@ -1916,7 +1920,7 @@ j = None
 # siuru_response_1975 p. 211: > Previous investigations have shown that the transition from rough to smooth wall flow is slower than for the smooth to rough transition.
 # rough to smooth: antonia_response_1972 (BL), tani_response_1971, Smits
 
-kusui_liquid_1969_csv = pd.read_csv('../../../data/kusui_liquid_1969/kusui_liquid_1969.csv', sep=',', header=0)
+kusui_liquid_1969_csv = pd.read_csv('../data/kusui_liquid_1969/kusui_liquid_1969.csv', sep=',', header=0)
 
 page_kusui_liquid_1969       = kusui_liquid_1969_csv['page']
 fig_kusui_liquid_1969        = kusui_liquid_1969_csv['figure']
@@ -2148,7 +2152,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_kusui_liquid_1969])
 # p. 9: > [...] The combined errors in elapsed time and weight amount to an error in exit velocity on the order of 2 percent.
 # p. 9: > The accuracy of position measurement was approximately .2 cm.
 
-phinney_stability_1970_csv = pd.read_csv('../../../data/phinney_stability_1970/phinney_stability_1970.csv', sep=',', header=0)
+phinney_stability_1970_csv = pd.read_csv('../data/phinney_stability_1970/phinney_stability_1970.csv', sep=',', header=0)
 
 page_fig_phinney_stability_1970   = phinney_stability_1970_csv['page fig']
 nozzle_phinney_stability_1970     = phinney_stability_1970_csv['nozzle']
@@ -2457,7 +2461,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_phinney_stability_1970])
 # 1. It is unclear how they reduced the surface tension so much for fluid II if it is merely salt water. Temperature? I am removing fluid II for now.
 # 2. The stability parameter as defined in figure 2 on p. 692 appears to be wrong. However, I have verified that the correct definition is what was used when producing figure 3 by comparing against data from chen_mechanics_1962.
 
-phinney_breakup_1973_csv = pd.read_csv('../../../data/phinney_breakup_1973/phinney_breakup_1973.csv', sep=',', header=0)
+phinney_breakup_1973_csv = pd.read_csv('../data/phinney_breakup_1973/phinney_breakup_1973.csv', sep=',', header=0)
 
 nozzle_phinney_breakup_1973     = phinney_breakup_1973_csv['nozzle']
 fluid_phinney_breakup_1973      = phinney_breakup_1973_csv['fluid']
@@ -2720,7 +2724,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_phinney_breakup_1973])
 # mu_l  = 1.15 centipoise = 1.15e-3 Pa*s
 # sigma = 73.1 dyne/cm    = 73.1e-3 N/m
 
-phinney_breakup_1975_csv = pd.read_csv('../../../data/phinney_breakup_1975/phinney_breakup_1975_fig_2.csv', sep=',', header=0)
+phinney_breakup_1975_csv = pd.read_csv('../data/phinney_breakup_1975/phinney_breakup_1975_fig_2.csv', sep=',', header=0)
 
 nozzle_phinney_breakup_1975 = phinney_breakup_1975_csv['nozzle']
 P_atm_phinney_breakup_1975  = phinney_breakup_1975_csv['P_atm (mm)'] * 133.322 # Pa
@@ -2928,7 +2932,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_phinney_breakup_1975])
 # TODO: Add tabulated data from sterling_instability_1969.
 # TODO: Add wavelength data (sterling_instability_1969 table VII). This has a different camera setup, so you should change the camera section for these. See sterling_instability_1975 p. 488.
 
-sterling_instability_1975_csv = pd.read_csv('../../../data/sterling_instability_1975/sterling_instability_1969.csv', sep=',', header=0)
+sterling_instability_1975_csv = pd.read_csv('../data/sterling_instability_1975/sterling_instability_1969.csv', sep=',', header=0)
 
 temp_sterling_instability_1975  = 23. # C, from sterling_instability_1975 table 1 (assumed gas temperature is the same as the fluid temperature)
 P_atm_sterling_instability_1975 = P_atm # sterling_instability_1969 p. 81 just says "1 atm".
@@ -3145,7 +3149,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_sterling_instability_1975])
 # TODO: Figure C-41, p. C45 (pdf p. 327): photo (1bS?); p. 68 suggests this might have a polymer added
 # TODO: reitz_dependence_1979 p. 12 fig. 11a
 
-reitz_atomization_1978_csv = pd.read_csv('../../../data/reitz_atomization_1978/reitz_atomization_1978.csv', sep=',', header=0)
+reitz_atomization_1978_csv = pd.read_csv('../data/reitz_atomization_1978/reitz_atomization_1978.csv', sep=',', header=0)
 
 #series_reitz_atomization_1978         = reitz_atomization_1978_csv['series']
 nozzle_reitz_atomization_1978         = reitz_atomization_1978_csv['nozzle']
@@ -3431,7 +3435,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_reitz_atomization_1978])
 # TODO: See other papers for information about photographic setup.
 # alt key = hoyt_structure_1974 or taylor_water_1983
 
-hoyt_pipeexit_1980_csv = pd.read_csv('../../../data/hoyt_pipe-exit_1980/hoyt_pipe.csv', sep=',', header=0)
+hoyt_pipeexit_1980_csv = pd.read_csv('../data/hoyt_pipe-exit_1980/hoyt_pipe.csv', sep=',', header=0)
 
 citation_key_hoyt_pipeexit_1980   = hoyt_pipeexit_1980_csv['citation key']
 Ubar_0_hoyt_pipeexit_1980         = hoyt_pipeexit_1980_csv['U_0 (ft/s)'] * 0.3048 # m/s
@@ -3646,7 +3650,7 @@ T_kim_investigation_1983 = 30 # C
 
 # kim_investigation_1983 pp. 174-200 (pdf pp. 192-)
 
-kim_investigation_1983_csv = pd.read_csv('../../../data/kim_investigation_1983/kim_investigation_1983_photos.csv', sep=',', header=0)
+kim_investigation_1983_csv = pd.read_csv('../data/kim_investigation_1983/kim_investigation_1983_photos.csv', sep=',', header=0)
 
 liquid_kim_investigation_1983         = kim_investigation_1983_csv['fluid']
 pipe_material_kim_investigation_1983  = kim_investigation_1983_csv['pipe material']
@@ -3891,7 +3895,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_kim_investigation_1983])
 
 # Test with high pressure apparatus.
 
-wu_atomizing_1983_csv = pd.read_csv('../../../data/wu_atomizing_1983/wu_atomizing_1983.csv', sep=',', header=0)
+wu_atomizing_1983_csv = pd.read_csv('../data/wu_atomizing_1983/wu_atomizing_1983.csv', sep=',', header=0)
 
 n_wu_atomizing_1983      = wu_atomizing_1983_csv['data'] # See issue #1.
 nozzle_wu_atomizing_1983 = wu_atomizing_1983_csv['nozzle']
@@ -4109,7 +4113,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_wu_atomizing_1983])
 # Fig. 9 has a curve for breakup length but no data points. It can be used to determine L_b regime.
 # Fig. 12 is likely duplicated by fig. 15, and it also does not seem to fully describe the differences between the fully developed data points.
 
-shimizu_measurements_1984_csv = pd.read_csv('../../../data/shimizu_measurements_1984/shimizu_measurements_1984.csv', sep=',', header=0)
+shimizu_measurements_1984_csv = pd.read_csv('../data/shimizu_measurements_1984/shimizu_measurements_1984.csv', sep=',', header=0)
 
 d_0_shimizu_measurements_1984            = shimizu_measurements_1984_csv['d_0 (mm)'] * 1e-3 # m
 L_0s_shimizu_measurements_1984           = shimizu_measurements_1984_csv['L_0/d_0']
@@ -4330,7 +4334,7 @@ nu_l_arai_break_up_1985  = nu_water(T_atm)
 sigma_arai_break_up_1985 = sigma_water(T_atm)
 d_0_arai_break_up_1985   = 0.3e-3; # m
 
-arai_break_up_1985_csv = pd.read_csv('../../../data/arai_break-up_1985/arai_break-up_1985.csv', sep=',', header=0)
+arai_break_up_1985_csv = pd.read_csv('../data/arai_break-up_1985/arai_break-up_1985.csv', sep=',', header=0)
 
 P_g_arai_break_up_1985        = arai_break_up_1985_csv['P_atm']
 L_0s_arai_break_up_1985       = arai_break_up_1985_csv['L_0/d_0']
@@ -4528,7 +4532,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_arai_break_up_1985])
 # TODO: Get Tu at exit from paper.
 # p. 39, tab. 2.4: test conditions table
 
-ruff_structure_1990_csv = pd.read_csv('../../../data/ruff_structure_1990/ruff_structure_1990.csv', sep=',', header=0)
+ruff_structure_1990_csv = pd.read_csv('../data/ruff_structure_1990/ruff_structure_1990.csv', sep=',', header=0)
 
 page_fig_ruff_structure_1990     = ruff_structure_1990_csv['page fig']
 liquid_ruff_structure_1990       = ruff_structure_1990_csv['liquid']
@@ -4737,7 +4741,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_ruff_structure_1990])
 
 # Tables: wu_liquid_1992 pp. 134-139 (pdf p. 151-139)
 
-wu_liquid_1992_csv = pd.read_csv('../../../data/wu_liquid_1992/wu_liquid_1992.csv', sep=',', header=0)
+wu_liquid_1992_csv = pd.read_csv('../data/wu_liquid_1992/wu_liquid_1992.csv', sep=',', header=0)
 
 key_wu_liquid_1992            = wu_liquid_1992_csv['key']
 alt_key_wu_liquid_1992        = wu_liquid_1992_csv['alt key']
@@ -4999,7 +5003,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_wu_liquid_1992])
 # DONE: Add photos.
 # mansour_effect_1994 pp. 132-133: > The nozzles were constructed from stainless steel hypodermic tubing, square cut on both ends and burr free. The injection orifices were examined under a 15x microscope and carefully deburred with a jeweler's broach, with particular care taken to avoid beveling corners. Tor the large capillary tube setup, the liquid entered a large cylinderical chamber followed by a 22:1 contraction. This was followed by an injector tube, D_1 = 3.051 mm diameter with a length to diameter ratio L_1/D_1 = 36. For the small capillary setup, the liquid entered a cylindrical chamber followed by a 4:1 contraction. This was followed by an injector tube, D_2 = 1.194 mm diamer with a length to diameter ratio L_2/D_2 = 255.
 
-mansour_effect_1994_csv = pd.read_csv('../../../data/mansour_effects_1994/mansour_effects_1994_fig_7_2.csv', sep=',', header=0)
+mansour_effect_1994_csv = pd.read_csv('../data/mansour_effects_1994/mansour_effects_1994_fig_7_2.csv', sep=',', header=0)
 
 d_0_mansour_effect_1994          = mansour_effect_1994_csv['d_0 (mm)'] * 1e-3 # m
 Ubar_0_mansour_effect_1994       = mansour_effect_1994_csv['Ubar_0 (m/s)']
@@ -5189,7 +5193,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_mansour_effect_1994])
 # p. 26: still air at $99\pm0.5$ kPa and $297\pm0.5$ K ($\rho_\text{g} - 1.16$ kg/m$^3$ and $\nu_\text{g} = 15.9$ mm$^2$/s). Round injector with a rounded entry and a length-to-diameter ratio of 40:1.
 T_sallam_properties_2002 = 297 - T_zero # C
 
-sallam_properties_2002_csv = pd.read_csv('../../../data/sallam_properties_2002/sallam_properties_2002.csv', sep=',', header=0)
+sallam_properties_2002_csv = pd.read_csv('../data/sallam_properties_2002/sallam_properties_2002.csv', sep=',', header=0)
 
 theta_page_fig_sallam_properties_2002 = sallam_properties_2002_csv['theta page fig']
 x_i_page_fig_sallam_properties_2002   = sallam_properties_2002_csv['x_i page fig']
@@ -5443,7 +5447,6 @@ f_trettel_modeling_2020 = friction_factor_smooth_array(Re_l0_trettel_modeling_20
 Fr_0_trettel_modeling_2020       = Ubar_0_trettel_modeling_2020**2. / (d_0_trettel_modeling_2020 * g)
 rho_s_trettel_modeling_2020      = rho_l_trettel_modeling_2020 / rho_g_trettel_modeling_2020
 nu_s_trettel_modeling_2020       = nu_l_trettel_modeling_2020 / nu_g_trettel_modeling_2020
-#K_c_trettel_modeling_2020        = (P_atm_trettel_modeling_2020 - P_v_trettel_modeling_2020) / (0.5 * rho_l_trettel_modeling_2020 * Ubar_0_trettel_modeling_2020**2)
 K_c_trettel_modeling_2020        = K_c(P_atm_trettel_modeling_2020, P_v_trettel_modeling_2020, rho_l_trettel_modeling_2020, Ubar_0_trettel_modeling_2020, K_L_sharpedged, friction_factor_smooth_array(Re_l0_trettel_modeling_2020), L_0_trettel_modeling_2020/d_0_trettel_modeling_2020)
 
 Ma_g_trettel_modeling_2020        = []
@@ -5494,8 +5497,8 @@ df_trettel_modeling_2020['t/d_0']       = np.nan
 df_trettel_modeling_2020['L_tip/d_0']   = np.nan
 df_trettel_modeling_2020['end checked'] = np.nan
 
-df_trettel_modeling_2020['orientation']         = np.nan
-df_trettel_modeling_2020['vibration isolation'] = np.nan
+df_trettel_modeling_2020['orientation']         = 'angled'
+df_trettel_modeling_2020['vibration isolation'] = False
 df_trettel_modeling_2020['d_chamber/d_0']       = np.nan
 
 #df_trettel_modeling_2020['We_l0']      = We_l0_trettel_modeling_2020
@@ -5593,7 +5596,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_trettel_modeling_2020])
 
 summary_table(df_jet_breakup)
 
-with open(output_filename+'.pickle', 'w') as f:
+with open('../outputs/output_filename+'.pickle', 'w') as f:
    pickle.dump([df_jet_breakup, metadata], f)
 
 macros_breakdown = open('macros_breakdown.tex', 'w')
@@ -5603,7 +5606,7 @@ macros_breakdown.write(r'\newcommand{\compilationcitations}{\cite{')
 key_array = []
 for key in df_jet_breakup['key']:
    if key == 'eisenklam_flow_1958':
-      # removed due to high Re_crits
+      # removed due to high Re_crit
       continue
    elif key == 'chen_mechanics_1962':
       key = 'chen_disintegration_1964'
