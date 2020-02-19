@@ -12,7 +12,7 @@ macros_atomization = open('../outputs/macros/atomization.tex', 'w')
 
 print
 
-with open('../outputs/'+data_file+'.pickle') as f:
+with open('../outputs/data/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
 xbavgs_df = df_jet_breakup
@@ -40,7 +40,7 @@ print 'C_A         =', C_A
 print 'alpha_Tu_A  =', alpha_Tu_A
 print 'alpha_rho_s =', alpha_rho_s
 
-with open('../data/atomization_xbavg.pickle', 'w') as f:
+with open('../outputs/data/atomization_xbavg.pickle', 'w') as f:
    pickle.dump([C_A, alpha_Tu_A, alpha_rho_s], f)
 
 macros_atomization.write(r'\newcommand{\xbavgatomreg}{\frac{\xbavg}{d_0} = '+roundstr(C_A)+r' \Tubarexp{'+roundstr(alpha_Tu_A)+r'} \left(\frac{\rhol}{\rhog}\right)^{'+roundstr(alpha_rho_s)+'}}\n')
@@ -51,7 +51,7 @@ print 'R^2 =', coeff_of_determination(xbavgs_df['L_b/d_0 predicted'], xbavgs_df[
 macros_atomization.write(r'\newcommand{\xbavgatomregrsquared}{'+roundstr(coeff_of_determination(xbavgs_df['L_b/d_0 predicted'], xbavgs_df['L_b/d_0']))+'}\n')
 macros_atomization.write(r'\newcommand{\xbavgatomregN}{\num{'+str(len(xbavgs_df))+'}}\n')
 
-with open('../data/TSB_xbavg.pickle') as f:
+with open('../outputs/data/TSB_xbavg.pickle') as f:
    C_TSB, alpha_We, alpha_Re_l0_2WI, alpha_Tu_2WI, alpha_rho_s_2WI = pickle.load(f)
 
 C_TSBtoA           = (C_A / C_TSB)**(1./alpha_We)
@@ -64,7 +64,7 @@ print 'alpha_Tu_2WItoA    =', alpha_Tu_2WItoA
 print 'alpha_rho_s_2WItoA =', alpha_rho_s_2WItoA
 print
 
-with open('../data/atomization_boundary.pickle', 'w') as f:
+with open('../outputs/data/atomization_boundary.pickle', 'w') as f:
    pickle.dump([C_TSBtoA, alpha_Tu_2WItoA, alpha_rho_s_2WItoA], f)
 
 macros_atomization.write(r'\newcommand{\Wecritatom}{\Welocrit = '+roundstr(C_TSBtoA)+r' \Tubarexp{'+roundstr(alpha_Tu_2WItoA)+r'} \left(\frac{\rhol}{\rhog}\right)^{'+roundstr(alpha_rho_s_2WItoA)+'}}\n')
@@ -84,4 +84,4 @@ macros_atomization.write(r'\newcommand{\WegcritReitz}{'+roundstr(We_g_crit)+'}\n
 macros_atomization.close()
 
 # TODO: Fix this hack that gets citations working in the legends.
-os.system("for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")
+os.system("cd ../outputs/figures/ ; for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")

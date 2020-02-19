@@ -3,12 +3,7 @@
 
 from jetbreakup import *
 
-lastchangedby       = '$LastChangedBy: $'
-lastchangedrevision = '$LastChangedRevision: $'
-lastchangeddate     = '$LastChangedDate: $'
-headurl             = '$HeadURL: $'
-
-#revno = lastchangedrevision.replace('$LastChangedRevision: ', '').replace('$', '')
+#revno = lastchangedrevision[0:6]
 revno = None
 
 macros_reg = open('../outputs/macros/regression.tex', 'w')
@@ -20,7 +15,7 @@ macros_reg = open('../outputs/macros/regression.tex', 'w')
 
 print
 
-with open('../outputs/'+data_file+'.pickle') as f:
+with open('../outputs/data/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
 ##########
@@ -99,7 +94,7 @@ print 'C_Re_l0 = ', C_Re_l0
 print 'C_I_0   = ', C_I_0
 print 'C_rho_s = ', C_rho_s
 
-with open('TSB_xbavg.pickle', 'w') as f:
+with open('../outputs/data/TSB_xbavg.pickle', 'w') as f:
    pickle.dump([C_xbavg, C_We_l0, C_Re_l0, C_I_0, C_rho_s], f)
 
 print 'sigma log <x_b>/d_0 =', sigma_regression(a + C_We_l0 * log(L_bs_df['We_l0']) + C_Re_l0 * log(L_bs_df['Re_l0']) + C_I_0 * log(L_bs_df['I_0']) + C_rho_s * log(L_bs_df['rho_s']), log(L_bs_df['L_b/d_0']))
@@ -123,7 +118,7 @@ macros_reg.write('\n')
 # Issues with this data:
 # 1. Divergence from previous correlation for high \langle x_b \rangle / d_0. This could be caused by a few things. Most notable are the exponent on Tu for the \langle x_b \rangle correlation. If the exponent is in the range of about -0.25 to -0.35 then the data matches the correlation much better (the correlation runs through the center of the data, although the data has large spread), but this is inconsistent with the most credible estimate for Tu that I can make for kusui_liquid_1969. Another possibility is that this data is in the atomization regime. However, the values of TA would suggest they are in the second wind induced regime. Yet another possibility is that the integral scales for this data are far off that for pipe jets.
 
-ervine_effect_1980_csv = pd.read_csv('../../../data/ervine_effect_1980/ervine_effect_1980_fig_8_2.csv', sep=',', header=0)
+ervine_effect_1980_csv = pd.read_csv('../data/ervine_effect_1980/ervine_effect_1980_fig_8_2.csv', sep=',', header=0)
 
 d_0_ervine_effect_1980    = ervine_effect_1980_csv['d (m)']
 I_0_ervine_effect_1980    = ervine_effect_1980_csv['TI']
@@ -165,7 +160,7 @@ df_ervine_effect_1980['rho_s']     = rho_s_ervine_effect_1980
 
 df_other_comparison = df_ervine_effect_1980
 
-mckeogh_air_1980_csv = pd.read_csv('../../../data/mckeogh_air_1980/mckeogh_air_1980_fig_3.csv', sep=',', header=0)
+mckeogh_air_1980_csv = pd.read_csv('../data/mckeogh_air_1980/mckeogh_air_1980_fig_3.csv', sep=',', header=0)
 
 d_0_mckeogh_air_1980  = mckeogh_air_1980_csv['d (m)']
 I_0_mckeogh_air_1980  = mckeogh_air_1980_csv['TI']
@@ -203,8 +198,13 @@ df_mckeogh_air_1980['rho_s']     = rho_s_mckeogh_air_1980
 
 df_other_comparison = pd.concat([df_other_comparison, df_mckeogh_air_1980])
 
-df_other_comparison['We_l0_crit'] = We_l0_crit(df_other_comparison['I_0'], df_other_comparison['rho_s'])
-df_other_comparison = df_other_comparison[df_other_comparison['We_l0'] < df_other_comparison['We_l0_crit']] # Exclude atomization points.
+if os.path.exists('../outputs/data/atomization_boundary.pickle'):
+   df_other_comparison['We_l0_crit'] = We_l0_crit(df_other_comparison['I_0'], df_other_comparison['rho_s'])
+   df_other_comparison = df_other_comparison[df_other_comparison['We_l0'] < df_other_comparison['We_l0_crit']] # Exclude atomization points.
+else:
+   print 'Run atomization.py to get the atomization regime boundary first.'
+   exit(-1)
+
 #df_other_comparison = df_other_comparison[df_other_comparison['Re_l0'] > 1.e5] # Use only likely turbulent points.
 #df_other_comparison = df_other_comparison[df_other_comparison['I_0'] >= 0.01] # Use only likely turbulent points.
 #df_other_comparison['We_l0_crit_TR'] = We_l0_crit_TR(df_other_comparison['I_0'])
@@ -319,7 +319,7 @@ plot_with_keys(theta_df, 'correlation', 'theta predicted', 'theta', plot_type='l
 print 'theta R^2 =', coeff_of_determination(theta_df['theta predicted'], theta_df['theta'])
 print
 
-with open('TSB_thetai.pickle', 'w') as f:
+with open('../outputs/data/TSB_thetai.pickle', 'w') as f:
    pickle.dump([C_theta, C_We_l0], f)
 
 macros_reg.write(r'\newcommand{\thetaikeysused}{\citet{')
@@ -530,6 +530,9 @@ v_d_bar_is['v_d_bar/vp predicted'] = C_v_d_bar * (v_d_bar_is['We_l0'] * v_d_bar_
 print
 
 # TODO: Fix this hack that gets citations working in the legends.
-os.system("for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")
+os.system("cd ../outputs/figures/ ; for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")
 
 macros_reg.close()
+
+if rerun:
+   print 'Rerun after running atomization.py to get atomization regime boundary correct.'

@@ -24,6 +24,21 @@ from scipy.optimize import fsolve
 from scipy.integrate import quad
 from git import Repo
 
+# Configuration
+root_dir  = '/home/ben/svn/pipe-jet-breakup-data/'
+data_file = 'pipe-jet-breakup-data'
+
+if not(os.path.exists('../outputs/')):
+   os.mkdir('../outputs/')
+if not(os.path.exists('../outputs/data/')):
+   os.mkdir('../outputs/data/')
+if not(os.path.exists('../outputs/figures/')):
+   os.mkdir('../outputs/figures/')
+if not(os.path.exists('../outputs/macros/')):
+   os.mkdir('../outputs/macros/')
+if not(os.path.exists('../outputs/tables/')):
+   os.mkdir('../outputs/tables/')
+
 repo = Repo('../')
 headcommit = repo.head.commit
 
@@ -87,10 +102,6 @@ pgf_with_pdflatex_talk = {
 pgf_with_pdflatex_talk = pgf_with_pdflatex_report
 mpl.rcParams.update(pgf_with_pdflatex_report)
 import matplotlib.pyplot as plt
-
-# Configuration
-root_dir  = '/home/ben/svn/pipe-jet-breakup-data/'
-data_file = 'pipe-jet-breakup-data'
 
 water_df = pd.read_csv(root_dir+'data/fluid-properties/water.csv', sep=',', header=0)
 water_df['Viscosity (m2/s)'] = water_df['Viscosity (Pa*s)'] / water_df['Density (kg/m3)']
@@ -376,7 +387,7 @@ def summary_table(df_key, variable=None):
          if not(regime in regime_list):
             regime_list.append(regime)
       
-      print len(df_key[df_key['L_b/d_0'].notnull()]), 'L_b/d_0 data points'
+      print len(df_key[df_key['L_b/d_0'].notnull()]), 'xbavg/d_0 data points'
       print len(df_key[df_key['theta'].notnull()]), 'theta data points'
       print len(df_key[df_key['D_10/d_0'].notnull()]) + len(df_key[df_key['D_30/d_0'].notnull()]) + len(df_key[df_key['D_32/d_0'].notnull()]), 'D data points'
       print len(df_key[df_key['x_i/d_0'].notnull()]), 'x_i/d_0 data points'
@@ -541,61 +552,12 @@ def summary_table(df_key, variable=None):
    #x_i
    #photos
 
-def trajectory_summary_table(df_key):
-   key_array = []
-   for key in df_key['key']:
-      if not(key in key_array):
-         key_array.append(key)
-   
-   if len(key_array) > 1:
-      print str(len(key_array))+' studies ('+str(len(df_key))+' data points):'
-      print key_array
-   else:
-      print df_key['key'][0]+' ('+str(len(df_key))+' data points):'
-   
-   print len(df_key[df_key['regime turb'] == 'turbulent']), 'turbulent data points'
-   
-   print 'eta_R_max = [', round(np.amin(df_key['eta_R_max']), 3), '--', round(np.amax(df_key['eta_R_max']), 3), ']'
-   print 'We_l0     = [', '%.1E' % Decimal(np.amin(df_key['We_l0'])), '--', '%.1E' % Decimal(np.amax(df_key['We_l0'])), ']'
-   print 'Re_l0     = [', '%.1E' % Decimal(np.amin(df_key['Re_l0'])), '--', '%.1E' % Decimal(np.amax(df_key['Re_l0'])), ']'
-   print 'Fr_0      = [', round(np.amin(df_key['Fr_0']), 1), '--', round(np.amax(df_key['Fr_0']), 1), ']'
-   print 'Fr_h_0    = [', round(np.amin(df_key['Fr_h_0']), 1), '--', round(np.amax(df_key['Fr_h_0']), 1), ']'
-   print 'rho_s     = [', round(np.amin(df_key['rho_s']), 1), '--', round(np.amax(df_key['rho_s']), 1), ']'
-   print 'theta_0   = [', round((180. / np.pi) * np.amin(df_key['theta_0']), 1), '--', round((180. / np.pi) * np.amax(df_key['theta_0']), 1), '] deg.'
-   print '<x_b>/d_0 = [', round(np.amin(df_key['avg_x_b/d_0']), 1), '--', round(np.amax(df_key['avg_x_b/d_0']), 1), ']'
-   print 'L_0/d_0   = [', round(np.amin(df_key['L_0/d_0']), 1), '--', round(np.amax(df_key['L_0/d_0']), 1), ']'
-   print 'c         = [', round(np.amin(df_key['c']), 1), '--', round(np.amax(df_key['c']), 1), '] = (d_inlet / d_0)^2'
-   
-   print
-   
-   #if len(df_key[df_key['eta_R_max'].notnull()]) > 0:
-   assert(np.amin(df_key['eta_R_max']) > 0.)
-   assert(np.amax(df_key['eta_R_max']) < 1.)
-   
-   assert(np.amin(df_key['We_l0']) > 0.)
-   assert(np.amax(df_key['We_l0']) < 2.e6)
-   assert(np.amin(df_key['Re_l0']) > 0.)
-   assert(np.amax(df_key['Re_l0']) < 2.e6)
-   assert(np.amin(df_key['Fr_0']) > 0.)
-   assert(np.amax(df_key['Fr_0']) < 1.e6)
-   assert(np.amin(df_key['Fr_h_0']) > 0.)
-   assert(np.amax(df_key['Fr_h_0']) < 5.e3)
-   assert(np.amin(df_key['rho_s']) > 0.)
-   assert(np.amax(df_key['rho_s']) < 1.e4)
-   assert(np.amin(df_key['theta_0']) >= 0.)
-   assert(np.amax(df_key['theta_0']) < np.pi)
-   assert(np.amin(df_key['avg_x_b/d_0']) > 0.)
-   #assert(np.amin(df_key['L_0/d_0']) >= 0.)
-   #assert(np.amin(df_key['L_0/d_0']) < 200.)
-   assert(np.amin(df_key['c']) >= 0.)
-   assert(np.amin(df_key['c']) < 100.)
-
 def latex_summary_table(df_key, variable):
    # DONE: Make LaTeX table generated automatically by the processing script.
    # WON'T: Use \uparrow, \downarrow, and \rightarrow for orientation in table.
    # WON'T: If writing out page figs, add slashes after periods to make sure the periods are not treated as the ends of sentences.
    
-   table_filename = filename_escape('summary_table_'+variable+'.tex')
+   table_filename = filename_escape('../outputs/tables/summary_table_'+variable+'.tex')
    
    print 'Writing '+table_filename+'...'
    
@@ -955,7 +917,7 @@ def plot_with_keys(df_variable, filename_header, input_variable_1, input_variabl
       axes.set_ylim([0., 1.])
    #plt.tight_layout() # TODO: comment out for talk
    fig = plt.gcf()
-   plt.savefig(filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'.png'))
+   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'.png'))
    #fig.set_size_inches(12., 8., forward=True) # poster
    fig.set_size_inches(6., 4., forward=True) # report
    mpl.rcParams.update(pgf_with_pdflatex_report)
@@ -965,16 +927,16 @@ def plot_with_keys(df_variable, filename_header, input_variable_1, input_variabl
    plt.legend(bbox_to_anchor=(0., -0.15), loc='upper left', frameon=False, fontsize=11)
    
    #mpl.rcParams.update({"font.family": "serif"})
-   plt.savefig(filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_report.pgf'), bbox_inches="tight")
+   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_report.pgf'), bbox_inches="tight")
    
    fig.set_size_inches(5.5, 4., forward=True) # paper
-   plt.savefig(filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_paper.pgf'), bbox_inches="tight")
+   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_paper.pgf'), bbox_inches="tight")
    
    fig.set_size_inches(4., 2.5, forward=True) # talk
    mpl.rcParams.update(pgf_with_pdflatex_talk)
    axes = plt.gca()
    axes.legend_.remove()
-   plt.savefig(filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_talk.pgf'), bbox_inches="tight")
+   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_talk.pgf'), bbox_inches="tight")
    #mpl.rcParams.update(pgf_with_pdflatex_report)
    plt.close()
    
@@ -1047,7 +1009,7 @@ def convert_variable_to_latex(variable):
       return r'$\eta_\text{max}$'+extra
    elif variable == 'theta_0':
       return r'$\theta_0$'+extra
-   elif variable == 'avg_x_b/d_0':
+   elif variable == 'xbavg/d_0':
       return r'$\langle x_\text{b} \rangle/d_0$'+extra # TODO: convert L_b/d_0 to this later
    elif variable == 'D_max/d_0':
       return r'$D_\text{max}/d_0$'+extra
@@ -1067,12 +1029,12 @@ def convert_variable_to_latex(variable):
 def spray_angle(Tu_0, We_l0):
    #return 2. * np.arctan(0.001007 * Tu_0**0.3469 * We_l0**0.4024)
    
-   #with open('/home/ben/svn/waterjets/scripts/breakup/pipe-jets/TSB_thetai.pickle') as f:
+   #with open(root_dir+'outputs/data/TSB_thetai.pickle') as f:
       #C_theta, C_We_l0, C_I_0 = pickle.load(f)
       
       #return 2. * np.arctan(C_theta * Tu_0**C_I_0 * We_l0**C_We_l0)
    
-   with open('/home/ben/svn/waterjets/scripts/breakup/pipe-jets/TSB_thetai.pickle') as f:
+   with open(root_dir+'outputs/data/TSB_thetai.pickle') as f:
       C_theta, C_We_l0 = pickle.load(f)
       
       return 2. * np.arctan(C_theta * We_l0**C_We_l0)
@@ -1080,7 +1042,7 @@ def spray_angle(Tu_0, We_l0):
 def breakup_length(Tu_0, We_l0):
    #return 3.5453 * Tu_0**(-0.2623) * We_l0**0.3387
    
-   with open('/home/ben/svn/waterjets/scripts/breakup/pipe-jets/TSB_xbavg.pickle') as f:
+   with open(root_dir+'outputs/data/TSB_xbavg.pickle') as f:
       C_TSB, alpha_We, alpha_Re_l0_2WI, alpha_Tu_2WI, alpha_rho_s_2WI = pickle.load(f)
       
       return C_TSB * Tu_0**alpha_Tu_2WI * We_l0**alpha_We
@@ -1088,7 +1050,7 @@ def breakup_length(Tu_0, We_l0):
 def breakup_length_atomization(Tu_0, rho_s):
    #return 5.30525284643 * Tu_0**(-0.567852186033) * rho_s**(0.334893454839)
    
-   with open('/home/ben/svn/waterjets/scripts/breakup/pipe-jets/atomization_xbavg.pickle') as f:
+   with open(root_dir+'outputs/data/atomization_xbavg.pickle') as f:
       C_A, alpha_Tu_A, alpha_rho_s = pickle.load(f)
       
       return C_A * Tu_0**alpha_Tu_A * rho_s**alpha_rho_s
@@ -1104,176 +1066,12 @@ def natural_keys(text):
    '''
    return [ atoi(c) for c in re.split('(\d+)', text) ]
 
-def write_trajectory_fds_input_file(basename, number, T_atm, D_FDS, D_max, d_0, Ubar_0, theta_i, h_0, theta_0, xbavg_s, dist=True, max_range=50., dx=1., height=25., width=40., behind=10., t_end=20., droplet_size=False, breakup_ratio=0.42857, droplet_breakup=False):
-   # basename  filename label
-   # number    data point number
-   # T_atm     ambient temperature (C)
-   # D_FDS     FDS droplet diameter parameter (m) (they call it the "volumetric median droplet diameter", but it's probably not that)
-   # D_max     maximum droplet diameter (m)
-   # d_0       nozzle diameter (m)
-   # Ubar_0    nozzle velocity (m/s)
-   # theta_i   spray angle (full angle, deg.)
-   # h_0       initial firing height (m)
-   # theta_0   firing angle (deg., above horizontal)
-   # xbavg_s   breakup length/d_0
-   
-   # / FLOW_RATE = (pi/4) * (12.7e-3^2) * 3.71 * sqrt(6.2 * 14.7 / 1.01325) * 60 * 1000
-   Q            = (np.pi / 4.) * d_0**2. * Ubar_0 * 60. * 1000. # L/min
-   half_theta_i = theta_i / 2.
-   x_vec        = np.cos(theta_0 * np.pi / 180.)
-   z_vec        = np.sin(theta_0 * np.pi / 180.)
-   xbavg        = xbavg_s * d_0
-   
-   gamma     = 2.4 # FDS distribution parameter
-   sigma_D   = 2. / (sqrt(2 * np.pi) * log(2.) * 2.4) # log-normal distribution parameter
-   
-   #print 'basename     =', basename
-   #print 'number       =', number
-   #print 'Q            =', Q, 'L/min'
-   #print 'half_theta_i =', half_theta_i, 'deg.'
-   #print 'x_vec        =', x_vec
-   #print 'z_vec        =', z_vec
-   
-   #index
-   #TMPA # ambient temperature in C
-   #DIAMETER= # median droplet diameter, um
-   #MAXIMUM_DIAMETER= # maximum droplet diameter, um
-   #FLOW_RATE= # L/min
-   #PARTICLE_VELOCITY= # m/s
-   #SPRAY_ANGLE=0.,2.55 # half angle, degrees
-   #XYZ=0.0,0.0,1.0 # height, m
-   #ORIENTATION=0.81915,0,0.57358 # firing angle as unit vector
-   
-   if not(number is None):
-      f = open('./fds_input_files/'+lower(basename)+'_'+str(number)+'.fds', 'w')
-      f.write("&HEAD CHID='"+lower(basename)+"_"+str(number)+"', TITLE='Fire hose jet trajectory, "+basename+" number "+str(number)+"' /\n\n")
-   else:
-      f = open('./fds_input_files/'+lower(basename)+'.fds', 'w')
-      f.write("&HEAD CHID='"+lower(basename)+"', TITLE='Fire hose jet trajectory, "+basename+"' /\n\n")
-   
-   N_x = int((max_range + behind) / dx)
-   N_y = int(width / dx)
-   N_z = int(height / dx)
-   
-   f.write("&MESH IJK="+str(N_x)+","+str(N_y)+","+str(N_z)+", XB=-"+str(behind)+","+str(max_range)+",-"+str(width/2.)+","+str(width/2.)+",0.0,"+str(height)+" /\n")
-   f.write("&TIME T_END="+str(t_end)+" /\n\n")
-   f.write("&MISC PARTICLE_CFL=.TRUE., TMPA="+str(T_atm)+" /\n\n")
-   f.write("&RADI RADIATION=.FALSE./\n\n")
-   f.write("&SPEC ID='WATER VAPOR'/\n\n")
-   f.write("&PART ID='water drops',\n")
-   f.write("   SPEC_ID='WATER VAPOR',\n")
-   f.write("   QUANTITIES(1:3)='PARTICLE DIAMETER','PARTICLE TEMPERATURE','PARTICLE AGE',\n")
-   f.write("   DISTRIBUTION='LOGNORMAL',\n")
-   f.write("   SIGMA_D="+str(sigma_D)+",\n")
-   f.write("   DIAMETER="+str(D_FDS * 1.e6)+",\n") # μm
-   f.write("   MAXIMUM_DIAMETER="+str(D_max * 1.e6)+",\n") # μm
-   f.write("   SAMPLING_FACTOR=1,\n")
-   if droplet_breakup:
-      f.write("   BREAKUP=.TRUE.,\n") # Randy set this to .FALSE. before.
-      f.write("   BREAKUP_RATIO="+str(breakup_ratio)+",\n") # Randy set this to 1.0 before.
-   f.write("   PRIMARY_BREAKUP_LENGTH="+str(xbavg)+",\n")
-   f.write("   PRIMARY_BREAKUP_DRAG_REDUCTION_FACTOR=0.1 /\n\n")
-   f.write("&PROP ID='nozzle', PART_ID='water drops', FLOW_RATE="+str(Q)+", PARTICLE_VELOCITY="+str(Ubar_0)+", SPRAY_ANGLE=0.,"+str(half_theta_i)+", FLOW_TAU=2. /\n\n")
-   f.write("&DEVC XYZ=0.0,0.0,"+str(h_0)+", PROP_ID='nozzle', ORIENTATION="+str(x_vec)+",0,"+str(z_vec)+", ID='noz_1', QUANTITY='TIME', SETPOINT=0. /\n\n")
-   f.write("&VENT MB='XMIN', SURF_ID='OPEN' /\n")
-   f.write("&VENT MB='XMAX', SURF_ID='OPEN' /\n")
-   f.write("&VENT MB='YMIN', SURF_ID='OPEN' /\n")
-   f.write("&VENT MB='YMAX', SURF_ID='OPEN' /\n")
-   f.write("&VENT MB='ZMAX', SURF_ID='OPEN' /\n\n")
-   #f.write("&SLCF PBY=0.0,QUANTITY='MASS FRACTION',SPEC_ID='WATER VAPOR' /\n")
-   f.write("&SLCF PBY=0, QUANTITY='VELOCITY', VECTOR=T/\n")
-   f.write("&SLCF PBZ="+str(h_0)+", QUANTITY='VELOCITY', VECTOR=T/\n")
-   if dist:
-      f.write("\n&BNDF QUANTITY='AMPUA', PART_ID='water drops', CELL_CENTERED=T/\n")
-      f.write("&DEVC ID='MF', XB=-"+str(behind)+","+str(max_range)+",-"+str(width/2.)+","+str(width/2.)+",0.0,0.0, IOR=3, QUANTITY='AMPUA', PART_ID='water drops' /\n")
-      for i in np.linspace(-behind, max_range - dx, N_x):
-         f.write("&DEVC ID='Mass"+str(i)+"', XB="+str(i)+","+str(i + dx)+",-"+str(width/2.)+","+str(width/2.)+",0.0,0.0, IOR=3, QUANTITY='AMPUA', PART_ID='water drops', STATISTICS='SURFACE INTEGRAL' /"+'\n')
-   
-   if droplet_size:
-      f.write("\n&PROP ID='pdpa_d20', QUANTITY='DIAMETER', PART_ID='water drops', PDPA_RADIUS=0.099, PDPA_M=2, PDPA_N=0, PDPA_START=20. /\n")
-      f.write("&DEVC ID='PDPA 1', XYZ="+str(1.)+",0.0,"+str(h_0 + z_vec)+", QUANTITY='PDPA', PROP_ID='pdpa_d20' /\n")
-      f.write("&DEVC ID='PDPA 2', XYZ="+str(2.)+",0.0,"+str(h_0 + z_vec)+", QUANTITY='PDPA', PROP_ID='pdpa_d20' /\n")
-      f.write("&DEVC ID='PDPA 3', XYZ="+str(3.)+",0.0,"+str(h_0 + z_vec)+", QUANTITY='PDPA', PROP_ID='pdpa_d20' /\n")
-      f.write("&DEVC ID='PDPA 4', XYZ="+str(4.)+",0.0,"+str(h_0 + z_vec)+", QUANTITY='PDPA', PROP_ID='pdpa_d20' /\n")
-   
-   f.write("\n&TAIL /")
-   f.close()
-   
-   number_of_fds_input_files_saved = 0.
-   for file in os.listdir("./fds_input_files/"):
-      if file.endswith(".fds"):
-         number_of_fds_input_files_saved = number_of_fds_input_files_saved + 1.
-   run_cases_number = str(int(floor(number_of_fds_input_files_saved / 35.)) + 1)
-   #print number_of_fds_input_files_saved, run_cases_number
-   
-   f = open('./fds_input_files/run_cases_'+run_cases_number+'.sh', 'a')
-   f.write('fds ./'+lower(basename)+'_'+str(number)+'.fds\n')
-   f.close()
-   
-   #print 'Written: ./fds_input_files/'+lower(basename)+'_'+str(number)+'.fds'
-   #print
-
-def fds_max_range(directory, df_trajectory):
-   R_max_fds = np.array([])
-   key_array = []
-   for key, number in zip(df_trajectory['key'], df_trajectory['number']):
-      basename = key.split('_')[0]
-      
-      #if not(key in key_array):
-         #key_array.append(key)
-      
-      fds_devc_file = basename+'_'+str(number)+'_devc.csv'
-      
-      try:
-         fds_devc_file_df = pd.read_csv('./'+directory+'/'+fds_devc_file, sep=',', header=1)
-      except:
-         R_max_fds = np.append(R_max_fds, np.nan)
-      else:
-         buckets = list(fds_devc_file_df.columns.values)[1:]
-         
-         total_mass = 0.
-         for bucket in buckets:
-            total_mass = total_mass + fds_devc_file_df[bucket].iloc[-1]
-         
-         cumulative_mass = 0.
-         for bucket in buckets:
-            cumulative_mass = cumulative_mass + fds_devc_file_df[bucket].iloc[-1]
-            if (cumulative_mass < 0.999 * total_mass) and (fds_devc_file_df[bucket].iloc[-1] > 1.e-5):
-               max_range = int(bucket.replace('Mass', '')) + 1.
-         
-         R_max_fds = np.append(R_max_fds, max_range)
-   
-   return R_max_fds
-
-def fds_distribution(fds_devc_file):
-   try:
-      fds_devc_file_df = pd.read_csv(fds_devc_file, sep=',', header=1)
-   except:
-      water_distribution = []
-   else:
-      buckets = list(fds_devc_file_df.columns.values)[1:]
-      
-      total_mass = 0.
-      bucket_loc = np.array([])
-      for bucket in buckets:
-         total_mass = total_mass + fds_devc_file_df[bucket].iloc[-1]
-         
-         bucket_loc = np.append(bucket_loc, float(bucket.replace('Mass', '')))
-      
-      water_distribution = np.array([])
-      for bucket in buckets:
-         water_distribution = np.append(water_distribution, fds_devc_file_df[bucket].iloc[-1] / total_mass)
-   
-   assert((np.sum(water_distribution) - 1.) < 1.e-6)
-   
-   return bucket_loc, water_distribution
-
 def We_l0_crit(Tu_0, rho_s):
    # second-wind-induced-atomization boundary
    #return 1.97458901974 * Tu_0**(-1.02350307758) * rho_s**1.02781138701
    #return 3.17250862504 * Tu_0**(-0.876275337814) * rho_s**1.00350442958
    
-   with open('/home/ben/svn/waterjets/scripts/breakup/pipe-jets/atomization_boundary.pickle') as f:
+   with open(root_dir+'outputs/data/atomization_boundary.pickle') as f:
       C_TSBtoA, alpha_Tu_2WItoA, alpha_rho_s_2WItoA = pickle.load(f)
       
       return C_TSBtoA * Tu_0**alpha_Tu_2WItoA * rho_s**alpha_rho_s_2WItoA
@@ -1496,10 +1294,10 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename):
    
    fig = plt.gcf()
    fig.set_size_inches(6., 4., forward=True) # report
-   plt.savefig('stability_curve_'+filename+'.png')
-   plt.savefig('stability_curve_'+filename+'.pgf', bbox_inches="tight")
+   plt.savefig('../outputs/figures/stability_curve_'+filename+'.png')
+   plt.savefig('../outputs/figures/stability_curve_'+filename+'.pgf', bbox_inches="tight")
    fig.set_size_inches(5., 3., forward=True) # paper
-   plt.savefig('stability_curve_'+filename+'_paper.pgf', bbox_inches="tight")
+   plt.savefig('../outputs/figures/stability_curve_'+filename+'_paper.pgf', bbox_inches="tight")
    plt.close()
 
 # TODO: Round to 3 sig. figs.

@@ -157,7 +157,7 @@ print
 # - Typically, if something is not mentioned, put np.nan in that field. Exceptions include fields defined by whether something was mentioned, e.g., the end checked field, and the trip field. (No trip mentioned is sufficient to assume they didn't use one.)
 # - Use the full spray angle. Accept units in radians, not degrees or tan(\theta / 2).
 
-data_file             = 'pipe-jet-breakup-data'
+data_file                   = 'pipe-jet-breakup-data'
 z                           = scipy.stats.norm.ppf(1 - (1 - interval_probability_level) / 2) # 2.5% on either side for a 5% confidence interval # DONE: change to t and use t when the number of data points is small, particularly for Grant and Chen
 breakup_length_sigmas = 0.1291 # TODO: Obtain this from automatic analysis of the data. Update the paper automatically too.
 cols = ['key', 'alt key',
@@ -5392,7 +5392,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_sallam_properties_2002])
 
 # TODO: Add t/d_0.
 
-trettel_modeling_2020_csv = pd.read_csv('../../../experiments/consolidated-trajectory-experiments.csv', sep=',', header=0)
+trettel_modeling_2020_csv = pd.read_csv('../data/trettel_modeling_2020/consolidated-trajectory-experiments.csv', sep=',', header=0)
 
 frame_rate = 29.97 # frames/s
 
@@ -5588,8 +5588,12 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_trettel_modeling_2020])
 
 summary_table(df_jet_breakup)
 
-with open('../outputs/'+data_file+'.pickle', 'w') as f:
+print 'Writing data frame to pickle file...'
+with open('../outputs/data/'+data_file+'.pickle', 'w') as f:
    pickle.dump([df_jet_breakup, metadata], f)
+
+print 'Writing data frame to CSV file...'
+df_jet_breakup.to_csv('../outputs/data/'+data_file+'.csv', sep='\t', encoding='utf-8')
 
 macros_breakdown = open('../outputs/macros/breakdown.tex', 'w')
 

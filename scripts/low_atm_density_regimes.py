@@ -16,7 +16,7 @@ print
 
 # TODO: Add lightly colored boxes for fire hoses, diesel injectors, jet sprinklers, etc. to these plots.
 
-with open('../outputs/'+data_file+'.pickle') as f:
+with open('../outputs/data/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
 i = 0
@@ -252,10 +252,10 @@ fig = plt.gcf()
 plt.xlim([1.e0, 1.e6])
 plt.ylim([1.e0, 1.e6])
 fig.set_size_inches(6., 4., forward=True) # report
-plt.savefig('regime_map_low_atm_density.png')
-plt.savefig('regime_map_low_atm_density.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_map_low_atm_density.png')
+plt.savefig('../outputs/figures/regime_map_low_atm_density.pgf', bbox_inches="tight")
 fig.set_size_inches(5.5, 4., forward=True) # paper
-plt.savefig('regime_map_low_atm_density_paper.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_map_low_atm_density_paper.pgf', bbox_inches="tight")
 plt.close()
 
 i = 0
@@ -392,7 +392,7 @@ plt.xlim([1.e0, 1.e6])
 plt.ylim([1.e0, 1.e6])
 
 fig.set_size_inches(5.5, 4., forward=True) # talk
-plt.savefig('regime_map_low_atm_density_with_data_and_lines_talk.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines_talk.pgf', bbox_inches="tight")
 
 fig.set_size_inches(6., 4., forward=True) # report
 
@@ -400,10 +400,10 @@ fig.set_size_inches(6., 4., forward=True) # report
 # https://stackoverflow.com/a/43439132
 plt.legend(bbox_to_anchor=(0., -0.15), loc='upper left', frameon=False, fontsize=11)
 
-plt.savefig('regime_map_low_atm_density_with_data_and_lines.png')
-plt.savefig('regime_map_low_atm_density_with_data_and_lines.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines.png')
+plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines.pgf', bbox_inches="tight")
 fig.set_size_inches(5.5, 4., forward=True) # paper
-plt.savefig('regime_map_low_atm_density_with_data_and_lines_paper.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines_paper.pgf', bbox_inches="tight")
 plt.close()
 
 d_0   = 6.e-3 # m
@@ -475,10 +475,10 @@ if not(revno is None):
    axes.add_artist(anchored_box)
 fig = plt.gcf()
 fig.set_size_inches(6., 4., forward=True) # report
-plt.savefig('old_regime_map_new_coords.png')
-plt.savefig('old_regime_map_new_coords.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/old_regime_map_new_coords.png')
+plt.savefig('../outputs/figures/old_regime_map_new_coords.pgf', bbox_inches="tight")
 fig.set_size_inches(5.5, 3., forward=True) # paper
-plt.savefig('old_regime_map_new_coords_paper.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/old_regime_map_new_coords_paper.pgf', bbox_inches="tight")
 plt.close()
 
 Re_0_arr   = np.logspace(0., 6., 1e2)
@@ -496,10 +496,10 @@ plt.xlim([1.e0, 1.e6])
 plt.ylim([1.e-3, 1.e1])
 fig = plt.gcf()
 fig.set_size_inches(6., 4., forward=True) # report
-plt.savefig('ohnesorge_diagram.png')
-plt.savefig('ohnesorge_diagram.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/ohnesorge_diagram.png')
+plt.savefig('../outputs/figures/ohnesorge_diagram.pgf', bbox_inches="tight")
 fig.set_size_inches(5.5, 3., forward=True) # paper
-plt.savefig('ohnesorge_diagram_paper.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/ohnesorge_diagram_paper.pgf', bbox_inches="tight")
 plt.close()
 
 ## DATA DEBUGGING:

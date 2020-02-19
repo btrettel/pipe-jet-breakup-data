@@ -6,11 +6,11 @@ from jetbreakup import *
 #revno = lastchangedrevision[0:6]
 revno = None
 
-macros_downstream_transition = open('../outputs/macros/downstream_transition.tex', 'w')
+macros_initially_laminar = open('../outputs/macros/initially_laminar.tex', 'w')
 
 print
 
-with open('../outputs/'+data_file+'.pickle') as f:
+with open('../outputs/data/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
 LR_df       = df_jet_breakup
@@ -125,10 +125,10 @@ C_TR = 3.27
 # #plt.legend()
 # fig = plt.gcf()
 # fig.set_size_inches(6., 4., forward=True) # report
-# plt.savefig('downstream_transition_xbavg.png')
-# # plt.savefig('downstream_transition_xbavg.pgf', bbox_inches="tight")
+# plt.savefig('../outputs/figures/downstream_transition_xbavg.png')
+# # plt.savefig('../outputs/figures/downstream_transition_xbavg.pgf', bbox_inches="tight")
 # # fig.set_size_inches(5., 3., forward=True) # paper
-# # plt.savefig('downstream_transition_xbavg_paper.pgf', bbox_inches="tight")
+# # plt.savefig('../outputs/figures/downstream_transition_xbavg_paper.pgf', bbox_inches="tight")
 # plt.close()
 
 # x_tr_o_xbavg_arr    = np.linspace(0., 1., 1e2)
@@ -142,7 +142,7 @@ C_TR = 3.27
 # plt.grid()
 # fig = plt.gcf()
 # fig.set_size_inches(6., 4., forward=True) # report
-# plt.savefig('log_func_DT.png')
+# plt.savefig('../outputs/figures/log_func_DT.png')
 # plt.close()
 # # end 2020-02-16 breakup length equation approximation
 
@@ -165,8 +165,11 @@ boundary_df['Re_x,tr implied'] = Re_x_tr_implied_arr
 # print max_boundary_df['L_b/d_0']
 # print max_boundary_df['liquid']
 
-macros_downstream_transition.close()
+macros_initially_laminar.close()
 
 # TODO: Unfortunately determining where transition occurred was difficult and the transition locations are not expected to be . Some photos had poor resolution. The process of determining where the flow transitioned also was fairly subjective. The transition location also was only found from photographs representing a single point in time. It is likely that the transition location fluctuates in time and this fluctuation does not appear in the photos.
 
 # TODO: Make a regression for \xbavg in the downstream transition regime
+
+# TODO: Fix this hack that gets citations working in the legends.
+os.system("cd ../outputs/figures/ ; for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")
