@@ -39,7 +39,7 @@ if not(os.path.exists('../outputs/macros/')):
 if not(os.path.exists('../outputs/tables/')):
    os.mkdir('../outputs/tables/')
 
-repo = Repo('../')
+repo = Repo(root_dir)
 headcommit = repo.head.commit
 
 lastchangedby       = headcommit.committer.name

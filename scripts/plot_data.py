@@ -533,6 +533,3 @@ print
 os.system("cd ../outputs/figures/ ; for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")
 
 macros_reg.close()
-
-if rerun:
-   print 'Rerun after running atomization.py to get atomization regime boundary correct.'
