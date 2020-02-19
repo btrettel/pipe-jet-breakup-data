@@ -2921,7 +2921,6 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_phinney_breakup_1975])
 # sterling_instability_1975 #
 #############################
 
-# TODO: Add tabulated data from sterling_instability_1969.
 # TODO: Add wavelength data (sterling_instability_1969 table VII). This has a different camera setup, so you should change the camera section for these. See sterling_instability_1975 p. 488.
 
 sterling_instability_1975_csv = pd.read_csv('../data/sterling_instability_1975/sterling_instability_1969.csv', sep=',', header=0)
