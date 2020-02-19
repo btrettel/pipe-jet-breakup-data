@@ -5170,15 +5170,13 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_mansour_effect_1994])
 # sallam_properties_2002 #
 ##########################
 
-# TODO: Add.
-# theta (low pressure atmosphere), D_{32}, L_b, ligaments
+# TODO: Add theta (low pressure atmosphere), D_{32}, L_b, ligaments
+# TODO: Might be able to use to get estimate of standard deviation of breakup length in turbulent Rayleigh regime in general? sallam_properties_2002 p. 108 (pdf p. 128): breakup length standard deviation
 
 # Issues with this data:
 # 1. The Reynolds numbers I am computing differ from those reported in the paper and dissertation.
 
 # pdf p. 165: data table
-
-# sallam_properties_2002 p. 108 (pdf p. 128): breakup length standard deviation
 
 # p. 26, tab. 2.3: test conditions table
 # p. 26: still air at $99\pm0.5$ kPa and $297\pm0.5$ K ($\rho_\text{g} - 1.16$ kg/m$^3$ and $\nu_\text{g} = 15.9$ mm$^2$/s). Round injector with a rounded entry and a length-to-diameter ratio of 40:1.
