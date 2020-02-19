@@ -16,9 +16,9 @@ Feel free to file issues, pull requests, or contact me with any improvements or 
 
 Assuming you are using Linux:
 
-Clone and navigate to the repository in a terminal. Then `cd scripts/`. First, change the `root_dir` line in `jetbreakup.py` to be the location of the repository. Initially the data has not been compiled and lives in CSV spreadsheets in the `data/` directory. You can compile the data into the `outputs/data/` directory (which will be automatically created if it does not exist) by running `python prepare_data.py`.
+Clone and navigate to the repository in a terminal. Then `cd scripts/`. Initially the data has not been compiled and lives in CSV spreadsheets in the `data/` directory. You can compile the data into the `outputs/data/` directory (which will be automatically created if it does not exist) by running the Bash script `compile_all.sh` which will run all of the jet breakup data processing Python scripts available. This takes approximately 3 minutes on my laptop.
 
-The other scripts then read the `pipe-jet-breakup-data.pickle` file to produce plots and perform other analyses. These scripts will create files in the `outputs/` directory. You can write your own script to do your own analysis too.
+The scripts then read the `pipe-jet-breakup-data.pickle` file to produce plots and perform other analyses. These scripts will create files in the `outputs/` directory. You can write your own script to do your own analysis too.
 
 # Statistics
 

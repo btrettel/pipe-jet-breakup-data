@@ -25,21 +25,25 @@ from scipy.integrate import quad
 from git import Repo
 
 # Configuration
-root_dir  = '/home/ben/svn/pipe-jet-breakup-data/'
 data_file = 'pipe-jet-breakup-data'
 
-if not(os.path.exists('../outputs/')):
-   os.mkdir('../outputs/')
-if not(os.path.exists('../outputs/data/')):
-   os.mkdir('../outputs/data/')
-if not(os.path.exists('../outputs/figures/')):
-   os.mkdir('../outputs/figures/')
-if not(os.path.exists('../outputs/macros/')):
-   os.mkdir('../outputs/macros/')
-if not(os.path.exists('../outputs/tables/')):
-   os.mkdir('../outputs/tables/')
+# determine root_dir
+repo = Repo(str(__file__), search_parent_directories=True)
+root_dir = repo.working_dir+'/'
 
-repo = Repo(root_dir)
+#print 'Root directory:', root_dir
+
+if not(os.path.exists(root_dir+'outputs/')):
+   os.mkdir(root_dir+'outputs/')
+if not(os.path.exists(root_dir+'outputs/data/')):
+   os.mkdir(root_dir+'outputs/data/')
+if not(os.path.exists(root_dir+'outputs/figures/')):
+   os.mkdir(root_dir+'outputs/figures/')
+if not(os.path.exists(root_dir+'outputs/macros/')):
+   os.mkdir(root_dir+'outputs/macros/')
+if not(os.path.exists(root_dir+'outputs/tables/')):
+   os.mkdir(root_dir+'outputs/tables/')
+
 headcommit = repo.head.commit
 
 lastchangedby       = headcommit.committer.name
@@ -557,7 +561,7 @@ def latex_summary_table(df_key, variable):
    # WON'T: Use \uparrow, \downarrow, and \rightarrow for orientation in table.
    # WON'T: If writing out page figs, add slashes after periods to make sure the periods are not treated as the ends of sentences.
    
-   table_filename = filename_escape('../outputs/tables/summary_table_'+variable+'.tex')
+   table_filename = filename_escape(root_dir+'outputs/tables/summary_table_'+variable+'.tex')
    
    print 'Writing '+table_filename+'...'
    
@@ -654,7 +658,7 @@ def latex_summary_table(df_key, variable):
    
    f.close()
 
-def plot_with_keys(df_variable, filename_header, input_variable_1, input_variable_2, plot_type='loglog', add_line=False, revno=None, actual=False, label_with_nozzle_type=False, fds_vers=None, filename_extra=''):
+def plot_with_keys(df_variable, filename_header, input_variable_1, input_variable_2, plot_type='loglog', add_line=False, revno=None, actual=False, label_with_nozzle_type=False, fds_vers=None, filename_extra='', output_dir=root_dir):
    # TODO: Label different studies differently in these plots.
    # https://stats.stackexchange.com/questions/104622/what-does-an-actual-vs-fitted-graph-tell-us#comment202248_104622
    # > the convention of plotting the values that are fixed (conditional on predictors) on the x-axis and the values that are random on the y-axis
@@ -917,7 +921,7 @@ def plot_with_keys(df_variable, filename_header, input_variable_1, input_variabl
       axes.set_ylim([0., 1.])
    #plt.tight_layout() # TODO: comment out for talk
    fig = plt.gcf()
-   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'.png'))
+   plt.savefig(output_dir+'outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'.png'))
    #fig.set_size_inches(12., 8., forward=True) # poster
    fig.set_size_inches(6., 4., forward=True) # report
    mpl.rcParams.update(pgf_with_pdflatex_report)
@@ -927,16 +931,16 @@ def plot_with_keys(df_variable, filename_header, input_variable_1, input_variabl
    plt.legend(bbox_to_anchor=(0., -0.15), loc='upper left', frameon=False, fontsize=11)
    
    #mpl.rcParams.update({"font.family": "serif"})
-   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_report.pgf'), bbox_inches="tight")
+   plt.savefig(output_dir+'outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_report.pgf'), bbox_inches="tight")
    
    fig.set_size_inches(5.5, 4., forward=True) # paper
-   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_paper.pgf'), bbox_inches="tight")
+   plt.savefig(output_dir+'outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_paper.pgf'), bbox_inches="tight")
    
    fig.set_size_inches(4., 2.5, forward=True) # talk
    mpl.rcParams.update(pgf_with_pdflatex_talk)
    axes = plt.gca()
    axes.legend_.remove()
-   plt.savefig('../outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_talk.pgf'), bbox_inches="tight")
+   plt.savefig(output_dir+'outputs/figures/'+filename_escape(filename_header+'_'+input_variable_1+'_vs_'+input_variable_2+filename_extra+'_talk.pgf'), bbox_inches="tight")
    #mpl.rcParams.update(pgf_with_pdflatex_report)
    plt.close()
    
@@ -1166,7 +1170,7 @@ def charD_lognormal(p, q, D_FDS, sigma, D_max=np.inf):
 def Wu_D32s(xs, We_l0):
    return 0.54 * (xs / (We_l0**(0.54)))**(0.57)
 
-def stability_curve(d_0, rho_l, nu_l, sigma, filename):
+def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
    We_corner_FtoS = 1.e2
    N_Re = 1e3
    Re_arr = np.logspace(-1., 7., N_Re)
@@ -1294,10 +1298,10 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename):
    
    fig = plt.gcf()
    fig.set_size_inches(6., 4., forward=True) # report
-   plt.savefig('../outputs/figures/stability_curve_'+filename+'.png')
-   plt.savefig('../outputs/figures/stability_curve_'+filename+'.pgf', bbox_inches="tight")
+   plt.savefig(output_dir+'outputs/figures/stability_curve_'+filename+'.png')
+   plt.savefig(output_dir+'outputs/figures/stability_curve_'+filename+'.pgf', bbox_inches="tight")
    fig.set_size_inches(5., 3., forward=True) # paper
-   plt.savefig('../outputs/figures/stability_curve_'+filename+'_paper.pgf', bbox_inches="tight")
+   plt.savefig(output_dir+'outputs/figures/stability_curve_'+filename+'_paper.pgf', bbox_inches="tight")
    plt.close()
 
 # TODO: Round to 3 sig. figs.
