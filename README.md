@@ -18,3 +18,4 @@ Compilation of jet breakup data where the nozzle is a long pipe.
 - Add more data
 - Add more data validation checks
 - Make many loops use zip rather than indexing
+- Add data and script for pipe turbulence statistics

@@ -3,21 +3,14 @@
 
 from jetbreakup import *
 
-lastchangedby       = '$LastChangedBy: $'
-lastchangedrevision = '$LastChangedRevision: $'
-lastchangeddate     = '$LastChangedDate: $'
-headurl             = '$HeadURL: $'
-
-#revno = lastchangedrevision.replace('$LastChangedRevision: ', '').replace('$', '')
+#revno = lastchangedrevision[0:6]
 revno = None
 
-macros_downstream_transition = open('macros_downstream_transition.tex', 'w')
-
-input_filename = 'pipe-jet-breakup-data'
+macros_downstream_transition = open('../outputs/macros/downstream_transition.tex', 'w')
 
 print
 
-with open(input_filename+'.pickle') as f:
+with open('../outputs/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
 LR_df       = df_jet_breakup
@@ -81,32 +74,6 @@ Re_x_tr = np.average(Re_x_tr_arr)
 print 'Re_x_tr =', Re_x_tr
 print 'min Re_x_tr =', np.min(Re_x_tr_arr)
 print 'max Re_x_tr =', np.max(Re_x_tr_arr)
-
-# xbavgs_df = xbavgs_df[xbavgs_df['regime L_b'] == 'first wind-induced']
-# xbavgs_df = xbavgs_df[xbavgs_df['L_b/d_0'].notnull()]
-# xbavgs_df['xbDTs'] = xbavgs_df['L_b/d_0'] - Re_x_tr / xbavgs_df['Re_l0']
-# xbavgs_df = xbavgs_df[xbavgs_df['xbDTs'] > 0.]
-# xbavgs_df = xbavgs_df[xbavgs_df['key'] != 'sterling_instability_1975']
-# Lod_min = 0.06 * xbavgs_df['Re_l0']
-# xbavgs_df['L_0/d_0 min'] = Lod_min
-# xbavgs_df = xbavgs_df[xbavgs_df['L_0/d_0'] >= xbavgs_df['L_0/d_0 min']]
-# #print max(xbavgs_df['L_b/d_0'])
-
-# A = np.column_stack([np.ones(len(xbavgs_df)), log(xbavgs_df['We_l0'])])
-# B = log(xbavgs_df['xbDTs'])
-
-# result, _, _, _ = np.linalg.lstsq(A, B)
-# a, C_We_l0 = result
-
-# C_xbDTs = exp(a)
-
-# print 'C_xbDTs = ', C_xbDTs
-# print 'C_We_l0 = ', C_We_l0
-# #print 'C_Re_l0 = ', C_Re_l0
-
-# xbavgs_df['L_b/d_0 predicted'] = Re_x_tr / xbavgs_df['Re_l0'] + C_xbDTs * xbavgs_df['We_l0']**C_We_l0
-# plot_with_keys(xbavgs_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_downstream_transition')
-# print 'R^2 =', coeff_of_determination(xbavgs_df['L_b/d_0 predicted'], xbavgs_df['L_b/d_0'])
 
 C_TR = 3.27
 #C_LR = 13.4

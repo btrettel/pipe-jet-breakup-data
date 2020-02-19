@@ -22,6 +22,14 @@ from string import lower
 from scipy.special import lambertw
 from scipy.optimize import fsolve
 from scipy.integrate import quad
+from git import Repo
+
+repo = Repo('../')
+headcommit = repo.head.commit
+
+lastchangedby       = headcommit.committer.name
+lastchangedrevision = headcommit.hexsha
+lastchangeddate     = headcommit.authored_date
 
 # https://tex.stackexchange.com/a/391078
 mpl.use('pgf')
@@ -80,7 +88,9 @@ pgf_with_pdflatex_talk = pgf_with_pdflatex_report
 mpl.rcParams.update(pgf_with_pdflatex_report)
 import matplotlib.pyplot as plt
 
-root_dir = '/home/ben/svn/pipe-jet-breakup-data/'
+# Configuration
+root_dir  = '/home/ben/svn/pipe-jet-breakup-data/'
+data_file = 'pipe-jet-breakup-data'
 
 water_df = pd.read_csv(root_dir+'data/fluid-properties/water.csv', sep=',', header=0)
 water_df['Viscosity (m2/s)'] = water_df['Viscosity (Pa*s)'] / water_df['Density (kg/m3)']

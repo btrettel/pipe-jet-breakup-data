@@ -11,20 +11,16 @@ headurl             = '$HeadURL: $'
 #revno = lastchangedrevision.replace('$LastChangedRevision: ', '').replace('$', '')
 revno = None
 
-macros_reg = open('macros_regression.tex', 'w')
+macros_reg = open('../outputs/macros/regression.tex', 'w')
 
 # Following mcdermott_quality_2011: "Parameter space" is defined as the entire range of all dependent variables of interest. The "application space" is the subset useful for a particular application.
 
 # TODO: Add error in coefficients and exponents.
 # LATER: Change \theta correlation so that \lim_{\rho_g/\rho_l \rightarrow 0} \theta does not equal zero. It currently does, which is not true.
 
-output_filename = 'pipe-jet-breakup-data'
-
-#mpl.rcParams.update({'font.size': 5})
-
 print
 
-with open(output_filename+'.pickle') as f:
+with open('../outputs/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
 ##########
@@ -38,20 +34,12 @@ with open(output_filename+'.pickle') as f:
 #print len(photo_df), 'photographs.\n'
 
 # TODO: Check if pipe thickness divided by pipe inner diameter (t_0/d_0) correlates with anything as suggested by kerstein_parameter_2017 p. 811 R5-5. Likely more important for higher gas densities.
-# TODO: Use density ratio or Atwood number?
 # TODO: Test if there are any differences due to orientation and/or Froude number.
 # TODO: Use nozzle material to see which data points are most likely to not be smooth.
-# TODO: Compare L_b for photographic vs. electrical. Check this for each regime, especially the plateau. If there is a difference in the plateau then that might indicate problems with electrical measurement.
 # TODO: Variation of \overline{D} with \nu?
 # TODO: Find coefficients for I_0 first with only studies with widely varying TI, then redo correlation taking that as a certainty?
 
 # TODO: add error bars to the regression coefficients
-# DONE: Add data removed due to having a high variance (e.g., grant_newtonian_1965) to the regression plot and R^2 calculation.
-
-# DONE: Actual vs. predicted plot.
-# https://stats.stackexchange.com/questions/104622/what-does-an-actual-vs-fitted-graph-tell-us
-# http://docs.statwing.com/interpreting-residual-plots-to-improve-your-regression/
-# https://matplotlib.org/examples/lines_bars_and_markers/marker_reference.html
 
 ############################
 # breakup length (L_b/d_0) #
@@ -60,12 +48,9 @@ with open(output_filename+'.pickle') as f:
 # TODO: Instead of giving photographic measurement zero weight, give it a small weight?
 
 L_bs_df = df_jet_breakup[df_jet_breakup['L_b/d_0'].notnull()]
-#L_bs_df = L_bs_df[L_bs_df.We_l0 > 5e2]
 L_bs_df = L_bs_df[L_bs_df['regime turb'] == 'turbulent']
-#L_bs_df = L_bs_df[L_bs_df['rho_s'] > 500]
 L_bs_df = L_bs_df[L_bs_df['Ma_g'] < 0.3]
 L_bs_df = L_bs_df[L_bs_df['regime L_b'] == 'second wind-induced']
-#L_bs_df = L_bs_df[L_bs_df['key'] != 'phinney_breakup_1973'] # Removed until I can understand why it seems wrong.
 L_bs_df_more = L_bs_df
 parameter_space_plots(L_bs_df_more, 'L_b/d_0', revno=revno)
 L_bs_df = L_bs_df[L_bs_df['L_b method'] == 'electrical']

@@ -3,17 +3,12 @@
 
 from jetbreakup import *
 
-lastchangedby       = '$LastChangedBy: $'
-lastchangedrevision = '$LastChangedRevision: $'
-lastchangeddate     = '$LastChangedDate: $'
-headurl             = '$HeadURL: $'
-
-#revno = lastchangedrevision.replace('$LastChangedRevision: ', '').replace('$', '')
+#revno = lastchangedrevision[0:6]
 revno = None
 
 # MAYBE: Make a function to plot points in the smooth pipe regime diagram. Use this to plot all photos in a regime diagram?
 
-macros_regime = open('macros_regime.tex', 'w')
+macros_regime = open('../outputs/macros/regime.tex', 'w')
 
 input_filename = 'pipe-jet-breakup-data'
 
@@ -21,7 +16,7 @@ print
 
 # TODO: Add lightly colored boxes for fire hoses, diesel injectors, jet sprinklers, etc. to these plots.
 
-with open(input_filename+'.pickle') as f:
+with open('../outputs/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
 i = 0
