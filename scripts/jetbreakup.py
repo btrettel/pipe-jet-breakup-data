@@ -31,6 +31,7 @@ from scipy.special import lambertw
 from scipy.optimize import fsolve
 from scipy.integrate import quad
 from git import Repo
+from datetime import datetime
 
 # Configuration
 data_file = 'pipe-jet-breakup-data'
@@ -56,7 +57,7 @@ headcommit = repo.head.commit
 
 lastchangedby       = headcommit.committer.name
 lastchangedrevision = headcommit.hexsha
-lastchangeddate     = headcommit.authored_date
+lastchangeddate     = datetime.utcfromtimestamp(headcommit.authored_date).strftime('%Y-%m-%dT%H:%M:%SZ')
 
 # https://tex.stackexchange.com/a/391078
 mpl.use('pgf')
