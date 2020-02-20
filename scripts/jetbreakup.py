@@ -1093,9 +1093,8 @@ def We_l0_crit_TR(Tu_0):
    We_T_crit = 8.
    return We_T_crit * Tu_0**(-2.)
 
-def Re_l0_crit_DT(We_l0, Re_x_trans=3.e5, C_LR=8.5, C_TR=3.27):
-   C_DTpeak = C_LR + np.log(np.exp(-C_TR) - np.exp(-C_LR))
-   return (Re_x_trans - 3. * C_DTpeak * We_l0) / (C_DTpeak * We_l0**(1./2.))
+def Re_l0_crit_DT(We_l0, Re_x_trans=3.e5, C_LR=8.5):
+   return (Re_x_trans - 3. * C_LR * We_l0) / (C_LR * We_l0**(1./2.))
 
 def x_b_s(Tu_0_arr, We_l0_arr, rho_s):
    x_b_s_arr = np.array([])
