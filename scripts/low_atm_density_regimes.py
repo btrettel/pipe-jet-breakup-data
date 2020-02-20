@@ -5,7 +5,7 @@
 # 
 # pipe-jet-breakup-data is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 # 
-# Foobar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+# pipe-jet-breakup-data is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 # 
 # You should have received a copy of the GNU General Public License along with pipe-jet-breakup-data. If not, see <https://www.gnu.org/licenses/>.
 
@@ -177,12 +177,14 @@ plt.loglog(We_2WItoA, Re_2WItoA, marker=None, color='k', zorder=4, linewidth=0.8
 #Re_RtoF = 125 * We_RtoF**(-0.19)
 
 # new Feb. 2020 theory
-Re_x_trans  = 1.7e5
+Re_x_trans  = 1.1e5
 C_LR        = 8.5
-We_low      = ((sqrt(Re_trans**2. - 12. * Re_x_trans / C_LR) - Re_trans) / 6.)**2.
-We_high     = Re_x_trans / (3. * C_LR)
+C_TR        = 3.27
+C_DTpeak    = C_LR + np.log(np.exp(-C_TR) - np.exp(-C_LR))
+We_low      = ((sqrt(Re_trans**2. - 12. * Re_x_trans / C_DTpeak) - Re_trans) / 6.)**2.
+We_high     = Re_x_trans / (3. * C_DTpeak)
 We_RtoF_all = np.logspace(np.log(We_low) / np.log(10.), np.log(We_high) / np.log(10.), 1e2)
-Re_RtoF_all = Re_l0_crit_DT(We_RtoF_all, Re_x_trans=Re_x_trans, C_LR=C_LR)
+Re_RtoF_all = Re_l0_crit_DT(We_RtoF_all, Re_x_trans=Re_x_trans, C_LR=C_LR, C_TR=C_TR)
 #plt.loglog(We_RtoF, Re_RtoF, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--') #, label=r'$\mathrm{We}_\text{T,crit}$')
 
 Re_stable = Re_x_trans / 1.e3

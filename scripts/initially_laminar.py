@@ -5,7 +5,7 @@
 # 
 # pipe-jet-breakup-data is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 # 
-# Foobar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+# pipe-jet-breakup-data is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 # 
 # You should have received a copy of the GNU General Public License along with pipe-jet-breakup-data. If not, see <https://www.gnu.org/licenses/>.
 
@@ -157,7 +157,9 @@ C_TR = 3.27
 boundary_df         = boundary_df[boundary_df['regime L_b'] == 'R2F']
 boundary_df         = boundary_df[boundary_df['rho_s'] < 1500.]
 boundary_df         = boundary_df[boundary_df['key'] != 'sterling_instability_1975']
-Re_x_tr_implied_arr = C_LR * (boundary_df['Re_l0'] * boundary_df['We_l0']**(1./2.) + 3. * boundary_df['We_l0'])
+C_DTpeak = C_LR + np.log(np.exp(-C_TR) - np.exp(-C_LR))
+print 'C_DTpeak =', C_DTpeak
+Re_x_tr_implied_arr = C_DTpeak * (boundary_df['Re_l0'] * boundary_df['We_l0']**(1./2.) + 3. * boundary_df['We_l0'])
 #Re_x_tr_implied_arr = (C_LR - C_TR * (1. + exp(-C_TR))) * (boundary_df['Re_l0'] * boundary_df['We_l0']**(1./2.) + 3. * boundary_df['We_l0'])
 #print boundary_df['key']
 Re_x_tr_implied = np.average(Re_x_tr_implied_arr)

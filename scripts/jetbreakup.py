@@ -5,7 +5,7 @@
 # 
 # pipe-jet-breakup-data is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 # 
-# Foobar is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+# pipe-jet-breakup-data is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 # 
 # You should have received a copy of the GNU General Public License along with pipe-jet-breakup-data. If not, see <https://www.gnu.org/licenses/>.
 
@@ -1093,8 +1093,9 @@ def We_l0_crit_TR(Tu_0):
    We_T_crit = 8.
    return We_T_crit * Tu_0**(-2.)
 
-def Re_l0_crit_DT(We_l0, Re_x_trans=3.e5, C_LR=13.4):
-   return (Re_x_trans - 3. * C_LR * We_l0) / (C_LR * We_l0**(1./2.))
+def Re_l0_crit_DT(We_l0, Re_x_trans=3.e5, C_LR=8.5, C_TR=3.27):
+   C_DTpeak = C_LR + np.log(np.exp(-C_TR) - np.exp(-C_LR))
+   return (Re_x_trans - 3. * C_DTpeak * We_l0) / (C_DTpeak * We_l0**(1./2.))
 
 def x_b_s(Tu_0_arr, We_l0_arr, rho_s):
    x_b_s_arr = np.array([])
