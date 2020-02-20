@@ -30,7 +30,7 @@ C_TR = 3.27
 
 LR_df       = df_jet_breakup
 photos_df   = df_jet_breakup
-#xbavgs_df   = df_jet_breakup
+DTxbavgs_df = df_jet_breakup
 boundary_df = df_jet_breakup
 
 LR_df = LR_df[LR_df['regime L_b'] == 'Rayleigh']
@@ -109,16 +109,18 @@ boundary_df['Re_x,tr implied'] = Re_x_tr_implied_arr
 # print max_boundary_df['L_b/d_0']
 # print max_boundary_df['liquid']
 
-# # start 2020-02-16 breakup length equation approximation
-# We_l0_asympt = Re_x_tr / (3. * C_DTpeak)
-# print 'We_l0_asympt =', We_l0_asympt
-
+# # start 2020-02-20 transition theory (see handwritten notes)
 # # pure isopropyl alcohol
 # d_0   = 1.e-3 # m
 # rho_l = 0.786 * rho_water(T_std) # kg/m^3
 # mu_l  = 2.036e-3 # Pa*s?
 # nu_l  = mu_l / rho_l # m^2/s
 # sigma = 21.74e-3 # N/m
+# Oh_l0 = mu_l / np.sqrt(rho_l * sigma * d_0)
+# rho_g = rho_ideal_gas(P_atm, T_std, MW_air)
+
+# C_L       = 0.4 # Levich constant, levich_physicochemical_1962 p. 644, eqn. 125.21
+# #delta_trs = 0. # additional jet surface deviation from transition ==> Doesn't seem to work right. The breakup length should not change when transition begins (\xtr = \xbavg), but it decreases abruptly when this is not zero.
 
 # def Ubar_0_crit_func(Ubar_0):
    # return C_LR * ((rho_l * Ubar_0**2. * d_0 / sigma)**(1./2.) + 3. * rho_l * nu_l * Ubar_0 / sigma) - Re_x_tr * nu_l / (Ubar_0 * d_0)
@@ -126,30 +128,25 @@ boundary_df['Re_x,tr implied'] = Re_x_tr_implied_arr
 # Ubar_0_crit = fsolve(Ubar_0_crit_func, 1.5)[0]
 # print 'Ubar_0,crit =', Ubar_0_crit, 'm/s'
 
-# Re_l0_crit = Ubar_0_crit * d_0 / nu_l
-# We_l0_crit = rho_l * Ubar_0_crit**2. * d_0 / sigma
-# Oh_l0      = mu_l / np.sqrt(rho_l * sigma * d_0)
+# Re_l0_tr = Ubar_0_crit * d_0 / nu_l
+# We_l0_tr = rho_l * Ubar_0_crit**2. * d_0 / sigma
 
-# print 'Re_l0,crit =', Re_l0_crit
-# print 'We_l0,crit =', We_l0_crit
+# print 'Re_l0,tr =', Re_l0_tr
+# print 'We_l0,tr =', We_l0_tr
 
-# Re_l0_arr = np.linspace(Re_l0_crit, Re_trans, 5e2)
+# Re_l0_arr = np.linspace(Re_l0_tr, Re_trans, 5e2)
 # We_l0_arr = (rho_l * nu_l**2.) / (sigma * d_0) * Re_l0_arr**2.
 
 # xbavgs_LR_arr = C_LR * (We_l0_arr**(1./2.) + 3. * We_l0_arr / Re_l0_arr)
-# x_trs_arr  = Re_x_tr / Re_l0_arr
-# xbavgs_arr = x_trs_arr + np.log(1./(np.exp(C_LR * (x_trs_arr / xbavgs_LR_arr - 1.)) + np.exp(-C_TR) - np.exp(-C_LR))) * (We_l0_arr**(1./2.) + 3. * We_l0_arr / Re_l0_arr)
-
-# Re_l0_peak = np.sqrt(Re_x_tr / (C_DTpeak * Oh_l0 * (1. + 3. * Oh_l0)))
+# x_trs_arr     = Re_x_tr / Re_l0_arr
+# #xbavgs_arr    = x_trs_arr - (1./C_L) * (rho_l/rho_g)**(3./2.) * np.log(np.exp(C_LR * (x_trs_arr / xbavgs_LR_arr - 1.)) + delta_trs) * We_l0_arr**(-1.)
+# xbavgs_arr    = x_trs_arr + (C_LR/C_L) * (rho_l/rho_g)**(3./2.) * (1. - x_trs_arr / xbavgs_LR_arr) * We_l0_arr**(-1.)
 
 # plt.plot(Re_l0_arr, xbavgs_arr, linestyle='-')
-# plt.axvline(Re_l0_peak, linestyle='--')
+# #plt.axvline(Re_l0_peak, linestyle='--')
 # plt.xlabel(r'$\mathrm{Re}_{\ell0}$')
 # plt.ylabel(r'$\langle x_\text{b} \rangle / d_0$')
 # plt.grid()
-# #plt.xlim([0., 30000])
-# #plt.ylim([0., 1.])
-# #plt.legend()
 # fig = plt.gcf()
 # fig.set_size_inches(6., 4., forward=True) # report
 # plt.savefig('../outputs/figures/downstream_transition_xbavg.png')
@@ -157,7 +154,24 @@ boundary_df['Re_x,tr implied'] = Re_x_tr_implied_arr
 # # fig.set_size_inches(5., 3., forward=True) # paper
 # # plt.savefig('../outputs/figures/downstream_transition_xbavg_paper.pgf', bbox_inches="tight")
 # plt.close()
-# # end 2020-02-16 breakup length equation approximation
+
+# DTxbavgs_df = DTxbavgs_df[DTxbavgs_df['regime L_b'] == 'first wind-induced']
+# DTxbavgs_df = DTxbavgs_df[DTxbavgs_df['regime turb'] == 'laminar']
+# DTxbavgs_df = DTxbavgs_df[DTxbavgs_df['rho_s'] < 2000.]
+
+# xbavgs_LR = C_LR * (DTxbavgs_df['We_l0']**(1./2.) + 3. * DTxbavgs_df['We_l0'] / DTxbavgs_df['Re_l0'])
+# x_trs_DT  = Re_x_tr / DTxbavgs_df['Re_l0']
+
+# print np.min(DTxbavgs_df['rho_s'])
+# print np.max(DTxbavgs_df['rho_s'])
+
+# #DTxbavgs_df['L_b/d_0 predicted'] = x_trs_DT + (C_LR/C_L) * (DTxbavgs_df['rho_s'])**(3./2.) * (1. - x_trs_DT / xbavgs_LR) * DTxbavgs_df['We_l0']**(-1.)
+# DTxbavgs_df['L_b/d_0 predicted'] = 2.5 * 214. * (DTxbavgs_df['rho_s'])**(3./2.) * DTxbavgs_df['We_l0']**(-1.) # etzold_break-up_2018 eqn. 7
+# #delta_trs = 0.1
+# #DTxbavgs_df['L_b/d_0 predicted'] = x_trs_DT - (1./C_L) * (DTxbavgs_df['rho_s'])**(3./2.) * np.log(np.exp(C_LR * (x_trs_DT / xbavgs_LR - 1.)) + delta_trs) * DTxbavgs_df['We_l0']**(-1.)
+# plot_with_keys(DTxbavgs_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_downstream_transition')
+# print 'R^2 =', coeff_of_determination(DTxbavgs_df['L_b/d_0 predicted'], DTxbavgs_df['L_b/d_0'])
+# # end 2020-02-20 transition theory (see handwritten notes)
 
 macros_initially_laminar.close()
 
