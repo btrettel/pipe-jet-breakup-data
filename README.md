@@ -1,6 +1,8 @@
 # pipe-jet-breakup-data
 Compilation of jet breakup data where the nozzle is a long pipe.
 
+![image of a liquid jet](https://raw.githubusercontent.com/btrettel/pipe-jet-breakup-data/master/data/rupe_dynamic_1962/rupe_dynamic_1962_fig_15a.jpg)
+
 Feel free to file issues, send in pull requests, or contact me with any improvements or comments. Email address: ![email address](http://trettel.org/email-address.png)
 
 # Requirements
