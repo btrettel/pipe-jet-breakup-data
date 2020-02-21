@@ -1,7 +1,7 @@
 # pipe-jet-breakup-data
 Compilation of jet breakup data where the nozzle is a long pipe.
 
-Feel free to file issues, pull requests, or contact me with any improvements or comments. Email address: ![email address](http://trettel.org/email-address.png)
+Feel free to file issues, send in pull requests, or contact me with any improvements or comments. Email address: ![email address](http://trettel.org/email-address.png)
 
 # Requirements
 
