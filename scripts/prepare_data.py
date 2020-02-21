@@ -5593,6 +5593,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_trettel_modeling_2020])
 
 summary_table(df_jet_breakup)
 
+# TODO: Upgrade to Python 3: https://stackoverflow.com/a/13906715/1124489
 print 'Writing data frame to pickle file...'
 with open('../outputs/data/'+data_file+'.pickle', 'w') as f:
    pickle.dump([df_jet_breakup, metadata], f)
