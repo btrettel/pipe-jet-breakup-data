@@ -25,9 +25,6 @@ print
 with open('../outputs/data/'+data_file+'.pickle') as f:
    df_jet_breakup, metadata = pickle.load(f)
 
-# configuration
-C_TR = 3.27
-
 LR_df       = df_jet_breakup
 photos_df   = df_jet_breakup
 DTxbavgs_df = df_jet_breakup
@@ -49,6 +46,13 @@ LR_df['L_b/d_0 predicted'] = C_LR * (LR_df['We_l0']**(1./2.) + 3. * LR_df['We_l0
 plot_with_keys(LR_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_laminar_Rayleigh')
 print 'R^2 =', coeff_of_determination(LR_df['L_b/d_0 predicted'], LR_df['L_b/d_0'])
 # TODO: Note that predicted vs. actual plot error does not include statistical error.
+
+with open('../outputs/data/LR_xbavg.pickle', 'w') as f:
+   pickle.dump(C_LR, f)
+
+macros_initially_laminar.write(r'\newcommand{\CLRnum}{'+roundstr(C_LR)+'}\n')
+macros_initially_laminar.write(r'\newcommand{\CLRrsquared}{'+roundstr(coeff_of_determination(LR_df['L_b/d_0 predicted'], LR_df['L_b/d_0']))+'}\n')
+macros_initially_laminar.write(r'\newcommand{\CLRN}{\num{'+str(len(LR_df))+'}}\n')
 
 i = 0
 combined_regime_array = []
@@ -92,6 +96,14 @@ print 'Re_x_tr =', Re_x_tr
 print 'min Re_x_tr =', np.min(Re_x_tr_arr)
 print 'max Re_x_tr =', np.max(Re_x_tr_arr)
 
+photo_citation_keys   = []
+photo_citation_string = ''
+for key in photos_df['key']:
+   if not(key in photo_citation_keys):
+      photo_citation_keys.append(key)
+      photo_citation_string = photo_citation_string + ',' + key
+photo_citation_string = photo_citation_string[1:]
+
 boundary_df         = boundary_df[boundary_df['regime L_b'] == 'R2F']
 boundary_df         = boundary_df[boundary_df['rho_s'] < 1500.]
 boundary_df         = boundary_df[boundary_df['key'] != 'sterling_instability_1975']
@@ -103,6 +115,27 @@ print 'max Re_x,tr,implied =', np.max(Re_x_tr_implied_arr)
 boundary_df['Re_x,tr implied'] = Re_x_tr_implied_arr
 #print
 #print Re_x_tr_implied / Re_x_tr
+
+boundary_citation_keys   = []
+boundary_citation_string = ''
+for key in boundary_df['key']:
+   if not(key in boundary_citation_keys):
+      boundary_citation_keys.append(key)
+      boundary_citation_string = boundary_citation_string + ',' + key
+boundary_citation_string = boundary_citation_string[1:]
+
+with open('../outputs/data/Re_x_tr.pickle', 'w') as f:
+   pickle.dump([Re_x_tr, Re_x_tr_implied], f)
+
+macros_initially_laminar.write(r'\newcommand{\Rextrnum}{'+roundstr(Re_x_tr)+'}\n')
+macros_initially_laminar.write(r'\newcommand{\RextrN}{\num{'+str(len(Re_x_tr_arr))+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrcitep}{\citep{'+photo_citation_string+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrrange}{\numrange{'+roundstr(np.min(Re_x_tr_arr), num=False)+'}{'+roundstr(np.min(Re_x_tr_arr), num=False)+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrimpliednum}{'+roundstr(Re_x_tr_implied)+'}\n')
+macros_initially_laminar.write(r'\newcommand{\RextrimpliedN}{\num{'+str(len(Re_x_tr_implied_arr))+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrimpliedcitep}{\citep{'+boundary_citation_string+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrimpliedrange}{\numrange{'+roundstr(np.min(Re_x_tr_implied_arr), num=False)+'}{'+roundstr(np.min(Re_x_tr_implied_arr), num=False)+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrratio}{'+roundstr(Re_x_tr_implied / Re_x_tr)+'}\n')
 
 # max_boundary_df = boundary_df[boundary_df['Re_x,tr implied'] == np.max(Re_x_tr_implied_arr)]
 # print max_boundary_df['key']

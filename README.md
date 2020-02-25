@@ -45,3 +45,4 @@ Trettel, B. (2019, March 22). Improving the validation of turbulent jet breakup 
 - Add more data validation checks
 - Make many loops use zip rather than indexing
 - Add data and script for pipe turbulence statistics
+- Add dimension checks via a Python package that does dimensional analysis

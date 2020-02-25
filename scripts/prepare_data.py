@@ -5103,8 +5103,10 @@ df_mansour_effect_1994['est rho_s']  = True
 df_mansour_effect_1994['est nu_s']   = True
 
 df_mansour_effect_1994['L_b/d_0']                      = L_bs_mansour_effect_1994
-df_mansour_effect_1994['L_b/d_0 stat error']           = scipy.stats.t.ppf(1 - (1 - interval_probability_level) / 2, 20 - 1) * breakup_length_sigmas * L_bs_mansour_effect_1994 / sqrt(20) # mansour_effect_1994 p. 134: "All breakup length data reported an average over 20 frames or more." The standard deviation of the breakup length is estimated from phinney_breakup_1973.
-df_mansour_effect_1994['L_b/d_0 resolution']           = 4.5 # p. 594: > The breakup length was very reproducible within one wavelength distance.
+df_mansour_effect_1994['L_b/d_0 stat error']           = np.nan # Using this rather than the standard deviation estimate due to me being unsure if this estimate is valid in the turbulent Rayleigh regime. Also disabling the resolution measurement because I don't want error bars to appear on the data. TODO
+#df_mansour_effect_1994['L_b/d_0 stat error']           = scipy.stats.t.ppf(1 - (1 - interval_probability_level) / 2, 20 - 1) * breakup_length_sigmas * L_bs_mansour_effect_1994 / sqrt(20) # mansour_effect_1994 p. 134: "All breakup length data reported an average over 20 frames or more." The standard deviation of the breakup length is estimated from phinney_breakup_1973.
+df_mansour_effect_1994['L_b/d_0 resolution']           = np.nan
+#df_mansour_effect_1994['L_b/d_0 resolution']           = 4.5 # p. 594: > The breakup length was very reproducible within one wavelength distance.
 df_mansour_effect_1994['L_b method']                   = 'photographic'
 df_mansour_effect_1994['L_b/d_0 page fig']             = 'p. 143, fig. 7-2'
 df_mansour_effect_1994['L_b/d_0 transcription method'] = 'figure'

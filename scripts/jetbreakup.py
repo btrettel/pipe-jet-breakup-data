@@ -1068,6 +1068,16 @@ def breakup_length_atomization(Tu_0, rho_s):
       
       return C_A * Tu_0**alpha_Tu_A * rho_s**alpha_rho_s
 
+def C_LR_from_file():
+   with open(root_dir+'outputs/data/LR_xbavg.pickle') as f:
+      C_LR = pickle.load(f)
+      return C_LR
+
+def C_TR_from_file():
+   with open(root_dir+'outputs/data/TR_xbavg.pickle') as f:
+      C_TR = pickle.load(f)
+      return C_TR
+
 def atoi(text):
    return int(text) if text.isdigit() else text
 
@@ -1093,7 +1103,8 @@ def We_l0_crit_TR(Tu_0):
    We_T_crit = 8.
    return We_T_crit * Tu_0**(-2.)
 
-def Re_l0_crit_DT(We_l0, Re_x_trans=3.e5, C_LR=8.5):
+def Re_l0_crit_DT(We_l0, Re_x_trans=1.7e5, C_LR=8.5):
+   # TODO: Change this to use the Re_x_tr and C_LR values from the regressions.
    return (Re_x_trans - 3. * C_LR * We_l0) / (C_LR * We_l0**(1./2.))
 
 def x_b_s(Tu_0_arr, We_l0_arr, rho_s):
@@ -1197,6 +1208,9 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
    prev_We     = 1.
    xbavg_center = 4.e1
    
+   C_LR = C_LR_from_file()
+   C_TR = C_TR_from_file()
+   
    K = 0.37 # clanet_transition_1999
    t = 0.   # tube thickness
    
@@ -1212,7 +1226,7 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
    
    We_guess = 4.
    for Re, We in zip(Re_arr, We_arr):
-      if Re > 500:
+      if Re > 500.:
          We_crit_dripping = 0.
       else:
          We_crit_dripping = fsolve(dripping_We_func, We_guess)[0]
@@ -1226,7 +1240,7 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
          if Re < Re_turb:
             if Re < Re_l0_crit_DT(We):
                # laminar Rayleigh
-               xbavgs = 8.5 * (We**0.5 + 3. * We / Re)
+               xbavgs = C_LR * (We**0.5 + 3. * We / Re)
                if not(LR_bool):
                   LR_bool = True
                   if (log(We) + log(prev_We)) > 0.:
@@ -1256,7 +1270,7 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
             
             if We < We_l0_crit_TR(Tu):
                # turbulent Rayleigh
-               xbavgs = 3.27 * (We**0.5 + 3. * We / Re)
+               xbavgs = C_TR * (We**0.5 + 3. * We / Re)
                if not(TR_bool):
                   TR_bool = True
                   plt.axvline(We, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')

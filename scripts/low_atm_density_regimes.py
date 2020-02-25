@@ -18,8 +18,6 @@ revno = None
 
 macros_regime = open('../outputs/macros/regime.tex', 'w')
 
-input_filename = 'pipe-jet-breakup-data'
-
 print
 
 # TODO: Add lightly colored boxes for fire hoses, diesel injectors, jet sprinklers, etc. to these plots.
@@ -177,9 +175,11 @@ plt.loglog(We_2WItoA, Re_2WItoA, marker=None, color='k', zorder=4, linewidth=0.8
 #Re_RtoF = 125 * We_RtoF**(-0.19)
 
 # new Feb. 2020 theory
-Re_x_trans  = 1.7e5
-C_LR        = 8.5
-C_TR        = 3.27
+with open(root_dir+'outputs/data/Re_x_tr.pickle') as f:
+   Re_x_tr, Re_x_tr_implied = pickle.load(f)
+Re_x_trans  = Re_x_tr_implied
+C_LR        = C_LR_from_file()
+C_TR        = C_TR_from_file()
 We_low      = ((sqrt(Re_trans**2. - 12. * Re_x_trans / C_LR) - Re_trans) / 6.)**2.
 We_high     = Re_x_trans / (3. * C_LR)
 We_RtoF_all = np.logspace(np.log(We_low) / np.log(10.), np.log(We_high) / np.log(10.), 1e2)
@@ -261,10 +261,10 @@ fig = plt.gcf()
 plt.xlim([1.e0, 1.e6])
 plt.ylim([1.e0, 1.e6])
 fig.set_size_inches(6., 4., forward=True) # report
-plt.savefig('../outputs/figures/regime_map_low_atm_density.png')
-plt.savefig('../outputs/figures/regime_map_low_atm_density.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density.png')
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density.pgf', bbox_inches="tight")
 fig.set_size_inches(5.5, 4., forward=True) # paper
-plt.savefig('../outputs/figures/regime_map_low_atm_density_paper.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_paper.pgf', bbox_inches="tight")
 plt.close()
 
 i = 0
@@ -347,7 +347,7 @@ plt.loglog(We_Rto2WI, Re_Rto2WI, marker=None, color='k', zorder=4, linewidth=0.8
 We_2WItoA = We_l0_crit(Tu_vec, 1000./1.2)
 plt.loglog(We_2WItoA, Re_2WItoA, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 
-# reusing arrays from in the map without the data
+# reusing arrays from in the diagram without the data
 plt.loglog(We_RtoF_obs, Re_RtoF_obs, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 plt.loglog(We_RtoF_far, Re_RtoF_far, marker=None, color='k', zorder=4, linewidth=0.5, linestyle=':')
 plt.loglog([We_stop, 1.e6], [Re_stable, Re_stable], marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
@@ -401,7 +401,7 @@ plt.xlim([1.e0, 1.e6])
 plt.ylim([1.e0, 1.e6])
 
 fig.set_size_inches(5.5, 4., forward=True) # talk
-plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines_talk.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_and_lines_talk.pgf', bbox_inches="tight")
 
 fig.set_size_inches(6., 4., forward=True) # report
 
@@ -409,10 +409,10 @@ fig.set_size_inches(6., 4., forward=True) # report
 # https://stackoverflow.com/a/43439132
 plt.legend(bbox_to_anchor=(0., -0.15), loc='upper left', frameon=False, fontsize=11)
 
-plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines.png')
-plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_and_lines.png')
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_and_lines.pgf', bbox_inches="tight")
 fig.set_size_inches(5.5, 4., forward=True) # paper
-plt.savefig('../outputs/figures/regime_map_low_atm_density_with_data_and_lines_paper.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_and_lines_paper.pgf', bbox_inches="tight")
 plt.close()
 
 d_0   = 6.e-3 # m
@@ -484,10 +484,10 @@ if not(revno is None):
    axes.add_artist(anchored_box)
 fig = plt.gcf()
 fig.set_size_inches(6., 4., forward=True) # report
-plt.savefig('../outputs/figures/old_regime_map_new_coords.png')
-plt.savefig('../outputs/figures/old_regime_map_new_coords.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/old_regime_diagram_new_coords.png')
+plt.savefig('../outputs/figures/old_regime_diagram_new_coords.pgf', bbox_inches="tight")
 fig.set_size_inches(5.5, 3., forward=True) # paper
-plt.savefig('../outputs/figures/old_regime_map_new_coords_paper.pgf', bbox_inches="tight")
+plt.savefig('../outputs/figures/old_regime_diagram_new_coords_paper.pgf', bbox_inches="tight")
 plt.close()
 
 Re_0_arr   = np.logspace(0., 6., 1e2)
