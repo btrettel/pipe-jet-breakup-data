@@ -130,11 +130,11 @@ with open('../outputs/data/Re_x_tr.pickle', 'w') as f:
 macros_initially_laminar.write(r'\newcommand{\Rextrnum}{'+roundstr(Re_x_tr)+'}\n')
 macros_initially_laminar.write(r'\newcommand{\RextrN}{\num{'+str(len(Re_x_tr_arr))+'}}\n')
 macros_initially_laminar.write(r'\newcommand{\Rextrcitep}{\citep{'+photo_citation_string+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrrange}{\numrange{'+roundstr(np.min(Re_x_tr_arr), num=False)+'}{'+roundstr(np.min(Re_x_tr_arr), num=False)+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrrange}{\numrange{'+roundstr(np.min(Re_x_tr_arr), num=False)+'}{'+roundstr(np.max(Re_x_tr_arr), num=False)+'}}\n')
 macros_initially_laminar.write(r'\newcommand{\Rextrimpliednum}{'+roundstr(Re_x_tr_implied)+'}\n')
 macros_initially_laminar.write(r'\newcommand{\RextrimpliedN}{\num{'+str(len(Re_x_tr_implied_arr))+'}}\n')
 macros_initially_laminar.write(r'\newcommand{\Rextrimpliedcitep}{\citep{'+boundary_citation_string+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrimpliedrange}{\numrange{'+roundstr(np.min(Re_x_tr_implied_arr), num=False)+'}{'+roundstr(np.min(Re_x_tr_implied_arr), num=False)+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Rextrimpliedrange}{\numrange{'+roundstr(np.min(Re_x_tr_implied_arr), num=False)+'}{'+roundstr(np.max(Re_x_tr_implied_arr), num=False)+'}}\n')
 macros_initially_laminar.write(r'\newcommand{\Rextrratio}{'+roundstr(Re_x_tr_implied / Re_x_tr)+'}\n')
 
 # max_boundary_df = boundary_df[boundary_df['Re_x,tr implied'] == np.max(Re_x_tr_implied_arr)]
