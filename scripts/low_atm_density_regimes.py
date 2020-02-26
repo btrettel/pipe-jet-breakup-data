@@ -16,6 +16,8 @@ revno = None
 
 # MAYBE: Make a function to plot points in the smooth pipe regime diagram. Use this to plot all photos in a regime diagram?
 
+Sauerwein = False
+
 macros_regime = open('../outputs/macros/regime.tex', 'w')
 
 print
@@ -153,6 +155,11 @@ We_2WItoA = We_l0_crit(Tu_vec, 1000./1.2)
 plt.loglog(We_2WItoA, Re_2WItoA, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 #We_Kolmogorov = 0.01022 * Tu_vec**(-3./4.) * Re_2WItoA**(5./4.)
 #plt.loglog(We_Kolmogorov, Re_2WItoA, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+if Sauerwein:
+   Re_Sauerwein = Re_Rto2WI
+   We_Sauerwein = 5. * Tu_vec**(-2) / 6.
+   plt.loglog(We_Sauerwein, Re_Sauerwein, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 
 # straight line
 #We_corner_RtoF = 1.e2

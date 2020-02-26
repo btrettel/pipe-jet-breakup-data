@@ -34,6 +34,7 @@ TR_df = TR_df[TR_df['Re_l0'] > Re_turb]
 TR_df = TR_df[TR_df['key'] != 'mansour_effect_1994'] # Removing because it is inconsistent with the others.
 
 Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0']
+#Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.)
 C_TR = Rayleigh_Weber_half_pow.dot(TR_df['L_b/d_0']) / Rayleigh_Weber_half_pow.dot(Rayleigh_Weber_half_pow)
 
 summary_table(TR_df)
@@ -46,12 +47,15 @@ print 'ln(a/delta_0) model =', np.log((2./3.) * avgTubar_0**(-2.))
 # mansour_effect_1994 p. 134: "All breakup length data reported an average over 20 frames or more." The standard deviation of the breakup length is estimated from phinney_breakup_1973.
 
 coefficient_Mansour = 4.8
-print 'ln(a/delta_0) Mansour =', coefficient_Mansour
-print 'ln(a/delta_0) regression =', C_TR
+print
+print 'ln(a/delta_0) Mansour      =', coefficient_Mansour
+print
+print 'ln(a/delta_0) regression   =', C_TR
 
 # WON'T: Add statistical error from R^2
 
 #TR_df['L_b/d_0 predicted'] = np.log((2./3.) * TR_df['I_0']**(-2.)) * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0'])
+#TR_df['L_b/d_0 predicted'] = C_TR * TR_df['We_l0']**(1./2.)
 TR_df['L_b/d_0 predicted'] = C_TR * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0'])
 print 'R^2 =', coeff_of_determination(TR_df['L_b/d_0 predicted'], TR_df['L_b/d_0'])
 plot_with_keys(TR_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_turbulent_Rayleigh')
@@ -62,6 +66,35 @@ with open('../outputs/data/TR_xbavg.pickle', 'w') as f:
 macros_TR.write(r'\newcommand{\CTRnum}{'+roundstr(C_TR)+'}\n')
 macros_TR.write(r'\newcommand{\CTRrsquared}{'+roundstr(coeff_of_determination(TR_df['L_b/d_0 predicted'], TR_df['L_b/d_0']))+'}\n')
 macros_TR.write(r'\newcommand{\CTRN}{\num{'+str(len(TR_df))+'}}\n')
+
+# A = np.column_stack([np.ones(len(TR_df)), Rayleigh_Weber_half_pow])
+# B = TR_df['L_b/d_0']
+
+# result, _, _, _ = np.linalg.lstsq(A, B)
+# a, C_TR_2 = result
+
+# print
+# print 'intercept =', a
+# print 'ln(a/delta_0) regression (2) =', C_TR_2
+# print 'R^2 (alt) =', coeff_of_determination(a + C_TR_2 * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0']), TR_df['L_b/d_0'])
+# print
+
+# A = np.column_stack([np.ones(len(TR_df)), np.log(TR_df['We_l0'])])
+# B = np.log(TR_df['L_b/d_0'])
+
+# result, _, _, _ = np.linalg.lstsq(A, B)
+# a, C_We_TR = result
+
+# C_TR_3 = np.exp(a)
+
+# print
+# print 'C_TR_3 =', a
+# print 'C_We_TR =', C_We_TR
+# print 'R^2 (alt) =', coeff_of_determination(C_TR_3 * TR_df['We_l0']**C_We_TR, TR_df['L_b/d_0'])
+# print
+
+print 'R^2 (TSB regression) =', coeff_of_determination(breakup_length(TR_df['I_0'], TR_df['We_l0']), TR_df['L_b/d_0'])
+# 2020-02-25: Given the poor fit with the data, I thought about trying the TSB regression. At least this is lower than what I have above! That indicates that the turbulent Rayleigh regime can't be best modeled like the TSB regime. The two do appear quite different in their extreme forms, but near the border determining which is which is difficult. I suspect that some sort of "random jump" model may reproduce a non-Rayleigh scaling and fit the turbulent Rayleigh data better.
 
 # TODO: Determine \Welocritinfty from data.
 
