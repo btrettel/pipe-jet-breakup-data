@@ -89,7 +89,7 @@ page,table,liquid,"P_atm (mm Hg)","rho_g (g/cm^3)",T_l,rho_l,sigma,mu_l,d_0,L_0/
 227,A-9,"distilled water",,,25,997,0.071,0.00091,0.00062,95,29.7,8,,158,,"second wind-induced",grant_newtonian_1965_fig_5-2f.jpg,"p. 94, fig. 5-2","second wind-induced",0
 227,A-9,"distilled water",,,25,997,0.071,0.00091,0.00062,95,39.6,8,,194,,"second wind-induced",,,,
 227,A-9,"distilled water",,,25,997,0.071,0.00091,0.00062,95,50,8,,237,,"second wind-induced",grant_newtonian_1965_fig_5-2g.jpg,"p. 94, fig. 5-2","second wind-induced",0
-227,A-9,"distilled water",,,25,997,0.071,0.00091,0.00062,95,68.2,8,,268,,"second wind-induced",grant_newtonian_1965_fig_5-2h.jpg,"p. 94, fig. 5-2","second wind-induced",0
+227,A-9,"distilled water",,,25,997,0.071,0.00091,0.00062,95,68.2,8,,268,,S2A,grant_newtonian_1965_fig_5-2h.jpg,"p. 94, fig. 5-2",S2A,0
 228,A-10,"distilled water",,,25,997,0.071,0.00091,0.00031,148,1.5,9,,42.9,,Rayleigh,,,,
 228,A-10,"distilled water",,,25,997,0.071,0.00091,0.00031,148,2,9,,60,,Rayleigh,,,,
 228,A-10,"distilled water",,,25,997,0.071,0.00091,0.00031,148,2.5,9,,88.7,,Rayleigh,,,,

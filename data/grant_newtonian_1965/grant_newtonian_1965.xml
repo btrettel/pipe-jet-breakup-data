@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2020-02-17T22:51:56Z</dc:date>
+      <dc:date>2020-02-27T22:55:54Z</dc:date>
       <meta:creation-date>2017-04-05T07:42:39Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -96,8 +96,8 @@
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="13.5" Count="139"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="12" CursorRow="134">
-        <gnm:Selection startCol="12" startRow="134" endCol="12" endRow="134"/>
+      <gnm:Selections CursorCol="19" CursorRow="91">
+        <gnm:Selection startCol="19" startRow="91" endCol="19" endRow="91"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">page</gnm:Cell>
@@ -1381,10 +1381,10 @@
         <gnm:Cell Row="91" Col="11" ValueType="40">68.200000000000003</gnm:Cell>
         <gnm:Cell Row="91" Col="12" ValueType="40">8</gnm:Cell>
         <gnm:Cell Row="91" Col="14" ValueType="40">268</gnm:Cell>
-        <gnm:Cell Row="91" Col="16" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="91" Col="16" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="91" Col="17" ValueType="60">grant_newtonian_1965_fig_5-2h.jpg</gnm:Cell>
         <gnm:Cell Row="91" Col="18" ValueType="60">p. 94, fig. 5-2</gnm:Cell>
-        <gnm:Cell Row="91" Col="19" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="91" Col="19" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="91" Col="20" ValueType="40">0</gnm:Cell>
         <gnm:Cell Row="92" Col="0" ValueType="40">228</gnm:Cell>
         <gnm:Cell Row="92" Col="1" ValueType="60">A-10</gnm:Cell>
@@ -2084,7 +2084,7 @@
         <gnm:Cell Row="138" Col="14" ExprID="1"/>
         <gnm:Cell Row="138" Col="16" ValueType="60">first wind-induced</gnm:Cell>
       </gnm:Cells>
-      <gnm:SheetLayout TopLeft="K122">
+      <gnm:SheetLayout TopLeft="P73">
         <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="A2"/>
       </gnm:SheetLayout>
       <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>

@@ -29,6 +29,7 @@ with open('../outputs/data/'+data_file+'.pickle') as f:
 
 i = 0
 combined_regime_array = []
+determination_arr     = []
 for regime_photo, regime_turb in zip(df_jet_breakup['regime photo'], df_jet_breakup['regime turb']):
    if isinstance(regime_photo, basestring):
       #print i, regime_photo
@@ -51,8 +52,10 @@ for regime_photo, regime_turb in zip(df_jet_breakup['regime photo'], df_jet_brea
          regime_photo = 'downstream transition'
       
       combined_regime_array.append(regime_photo)
+      determination_arr.append('photo')
    else:
       combined_regime_array.append(np.nan)
+      determination_arr.append(np.nan)
    
    i = i + 1
 
@@ -79,6 +82,7 @@ for regime_L_b, regime_turb in zip(df_jet_breakup['regime L_b'], df_jet_breakup[
             raise ValueError('Inconsistent regimes:', i, regime_L_b, combined_regime_array[i])
       else:
          combined_regime_array[i] = regime_L_b
+         determination_arr[i]     = 'breakup length'
    
    i = i + 1
 
@@ -91,6 +95,7 @@ marker_array = ['o', 's', 'D', 'x', '+', '>', '<', '^', 'v', '.']
 
 regime_all_df = df_jet_breakup
 regime_all_df['regime combined'] = combined_regime_array
+regime_all_df['regime determination method'] = determination_arr
 regime_all_df = regime_all_df[regime_all_df['regime combined'].notnull()]
 
 assert(not('bursting' in regime_all_df['regime combined']))
@@ -518,54 +523,216 @@ fig.set_size_inches(5.5, 3., forward=True) # paper
 plt.savefig('../outputs/figures/ohnesorge_diagram_paper.pgf', bbox_inches="tight")
 plt.close()
 
-## DATA DEBUGGING:
+# universality checks
 
-## dripping points
-#regime_df_point = regime_all_df[regime_all_df['We_l0'] < 4.]
+# photos only
+regime_photo_df = regime_all_df[regime_all_df['regime determination method'] == 'photo']
 
-#print(regime_df_point['key'])
-##print(regime_df_point['photo filename'])
-##print(regime_df_point['L_b/d_0 page fig'])
+print len(regime_photo_df), 'data points with breakup regime classified (smooth pipe nozzles, photos only).'
+macros_regime.write(r'\newcommand{\smoothregimephotonum}{\num{'+str(len(regime_photo_df))+'}}\n')
 
-## identify 1WI points with photos
-#print "First wind-induced points:"
-#regime_all_df_1WI = regime_all_df[regime_all_df['regime combined'] == 'first wind-induced']
-#regime_all_df_1WI = regime_all_df_1WI[regime_all_df_1WI['photo filename'].notnull()]
-#print regime_all_df_1WI['photo filename']
-#print regime_all_df_1WI['regime turb']
+regime_photo_TSB_df = regime_photo_df[regime_photo_df['regime combined'] == 'turbulent surface breakup']
+regime_photo_TSB_df['We_crit'] = We_l0_crit(regime_photo_TSB_df['I_0'], regime_photo_TSB_df['rho_s'])
+regime_photo_TSB_df = regime_photo_TSB_df[regime_photo_TSB_df['We_l0'] > regime_photo_TSB_df['We_crit']]
+print regime_photo_TSB_df['photo filename']
 
-#print "Bursting points:"
-#regime_all_df_bursting = regime_all_df_with_trans[regime_all_df_with_trans['regime combined'] == 'bursting']
-#print regime_all_df_bursting['photo filename']
-#print 'Re_l0:'
-#print regime_all_df_bursting['Re_l0']
-#print 'We_l0:'
-#print regime_all_df_bursting['We_l0']
-#regime_all_df_bursting = regime_all_df_with_eisenklam[regime_all_df_with_eisenklam['regime combined'] == 'bursting']
-#regime_all_df_bursting = regime_all_df_bursting[regime_all_df_bursting['key'] == 'eisenklam_flow_1958']
-#print regime_all_df_bursting['photo filename']
-#print 'Re_l0:'
-#print regime_all_df_bursting['Re_l0']
-#print 'We_l0:'
-#print regime_all_df_bursting['We_l0']
+i = 0
+for regime in regime_array:
+   if regime == 'R2F':
+      regime_print = 'Rayleigh to first wind-induced transition'
+   elif regime == 'F2S':
+      regime_print = 'first wind-induced to second wind-induced transition'
+   elif regime == 'S2A':
+      regime_print = 'second wind-induced to atomization transition'
+   elif regime == 'R2B':
+      regime_print = 'Rayleigh to bursting transition'
+   else:
+      regime_print = regime
+   this_regime_all_df = regime_photo_df[regime_photo_df['regime combined'] == regime]
+   plt.loglog(this_regime_all_df['We_l0'], this_regime_all_df['Re_l0'], linestyle='None', marker=marker_array[i], label=regime_print)
+   
+   i = i + 1
 
-##print
-##print "Near-transitional TSB points:"
-##regime_all_df_TSB = regime_all_df[regime_all_df['regime combined'] == 'turbulent surface breakup']
-###print len(regime_all_df_TSB)
-##regime_near_transitional_TSB = regime_all_df_TSB[regime_all_df_TSB['Re_l0'] > 3.e3]
-##regime_near_transitional_TSB = regime_near_transitional_TSB[regime_near_transitional_TSB['Re_l0'] < 1.e4]
-##regime_near_transitional_TSB = regime_near_transitional_TSB[regime_near_transitional_TSB['We_l0'] > 3.e4]
-##print regime_near_transitional_TSB['key']
-##print regime_near_transitional_TSB['liquid']
+#We_T_crit = 8.
+Tu_vec = I_fully_developed_array(Re_Rto2WI)
+We_Rto2WI = We_l0_crit_TR(Tu_vec)
+plt.loglog(We_Rto2WI, Re_Rto2WI, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--') #, label=r'$\mathrm{We}_\text{T,crit}$')
 
-#print
-#print "Possibly misclassified TSB points:"
-#regime_all_df_atomization = regime_all_df[regime_all_df['regime photo'] == 'second wind-induced']
-#regime_all_df_atomization = regime_all_df_atomization[regime_all_df_atomization['We_l0'] > 2.e4]
-#print regime_all_df_atomization['key']
-##print regime_all_df_atomization['liquid']
-##print regime_all_df_atomization['L_0/d_0']
-#print regime_all_df_atomization['photo filename']
+#Re_2WItoA = Re_Rto2WI
+##We_2WItoA = 0.12 * Tu_vec**(-1.26) * (1000./1.2)**1.53
+#We_2WItoA = 0.12 * Tu_vec**(-5./4.) * (1000./1.2)**(3./2.)
+We_2WItoA = We_l0_crit(Tu_vec, 1000./1.2)
+plt.loglog(We_2WItoA, Re_2WItoA, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 
+# reusing arrays from in the diagram without the data
+plt.loglog(We_RtoF_obs, Re_RtoF_obs, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+plt.loglog(We_RtoF_far, Re_RtoF_far, marker=None, color='k', zorder=4, linewidth=0.5, linestyle=':')
+plt.loglog([We_stop, 1.e6], [Re_stable, Re_stable], marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+plt.axhline(Re_trans, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+#plt.loglog(np.array([4., 4.]), np.array([1.e0, Re_trans]), marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+#plt.loglog(np.array([4., 4.]), np.array([Re_turb, 1.e6]), marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+plt.axhline(Re_turb, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+# rho_l = rho_water(T_std)
+# nu_l  = nu_water(T_std)
+# sigma = sigma_water(T_std)
+rho_l = 749.5 # kg/m^3, https://en.wikipedia.org/wiki/Dodecane
+nu_l  = 1.34e-3 / rho_l # m^2/s, https://en.wikipedia.org/wiki/Dodecane
+sigma = 25.35e-3 # N/m, http://www.surface-tension.de/
+Re_lo_arr   = np.logspace(0., np.log(160.) / np.log(10.), 1e3)
+We_lo_arr   = np.array([])
+We_lo_guess = 4.
+for Re_lo in Re_lo_arr:
+   We_lo = fsolve(dripping_We_func, We_lo_guess)[0]
+   We_lo_arr = np.append(We_lo_arr, We_lo)
+   We_lo_guess = We_lo
+
+# This is probably slightly inaccurate but smooths out the part that probably has numerical error.
+Re_lo_arr = np.append(Re_lo_arr, max(Re_lo_arr))
+We_lo_arr = np.append(We_lo_arr, 1.)
+
+plt.loglog(We_lo_arr, Re_lo_arr, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+plt.text(1.3e6, turb_Re_center, 'turb.\ at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, lam_Re_center, 'laminar at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+
+plt.text(1.e3, 1.5e0, r'\textbf{do not use to determine regime}', backgroundcolor='w', verticalalignment='bottom', horizontalalignment='center', color='#777777')
+
+#plt.legend(loc='best') #, fancybox=True, framealpha=0.5, numpoints=1)
+plt.xlabel(r'$\mathrm{We}_{\ell0}$')
+plt.ylabel(r'$\mathrm{Re}_{\ell0}$')
+plt.grid()
+#plt.tight_layout() # TODO: comment out for talk
+axes = plt.gca()
+if not(revno is None):
+   box1 = TextArea('Rev. '+revno, textprops=dict(color="k"))
+   anchored_box = AnchoredOffsetbox(loc=4,
+                                    child=box1,
+                                    frameon=False,
+                                    bbox_to_anchor=(1., -0.20),
+                                    bbox_transform=axes.transAxes)
+   axes.add_artist(anchored_box)
+fig = plt.gcf()
+plt.xlim([1.e0, 1.e6])
+plt.ylim([1.e0, 1.e6])
+
+fig.set_size_inches(5.5, 4., forward=True) # talk
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_photos_only_talk.pgf', bbox_inches="tight")
+
+fig.set_size_inches(6., 4., forward=True) # report
+
+# Move legend out of the plot to have extra space.
+# https://stackoverflow.com/a/43439132
+plt.legend(bbox_to_anchor=(0., -0.15), loc='upper left', frameon=False, fontsize=11)
+
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_photos_only.png')
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_photos_only.pgf', bbox_inches="tight")
+fig.set_size_inches(5.5, 4., forward=True) # paper
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_photos_only_paper.pgf', bbox_inches="tight")
+plt.close()
+
+# breakup length only
+regime_xbavg_df = regime_all_df[regime_all_df['regime determination method'] == 'breakup length']
+
+print len(regime_xbavg_df), 'data points with breakup regime classified (smooth pipe nozzles, xbavg only).'
+macros_regime.write(r'\newcommand{\smoothregimexbavgnum}{\num{'+str(len(regime_xbavg_df))+'}}\n')
+
+i = 0
+for regime in regime_array:
+   if regime == 'R2F':
+      regime_print = 'Rayleigh to first wind-induced transition'
+   elif regime == 'F2S':
+      regime_print = 'first wind-induced to second wind-induced transition'
+   elif regime == 'S2A':
+      regime_print = 'second wind-induced to atomization transition'
+   elif regime == 'R2B':
+      regime_print = 'Rayleigh to bursting transition'
+   else:
+      regime_print = regime
+   this_regime_all_df = regime_xbavg_df[regime_xbavg_df['regime combined'] == regime]
+   plt.loglog(this_regime_all_df['We_l0'], this_regime_all_df['Re_l0'], linestyle='None', marker=marker_array[i], label=regime_print)
+   
+   i = i + 1
+
+#We_T_crit = 8.
+Tu_vec = I_fully_developed_array(Re_Rto2WI)
+We_Rto2WI = We_l0_crit_TR(Tu_vec)
+plt.loglog(We_Rto2WI, Re_Rto2WI, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--') #, label=r'$\mathrm{We}_\text{T,crit}$')
+
+#Re_2WItoA = Re_Rto2WI
+##We_2WItoA = 0.12 * Tu_vec**(-1.26) * (1000./1.2)**1.53
+#We_2WItoA = 0.12 * Tu_vec**(-5./4.) * (1000./1.2)**(3./2.)
+We_2WItoA = We_l0_crit(Tu_vec, 1000./1.2)
+plt.loglog(We_2WItoA, Re_2WItoA, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+# reusing arrays from in the diagram without the data
+plt.loglog(We_RtoF_obs, Re_RtoF_obs, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+plt.loglog(We_RtoF_far, Re_RtoF_far, marker=None, color='k', zorder=4, linewidth=0.5, linestyle=':')
+plt.loglog([We_stop, 1.e6], [Re_stable, Re_stable], marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+plt.axhline(Re_trans, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+#plt.loglog(np.array([4., 4.]), np.array([1.e0, Re_trans]), marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+#plt.loglog(np.array([4., 4.]), np.array([Re_turb, 1.e6]), marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+plt.axhline(Re_turb, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+# rho_l = rho_water(T_std)
+# nu_l  = nu_water(T_std)
+# sigma = sigma_water(T_std)
+rho_l = 749.5 # kg/m^3, https://en.wikipedia.org/wiki/Dodecane
+nu_l  = 1.34e-3 / rho_l # m^2/s, https://en.wikipedia.org/wiki/Dodecane
+sigma = 25.35e-3 # N/m, http://www.surface-tension.de/
+Re_lo_arr   = np.logspace(0., np.log(160.) / np.log(10.), 1e3)
+We_lo_arr   = np.array([])
+We_lo_guess = 4.
+for Re_lo in Re_lo_arr:
+   We_lo = fsolve(dripping_We_func, We_lo_guess)[0]
+   We_lo_arr = np.append(We_lo_arr, We_lo)
+   We_lo_guess = We_lo
+
+# This is probably slightly inaccurate but smooths out the part that probably has numerical error.
+Re_lo_arr = np.append(Re_lo_arr, max(Re_lo_arr))
+We_lo_arr = np.append(We_lo_arr, 1.)
+
+plt.loglog(We_lo_arr, Re_lo_arr, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
+
+plt.text(1.3e6, turb_Re_center, 'turb.\ at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, lam_Re_center, 'laminar at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+
+plt.text(1.e3, 1.5e0, r'\textbf{do not use to determine regime}', backgroundcolor='w', verticalalignment='bottom', horizontalalignment='center', color='#777777')
+
+#plt.legend(loc='best') #, fancybox=True, framealpha=0.5, numpoints=1)
+plt.xlabel(r'$\mathrm{We}_{\ell0}$')
+plt.ylabel(r'$\mathrm{Re}_{\ell0}$')
+plt.grid()
+#plt.tight_layout() # TODO: comment out for talk
+axes = plt.gca()
+if not(revno is None):
+   box1 = TextArea('Rev. '+revno, textprops=dict(color="k"))
+   anchored_box = AnchoredOffsetbox(loc=4,
+                                    child=box1,
+                                    frameon=False,
+                                    bbox_to_anchor=(1., -0.20),
+                                    bbox_transform=axes.transAxes)
+   axes.add_artist(anchored_box)
+fig = plt.gcf()
+plt.xlim([1.e0, 1.e6])
+plt.ylim([1.e0, 1.e6])
+
+fig.set_size_inches(5.5, 4., forward=True) # talk
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_xbavg_only_talk.pgf', bbox_inches="tight")
+
+fig.set_size_inches(6., 4., forward=True) # report
+
+# Move legend out of the plot to have extra space.
+# https://stackoverflow.com/a/43439132
+plt.legend(bbox_to_anchor=(0., -0.15), loc='upper left', frameon=False, fontsize=11)
+
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_xbavg_only.png')
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_xbavg_only.pgf', bbox_inches="tight")
+fig.set_size_inches(5.5, 4., forward=True) # paper
+plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_xbavg_only_paper.pgf', bbox_inches="tight")
+plt.close()
+
+# close TeX macros file
 macros_regime.close()

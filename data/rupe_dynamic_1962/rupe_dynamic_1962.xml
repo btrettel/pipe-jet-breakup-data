@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
-  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Version Epoch="1" Major="12" Minor="35" Full="1.12.35"/>
   <gnm:Attributes>
     <gnm:Attribute>
       <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2019-07-16T15:17:57Z</dc:date>
+      <dc:date>2020-02-27T22:54:39Z</dc:date>
       <meta:creation-date>2017-04-04T18:51:41Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -35,7 +35,7 @@
     <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet2</gnm:SheetName>
     <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet3</gnm:SheetName>
   </gnm:SheetNameIndex>
-  <gnm:Geometry Width="1366" Height="494"/>
+  <gnm:Geometry Width="679" Height="462"/>
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Sheet1</gnm:Name>
@@ -97,8 +97,8 @@
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="13.5" Count="9"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="10" CursorRow="5">
-        <gnm:Selection startCol="10" startRow="5" endCol="10" endRow="5"/>
+      <gnm:Selections CursorCol="11" CursorRow="4">
+        <gnm:Selection startCol="11" startRow="4" endCol="11" endRow="4"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">liquid</gnm:Cell>
@@ -161,7 +161,7 @@
         <gnm:Cell Row="4" Col="6" ValueType="20">FALSE</gnm:Cell>
         <gnm:Cell Row="4" Col="7" ValueType="40">0</gnm:Cell>
         <gnm:Cell Row="4" Col="9" ValueType="60">turbulent</gnm:Cell>
-        <gnm:Cell Row="4" Col="10" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="4" Col="10" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="4" Col="13" ValueType="60">rupe_dynamic_1962_fig_4f.jpg</gnm:Cell>
         <gnm:Cell Row="5" Col="0" ValueType="60">water</gnm:Cell>
         <gnm:Cell Row="5" Col="1" ValueType="60">p. 23, fig. 15</gnm:Cell>
@@ -208,8 +208,8 @@
         <gnm:Cell Row="8" Col="10" ValueType="60">second wind-induced</gnm:Cell>
         <gnm:Cell Row="8" Col="13" ValueType="60">rupe_dynamic_1962_fig_15d.jpg</gnm:Cell>
       </gnm:Cells>
-      <gnm:SheetLayout TopLeft="A1"/>
-      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+      <gnm:SheetLayout TopLeft="I1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
     </gnm:Sheet>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Sheet2</gnm:Name>
@@ -269,7 +269,7 @@
       </gnm:Selections>
       <gnm:Cells/>
       <gnm:SheetLayout TopLeft="A1"/>
-      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
     </gnm:Sheet>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Sheet3</gnm:Name>
@@ -329,7 +329,7 @@
       </gnm:Selections>
       <gnm:Cells/>
       <gnm:SheetLayout TopLeft="A1"/>
-      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
     </gnm:Sheet>
   </gnm:Sheets>
   <gnm:UIData SelectedTab="0"/>

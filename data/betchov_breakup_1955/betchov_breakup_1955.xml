@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
-  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Version Epoch="1" Major="12" Minor="35" Full="1.12.35"/>
   <gnm:Attributes>
     <gnm:Attribute>
       <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2019-10-06T22:35:28Z</dc:date>
+      <dc:date>2020-02-27T22:57:44Z</dc:date>
       <meta:creation-date>2019-05-26T01:21:42Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -33,7 +33,7 @@
   <gnm:SheetNameIndex>
     <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet1</gnm:SheetName>
   </gnm:SheetNameIndex>
-  <gnm:Geometry Width="1366" Height="494"/>
+  <gnm:Geometry Width="679" Height="462"/>
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Sheet1</gnm:Name>
@@ -93,8 +93,8 @@
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="13.5" Count="11"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="10" CursorRow="3">
-        <gnm:Selection startCol="10" startRow="3" endCol="10" endRow="3"/>
+      <gnm:Selections CursorCol="10" CursorRow="1">
+        <gnm:Selection startCol="10" startRow="1" endCol="10" endRow="1"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">fluid</gnm:Cell>
@@ -116,7 +116,7 @@
         <gnm:Cell Row="1" Col="3" ValueType="40">0.0014</gnm:Cell>
         <gnm:Cell Row="1" Col="4" ValueType="40">40</gnm:Cell>
         <gnm:Cell Row="1" Col="9" ValueType="60">p. 33, tab. III</gnm:Cell>
-        <gnm:Cell Row="1" Col="10" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="1" Col="10" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="1" Col="11" ValueType="60">betchov_breakup_1955_fig_19d.png</gnm:Cell>
         <gnm:Cell Row="1" Col="12" ValueType="60">fig. 19</gnm:Cell>
         <gnm:Cell Row="2" Col="0" ValueType="60">Dow 1 cs</gnm:Cell>
@@ -125,7 +125,7 @@
         <gnm:Cell Row="2" Col="3" ValueType="40">0.014</gnm:Cell>
         <gnm:Cell Row="2" Col="4" ValueType="40">50</gnm:Cell>
         <gnm:Cell Row="2" Col="9" ValueType="60">p. 33, tab. III</gnm:Cell>
-        <gnm:Cell Row="2" Col="10" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="2" Col="10" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="2" Col="11" ValueType="60">betchov_breakup_1955_fig_19c.png</gnm:Cell>
         <gnm:Cell Row="2" Col="12" ValueType="60">fig. 19</gnm:Cell>
         <gnm:Cell Row="3" Col="0" ValueType="60">Dow 1 cs</gnm:Cell>
@@ -203,8 +203,8 @@
         <gnm:Cell Row="10" Col="7" ValueType="40">7.2999999999999998</gnm:Cell>
         <gnm:Cell Row="10" Col="9" ValueType="60">p. 36, tab. V</gnm:Cell>
       </gnm:Cells>
-      <gnm:SheetLayout TopLeft="A1"/>
-      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+      <gnm:SheetLayout TopLeft="G1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
     </gnm:Sheet>
   </gnm:Sheets>
   <gnm:UIData SelectedTab="0"/>

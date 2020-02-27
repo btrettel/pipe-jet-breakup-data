@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
-  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Version Epoch="1" Major="12" Minor="35" Full="1.12.35"/>
   <gnm:Attributes>
     <gnm:Attribute>
       <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2019-11-20T23:26:17Z</dc:date>
+      <dc:date>2020-02-27T22:55:20Z</dc:date>
       <meta:creation-date>2019-05-26T16:41:35Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -33,7 +33,7 @@
   <gnm:SheetNameIndex>
     <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">wu_liquid_1992.csv</gnm:SheetName>
   </gnm:SheetNameIndex>
-  <gnm:Geometry Width="1366" Height="494"/>
+  <gnm:Geometry Width="679" Height="462"/>
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>wu_liquid_1992.csv</gnm:Name>
@@ -95,8 +95,8 @@
         <gnm:RowInfo No="10" Unit="13.5"/>
         <gnm:RowInfo No="48" Unit="13.5" Count="5"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="0" CursorRow="10">
-        <gnm:Selection startCol="0" startRow="10" endCol="0" endRow="10"/>
+      <gnm:Selections CursorCol="24" CursorRow="10">
+        <gnm:Selection startCol="24" startRow="10" endCol="24" endRow="10"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">key</gnm:Cell>
@@ -315,7 +315,7 @@
         <gnm:Cell Row="10" Col="21" ValueType="40">0.11</gnm:Cell>
         <gnm:Cell Row="10" Col="22" ValueType="40">1.0700000000000001</gnm:Cell>
         <gnm:Cell Row="10" Col="23" ValueType="40">1.1799999999999999</gnm:Cell>
-        <gnm:Cell Row="10" Col="24" ValueType="60">second wind-induced</gnm:Cell>
+        <gnm:Cell Row="10" Col="24" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="10" Col="25" ValueType="60">wu_effects_1995_fig_5c.jpg</gnm:Cell>
         <gnm:Cell Row="11" Col="0" ValueType="60">wu_liquid_1992</gnm:Cell>
         <gnm:Cell Row="11" Col="2" ValueType="60">p. 87, fig. 4.9</gnm:Cell>
@@ -977,10 +977,10 @@
         <gnm:Cell Row="52" Col="24" ValueType="60">second wind-induced</gnm:Cell>
         <gnm:Cell Row="52" Col="25" ValueType="60">wu_liquid_1992_fig_4_2e.jpg</gnm:Cell>
       </gnm:Cells>
-      <gnm:SheetLayout TopLeft="A2">
+      <gnm:SheetLayout TopLeft="T2">
         <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="A2"/>
       </gnm:SheetLayout>
-      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
     </gnm:Sheet>
   </gnm:Sheets>
   <gnm:UIData SelectedTab="0"/>
