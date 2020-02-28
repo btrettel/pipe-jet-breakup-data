@@ -18,7 +18,7 @@ shopt -s nullglob globstar
 # You should have received a copy of the GNU General Public License along with pipe-jet-breakup-data. If not, see <https://www.gnu.org/licenses/>.
 
 rm -rfv ../outputs/
-python prepare_data.py
+python generate_database.py
 python plot_data.py
 python atomization.py # needs to run before plot_data_2.py and low_atm_density_regimes.py
 python plot_data_2.py

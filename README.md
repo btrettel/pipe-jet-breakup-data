@@ -35,14 +35,3 @@ The scripts then read the `pipe-jet-breakup-data.pickle` file to produce plots a
 # Data compilation philosophy
 
 Trettel, B. (2019, March 22). Improving the validation of turbulent jet breakup models. https://doi.org/10.31224/osf.io/k2fnm
-
-# TODO
-
-- Update to Python 3
-- Convert variable names to be consistent with papers
-- Change regime names to be consistent with papers and not archaic
-- Add more data
-- Add more data validation checks
-- Make many loops use zip rather than indexing
-- Add data and script for pipe turbulence statistics
-- Add dimension checks via a Python package that does dimensional analysis

@@ -18,90 +18,14 @@ metadata = [lastchangedby, lastchangedrevision, lastchangeddate]
 print
 
 # TODO: Generate "breakdown" table in validation paper automatically from this. Add extra fields to the database for the data quality issues mentioned so that the table can be generated automatically.
-# TODO: Split into multiple files, one per study.
-
-# TODO: Obtain more data for liquid-liquid systems, liquid jets in cross flow, liquid jets with co-flows
-# TODO: chow_experimental_1980 doesn't have many data points but discusses many things done to have a high quality experiment. Add some more database fields inspired by this.
-# TODO: Reject all laminar data that isn't fully developed.
-# TODO: Can K_c be negative?
-# TODO: Check that all basic quantities (e.g., Re, Fr, etc.) are defined
 
 # WON'T: Change c to area contraction ratio rather than diameter contraction ratio (both \geq 0 here).
 # TODO: check if need confidence interval or prediction interval in database
 # TODO: \langle x_\text{b} \rangle ==> confidence interval for average
 # TODO: \langle x_\text{i} \rangle ==> confidence interval for average
 
-# TODO: Change variable names to be more consistent with later work. L_b ==> x_b, I_0 ==> Tu_0
-
-# TODO: duffie_factors_1953/duffie_factors_1951
-# TODO: richardson_mechanism_1954
-# TODO: keith_liquid-liquid_1955/keith_drop_1951
-# TODO: christiansen_breakup_1957/christiansen_influence_1957
-# TODO: ryley_construction_1963
-# TODO: smirnov_effect_1965
-# TODO: meister_formation_1966/scheele_drop_1968/scheele_drop_1968-1/meister_drop_1969/meister_prediction_1969
-# TODO: rao_drop_1966 ("capillary" but what is its length?)
-# TODO: dotson_study_1967
-# TODO: newman_preliminary_1967
-# TODO: kroesser_stability_1968, kroesser_viscoelastic_1969
-# TODO: takahashi_effect_1969, takahashi_laminar_1971/kitamura_stability_1986, takahashi_stability_1972/takahashi_breakup_1972/takahashi_laminar_1971, kitamura_stability_1982
-# TODO: Add fenn_newtonian_1969/fenn_ambient_1968 ==> Should be useful to examine density ratio effects on LR-DT boundary.
-# TODO: rutland_theoretical_1970 (see p. 1692R: 4 mm diameter, 30 cm length nozzle)
-# TODO: skelland_dispersed_1971/minhas_dispersed_1969
-# TODO: gordon_non-newtonian_1973 (both Newtonian and non-Newtonian fluids)
-# TODO: parkin_production_1973 (p. 67: nozzle not long enough)
-# TODO: skelland_jet_1974/johnson_jet_1973
-# TODO: van_de_sande_air_1974 fig III.13 (pdf p. 41), fig. III.15 (turbulent Rayleigh, pdf p. 43), fig. III.17 (can't disambiguate, pdf p. 46, also van_de_sande_surface_1973 fig. 3)
-# TODO: lafrance_capillary_1975 (most experimental results are forced, but p. 78 has some earlier unforced data), lafrance_drop_1974
-# TODO: skelland_dispersed_1977
-
-# TODO: kitamura_influence_1978
-# fig. 8: \rhol/\rhog \approx 1.3, highest Re \approx 3000
-# fig. 9: \rhol/\rhog \approx 0.8, highest Re \approx 1500
-
-# TODO: van_den_akker_spontaneous_1980 (long enough for laminar fully developed flow?)
-# TODO: abbott_analysis_1982
-# TODO: mayer_zur_1993/mayer_coaxial_1994/mayer_rocket_1995
-# TODO: eroglu_coaxial_1991/eroglu_initial_1991/eroglu_wave_1991/farago_morphological_1992/farago_parametric_1990
-# TODO: olinger_lock-states_1993 (forced dripping)
-# TODO: hardalupas_characteristics_1994
-# TODO: Add amagai_frequency_1997/arai_surface_1999
-# TODO: leroux_break-up_1997
-# TODO: rhim_measurement_1998
-# TODO: Add tamaki_effects_1998
-# TODO: Add clanet_transition_1999
-# TODO: Add blaisot_determination_2000, godelle_phase_2000
-# TODO: Add godelle_symbolic_2000
-# TODO: Add malot_experimental_2001
-# TODO: blaisot_instabilities_2003
-# TODO: aalburg_primary_2005/aalburg_deformation_2002 (has data with no cross-flow: fig. 4, figs. 7--9)
-# TODO: Add salyers_spray_2010
-# TODO: Add walker_effect_2012
-
-# TODO: Add Ruff and Tseng data, which apparently has low \rhol/\rhog photographic regimes according to wu_effects_1995 p. 189, fig. 7 (pdf p. 15) / faeth_structure_1995 p. 117, fig. 1.5.
-# TODO: Based on the same figure as the previous line's TODO, so does wu_effects_1995.
-
 # TODO: Add radial droplet velocity uncertainty. wu_liquid_1992 p. 129
 # TODO: Add droplet size uncertainty from wu_liquid_1992 too.
-# TODO: Add breakup lengths from sauerwein_theoretische_1992 pp. 121--122?
-# TODO: engelbert_breakup_1995
-# TODO: mun_effects_1998 (L_0/d_0 = 25.6. Not long enough for laminar jets?)
-# TODO: Add breakup lengths from rhim_measurement_1998?
-# TODO: tang_laminar_2003/tang_cylindrical_2004
-# TODO: badens_laminar_2005
-# TODO: Add spray angle from osta_effect_2010 pdf p. 70
-# TODO: umemura_two-valued_2011
-# TODO: moallemi_breakup_2016 (see pdf p. 10)
-# TODO: omocea_breakup_2016 (unclear on length of nozzle)
-# TODO: rajendran_experimental_2017/rajendran_experimental_2012
-# TODO: kiaoulias_evaluation_2019 (has pressure drop so I can better estimate f!)
-# TODO: patrascu_dominant-wavelength_2019 (unclear on length of nozzle)
-
-# TODO: Add atomization regime markers from palmer_water_1962 fig. 2 (also see report by same author).
-# TODO: Add motion compensation key for photos. thorne_effect_1978, taylor_water_1983 (I later read that Hoyt and Taylor had two different setups with different methods of motion compensation?)
-# TODO: Add transcription error. Break into error from image resolution, error from not knowing the center of the point due to its odd shape, and error from imprecise placement of the points.
-# TODO: Get more spray angles from photos.
-# TODO: Add Knudsen number. https://en.wikipedia.org/wiki/Knudsen_number
 
 # TODO: Add other sources of error for spray angle.
 # inter-rater reliability for droplet size: wu_measurements_1986 p. 945R (they call it "person-to-person bias")
@@ -110,37 +34,17 @@ print
 # balewski_experimental_2010-1 discusses the effects of different threshold values
 # TODO: Give people photos and ask them to measure the spray angle. Use this as an estimate of the "inter-rater reliability".
 
-# TODO: Data validation for incrementing variables like pressure, velocity, Reynolds number, Weber number, etc. Do this for certain series, resetting when a new series is encountered?
-
-# TODO: Look into papers on scale effects in hydraulic structures for other ideas.
-# TODO: Add whether the flow is cavitating or not.
-# TODO: Add field to mark as true when data for the wrong fluid was used due to the correct data being unavailable or otherwise.
-# TODO: Add duration of jet in time.
-# TODO: Add Jacob number for evaporation/flashing. See Incropera p. 376, kitamura_critical_1986, cleary_flashing_2007. Alternative: how close the temperature is to boiling. nezgada_effect_1970, nezgada_effect_1970-1
-# TODO: Check whether spray angles are for the near or far fields.
-# TODO: Characterize velocity profile. logan_flow_1963
-# TODO: Add index of refraction. corey_droplet_1969 pdf p. 37, balewski_experimental_2008
-
 # TODO: Classify all photos as turbulent or laminar at the nozzle. Add assertion to check this.
 # TODO: Find surface transition location in all photos.
 # TODO: Double check all orientations.
 # TODO: List limits and number of data points for each dependent variable. Use these for the correlations developed.
 
-# WON'T: Write function to mostly automatically determine the regime from the breakup length. Notice when "major" (i.e., not including noise) changes in slope occur. The other regime column is for visual classification. L regime vs V regime.
-
 # MAYBE: For Mansour's data, estimate the friction factor from the u' and v' measurements. Compare this against smooth tubes. You can interpolate his u' and v' data to get the right TKE. You'll need the w' correlation for fully developed flow, however. ==> He doesn't have plane averaged TKE?
-# TODO: Add more data from Phinney for various atmospheric densities.
 
 # TODO: Source of SMD/MMD = 1.2? How does this vary with We, Re, I, etc.?
 
 # TODO: Does Pandas automatically treat the missing data in D_10 correctly?
 
-# MAYBE: Add information about cavitation inception. History of water? keller_influence_1980, ooi_scale_1985 (dissolved air content in ppm), brennen_cavitation_2013 p. 22
-# MAYBE: Add other Mach number: U_0/c_l.
-# MAYBE: Add distance to flat plate divided by nozzle diameter for breakup measurements. See takahashi_stability_1972 p. 75. li_study_2007 seems to be on the same topic, but I don't know if they come to the same conclusion.
-# WON'T: Add some measure of total vorticity? Luis seems interested in vorticity generation in the flow.
-# MAYBE: birkhoff_jets_1957 p. 330: > Also, dust in the air, the chemistry of the surrounding gas, and electrification may affect the final behavior decisively, by determining whether colliding drops amalgamate or rebound.
-# MAYBE: Electrically ground the nozzle?
 # TODO: Add ECN conditions:
 # https://ecn.sandia.gov/diesel-spray-combustion/target-condition/spray-ab/
 # https://ecn.sandia.gov/diesel-spray-combustion/experimental-diagnostics/
@@ -148,15 +52,15 @@ print
 # TODO: Range testing nuisance variables. http://www.artofsoaking.com/2017/04/28/thoughts-on-water-gun-water-blaster-range-testing-2017/ : > As noted above, beyond the wind variable, I became more acutely aware of two other variables that can adversely affect stream performance: nozzle jitters and water gas content.
 # Other nuisance variables: alberdi_strategies_2011 ("the fluid storage and delivery apparatus should not be treated as an afterthought [Alberdi et al. [2011], Ramesh et al. [2004]" from rouly_design_2015), bardi_engine_2012, meijer_engine_2012, payri_engine_2014, pei_engine_2015
 
-# TODO: Change x_low, etc. to x_s_low as this is actually x_low/d_0.
-
 # Can't disambiguate variables.
-# WON'T: See if you can convert van_de_sande_surface_1973 fig. 3 data to spray angle.
-# WON'T: Add branam_injection_2002 fig. 25 p. 8 if this is possible. Might not be able to get unambiguous Re, We, etc. values.
+# CAN'T: See if you can convert van_de_sande_surface_1973 fig. 3 data to spray angle.
+# CAN'T: Add branam_injection_2002 fig. 25 p. 8 if this is possible. Might not be able to get unambiguous Re, We, etc. values.
 
 #########
 # Rules #
 #########
+
+# 2020-02-28: Doesn't seem to me that I followed these rules very closely.
 
 # - Use a different row for each photo. Only put breakup, etc. data in the first row. The other rows have We, Re, etc., but now breakup data. Order the photos by location in x, so typically the first row would have the photo of the jet at the nozzle.
 # - When naming photo files, if the figure contains multiple photos but not labels for each photo individually, distinguish each with a letter in alphabetical order from the first photo in the figure.
@@ -165,7 +69,6 @@ print
 # - Typically, if something is not mentioned, put np.nan in that field. Exceptions include fields defined by whether something was mentioned, e.g., the end checked field, and the trip field. (No trip mentioned is sufficient to assume they didn't use one.)
 # - Use the full spray angle. Accept units in radians, not degrees or tan(\theta / 2).
 
-data_file                   = 'pipe-jet-breakup-data'
 z                           = scipy.stats.norm.ppf(1 - (1 - interval_probability_level) / 2) # 2.5% on either side for a 5% confidence interval # DONE: change to t and use t when the number of data points is small, particularly for Grant and Chen
 breakup_length_sigmas = 0.1291 # TODO: Obtain this from automatic analysis of the data. Update the paper automatically too.
 cols = ['key', 'alt key',
