@@ -18,6 +18,7 @@
 - Regression considering uncertainty.
 - Bayesian experimental design
 - Bayesian model selection
+- Add more citations listed in the "Data sources to add" section below to the bib file. Stopped at kitamura_influence_1978.
 
 # Output data format
 
