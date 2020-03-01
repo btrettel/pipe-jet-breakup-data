@@ -4,6 +4,10 @@
 - Convert variable names to be consistent with papers (e.g., L_b ==> x_b, I_0 ==> Tubar_0)
 - Change regime names to be consistent with papers and not archaic
 - Add more data validation checks (see section below)
+- Add type hinting (both function and variable annotation, with latest syntax). Some links:
+  - https://towardsdatascience.com/down-with-technical-debt-clean-python-for-data-scientists-aa7592eff7fc
+  - https://www.bernat.tech/the-state-of-type-hints-in-python/
+  - https://stackoverflow.com/questions/32557920/what-are-type-hints-in-python-3-5
 - Make many loops use zip rather than indexing
 - Add data and script for pipe turbulence statistics
 - Add dimension checks via a Python package that does dimensional analysis (via [Pint](https://github.com/hgrecco/pint)); use for unit conversions as well, e.g., make the raw CSV spreadsheets in the units as printed and convert rather than putting the raw CSV spreadsheets in SI units
@@ -13,7 +17,7 @@
 - Don't make queries directly to the database and instead use OOP or functions. This would allow you to switch between pandas and SQLite if you want to.
 - "codebook" per http://datacolada.org/69
 - standardized input CSV file form?
-- Delete gnumeric spreadsheets and instead use CSV files directly
+- Have Gnumeric spreadsheets for every CSV file, and use [data validation](http://www.fifi.org/doc/gnumeric-doc/html/C/protectionandvalidation.html) in the spreadsheets
 - Change x_low, etc. to x_s_low as this is actually x_low/d_0.
 - Regression considering uncertainty.
 - Bayesian experimental design
@@ -48,7 +52,7 @@
 - Can readily be used in other programming languages
 - [Wide support](https://en.wikipedia.org/wiki/Sqlite)
 - Older than pandas: started in 2000
-- Constraints are easy
+- [Constraints](https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm) are easy
 
 ### Disadvantages 
 
@@ -60,6 +64,7 @@
 - Obtain more data for liquid-liquid systems, liquid jets in cross flow, liquid jets with co-flows
 - Get more spray angles from photos.
 - Add more data from Phinney for various atmospheric densities. (Not sure what I meant by this. I'll check if all of Phinney's data has been added.)
+- Re-add data from wu_liquid_1992. Type raw data in and process to produce the Weber number, e.g., table B.5 has velocities not entered in the spreadsheet. Compare this against the one in there right now, which I believe was produced from figures? Also check that the Weber and Reynolds numbers are actually higher than 1e6 as this is the only data I have that high.
 - duffie_factors_1953/duffie_factors_1951
 - richardson_mechanism_1954
 - keith_liquid-liquid_1955/keith_drop_1951
