@@ -78,6 +78,7 @@ for regime_L_b, regime_turb in zip(df_jet_breakup['regime L_b'], df_jet_breakup[
          regime_L_b = 'downstream transition'
       
       if isinstance(combined_regime_array[i], basestring):
+         determination_arr[i] = 'photo, breakup length'
          if not(combined_regime_array[i] == regime_L_b):
             raise ValueError('Inconsistent regimes:', i, regime_L_b, combined_regime_array[i])
       else:
@@ -141,7 +142,8 @@ for regime in regime_all_df['regime combined']:
    if not(regime in regime_array):
       regime_array.append(regime)
 
-print len(regime_all_df), 'data points with breakup regime classified (smooth pipe nozzles).'
+N_regime_data_points = len(regime_all_df)
+print N_regime_data_points, 'data points with breakup regime classified (smooth pipe nozzles).'
 macros_regime.write(r'\newcommand{\smoothregimenum}{\num{'+str(len(regime_all_df))+'}}\n')
 
 #R2S_df = regime_all_df_with_trans[regime_all_df_with_trans['regime combined'] == 'R2S']
@@ -526,15 +528,11 @@ plt.close()
 # universality checks
 
 # photos only
-regime_photo_df = regime_all_df[regime_all_df['regime determination method'] == 'photo']
+regime_photo_df = regime_all_df[(regime_all_df['regime determination method'] == 'photo') | (regime_all_df['regime determination method'] == 'photo, breakup length')]
 
-print len(regime_photo_df), 'data points with breakup regime classified (smooth pipe nozzles, photos only).'
+N_photo_regime_data_points = len(regime_photo_df)
+print N_photo_regime_data_points, 'data points with breakup regime classified (smooth pipe nozzles, photos only).'
 macros_regime.write(r'\newcommand{\smoothregimephotonum}{\num{'+str(len(regime_photo_df))+'}}\n')
-
-regime_photo_TSB_df = regime_photo_df[regime_photo_df['regime combined'] == 'turbulent surface breakup']
-regime_photo_TSB_df['We_crit'] = We_l0_crit(regime_photo_TSB_df['I_0'], regime_photo_TSB_df['rho_s'])
-regime_photo_TSB_df = regime_photo_TSB_df[regime_photo_TSB_df['We_l0'] > regime_photo_TSB_df['We_crit']]
-print regime_photo_TSB_df['photo filename']
 
 i = 0
 for regime in regime_array:
@@ -633,10 +631,12 @@ plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_photos_
 plt.close()
 
 # breakup length only
-regime_xbavg_df = regime_all_df[regime_all_df['regime determination method'] == 'breakup length']
+regime_xbavg_df = regime_all_df[(regime_all_df['regime determination method'] == 'breakup length') | (regime_all_df['regime determination method'] == 'photo, breakup length')]
 
-print len(regime_xbavg_df), 'data points with breakup regime classified (smooth pipe nozzles, xbavg only).'
+N_breakup_length_regime_data_points = len(regime_xbavg_df)
+print N_breakup_length_regime_data_points, 'data points with breakup regime classified (smooth pipe nozzles, xbavg only).'
 macros_regime.write(r'\newcommand{\smoothregimexbavgnum}{\num{'+str(len(regime_xbavg_df))+'}}\n')
+#assert(N_regime_data_points == (N_photo_regime_data_points + N_breakup_length_regime_data_points))
 
 i = 0
 for regime in regime_array:
