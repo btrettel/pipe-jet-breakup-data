@@ -166,9 +166,13 @@ macros_reg.write('}}\n')
 
 theta_df = theta_df[theta_df['key'] != 'reitz_atomization_1978']
 theta_df = theta_df[theta_df['key'] != 'arai_break-up_1985']
+#theta_df_1 = theta_df_1[theta_df_1['key'] != 'skrebkov_turbulentnyye_1963']
 
-theta_df['We_l0_crit'] = We_l0_crit(theta_df['I_0'], theta_df['rho_s'])
-theta_df = theta_df[theta_df['We_l0'] < theta_df['We_l0_crit']] # Exclude atomization points.
+theta_df_1 = theta_df
+theta_df_1['We_l0_crit'] = We_l0_crit(theta_df_1['I_0'], theta_df_1['rho_s'])
+theta_df_1 = theta_df[theta_df['We_l0'] < theta_df['We_l0_crit']] # Exclude atomization points.
+
+theta_df_2 = theta_df[theta_df['key'] == 'skrebkov_turbulentnyye_1963']
 
 parameter_space_plots(theta_df, 'theta', revno=revno)
 
@@ -177,9 +181,17 @@ parameter_space_plots(theta_df, 'theta', revno=revno)
 ## # # # # # # # # # # # # # # # # # # # # # # # # ##
 
 latex_summary_table(theta_df, 'theta')
-A = np.column_stack([np.ones(len(theta_df)), log(theta_df['We_l0'])])
-tan_theta = np.tan(theta_df['theta']/2.)
-B = log(tan_theta)
+
+A = np.column_stack([np.ones(len(theta_df_2)), np.log(theta_df_2['I_0'])])
+tan_theta = np.tan(theta_df_2['theta']/2.)
+B = np.log(tan_theta)
+
+result, _, _, _ = np.linalg.lstsq(A, B)
+a, C_Tubar_0 = result
+
+A = np.column_stack([np.ones(len(theta_df_1)), np.log(theta_df_1['We_l0'])])
+tan_theta = np.tan(theta_df_1['theta']/2.)
+B = np.log(tan_theta * theta_df_1['I_0']**(-C_Tubar_0))
 
 result, _, _, _ = np.linalg.lstsq(A, B)
 a, C_We_l0 = result
@@ -188,16 +200,17 @@ C_theta = exp(a)
 
 print 'C_theta = ', C_theta
 print 'C_We_l0 = ', C_We_l0
+print 'C_Tubar_0 = ', C_Tubar_0
 
-theta_df['theta predicted'] = 2. * np.arctan(C_theta * theta_df['We_l0']**C_We_l0)
-tan_theta_predicted = np.tan(theta_df['theta predicted'] / 2.)
+theta_df_1['theta predicted'] = 2. * np.arctan(C_theta * theta_df_1['We_l0']**C_We_l0 * theta_df_1['I_0']**C_Tubar_0)
+tan_theta_predicted = np.tan(theta_df_1['theta predicted'] / 2.)
 print 'tan theta/2 R^2 =', coeff_of_determination(tan_theta_predicted, tan_theta)
-plot_with_keys(theta_df, 'correlation', 'theta predicted', 'theta', plot_type='linear', add_line=True, revno=revno)
-print 'theta R^2 =', coeff_of_determination(theta_df['theta predicted'], theta_df['theta'])
+plot_with_keys(theta_df_1, 'correlation', 'theta predicted', 'theta', plot_type='linear', add_line=True, revno=revno)
+print 'theta R^2 =', coeff_of_determination(theta_df_1['theta predicted'], theta_df_1['theta'])
 print
 
 with open('../outputs/data/TSB_thetai.pickle', 'w') as f:
-   pickle.dump([C_theta, C_We_l0], f)
+   pickle.dump([C_theta, C_We_l0, C_Tubar_0], f)
 
 macros_reg.write(r'\newcommand{\thetaikeysused}{\citet{')
 key_array = []
@@ -211,9 +224,9 @@ for key in theta_df['key']:
 macros_reg.write('}}\n')
 
 #macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Tubarexp{'+roundstr(C_I_0)+'} \Welo^{'+roundstr(C_We_l0)+'}}\n')
-macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Welo^{'+roundstr(C_We_l0)+'}}\n')
-macros_reg.write(r'\newcommand{\thetairegrsquared}{'+roundstr(coeff_of_determination(theta_df['theta predicted'], theta_df['theta']))+'}\n')
-macros_reg.write(r'\newcommand{\thetairegN}{\num{'+str(len(theta_df))+'}}\n')
+macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Welo^{'+roundstr(C_We_l0)+r'} \Tubar_0^{'+roundstr(C_Tubar_0)+'}}\n')
+macros_reg.write(r'\newcommand{\thetairegrsquared}{'+roundstr(coeff_of_determination(theta_df_1['theta predicted'], theta_df_1['theta']))+'}\n')
+macros_reg.write(r'\newcommand{\thetairegN}{\num{'+str(len(theta_df_1))+'}}\n')
 macros_reg.write('\n')
 
 print '\n##########\n'
