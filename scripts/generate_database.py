@@ -24,9 +24,6 @@ print
 # TODO: \langle x_\text{b} \rangle ==> confidence interval for average
 # TODO: \langle x_\text{i} \rangle ==> confidence interval for average
 
-# TODO: Add radial droplet velocity uncertainty. wu_liquid_1992 p. 129
-# TODO: Add droplet size uncertainty from wu_liquid_1992 too.
-
 # TODO: Add other sources of error for spray angle.
 # inter-rater reliability for droplet size: wu_measurements_1986 p. 945R (they call it "person-to-person bias")
 # differences in definitions of spray angle:
@@ -4845,14 +4842,14 @@ df_wu_liquid_1992['D_30/d_0']                   = np.nan
 df_wu_liquid_1992['D_30/d_0 stat error']        = np.nan
 df_wu_liquid_1992['D_30/d_0 resolution']        = np.nan
 df_wu_liquid_1992['D_32/d_0']                   = D_32_is_wu_liquid_1992
-df_wu_liquid_1992['D_32/d_0 stat error']        = np.nan # TODO
+df_wu_liquid_1992['D_32/d_0 stat error']        = 0.33 * D_32_is_wu_liquid_1992 # p. 129 (pdf p. 146)
 df_wu_liquid_1992['D_32/d_0 resolution']        = np.nan # TODO
 df_wu_liquid_1992['droplet x/d_0']              = np.nan
 df_wu_liquid_1992['D/d_0 page fig']             = np.nan
 df_wu_liquid_1992['D/d_0 transcription method'] = np.nan
 df_wu_liquid_1992['D/d_0 measurement method']   = np.nan
 df_wu_liquid_1992['v_d_bar/vp']                      = v_d_s_wu_liquid_1992
-df_wu_liquid_1992['v_d_bar/vp stat error']           = np.nan # TODO
+df_wu_liquid_1992['v_d_bar/vp stat error']           = 0.60 * v_d_s_wu_liquid_1992 # p. 129 (pdf p. 146)
 df_wu_liquid_1992['v_d_bar/vp resolution']           = np.nan # TODO
 df_wu_liquid_1992['v_d_bar/vp page fig']             = np.nan # TODO
 df_wu_liquid_1992['v_d_bar/vp transcription method'] = np.nan # TODO

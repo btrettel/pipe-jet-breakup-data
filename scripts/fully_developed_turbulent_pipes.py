@@ -26,3 +26,4 @@ from jetbreakup import *
 # TODO: regression for w' from u', v'
 # TODO: regression for \Lambda
 # TODO: regression for velocity profile
+# TODO: regression for velocity profile kinetic energy coefficient (This would clear up uncertainties on this in the literature, as most of the time it's merely guessed or a prescribed profile is used.)
