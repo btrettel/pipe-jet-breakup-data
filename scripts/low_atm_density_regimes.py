@@ -300,13 +300,13 @@ for regime in regime_array:
 
 #d_0 = 0.25 * 2.54e-2 # m
 #d_0 = 2.519e-3 # Clanet dripping tests
-d_0 = 6.e-3 # m
+d_0 = 7.e-3 # m
 rho_l = rho_water(T_std)
 nu_l  = nu_water(T_std)
 sigma = sigma_water(T_std)
 Re_0_arr = np.logspace(0., 6., 1e2)
 We_0_arr = (rho_l * nu_l**2.) / (sigma * d_0) * Re_0_arr**2.
-plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r'$d_0 =$ 6~mm, water', zorder=1)
+plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r'$d_0 =$ 7~mm, water', zorder=1)
 
 # "conventional" case
 # # n-dodecane
@@ -429,7 +429,7 @@ fig.set_size_inches(5.5, 4., forward=True) # paper
 plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_and_lines_paper.pgf', bbox_inches="tight")
 plt.close()
 
-d_0   = 6.e-3 # m
+d_0   = 7.e-3 # m
 rho_l = rho_water(T_std)
 nu_l  = nu_water(T_std)
 sigma = sigma_water(T_std)

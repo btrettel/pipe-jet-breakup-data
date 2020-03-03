@@ -63,6 +63,7 @@ plot_with_keys(TR_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='
 with open('../outputs/data/TR_xbavg.pickle', 'w') as f:
    pickle.dump(C_TR, f)
 
+macros_TR.write(r'\newcommand{\CTRtheory}{'+roundstr(np.log((2./3.) * avgTubar_0**(-2.)))+'}\n')
 macros_TR.write(r'\newcommand{\CTRnum}{'+roundstr(C_TR)+'}\n')
 macros_TR.write(r'\newcommand{\CTRrsquared}{'+roundstr(coeff_of_determination(TR_df['L_b/d_0 predicted'], TR_df['L_b/d_0']))+'}\n')
 macros_TR.write(r'\newcommand{\CTRN}{\num{'+str(len(TR_df))+'}}\n')

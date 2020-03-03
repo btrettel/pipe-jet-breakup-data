@@ -5296,201 +5296,201 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_sallam_properties_2002])
 # theta table on p. 52 (pdf p. 70)
 # see table B.1 on p. 109 (pdf p. 127) for velocity estimate function
 
-#########################
-# trettel_modeling_2020 #
-#########################
+##########################
+# trettel_turbulent_2020 #
+##########################
 
 # TODO: Add t/d_0.
 
-trettel_modeling_2020_csv = pd.read_csv('../data/trettel_modeling_2020/consolidated-trajectory-experiments.csv', sep=',', header=0)
+trettel_turbulent_2020_csv = pd.read_csv('../data/trettel_turbulent_2020/consolidated-trajectory-experiments.csv', sep=',', header=0)
 
 frame_rate = 29.97 # frames/s
 
-photo_filename_trettel_modeling_2020  = trettel_modeling_2020_csv['video filename'] # C
-temp_trettel_modeling_2020_weather    = (5./9.) * (trettel_modeling_2020_csv['temp. (F, weather service)'] - 32.0) # C
-temp_trettel_modeling_2020_anemometer = trettel_modeling_2020_csv['temp. (C, anemometer)']
-P_atm_trettel_modeling_2020_temp      = trettel_modeling_2020_csv['P_atm (inHg)'] * 3386.39 # Pa
-d_0_trettel_modeling_2020             = in_to_m(trettel_modeling_2020_csv['d_0 (in)']) # m
-L_0_trettel_modeling_2020             = in_to_m(trettel_modeling_2020_csv['L_0 (in)']) # m
-roughness_trettel_modeling_2020       = trettel_modeling_2020_csv['roughness']
-Vol_trettel_modeling_2020             = trettel_modeling_2020_csv['Vol. (L)'] * 0.001 # m^3
-T_trettel_modeling_2020               = (trettel_modeling_2020_csv['end frame']- trettel_modeling_2020_csv['start frame']) / frame_rate # s
-regime_photo_trettel_modeling_2020    = trettel_modeling_2020_csv['regime photo']
+photo_filename_trettel_turbulent_2020  = trettel_turbulent_2020_csv['video filename'] # C
+temp_trettel_turbulent_2020_weather    = (5./9.) * (trettel_turbulent_2020_csv['temp. (F, weather service)'] - 32.0) # C
+temp_trettel_turbulent_2020_anemometer = trettel_turbulent_2020_csv['temp. (C, anemometer)']
+P_atm_trettel_turbulent_2020_temp      = trettel_turbulent_2020_csv['P_atm (inHg)'] * 3386.39 # Pa
+d_0_trettel_turbulent_2020             = in_to_m(trettel_turbulent_2020_csv['d_0 (in)']) # m
+L_0_trettel_turbulent_2020             = in_to_m(trettel_turbulent_2020_csv['L_0 (in)']) # m
+roughness_trettel_turbulent_2020       = trettel_turbulent_2020_csv['roughness']
+Vol_trettel_turbulent_2020             = trettel_turbulent_2020_csv['Vol. (L)'] * 0.001 # m^3
+T_trettel_turbulent_2020               = (trettel_turbulent_2020_csv['end frame']- trettel_turbulent_2020_csv['start frame']) / frame_rate # s
+regime_photo_trettel_turbulent_2020    = trettel_turbulent_2020_csv['regime photo']
 
-temp_trettel_modeling_2020 = np.array([])
-for temp_weather, temp_anemometer in zip(temp_trettel_modeling_2020_weather, temp_trettel_modeling_2020_anemometer):
+temp_trettel_turbulent_2020 = np.array([])
+for temp_weather, temp_anemometer in zip(temp_trettel_turbulent_2020_weather, temp_trettel_turbulent_2020_anemometer):
    if temp_weather > 0.: # not sure why not(temp_weather is np.nan) doesn't work
-      temp_trettel_modeling_2020 = np.append(temp_trettel_modeling_2020, temp_weather)
+      temp_trettel_turbulent_2020 = np.append(temp_trettel_turbulent_2020, temp_weather)
    else:
-      temp_trettel_modeling_2020 = np.append(temp_trettel_modeling_2020, temp_anemometer)
+      temp_trettel_turbulent_2020 = np.append(temp_trettel_turbulent_2020, temp_anemometer)
 
-P_atm_trettel_modeling_2020 = np.array([])
-for P_atm_i in P_atm_trettel_modeling_2020_temp:
+P_atm_trettel_turbulent_2020 = np.array([])
+for P_atm_i in P_atm_trettel_turbulent_2020_temp:
    if P_atm_i > 0.:
-      P_atm_trettel_modeling_2020 = np.append(P_atm_trettel_modeling_2020, P_atm_i)
+      P_atm_trettel_turbulent_2020 = np.append(P_atm_trettel_turbulent_2020, P_atm_i)
    else:
-      P_atm_trettel_modeling_2020 = np.append(P_atm_trettel_modeling_2020, P_atm)
+      P_atm_trettel_turbulent_2020 = np.append(P_atm_trettel_turbulent_2020, P_atm)
 
-Q_trettel_modeling_2020      = Vol_trettel_modeling_2020 / T_trettel_modeling_2020
-A_0_trettel_modeling_2020    = (np.pi / 4.) * d_0_trettel_modeling_2020**2.
-Ubar_0_trettel_modeling_2020 = Q_trettel_modeling_2020 / A_0_trettel_modeling_2020
+Q_trettel_turbulent_2020      = Vol_trettel_turbulent_2020 / T_trettel_turbulent_2020
+A_0_trettel_turbulent_2020    = (np.pi / 4.) * d_0_trettel_turbulent_2020**2.
+Ubar_0_trettel_turbulent_2020 = Q_trettel_turbulent_2020 / A_0_trettel_turbulent_2020
 
-rho_g_trettel_modeling_2020 = rho_ideal_gas(P_atm_trettel_modeling_2020, temp_trettel_modeling_2020, MW_air)
-nu_g_trettel_modeling_2020  = mu_ideal_gas(temp_trettel_modeling_2020, mu_0_air, T_0_air, C_air) / rho_g_trettel_modeling_2020
+rho_g_trettel_turbulent_2020 = rho_ideal_gas(P_atm_trettel_turbulent_2020, temp_trettel_turbulent_2020, MW_air)
+nu_g_trettel_turbulent_2020  = mu_ideal_gas(temp_trettel_turbulent_2020, mu_0_air, T_0_air, C_air) / rho_g_trettel_turbulent_2020
 
-rho_l_trettel_modeling_2020 = rho_water(temp_trettel_modeling_2020)
-sigma_trettel_modeling_2020 = sigma_water(temp_trettel_modeling_2020)
-nu_l_trettel_modeling_2020  = nu_water(temp_trettel_modeling_2020)
-P_v_trettel_modeling_2020   = P_v_water(temp_trettel_modeling_2020)
+rho_l_trettel_turbulent_2020 = rho_water(temp_trettel_turbulent_2020)
+sigma_trettel_turbulent_2020 = sigma_water(temp_trettel_turbulent_2020)
+nu_l_trettel_turbulent_2020  = nu_water(temp_trettel_turbulent_2020)
+P_v_trettel_turbulent_2020   = P_v_water(temp_trettel_turbulent_2020)
 
-We_l0_trettel_modeling_2020      = rho_l_trettel_modeling_2020 * Ubar_0_trettel_modeling_2020**2. * d_0_trettel_modeling_2020 / sigma_trettel_modeling_2020
-Re_l0_trettel_modeling_2020      = Ubar_0_trettel_modeling_2020 * d_0_trettel_modeling_2020 / nu_l_trettel_modeling_2020
-f_trettel_modeling_2020 = friction_factor_smooth_array(Re_l0_trettel_modeling_2020)
-Fr_0_trettel_modeling_2020       = Ubar_0_trettel_modeling_2020**2. / (d_0_trettel_modeling_2020 * g)
-rho_s_trettel_modeling_2020      = rho_l_trettel_modeling_2020 / rho_g_trettel_modeling_2020
-nu_s_trettel_modeling_2020       = nu_l_trettel_modeling_2020 / nu_g_trettel_modeling_2020
-K_c_trettel_modeling_2020        = K_c(P_atm_trettel_modeling_2020, P_v_trettel_modeling_2020, rho_l_trettel_modeling_2020, Ubar_0_trettel_modeling_2020, K_L_sharpedged, friction_factor_smooth_array(Re_l0_trettel_modeling_2020), L_0_trettel_modeling_2020/d_0_trettel_modeling_2020)
+We_l0_trettel_turbulent_2020      = rho_l_trettel_turbulent_2020 * Ubar_0_trettel_turbulent_2020**2. * d_0_trettel_turbulent_2020 / sigma_trettel_turbulent_2020
+Re_l0_trettel_turbulent_2020      = Ubar_0_trettel_turbulent_2020 * d_0_trettel_turbulent_2020 / nu_l_trettel_turbulent_2020
+f_trettel_turbulent_2020 = friction_factor_smooth_array(Re_l0_trettel_turbulent_2020)
+Fr_0_trettel_turbulent_2020       = Ubar_0_trettel_turbulent_2020**2. / (d_0_trettel_turbulent_2020 * g)
+rho_s_trettel_turbulent_2020      = rho_l_trettel_turbulent_2020 / rho_g_trettel_turbulent_2020
+nu_s_trettel_turbulent_2020       = nu_l_trettel_turbulent_2020 / nu_g_trettel_turbulent_2020
+K_c_trettel_turbulent_2020        = K_c(P_atm_trettel_turbulent_2020, P_v_trettel_turbulent_2020, rho_l_trettel_turbulent_2020, Ubar_0_trettel_turbulent_2020, K_L_sharpedged, friction_factor_smooth_array(Re_l0_trettel_turbulent_2020), L_0_trettel_turbulent_2020/d_0_trettel_turbulent_2020)
 
-Ma_g_trettel_modeling_2020        = []
-Lambda_r_s_trettel_modeling_2020  = []
-regime_turb_trettel_modeling_2020 = []
-I_0_trettel_modeling_2020         = []
-for Ubar_0, temp, roughness, f, Re_l0 in zip(Ubar_0_trettel_modeling_2020, temp_trettel_modeling_2020, roughness_trettel_modeling_2020, f_trettel_modeling_2020, Re_l0_trettel_modeling_2020):
-   Ma_g_trettel_modeling_2020.append(Ubar_0 / c_ideal_gas(gamma_air(temp), temp + T_zero, MW_air))
+Ma_g_trettel_turbulent_2020        = []
+Lambda_r_s_trettel_turbulent_2020  = []
+regime_turb_trettel_turbulent_2020 = []
+I_0_trettel_turbulent_2020         = []
+for Ubar_0, temp, roughness, f, Re_l0 in zip(Ubar_0_trettel_turbulent_2020, temp_trettel_turbulent_2020, roughness_trettel_turbulent_2020, f_trettel_turbulent_2020, Re_l0_trettel_turbulent_2020):
+   Ma_g_trettel_turbulent_2020.append(Ubar_0 / c_ideal_gas(gamma_air(temp), temp + T_zero, MW_air))
    
    if Re_l0 > Re_turb:
-      regime_turb_trettel_modeling_2020.append('turbulent')
-      Lambda_r_s_trettel_modeling_2020.append(Lambda_s(roughness, f, 'v'))
-      I_0_trettel_modeling_2020.append(I_fully_developed(friction_factor_smooth(Re_l0)))
+      regime_turb_trettel_turbulent_2020.append('turbulent')
+      Lambda_r_s_trettel_turbulent_2020.append(Lambda_s(roughness, f, 'v'))
+      I_0_trettel_turbulent_2020.append(I_fully_developed(friction_factor_smooth(Re_l0)))
    elif Re_l0 > Re_trans:
-      regime_turb_trettel_modeling_2020.append('transitional')
-      Lambda_r_s_trettel_modeling_2020.append(np.nan)
-      I_0_trettel_modeling_2020.append(np.nan)
+      regime_turb_trettel_turbulent_2020.append('transitional')
+      Lambda_r_s_trettel_turbulent_2020.append(np.nan)
+      I_0_trettel_turbulent_2020.append(np.nan)
    else:
-      regime_turb_trettel_modeling_2020.append('laminar')
-      Lambda_r_s_trettel_modeling_2020.append(np.nan)
-      I_0_trettel_modeling_2020.append(np.nan)
+      regime_turb_trettel_turbulent_2020.append('laminar')
+      Lambda_r_s_trettel_turbulent_2020.append(np.nan)
+      I_0_trettel_turbulent_2020.append(np.nan)
 
-df_trettel_modeling_2020 = pd.DataFrame({'key': 'trettel_modeling_2020',
-                                       'We_l0': We_l0_trettel_modeling_2020})
-df_trettel_modeling_2020['liquid']     = 'water'
-df_trettel_modeling_2020['alt key']    = np.nan
-df_trettel_modeling_2020['gas']        = 'air'
-df_trettel_modeling_2020['degas']      = False
-df_trettel_modeling_2020['regulation'] = True
+df_trettel_turbulent_2020 = pd.DataFrame({'key': 'trettel_turbulent_2020',
+                                       'We_l0': We_l0_trettel_turbulent_2020})
+df_trettel_turbulent_2020['liquid']     = 'water'
+df_trettel_turbulent_2020['alt key']    = np.nan
+df_trettel_turbulent_2020['gas']        = 'air'
+df_trettel_turbulent_2020['degas']      = False
+df_trettel_turbulent_2020['regulation'] = True
 
-df_trettel_modeling_2020['bend']              = True
-df_trettel_modeling_2020['flow straightener'] = True
-df_trettel_modeling_2020['screen']            = True
-df_trettel_modeling_2020['contraction shape'] = 'rough'
-df_trettel_modeling_2020['c']                 = 0.824 * 2.54e-2 / d_0_trettel_modeling_2020
-df_trettel_modeling_2020['trip']              = False
-df_trettel_modeling_2020['L_r/d_0']           = 0
-df_trettel_modeling_2020['eps_r/d_0']         = np.nan
+df_trettel_turbulent_2020['bend']              = True
+df_trettel_turbulent_2020['flow straightener'] = True
+df_trettel_turbulent_2020['screen']            = True
+df_trettel_turbulent_2020['contraction shape'] = 'rough'
+df_trettel_turbulent_2020['c']                 = 0.824 * 2.54e-2 / d_0_trettel_turbulent_2020
+df_trettel_turbulent_2020['trip']              = False
+df_trettel_turbulent_2020['L_r/d_0']           = 0
+df_trettel_turbulent_2020['eps_r/d_0']         = np.nan
 
-df_trettel_modeling_2020['L_0/d_0']       = L_0_trettel_modeling_2020 / d_0_trettel_modeling_2020
-df_trettel_modeling_2020['roughness']     = roughness_trettel_modeling_2020
-df_trettel_modeling_2020['f page fig']    = np.nan
-df_trettel_modeling_2020['pipe material'] = 'brass'
-df_trettel_modeling_2020['est f']         = True
-df_trettel_modeling_2020['check FD']      = False
+df_trettel_turbulent_2020['L_0/d_0']       = L_0_trettel_turbulent_2020 / d_0_trettel_turbulent_2020
+df_trettel_turbulent_2020['roughness']     = roughness_trettel_turbulent_2020
+df_trettel_turbulent_2020['f page fig']    = np.nan
+df_trettel_turbulent_2020['pipe material'] = 'brass'
+df_trettel_turbulent_2020['est f']         = True
+df_trettel_turbulent_2020['check FD']      = False
 
-df_trettel_modeling_2020['t/d_0']       = np.nan
-df_trettel_modeling_2020['L_tip/d_0']   = np.nan
-df_trettel_modeling_2020['end checked'] = np.nan
+df_trettel_turbulent_2020['t/d_0']       = np.nan
+df_trettel_turbulent_2020['L_tip/d_0']   = np.nan
+df_trettel_turbulent_2020['end checked'] = np.nan
 
-df_trettel_modeling_2020['orientation']         = 'angled'
-df_trettel_modeling_2020['vibration isolation'] = False
-df_trettel_modeling_2020['d_chamber/d_0']       = np.nan
+df_trettel_turbulent_2020['orientation']         = 'angled'
+df_trettel_turbulent_2020['vibration isolation'] = False
+df_trettel_turbulent_2020['d_chamber/d_0']       = np.nan
 
-#df_trettel_modeling_2020['We_l0']      = We_l0_trettel_modeling_2020
-df_trettel_modeling_2020['Re_l0']      = Re_l0_trettel_modeling_2020
-df_trettel_modeling_2020['I_0']        = I_0_trettel_modeling_2020
-df_trettel_modeling_2020['Fr_0']       = Fr_0_trettel_modeling_2020
-df_trettel_modeling_2020['rho_s']      = rho_s_trettel_modeling_2020
-df_trettel_modeling_2020['nu_s']       = nu_s_trettel_modeling_2020
-df_trettel_modeling_2020['K_c']        = K_c_trettel_modeling_2020
-df_trettel_modeling_2020['Ma_g']       = Ma_g_trettel_modeling_2020
-df_trettel_modeling_2020['Lambda_r_s'] = Lambda_r_s_trettel_modeling_2020
-df_trettel_modeling_2020['est rho_s']  = False
-df_trettel_modeling_2020['est nu_s']   = True
+#df_trettel_turbulent_2020['We_l0']      = We_l0_trettel_turbulent_2020
+df_trettel_turbulent_2020['Re_l0']      = Re_l0_trettel_turbulent_2020
+df_trettel_turbulent_2020['I_0']        = I_0_trettel_turbulent_2020
+df_trettel_turbulent_2020['Fr_0']       = Fr_0_trettel_turbulent_2020
+df_trettel_turbulent_2020['rho_s']      = rho_s_trettel_turbulent_2020
+df_trettel_turbulent_2020['nu_s']       = nu_s_trettel_turbulent_2020
+df_trettel_turbulent_2020['K_c']        = K_c_trettel_turbulent_2020
+df_trettel_turbulent_2020['Ma_g']       = Ma_g_trettel_turbulent_2020
+df_trettel_turbulent_2020['Lambda_r_s'] = Lambda_r_s_trettel_turbulent_2020
+df_trettel_turbulent_2020['est rho_s']  = False
+df_trettel_turbulent_2020['est nu_s']   = True
 
-df_trettel_modeling_2020['regime photo'] = regime_photo_trettel_modeling_2020
-df_trettel_modeling_2020['regime L_b']   = np.nan
-df_trettel_modeling_2020['regime turb']  = regime_turb_trettel_modeling_2020
-df_trettel_modeling_2020['est turb']     = True
+df_trettel_turbulent_2020['regime photo'] = regime_photo_trettel_turbulent_2020
+df_trettel_turbulent_2020['regime L_b']   = np.nan
+df_trettel_turbulent_2020['regime turb']  = regime_turb_trettel_turbulent_2020
+df_trettel_turbulent_2020['est turb']     = True
 
-df_trettel_modeling_2020['L_b/d_0']                      = np.nan
-df_trettel_modeling_2020['L_b/d_0 stat error']           = np.nan
-df_trettel_modeling_2020['L_b/d_0 resolution']           = np.nan
-df_trettel_modeling_2020['L_b method']                   = np.nan
-df_trettel_modeling_2020['L_b/d_0 page fig']             = np.nan
-df_trettel_modeling_2020['L_b/d_0 transcription method'] = np.nan
+df_trettel_turbulent_2020['L_b/d_0']                      = np.nan
+df_trettel_turbulent_2020['L_b/d_0 stat error']           = np.nan
+df_trettel_turbulent_2020['L_b/d_0 resolution']           = np.nan
+df_trettel_turbulent_2020['L_b method']                   = np.nan
+df_trettel_turbulent_2020['L_b/d_0 page fig']             = np.nan
+df_trettel_turbulent_2020['L_b/d_0 transcription method'] = np.nan
 
-df_trettel_modeling_2020['theta']                      = np.nan
-df_trettel_modeling_2020['theta stat error']           = np.nan
-df_trettel_modeling_2020['theta resolution']           = np.nan
-df_trettel_modeling_2020['theta page fig']             = np.nan
-df_trettel_modeling_2020['theta transcription method'] = np.nan
+df_trettel_turbulent_2020['theta']                      = np.nan
+df_trettel_turbulent_2020['theta stat error']           = np.nan
+df_trettel_turbulent_2020['theta resolution']           = np.nan
+df_trettel_turbulent_2020['theta page fig']             = np.nan
+df_trettel_turbulent_2020['theta transcription method'] = np.nan
 
-df_trettel_modeling_2020['D_10/d_0']                        = np.nan
-df_trettel_modeling_2020['D_10/d_0 stat error']             = np.nan
-df_trettel_modeling_2020['D_10/d_0 resolution']             = np.nan
-df_trettel_modeling_2020['D_32/d_0']                        = np.nan
-df_trettel_modeling_2020['D_32/d_0 stat error']             = np.nan
-df_trettel_modeling_2020['D_32/d_0 resolution']             = np.nan
-df_trettel_modeling_2020['D_30/d_0']                        = np.nan
-df_trettel_modeling_2020['D_30/d_0 stat error']             = np.nan
-df_trettel_modeling_2020['D_30/d_0 resolution']             = np.nan
-df_trettel_modeling_2020['droplet x/d_0']                   = np.nan
-df_trettel_modeling_2020['D/d_0 page fig']                  = np.nan
-df_trettel_modeling_2020['D/d_0 transcription method']      = np.nan
-df_trettel_modeling_2020['D/d_0 measurement method']        = np.nan
-df_trettel_modeling_2020['v_d_bar/vp']                      = np.nan
-df_trettel_modeling_2020['v_d_bar/vp stat error']           = np.nan
-df_trettel_modeling_2020['v_d_bar/vp resolution']           = np.nan
-df_trettel_modeling_2020['v_d_bar/vp page fig']             = np.nan
-df_trettel_modeling_2020['v_d_bar/vp transcription method'] = np.nan
-df_trettel_modeling_2020['e_p']                             = np.nan
-df_trettel_modeling_2020['e_p page fig']                    = np.nan
-df_trettel_modeling_2020['e_p transcription method']        = np.nan
+df_trettel_turbulent_2020['D_10/d_0']                        = np.nan
+df_trettel_turbulent_2020['D_10/d_0 stat error']             = np.nan
+df_trettel_turbulent_2020['D_10/d_0 resolution']             = np.nan
+df_trettel_turbulent_2020['D_32/d_0']                        = np.nan
+df_trettel_turbulent_2020['D_32/d_0 stat error']             = np.nan
+df_trettel_turbulent_2020['D_32/d_0 resolution']             = np.nan
+df_trettel_turbulent_2020['D_30/d_0']                        = np.nan
+df_trettel_turbulent_2020['D_30/d_0 stat error']             = np.nan
+df_trettel_turbulent_2020['D_30/d_0 resolution']             = np.nan
+df_trettel_turbulent_2020['droplet x/d_0']                   = np.nan
+df_trettel_turbulent_2020['D/d_0 page fig']                  = np.nan
+df_trettel_turbulent_2020['D/d_0 transcription method']      = np.nan
+df_trettel_turbulent_2020['D/d_0 measurement method']        = np.nan
+df_trettel_turbulent_2020['v_d_bar/vp']                      = np.nan
+df_trettel_turbulent_2020['v_d_bar/vp stat error']           = np.nan
+df_trettel_turbulent_2020['v_d_bar/vp resolution']           = np.nan
+df_trettel_turbulent_2020['v_d_bar/vp page fig']             = np.nan
+df_trettel_turbulent_2020['v_d_bar/vp transcription method'] = np.nan
+df_trettel_turbulent_2020['e_p']                             = np.nan
+df_trettel_turbulent_2020['e_p page fig']                    = np.nan
+df_trettel_turbulent_2020['e_p transcription method']        = np.nan
 
-df_trettel_modeling_2020['x_trans/d_0']                      = np.nan
-df_trettel_modeling_2020['x_trans/d_0 page fig']             = np.nan
-df_trettel_modeling_2020['x_trans/d_0 transcription method'] = np.nan
+df_trettel_turbulent_2020['x_trans/d_0']                      = np.nan
+df_trettel_turbulent_2020['x_trans/d_0 page fig']             = np.nan
+df_trettel_turbulent_2020['x_trans/d_0 transcription method'] = np.nan
 
-df_trettel_modeling_2020['x_i/d_0']                      = np.nan
-df_trettel_modeling_2020['x_i/d_0 stat error']           = np.nan
-df_trettel_modeling_2020['x_i/d_0 resolution']           = np.nan
-df_trettel_modeling_2020['x_i/d_0 page fig']             = np.nan
-df_trettel_modeling_2020['x_i/d_0 transcription method'] = np.nan
+df_trettel_turbulent_2020['x_i/d_0']                      = np.nan
+df_trettel_turbulent_2020['x_i/d_0 stat error']           = np.nan
+df_trettel_turbulent_2020['x_i/d_0 resolution']           = np.nan
+df_trettel_turbulent_2020['x_i/d_0 page fig']             = np.nan
+df_trettel_turbulent_2020['x_i/d_0 transcription method'] = np.nan
 
-df_trettel_modeling_2020['x_e/d_0']                      = np.nan
-df_trettel_modeling_2020['x_e/d_0 stat error']           = np.nan
-df_trettel_modeling_2020['x_e/d_0 resolution']           = np.nan
-df_trettel_modeling_2020['x_e/d_0 page fig']             = np.nan
-df_trettel_modeling_2020['x_e/d_0 transcription method'] = np.nan
+df_trettel_turbulent_2020['x_e/d_0']                      = np.nan
+df_trettel_turbulent_2020['x_e/d_0 stat error']           = np.nan
+df_trettel_turbulent_2020['x_e/d_0 resolution']           = np.nan
+df_trettel_turbulent_2020['x_e/d_0 page fig']             = np.nan
+df_trettel_turbulent_2020['x_e/d_0 transcription method'] = np.nan
 
-df_trettel_modeling_2020['photo filename']   = photo_filename_trettel_modeling_2020
-df_trettel_modeling_2020['exposure time']    = np.nan
-df_trettel_modeling_2020['flash']            = False
-df_trettel_modeling_2020['x_low']            = 0.
-df_trettel_modeling_2020['x_mid']            = np.nan
-df_trettel_modeling_2020['x_high']           = np.nan
-df_trettel_modeling_2020['photo page fig']   = np.nan
-df_trettel_modeling_2020['spectrum']         = 'visible'
-df_trettel_modeling_2020['lighting']         = 'ambient, outdoors'
-df_trettel_modeling_2020['background color'] = np.nan
-df_trettel_modeling_2020['grid']             = False
-df_trettel_modeling_2020['distance']         = np.nan
-df_trettel_modeling_2020['f-stop']           = np.nan
-df_trettel_modeling_2020['focal length']     = np.nan
-df_trettel_modeling_2020['camera model']     = 'Contour ROAM model 1600'
-df_trettel_modeling_2020['sensor']           = np.nan
+df_trettel_turbulent_2020['photo filename']   = photo_filename_trettel_turbulent_2020
+df_trettel_turbulent_2020['exposure time']    = np.nan
+df_trettel_turbulent_2020['flash']            = False
+df_trettel_turbulent_2020['x_low']            = 0.
+df_trettel_turbulent_2020['x_mid']            = np.nan
+df_trettel_turbulent_2020['x_high']           = np.nan
+df_trettel_turbulent_2020['photo page fig']   = np.nan
+df_trettel_turbulent_2020['spectrum']         = 'visible'
+df_trettel_turbulent_2020['lighting']         = 'ambient, outdoors'
+df_trettel_turbulent_2020['background color'] = np.nan
+df_trettel_turbulent_2020['grid']             = False
+df_trettel_turbulent_2020['distance']         = np.nan
+df_trettel_turbulent_2020['f-stop']           = np.nan
+df_trettel_turbulent_2020['focal length']     = np.nan
+df_trettel_turbulent_2020['camera model']     = 'Contour ROAM model 1600'
+df_trettel_turbulent_2020['sensor']           = np.nan
 
-df_trettel_modeling_2020 = df_trettel_modeling_2020[cols]
-summary_table(df_trettel_modeling_2020)
-df_jet_breakup = pd.concat([df_jet_breakup, df_trettel_modeling_2020])
+df_trettel_turbulent_2020 = df_trettel_turbulent_2020[cols]
+summary_table(df_trettel_turbulent_2020)
+df_jet_breakup = pd.concat([df_jet_breakup, df_trettel_turbulent_2020])
 
 #######
 # END #

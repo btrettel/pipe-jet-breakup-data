@@ -23,6 +23,8 @@
 - Bayesian experimental design
 - Bayesian model selection
 - Add more citations listed in the "Data sources to add" section below to the bib file. Stopped at kitamura_influence_1978.
+- https://liw.fi/hackingdoc/
+- https://liw.fi/free-software-website/
 
 # Output data format
 

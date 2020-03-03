@@ -35,3 +35,9 @@ The scripts then read the `pipe-jet-breakup-data.pickle` file to produce plots a
 # Data compilation philosophy
 
 Trettel, B. (2019, March 22). Improving the validation of turbulent jet breakup models. https://doi.org/10.31224/osf.io/k2fnm
+
+# Studies using this data compilation
+
+Trettel, B. (2019, November 18). Reevaluating the jet breakup regime diagram. https://doi.org/10.31224/osf.io/nqhs5
+
+Trettel, B. (2018, March 6). Conditional damped random surface velocity model of turbulent jet breakup. https://doi.org/10.31224/osf.io/35u7g
