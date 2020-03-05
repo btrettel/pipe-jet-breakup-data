@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
-  <gnm:Version Epoch="1" Major="12" Minor="9" Full="1.12.9"/>
+  <gnm:Version Epoch="1" Major="12" Minor="35" Full="1.12.35"/>
   <gnm:Attributes>
     <gnm:Attribute>
       <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2019-10-06T23:30:35Z</dc:date>
+      <dc:date>2020-03-04T22:02:19Z</dc:date>
       <meta:creation-date>2019-05-26T05:02:52Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -37,7 +37,7 @@
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Sheet1</gnm:Name>
-      <gnm:MaxCol>10</gnm:MaxCol>
+      <gnm:MaxCol>11</gnm:MaxCol>
       <gnm:MaxRow>2</gnm:MaxRow>
       <gnm:Zoom>1</gnm:Zoom>
       <gnm:Names>
@@ -92,8 +92,8 @@
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="13.5" Count="3"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="10" CursorRow="2">
-        <gnm:Selection startCol="10" startRow="2" endCol="10" endRow="2"/>
+      <gnm:Selections CursorCol="0" CursorRow="2">
+        <gnm:Selection startCol="0" startRow="2" endCol="0" endRow="2"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">citation key</gnm:Cell>
@@ -107,6 +107,7 @@
         <gnm:Cell Row="0" Col="8" ValueType="60">photo filename 2</gnm:Cell>
         <gnm:Cell Row="0" Col="9" ValueType="60">photo page fig 2</gnm:Cell>
         <gnm:Cell Row="0" Col="10" ValueType="60">regime photo</gnm:Cell>
+        <gnm:Cell Row="0" Col="11" ValueType="60">theta (deg.)</gnm:Cell>
         <gnm:Cell Row="1" Col="0" ValueType="60">hoyt_pipe-exit_1980</gnm:Cell>
         <gnm:Cell Row="1" Col="1" ValueType="40">86</gnm:Cell>
         <gnm:Cell Row="1" Col="3" ValueType="60">p. 42</gnm:Cell>
@@ -117,16 +118,18 @@
         <gnm:Cell Row="1" Col="8" ValueType="60">hoyt_pipe-exit_1980_fig_2a.jpg</gnm:Cell>
         <gnm:Cell Row="1" Col="9" ValueType="60">p. 44, fig. 2a</gnm:Cell>
         <gnm:Cell Row="1" Col="10" ValueType="60">atomization</gnm:Cell>
+        <gnm:Cell Row="1" Col="11" ValueType="40">4.2000000000000002</gnm:Cell>
         <gnm:Cell Row="2" Col="0" ValueType="60">hoyt_effect_1985</gnm:Cell>
         <gnm:Cell Row="2" Col="2" ValueType="40">250000</gnm:Cell>
         <gnm:Cell Row="2" Col="3" ValueType="60">p. 98</gnm:Cell>
         <gnm:Cell Row="2" Col="4" ValueType="40">0</gnm:Cell>
         <gnm:Cell Row="2" Col="5" ValueType="60">hoyt_effect_1985_fig_9.jpg</gnm:Cell>
         <gnm:Cell Row="2" Col="6" ValueType="60">p. 98, fig. 9</gnm:Cell>
-        <gnm:Cell Row="2" Col="10" ValueType="60">atomization</gnm:Cell>
+        <gnm:Cell Row="2" Col="10" ValueType="60">S2A</gnm:Cell>
+        <gnm:Cell Row="2" Col="11" ValueType="40">2.8999999999999999</gnm:Cell>
       </gnm:Cells>
       <gnm:SheetLayout TopLeft="A1"/>
-      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>
     </gnm:Sheet>
   </gnm:Sheets>
   <gnm:UIData SelectedTab="0"/>

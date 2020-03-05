@@ -166,6 +166,11 @@ macros_reg.write('}}\n')
 
 theta_df = theta_df[theta_df['key'] != 'reitz_atomization_1978']
 theta_df = theta_df[theta_df['key'] != 'arai_break-up_1985']
+theta_df = theta_df[theta_df['key'] != 'rupe_dynamic_1962']
+theta_df = theta_df[theta_df['key'] != 'grant_newtonian_1965']
+theta_df = theta_df[theta_df['key'] != 'hoyt_pipe-exit_1980']
+theta_df = theta_df[theta_df['key'] != 'hoyt_effect_1985']
+theta_df = theta_df[theta_df['key'] != 'wu_liquid_1992']
 #theta_df_1 = theta_df_1[theta_df_1['key'] != 'skrebkov_turbulentnyye_1963']
 
 theta_df_1 = theta_df
@@ -187,22 +192,22 @@ tan_theta = np.tan(theta_df_2['theta']/2.)
 B = np.log(tan_theta)
 
 result, _, _, _ = np.linalg.lstsq(A, B)
-a, C_Tubar_0 = result
+a, alpha_Tubar_0_theta = result
 
 A = np.column_stack([np.ones(len(theta_df_1)), np.log(theta_df_1['We_l0'])])
 tan_theta = np.tan(theta_df_1['theta']/2.)
-B = np.log(tan_theta * theta_df_1['I_0']**(-C_Tubar_0))
+B = np.log(tan_theta * theta_df_1['I_0']**(-alpha_Tubar_0_theta))
 
 result, _, _, _ = np.linalg.lstsq(A, B)
-a, C_We_l0 = result
+a, alpha_We_l0_theta = result
 
 C_theta = exp(a)
 
 print 'C_theta = ', C_theta
-print 'C_We_l0 = ', C_We_l0
-print 'C_Tubar_0 = ', C_Tubar_0
+print 'alpha_We_l0_theta = ', alpha_We_l0_theta
+print 'alpha_Tubar_0_theta = ', alpha_Tubar_0_theta
 
-theta_df_1['theta predicted'] = 2. * np.arctan(C_theta * theta_df_1['We_l0']**C_We_l0 * theta_df_1['I_0']**C_Tubar_0)
+theta_df_1['theta predicted'] = 2. * np.arctan(C_theta * theta_df_1['We_l0']**alpha_We_l0_theta * theta_df_1['I_0']**alpha_Tubar_0_theta)
 tan_theta_predicted = np.tan(theta_df_1['theta predicted'] / 2.)
 print 'tan theta/2 R^2 =', coeff_of_determination(tan_theta_predicted, tan_theta)
 plot_with_keys(theta_df_1, 'correlation', 'theta predicted', 'theta', plot_type='linear', add_line=True, revno=revno)
@@ -210,7 +215,7 @@ print 'theta R^2 =', coeff_of_determination(theta_df_1['theta predicted'], theta
 print
 
 with open('../outputs/data/TSB_thetai.pickle', 'w') as f:
-   pickle.dump([C_theta, C_We_l0, C_Tubar_0], f)
+   pickle.dump([C_theta, alpha_We_l0_theta, alpha_Tubar_0_theta], f)
 
 macros_reg.write(r'\newcommand{\thetaikeysused}{\citet{')
 key_array = []
@@ -223,8 +228,8 @@ for key in theta_df['key']:
          macros_reg.write(','+key)
 macros_reg.write('}}\n')
 
-#macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Tubarexp{'+roundstr(C_I_0)+'} \Welo^{'+roundstr(C_We_l0)+'}}\n')
-macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Welo^{'+roundstr(C_We_l0)+r'} \Tubar_0^{'+roundstr(C_Tubar_0)+'}}\n')
+#macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Tubarexp{'+roundstr(C_I_0)+'} \Welo^{'+roundstr(alpha_We_l0_theta)+'}}\n')
+macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Welo^{'+roundstr(alpha_We_l0_theta)+r'} \Tubarexp{'+roundstr(alpha_Tubar_0_theta)+'}}\n')
 macros_reg.write(r'\newcommand{\thetairegrsquared}{'+roundstr(coeff_of_determination(theta_df_1['theta predicted'], theta_df_1['theta']))+'}\n')
 macros_reg.write(r'\newcommand{\thetairegN}{\num{'+str(len(theta_df_1))+'}}\n')
 macros_reg.write('\n')
@@ -236,6 +241,50 @@ print '\n##########\n'
 ## # # # # # # # # # # # # # # # # # # # #
 
 # reitz_atomization_1978 w/ kent_nozzle_1983 (only use non-cavitating points because kent_nozzle_1983 was for air), ervine_behaviour_1987?, balewski_experimental_2008
+
+with open('../outputs/data/atomization_boundary.pickle', 'r') as f:
+   C_TSBtoA, alpha_Tu_2WItoA, alpha_rho_s_2WItoA = pickle.load(f)
+
+theta_df = df_jet_breakup
+theta_df = theta_df[theta_df['regime L_b'] != 'Rayleigh']
+theta_df = theta_df[theta_df['regime photo'].notnull()]
+theta_df = theta_df[theta_df['regime photo'] != 'Rayleigh']
+theta_df = theta_df[theta_df['regime turb'] == 'turbulent']
+theta_df = theta_df[theta_df['Re_l0'] > Re_turb]
+theta_df = theta_df[theta_df['theta'].notnull()]
+
+Tubar_0_bar = np.average(theta_df['I_0'])
+
+#print 'C_TSBtoA = ', C_TSBtoA
+#print 'C_theta =', C_theta
+#print 'alpha_Tu_2WItoA =', alpha_Tu_2WItoA
+#print 'alpha_Tubar_0_theta =', alpha_Tubar_0_theta
+
+C_theta_boundary     = C_theta * C_TSBtoA**alpha_We_l0_theta
+alpha_theta_boundary = alpha_Tu_2WItoA*alpha_We_l0_theta+alpha_Tubar_0_theta
+
+print 'C_theta_boundary =', C_theta_boundary
+print 'alpha_theta_boundary =', alpha_theta_boundary
+print
+
+macros_reg.write(r'\newcommand{\thetaiboundary}{\tan\left(\frac{\thetai}{2}\right)_\text{crit} = '+roundstr(C_theta_boundary)+r' \left(\frac{\rhol}{\rhog}\right)^{'+roundstr(alpha_We_l0_theta)+r'} \Tubarexp{'+roundstr(alpha_theta_boundary)+'}}\n')
+macros_reg.write('\n')
+
+for theta, Tubar_0, rho_s, regime_photo, photo_filename in zip(theta_df['theta'], theta_df['I_0'], theta_df['rho_s'], theta_df['regime photo'], theta_df['photo filename']):
+   tan_theta_crit = C_theta_boundary * rho_s**alpha_We_l0_theta * Tubar_0**alpha_theta_boundary
+   tan_theta = np.tan(theta / 2.)
+   
+   if (tan_theta / tan_theta_crit) <= 0.5:
+      regime_theta = 'second wind-induced'
+   elif ((tan_theta / tan_theta_crit) > 0.5) and ((tan_theta / tan_theta_crit) <= 1.25):
+      regime_theta = 'S2A'
+   else:
+      regime_theta = 'atomization'
+   
+   #print tan_theta / tan_theta_crit, tan_theta, tan_theta_crit, regime_photo, regime_theta
+   
+   if regime_photo != regime_theta:
+      print photo_filename, regime_photo, regime_theta
 
 # TODO: Fix this hack that gets citations working in the legends.
 os.system("cd ../outputs/figures/ ; for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")

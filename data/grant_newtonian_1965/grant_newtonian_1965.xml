@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2020-02-27T22:55:54Z</dc:date>
+      <dc:date>2020-03-04T19:12:06Z</dc:date>
       <meta:creation-date>2017-04-05T07:42:39Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -37,7 +37,7 @@
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>grant_newtonian_1965.csv</gnm:Name>
-      <gnm:MaxCol>20</gnm:MaxCol>
+      <gnm:MaxCol>21</gnm:MaxCol>
       <gnm:MaxRow>138</gnm:MaxRow>
       <gnm:Zoom>1</gnm:Zoom>
       <gnm:Names>
@@ -96,8 +96,8 @@
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="13.5" Count="139"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="19" CursorRow="91">
-        <gnm:Selection startCol="19" startRow="91" endCol="19" endRow="91"/>
+      <gnm:Selections CursorCol="21" CursorRow="91">
+        <gnm:Selection startCol="21" startRow="91" endCol="21" endRow="91"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">page</gnm:Cell>
@@ -121,6 +121,7 @@
         <gnm:Cell Row="0" Col="18" ValueType="60">photo page fig</gnm:Cell>
         <gnm:Cell Row="0" Col="19" ValueType="60">regime photo</gnm:Cell>
         <gnm:Cell Row="0" Col="20" ValueType="60">x low</gnm:Cell>
+        <gnm:Cell Row="0" Col="21" ValueType="60">theta (deg.)</gnm:Cell>
         <gnm:Cell Row="1" Col="0" ValueType="40">221</gnm:Cell>
         <gnm:Cell Row="1" Col="1" ValueType="60">A-3</gnm:Cell>
         <gnm:Cell Row="1" Col="2" ValueType="60">glycerin-water (88%-12%)</gnm:Cell>
@@ -590,6 +591,7 @@
         <gnm:Cell Row="35" Col="18" ValueType="60">p. 83, fig. 5-1</gnm:Cell>
         <gnm:Cell Row="35" Col="19" ValueType="60">atomization</gnm:Cell>
         <gnm:Cell Row="35" Col="20" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="35" Col="21" ValueType="40">5.2000000000000002</gnm:Cell>
         <gnm:Cell Row="36" Col="2" ValueType="60">ethylene-glycol</gnm:Cell>
         <gnm:Cell Row="36" Col="5" ValueType="40">25</gnm:Cell>
         <gnm:Cell Row="36" Col="6" ValueType="40">1116</gnm:Cell>
@@ -617,6 +619,7 @@
         <gnm:Cell Row="37" Col="18" ValueType="60">p. 84, fig. 5-1</gnm:Cell>
         <gnm:Cell Row="37" Col="19" ValueType="60">atomization</gnm:Cell>
         <gnm:Cell Row="37" Col="20" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="37" Col="21" ValueType="40">5.4000000000000004</gnm:Cell>
         <gnm:Cell Row="38" Col="0" ValueType="40">224</gnm:Cell>
         <gnm:Cell Row="38" Col="1" ValueType="60">A-6</gnm:Cell>
         <gnm:Cell Row="38" Col="2" ValueType="60">ethylene-glycol</gnm:Cell>
@@ -985,6 +988,7 @@
         <gnm:Cell Row="63" Col="18" ValueType="60">p. 100, fig. 5-3</gnm:Cell>
         <gnm:Cell Row="63" Col="19" ValueType="60">second wind-induced</gnm:Cell>
         <gnm:Cell Row="63" Col="20" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="63" Col="21" ValueType="40">1.3</gnm:Cell>
         <gnm:Cell Row="64" Col="0" ValueType="40">225</gnm:Cell>
         <gnm:Cell Row="64" Col="1" ValueType="60">A-7</gnm:Cell>
         <gnm:Cell Row="64" Col="2" ValueType="60">ethanol-water (95%-5%)</gnm:Cell>
@@ -1015,6 +1019,7 @@
         <gnm:Cell Row="65" Col="18" ValueType="60">p. 100, fig. 5-3</gnm:Cell>
         <gnm:Cell Row="65" Col="19" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="65" Col="20" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="65" Col="21" ValueType="40">1.7</gnm:Cell>
         <gnm:Cell Row="66" Col="0" ValueType="40">225</gnm:Cell>
         <gnm:Cell Row="66" Col="1" ValueType="60">A-7</gnm:Cell>
         <gnm:Cell Row="66" Col="2" ValueType="60">ethanol-water (95%-5%)</gnm:Cell>
@@ -1339,6 +1344,7 @@
         <gnm:Cell Row="88" Col="18" ValueType="60">p. 94, fig. 5-2</gnm:Cell>
         <gnm:Cell Row="88" Col="19" ValueType="60">second wind-induced</gnm:Cell>
         <gnm:Cell Row="88" Col="20" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="88" Col="21" ExprID="1">=1.3</gnm:Cell>
         <gnm:Cell Row="89" Col="0" ValueType="40">227</gnm:Cell>
         <gnm:Cell Row="89" Col="1" ValueType="60">A-9</gnm:Cell>
         <gnm:Cell Row="89" Col="2" ValueType="60">distilled water</gnm:Cell>
@@ -1369,6 +1375,7 @@
         <gnm:Cell Row="90" Col="18" ValueType="60">p. 94, fig. 5-2</gnm:Cell>
         <gnm:Cell Row="90" Col="19" ValueType="60">second wind-induced</gnm:Cell>
         <gnm:Cell Row="90" Col="20" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="90" Col="21" ExprID="1"/>
         <gnm:Cell Row="91" Col="0" ValueType="40">227</gnm:Cell>
         <gnm:Cell Row="91" Col="1" ValueType="60">A-9</gnm:Cell>
         <gnm:Cell Row="91" Col="2" ValueType="60">distilled water</gnm:Cell>
@@ -1386,6 +1393,7 @@
         <gnm:Cell Row="91" Col="18" ValueType="60">p. 94, fig. 5-2</gnm:Cell>
         <gnm:Cell Row="91" Col="19" ValueType="60">S2A</gnm:Cell>
         <gnm:Cell Row="91" Col="20" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="91" Col="21" ValueType="40">2.1000000000000001</gnm:Cell>
         <gnm:Cell Row="92" Col="0" ValueType="40">228</gnm:Cell>
         <gnm:Cell Row="92" Col="1" ValueType="60">A-10</gnm:Cell>
         <gnm:Cell Row="92" Col="2" ValueType="60">distilled water</gnm:Cell>
@@ -1569,7 +1577,7 @@
         <gnm:Cell Row="105" Col="11" ValueType="40">9.1999999999999993</gnm:Cell>
         <gnm:Cell Row="105" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="105" Col="13" ValueType="40">0.505</gnm:Cell>
-        <gnm:Cell Row="105" Col="14" ExprID="1">=N106/J106</gnm:Cell>
+        <gnm:Cell Row="105" Col="14" ExprID="2">=N106/J106</gnm:Cell>
         <gnm:Cell Row="105" Col="16" ValueType="60">Rayleigh</gnm:Cell>
         <gnm:Cell Row="106" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="106" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1585,7 +1593,7 @@
         <gnm:Cell Row="106" Col="11" ValueType="40">11</gnm:Cell>
         <gnm:Cell Row="106" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="106" Col="13" ValueType="40">0.56200000000000006</gnm:Cell>
-        <gnm:Cell Row="106" Col="14" ExprID="1"/>
+        <gnm:Cell Row="106" Col="14" ExprID="2"/>
         <gnm:Cell Row="106" Col="16" ValueType="60">Rayleigh</gnm:Cell>
         <gnm:Cell Row="107" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="107" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1601,7 +1609,7 @@
         <gnm:Cell Row="107" Col="11" ValueType="40">13.1</gnm:Cell>
         <gnm:Cell Row="107" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="107" Col="13" ValueType="40">0.67300000000000004</gnm:Cell>
-        <gnm:Cell Row="107" Col="14" ExprID="1"/>
+        <gnm:Cell Row="107" Col="14" ExprID="2"/>
         <gnm:Cell Row="107" Col="16" ValueType="60">Rayleigh</gnm:Cell>
         <gnm:Cell Row="108" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="108" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1617,7 +1625,7 @@
         <gnm:Cell Row="108" Col="11" ValueType="40">15</gnm:Cell>
         <gnm:Cell Row="108" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="108" Col="13" ValueType="40">0.72499999999999998</gnm:Cell>
-        <gnm:Cell Row="108" Col="14" ExprID="1"/>
+        <gnm:Cell Row="108" Col="14" ExprID="2"/>
         <gnm:Cell Row="108" Col="16" ValueType="60">Rayleigh</gnm:Cell>
         <gnm:Cell Row="109" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="109" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1633,7 +1641,7 @@
         <gnm:Cell Row="109" Col="11" ValueType="40">17</gnm:Cell>
         <gnm:Cell Row="109" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="109" Col="13" ValueType="40">0.81000000000000005</gnm:Cell>
-        <gnm:Cell Row="109" Col="14" ExprID="1"/>
+        <gnm:Cell Row="109" Col="14" ExprID="2"/>
         <gnm:Cell Row="109" Col="16" ValueType="60">R2F</gnm:Cell>
         <gnm:Cell Row="110" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="110" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1649,7 +1657,7 @@
         <gnm:Cell Row="110" Col="11" ValueType="40">19</gnm:Cell>
         <gnm:Cell Row="110" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="110" Col="13" ValueType="40">0.81499999999999995</gnm:Cell>
-        <gnm:Cell Row="110" Col="14" ExprID="1"/>
+        <gnm:Cell Row="110" Col="14" ExprID="2"/>
         <gnm:Cell Row="110" Col="16" ValueType="60">R2F</gnm:Cell>
         <gnm:Cell Row="111" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="111" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1665,7 +1673,7 @@
         <gnm:Cell Row="111" Col="11" ValueType="40">20.899999999999999</gnm:Cell>
         <gnm:Cell Row="111" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="111" Col="13" ValueType="40">0.78000000000000003</gnm:Cell>
-        <gnm:Cell Row="111" Col="14" ExprID="1"/>
+        <gnm:Cell Row="111" Col="14" ExprID="2"/>
         <gnm:Cell Row="111" Col="16" ValueType="60">R2F</gnm:Cell>
         <gnm:Cell Row="112" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="112" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1681,7 +1689,7 @@
         <gnm:Cell Row="112" Col="11" ValueType="40">22.899999999999999</gnm:Cell>
         <gnm:Cell Row="112" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="112" Col="13" ValueType="40">0.70799999999999996</gnm:Cell>
-        <gnm:Cell Row="112" Col="14" ExprID="1"/>
+        <gnm:Cell Row="112" Col="14" ExprID="2"/>
         <gnm:Cell Row="112" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="113" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="113" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1697,7 +1705,7 @@
         <gnm:Cell Row="113" Col="11" ValueType="40">24.899999999999999</gnm:Cell>
         <gnm:Cell Row="113" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="113" Col="13" ValueType="40">0.69699999999999995</gnm:Cell>
-        <gnm:Cell Row="113" Col="14" ExprID="1"/>
+        <gnm:Cell Row="113" Col="14" ExprID="2"/>
         <gnm:Cell Row="113" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="114" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="114" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1713,7 +1721,7 @@
         <gnm:Cell Row="114" Col="11" ValueType="40">26.899999999999999</gnm:Cell>
         <gnm:Cell Row="114" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="114" Col="13" ValueType="40">0.68500000000000005</gnm:Cell>
-        <gnm:Cell Row="114" Col="14" ExprID="1"/>
+        <gnm:Cell Row="114" Col="14" ExprID="2"/>
         <gnm:Cell Row="114" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="115" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="115" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1729,7 +1737,7 @@
         <gnm:Cell Row="115" Col="11" ValueType="40">28.699999999999999</gnm:Cell>
         <gnm:Cell Row="115" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="115" Col="13" ValueType="40">0.63</gnm:Cell>
-        <gnm:Cell Row="115" Col="14" ExprID="1"/>
+        <gnm:Cell Row="115" Col="14" ExprID="2"/>
         <gnm:Cell Row="115" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="116" Col="0" ValueType="40">230</gnm:Cell>
         <gnm:Cell Row="116" Col="1" ValueType="60">A-11</gnm:Cell>
@@ -1745,7 +1753,7 @@
         <gnm:Cell Row="116" Col="11" ValueType="40">30.699999999999999</gnm:Cell>
         <gnm:Cell Row="116" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="116" Col="13" ValueType="40">0.42799999999999999</gnm:Cell>
-        <gnm:Cell Row="116" Col="14" ExprID="1"/>
+        <gnm:Cell Row="116" Col="14" ExprID="2"/>
         <gnm:Cell Row="116" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="116" Col="17" ValueType="60">grant_newtonian_1965_fig_5-4a2.jpg</gnm:Cell>
         <gnm:Cell Row="116" Col="18" ValueType="60">p. 113, fig. 5-4 (velocity slightly differs)</gnm:Cell>
@@ -1765,7 +1773,7 @@
         <gnm:Cell Row="117" Col="11" ValueType="40">35.200000000000003</gnm:Cell>
         <gnm:Cell Row="117" Col="12" ValueType="40">4</gnm:Cell>
         <gnm:Cell Row="117" Col="13" ValueType="40">0.034000000000000002</gnm:Cell>
-        <gnm:Cell Row="117" Col="14" ExprID="1"/>
+        <gnm:Cell Row="117" Col="14" ExprID="2"/>
         <gnm:Cell Row="117" Col="16" ValueType="60">F2S</gnm:Cell>
         <gnm:Cell Row="117" Col="17" ValueType="60">grant_newtonian_1965_fig_5-4b2.jpg</gnm:Cell>
         <gnm:Cell Row="117" Col="18" ValueType="60">p. 113, fig. 5-4</gnm:Cell>
@@ -1785,7 +1793,7 @@
         <gnm:Cell Row="118" Col="11" ValueType="40">4.8499999999999996</gnm:Cell>
         <gnm:Cell Row="118" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="118" Col="13" ValueType="40">0.032000000000000001</gnm:Cell>
-        <gnm:Cell Row="118" Col="14" ExprID="1"/>
+        <gnm:Cell Row="118" Col="14" ExprID="2"/>
         <gnm:Cell Row="118" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="119" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="119" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1801,7 +1809,7 @@
         <gnm:Cell Row="119" Col="11" ValueType="40">6.2000000000000002</gnm:Cell>
         <gnm:Cell Row="119" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="119" Col="13" ValueType="40">0.02</gnm:Cell>
-        <gnm:Cell Row="119" Col="14" ExprID="1"/>
+        <gnm:Cell Row="119" Col="14" ExprID="2"/>
         <gnm:Cell Row="119" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="120" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="120" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1817,7 +1825,7 @@
         <gnm:Cell Row="120" Col="11" ValueType="40">8.0999999999999996</gnm:Cell>
         <gnm:Cell Row="120" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="120" Col="13" ValueType="40">0.013599999999999999</gnm:Cell>
-        <gnm:Cell Row="120" Col="14" ExprID="1"/>
+        <gnm:Cell Row="120" Col="14" ExprID="2"/>
         <gnm:Cell Row="120" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="121" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="121" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1833,7 +1841,7 @@
         <gnm:Cell Row="121" Col="11" ValueType="40">10.199999999999999</gnm:Cell>
         <gnm:Cell Row="121" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="121" Col="13" ValueType="40">0.018499999999999999</gnm:Cell>
-        <gnm:Cell Row="121" Col="14" ExprID="1"/>
+        <gnm:Cell Row="121" Col="14" ExprID="2"/>
         <gnm:Cell Row="121" Col="16" ValueType="60">F2S</gnm:Cell>
         <gnm:Cell Row="122" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="122" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1849,7 +1857,7 @@
         <gnm:Cell Row="122" Col="11" ValueType="40">20</gnm:Cell>
         <gnm:Cell Row="122" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="122" Col="13" ValueType="40">0.031</gnm:Cell>
-        <gnm:Cell Row="122" Col="14" ExprID="1"/>
+        <gnm:Cell Row="122" Col="14" ExprID="2"/>
         <gnm:Cell Row="122" Col="16" ValueType="60">F2S</gnm:Cell>
         <gnm:Cell Row="123" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="123" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1865,7 +1873,7 @@
         <gnm:Cell Row="123" Col="11" ValueType="40">30</gnm:Cell>
         <gnm:Cell Row="123" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="123" Col="13" ValueType="40">0.040800000000000003</gnm:Cell>
-        <gnm:Cell Row="123" Col="14" ExprID="1"/>
+        <gnm:Cell Row="123" Col="14" ExprID="2"/>
         <gnm:Cell Row="123" Col="16" ValueType="60">F2S</gnm:Cell>
         <gnm:Cell Row="124" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="124" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1881,7 +1889,7 @@
         <gnm:Cell Row="124" Col="11" ValueType="40">40</gnm:Cell>
         <gnm:Cell Row="124" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="124" Col="13" ValueType="40">0.050599999999999999</gnm:Cell>
-        <gnm:Cell Row="124" Col="14" ExprID="1"/>
+        <gnm:Cell Row="124" Col="14" ExprID="2"/>
         <gnm:Cell Row="124" Col="16" ValueType="60">F2S</gnm:Cell>
         <gnm:Cell Row="125" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="125" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1897,7 +1905,7 @@
         <gnm:Cell Row="125" Col="11" ValueType="40">50</gnm:Cell>
         <gnm:Cell Row="125" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="125" Col="13" ValueType="40">0.057799999999999997</gnm:Cell>
-        <gnm:Cell Row="125" Col="14" ExprID="1"/>
+        <gnm:Cell Row="125" Col="14" ExprID="2"/>
         <gnm:Cell Row="125" Col="16" ValueType="60">F2S</gnm:Cell>
         <gnm:Cell Row="126" Col="0" ValueType="40">231</gnm:Cell>
         <gnm:Cell Row="126" Col="1" ValueType="60">A-12</gnm:Cell>
@@ -1913,7 +1921,7 @@
         <gnm:Cell Row="126" Col="11" ValueType="40">60</gnm:Cell>
         <gnm:Cell Row="126" Col="12" ValueType="40">9</gnm:Cell>
         <gnm:Cell Row="126" Col="13" ValueType="40">0.065799999999999997</gnm:Cell>
-        <gnm:Cell Row="126" Col="14" ExprID="1"/>
+        <gnm:Cell Row="126" Col="14" ExprID="2"/>
         <gnm:Cell Row="126" Col="16" ValueType="60">F2S</gnm:Cell>
         <gnm:Cell Row="127" Col="0" ValueType="40">233</gnm:Cell>
         <gnm:Cell Row="127" Col="1" ValueType="60">A-13</gnm:Cell>
@@ -1927,7 +1935,7 @@
         <gnm:Cell Row="127" Col="11" ValueType="40">8</gnm:Cell>
         <gnm:Cell Row="127" Col="12" ValueType="40">5</gnm:Cell>
         <gnm:Cell Row="127" Col="13" ValueType="40">0.38500000000000001</gnm:Cell>
-        <gnm:Cell Row="127" Col="14" ExprID="1"/>
+        <gnm:Cell Row="127" Col="14" ExprID="2"/>
         <gnm:Cell Row="127" Col="16" ValueType="60">Rayleigh</gnm:Cell>
         <gnm:Cell Row="128" Col="0" ValueType="40">233</gnm:Cell>
         <gnm:Cell Row="128" Col="1" ValueType="60">A-13</gnm:Cell>
@@ -1941,7 +1949,7 @@
         <gnm:Cell Row="128" Col="11" ValueType="40">12</gnm:Cell>
         <gnm:Cell Row="128" Col="12" ValueType="40">5</gnm:Cell>
         <gnm:Cell Row="128" Col="13" ValueType="40">0.48499999999999999</gnm:Cell>
-        <gnm:Cell Row="128" Col="14" ExprID="1"/>
+        <gnm:Cell Row="128" Col="14" ExprID="2"/>
         <gnm:Cell Row="128" Col="16" ValueType="60">R2F</gnm:Cell>
         <gnm:Cell Row="129" Col="0" ValueType="40">233</gnm:Cell>
         <gnm:Cell Row="129" Col="1" ValueType="60">A-13</gnm:Cell>
@@ -1955,7 +1963,7 @@
         <gnm:Cell Row="129" Col="11" ValueType="40">16</gnm:Cell>
         <gnm:Cell Row="129" Col="12" ValueType="40">5</gnm:Cell>
         <gnm:Cell Row="129" Col="13" ValueType="40">0.41699999999999998</gnm:Cell>
-        <gnm:Cell Row="129" Col="14" ExprID="1"/>
+        <gnm:Cell Row="129" Col="14" ExprID="2"/>
         <gnm:Cell Row="129" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="130" Col="0" ValueType="40">233</gnm:Cell>
         <gnm:Cell Row="130" Col="1" ValueType="60">A-13</gnm:Cell>
@@ -1969,7 +1977,7 @@
         <gnm:Cell Row="130" Col="11" ValueType="40">20</gnm:Cell>
         <gnm:Cell Row="130" Col="12" ValueType="40">5</gnm:Cell>
         <gnm:Cell Row="130" Col="13" ValueType="40">0.36399999999999999</gnm:Cell>
-        <gnm:Cell Row="130" Col="14" ExprID="1"/>
+        <gnm:Cell Row="130" Col="14" ExprID="2"/>
         <gnm:Cell Row="130" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="131" Col="0" ValueType="40">233</gnm:Cell>
         <gnm:Cell Row="131" Col="1" ValueType="60">A-13</gnm:Cell>
@@ -1983,7 +1991,7 @@
         <gnm:Cell Row="131" Col="11" ValueType="40">26</gnm:Cell>
         <gnm:Cell Row="131" Col="12" ValueType="40">5</gnm:Cell>
         <gnm:Cell Row="131" Col="13" ValueType="40">0.19</gnm:Cell>
-        <gnm:Cell Row="131" Col="14" ExprID="1"/>
+        <gnm:Cell Row="131" Col="14" ExprID="2"/>
         <gnm:Cell Row="131" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="132" Col="0" ValueType="40">233</gnm:Cell>
         <gnm:Cell Row="132" Col="1" ValueType="60">A-13</gnm:Cell>
@@ -1997,7 +2005,7 @@
         <gnm:Cell Row="132" Col="11" ValueType="40">36</gnm:Cell>
         <gnm:Cell Row="132" Col="12" ValueType="40">5</gnm:Cell>
         <gnm:Cell Row="132" Col="13" ValueType="40">0.043700000000000003</gnm:Cell>
-        <gnm:Cell Row="132" Col="14" ExprID="1"/>
+        <gnm:Cell Row="132" Col="14" ExprID="2"/>
         <gnm:Cell Row="132" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="133" Col="0" ValueType="40">234</gnm:Cell>
         <gnm:Cell Row="133" Col="1" ValueType="60">A-14</gnm:Cell>
@@ -2011,7 +2019,7 @@
         <gnm:Cell Row="133" Col="11" ValueType="40">8</gnm:Cell>
         <gnm:Cell Row="133" Col="12" ValueType="40">6</gnm:Cell>
         <gnm:Cell Row="133" Col="13" ValueType="40">0.39700000000000002</gnm:Cell>
-        <gnm:Cell Row="133" Col="14" ExprID="1"/>
+        <gnm:Cell Row="133" Col="14" ExprID="2"/>
         <gnm:Cell Row="133" Col="16" ValueType="60">Rayleigh</gnm:Cell>
         <gnm:Cell Row="134" Col="0" ValueType="40">234</gnm:Cell>
         <gnm:Cell Row="134" Col="1" ValueType="60">A-14</gnm:Cell>
@@ -2025,7 +2033,7 @@
         <gnm:Cell Row="134" Col="11" ValueType="40">12</gnm:Cell>
         <gnm:Cell Row="134" Col="12" ValueType="40">6</gnm:Cell>
         <gnm:Cell Row="134" Col="13" ValueType="40">0.46300000000000002</gnm:Cell>
-        <gnm:Cell Row="134" Col="14" ExprID="1"/>
+        <gnm:Cell Row="134" Col="14" ExprID="2"/>
         <gnm:Cell Row="134" Col="16" ValueType="60">R2F</gnm:Cell>
         <gnm:Cell Row="135" Col="0" ValueType="40">234</gnm:Cell>
         <gnm:Cell Row="135" Col="1" ValueType="60">A-14</gnm:Cell>
@@ -2039,7 +2047,7 @@
         <gnm:Cell Row="135" Col="11" ValueType="40">16</gnm:Cell>
         <gnm:Cell Row="135" Col="12" ValueType="40">6</gnm:Cell>
         <gnm:Cell Row="135" Col="13" ValueType="40">0.45000000000000001</gnm:Cell>
-        <gnm:Cell Row="135" Col="14" ExprID="1"/>
+        <gnm:Cell Row="135" Col="14" ExprID="2"/>
         <gnm:Cell Row="135" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="136" Col="0" ValueType="40">234</gnm:Cell>
         <gnm:Cell Row="136" Col="1" ValueType="60">A-14</gnm:Cell>
@@ -2053,7 +2061,7 @@
         <gnm:Cell Row="136" Col="11" ValueType="40">20</gnm:Cell>
         <gnm:Cell Row="136" Col="12" ValueType="40">6</gnm:Cell>
         <gnm:Cell Row="136" Col="13" ValueType="40">0.377</gnm:Cell>
-        <gnm:Cell Row="136" Col="14" ExprID="1"/>
+        <gnm:Cell Row="136" Col="14" ExprID="2"/>
         <gnm:Cell Row="136" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="137" Col="0" ValueType="40">234</gnm:Cell>
         <gnm:Cell Row="137" Col="1" ValueType="60">A-14</gnm:Cell>
@@ -2067,7 +2075,7 @@
         <gnm:Cell Row="137" Col="11" ValueType="40">26</gnm:Cell>
         <gnm:Cell Row="137" Col="12" ValueType="40">6</gnm:Cell>
         <gnm:Cell Row="137" Col="13" ValueType="40">0.21199999999999999</gnm:Cell>
-        <gnm:Cell Row="137" Col="14" ExprID="1"/>
+        <gnm:Cell Row="137" Col="14" ExprID="2"/>
         <gnm:Cell Row="137" Col="16" ValueType="60">first wind-induced</gnm:Cell>
         <gnm:Cell Row="138" Col="0" ValueType="40">234</gnm:Cell>
         <gnm:Cell Row="138" Col="1" ValueType="60">A-14</gnm:Cell>
@@ -2081,10 +2089,10 @@
         <gnm:Cell Row="138" Col="11" ValueType="40">36</gnm:Cell>
         <gnm:Cell Row="138" Col="12" ValueType="40">6</gnm:Cell>
         <gnm:Cell Row="138" Col="13" ValueType="40">0.020199999999999999</gnm:Cell>
-        <gnm:Cell Row="138" Col="14" ExprID="1"/>
+        <gnm:Cell Row="138" Col="14" ExprID="2"/>
         <gnm:Cell Row="138" Col="16" ValueType="60">first wind-induced</gnm:Cell>
       </gnm:Cells>
-      <gnm:SheetLayout TopLeft="P73">
+      <gnm:SheetLayout TopLeft="P85">
         <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="A2"/>
       </gnm:SheetLayout>
       <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0" SensitivityR="0"/>

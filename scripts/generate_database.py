@@ -1126,6 +1126,7 @@ regime_turb_rupe_dynamic_1962    = rupe_dynamic_1962_csv['regime turb']
 regime_photo_rupe_dynamic_1962   = rupe_dynamic_1962_csv['regime photo']
 xtranss_rupe_dynamic_1962        = rupe_dynamic_1962_csv['x_trans/d_0']
 photo_filename_rupe_dynamic_1962 = rupe_dynamic_1962_csv['photo filename']
+theta_rupe_dynamic_1962          = rupe_dynamic_1962_csv['theta (deg.)'] * (np.pi / 180.)
 
 # Non-dimensionalize x_trans_eisenklam_flow_1958. Need to do loop due to nans in the raw data.
 i = 0
@@ -1264,7 +1265,7 @@ df_rupe_dynamic_1962['L_b method']                   = np.nan
 df_rupe_dynamic_1962['L_b/d_0 page fig']             = np.nan
 df_rupe_dynamic_1962['L_b/d_0 transcription method'] = np.nan
 
-df_rupe_dynamic_1962['theta']                      = np.nan
+df_rupe_dynamic_1962['theta']                      = theta_rupe_dynamic_1962
 df_rupe_dynamic_1962['theta stat error']           = np.nan
 df_rupe_dynamic_1962['theta resolution']           = np.nan
 df_rupe_dynamic_1962['theta page fig']             = np.nan
@@ -1559,6 +1560,7 @@ photo_page_fig_grant_newtonian_1965 = grant_newtonian_1965_csv['photo page fig']
 regime_photo_grant_newtonian_1965   = grant_newtonian_1965_csv['regime photo']
 x_low_grant_newtonian_1965          = grant_newtonian_1965_csv['x low']
 x_tr_s_grant_newtonian_1965         = grant_newtonian_1965_csv['x_tr/d_0']
+theta_grant_newtonian_1965          = grant_newtonian_1965_csv['theta (deg.)'] * (np.pi / 180.) # radians
 
 i = 0
 Re_l0_grant_newtonian_1965       = np.zeros(len(Ubar_0_grant_newtonian_1965))
@@ -1734,7 +1736,7 @@ df_grant_newtonian_1965['L_b method'] = 'photographic'
 df_grant_newtonian_1965['L_b/d_0 page fig'] = page_fig_grant_newtonian_1965
 df_grant_newtonian_1965['L_b/d_0 transcription method'] = 'table'
 
-df_grant_newtonian_1965['theta']                      = np.nan 
+df_grant_newtonian_1965['theta']                      = theta_grant_newtonian_1965 
 df_grant_newtonian_1965['theta stat error']           = np.nan 
 df_grant_newtonian_1965['theta resolution']           = np.nan 
 df_grant_newtonian_1965['theta page fig']             = np.nan 
@@ -3318,8 +3320,6 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_reitz_atomization_1978])
 # hoyt_pipe-exit_1980 #
 #######################
 
-# WON'T: Measure spray angle and add it. Use the average of the half angle on both sides to estimate.
-
 # TODO: Estimate pipe thickness based on photo.
 # 0.43 in = 217 px
 # t = 17.5 px (average of both sides) = 0.035 in
@@ -3342,7 +3342,8 @@ Re_l0_approx_hoyt_pipeexit_1980   = hoyt_pipeexit_1980_csv['Re_l0']
 x_s_low_hoyt_pipeexit_1980        = hoyt_pipeexit_1980_csv['x/d_0 1']
 photo_filename_hoyt_pipeexit_1980 = hoyt_pipeexit_1980_csv['photo filename 1']
 photo_page_fig_hoyt_pipeexit_1980 = hoyt_pipeexit_1980_csv['photo page fig 1']
-regime_photo_hoyt_pipeexit_1980 = hoyt_pipeexit_1980_csv['regime photo']
+regime_photo_hoyt_pipeexit_1980   = hoyt_pipeexit_1980_csv['regime photo']
+theta_hoyt_pipeexit_1980          = hoyt_pipeexit_1980_csv['theta (deg.)'] * (np.pi / 180.)
 
 d_0 = 0.43 * 2.54e-2 # m
 
@@ -3440,7 +3441,7 @@ df_hoyt_pipeexit_1980['L_b method']                   = np.nan
 df_hoyt_pipeexit_1980['L_b/d_0 page fig']             = np.nan
 df_hoyt_pipeexit_1980['L_b/d_0 transcription method'] = np.nan
 
-df_hoyt_pipeexit_1980['theta']                      = np.nan
+df_hoyt_pipeexit_1980['theta']                      = theta_hoyt_pipeexit_1980
 df_hoyt_pipeexit_1980['theta stat error']           = np.nan
 df_hoyt_pipeexit_1980['theta resolution']           = np.nan
 df_hoyt_pipeexit_1980['theta page fig']             = np.nan
@@ -4663,6 +4664,7 @@ D_32_is_wu_liquid_1992        = wu_liquid_1992_csv['D_{32,i}/d_0']
 v_d_s_wu_liquid_1992          = wu_liquid_1992_csv['vtilde_p/Ubar_0']
 regime_photo_wu_liquid_1992   = wu_liquid_1992_csv['regime photo']
 photo_filename_wu_liquid_1992 = wu_liquid_1992_csv['photo filename']
+theta_wu_liquid_1992          = wu_liquid_1992_csv['theta (deg.)'] * (np.pi / 180.)
 
 T_wu_liquid_1992 = 298 # K, \pm 3; see p. 34
 
@@ -4829,7 +4831,7 @@ df_wu_liquid_1992['L_b method']                   = np.nan
 df_wu_liquid_1992['L_b/d_0 page fig']             = np.nan
 df_wu_liquid_1992['L_b/d_0 transcription method'] = np.nan
 
-df_wu_liquid_1992['theta']                      = np.nan
+df_wu_liquid_1992['theta']                      = theta_wu_liquid_1992
 df_wu_liquid_1992['theta stat error']           = np.nan
 df_wu_liquid_1992['theta resolution']           = np.nan
 df_wu_liquid_1992['theta page fig']             = np.nan
