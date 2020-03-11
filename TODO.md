@@ -25,6 +25,10 @@
 - Add more citations listed in the "Data sources to add" section below to the bib file. Stopped at kitamura_influence_1978.
 - https://liw.fi/hackingdoc/
 - https://liw.fi/free-software-website/
+- https://vincent.bernat.ch/en/blog/2019-sustainable-python-script
+- Test all functions used. Start with assertions on all inputs and outputs (test bounds and dimensions), [Hypothesis for property testing](https://datascience.blog.wzb.eu/2019/11/08/property-based-testing-for-scientific-code-in-python/) and [doctest](https://en.wikipedia.org/wiki/Doctest).
+- [Require keyword arguments](http://www.jefftk.com/p/require-keyword-arguments)
+- Start using Pylint regularly.
 
 # Output data format
 
@@ -63,6 +67,7 @@
 
 # Data sources to add
 
+- Add photos from trettel_turbulent_2020.
 - Obtain more data for liquid-liquid systems, liquid jets in cross flow, liquid jets with co-flows
 - Get more spray angles from photos.
 - Add more data from Phinney for various atmospheric densities. (Not sure what I meant by this. I'll check if all of Phinney's data has been added.)
@@ -86,8 +91,8 @@
 - gordon_non-newtonian_1973 (both Newtonian and non-Newtonian fluids)
 - parkin_production_1973 (p. 67: nozzle not long enough)
 - skelland_jet_1974/johnson_jet_1973
-- van_de_sande_air_1974 fig III.13 (pdf p. 41), fig. III.15 (turbulent Rayleigh, pdf p. 43), fig. III.17 (can't disambiguate, pdf p. 46, also van_de_sande_surface_1973 fig. 3)
-- lafrance_capillary_1975 (most experimental results are forced, but p. 78 has some earlier unforced data), lafrance_drop_1974
+- van_de_sande_air_1974 fig III.13 (pdf p. 41), fig. III.15 (turbulent Rayleigh, pdf p. 43; also see van_de_sande_jet_1976 p. 221L), fig. III.17 (can't disambiguate, pdf p. 46, also van_de_sande_surface_1973 fig. 3); van_de_sande_air_1974 pdf p. "each value plotted is the arithmetic mean of at least five photographs"
+- lafrance_capillary_1975 (most experimental results are forced, but p. 78 has some earlier unforced data), lafrance_drop_1974 (droplet size and breakup length in laminar and turbulent Rayleigh regimes)
 - skelland_dispersed_1977
 - kitamura_influence_1978
   - fig. 8: \rhol/\rhog \approx 1.3, highest Re \approx 3000
@@ -137,6 +142,7 @@
 
 # Database fields
 
+- Add D_mode (most common droplet size) to database
 - chow_experimental_1980 doesn't have many data points but discusses many things done to have a high quality experiment. Add some more database fields inspired by this.
 - Add motion compensation key for photos. thorne_effect_1978, taylor_water_1983 (I later read that Hoyt and Taylor had two different setups with different methods of motion compensation?)
 - Add transcription error. Break into error from image resolution, error from not knowing the center of the point due to its odd shape, and error from imprecise placement of the points.

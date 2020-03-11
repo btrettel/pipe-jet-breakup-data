@@ -31,7 +31,26 @@ TR_df = df_jet_breakup
 TR_df = TR_df[TR_df['regime L_b'] == 'Rayleigh']
 TR_df = TR_df[TR_df['regime turb'] == 'turbulent']
 TR_df = TR_df[TR_df['Re_l0'] > Re_turb]
-TR_df = TR_df[TR_df['key'] != 'mansour_effect_1994'] # Removing because it is inconsistent with the others.
+TR_df = TR_df[TR_df['key'] != 'mansour_effect_1994'] # Removing because it is inconsistent with the others. Likely due to not using the same definition of the breakup length.
+
+# C_TR_arr = TR_df['L_b/d_0'] / Rayleigh_Weber_half_pow
+
+# A = np.column_stack([np.ones(len(TR_df)), np.log(TR_df['We_l0'])])
+# B = np.log(C_TR_arr)
+
+# result, _, _, _ = np.linalg.lstsq(A, B)
+# a, alpha_We_l0_C_TR = result
+
+# C_TR_0 = exp(a)
+
+# print 'C_TR_0 =', C_TR_0
+# print 'alpha_We_l0_C_TR =', alpha_We_l0_C_TR
+# #print 'alpha_Re_l0_C_TR =', alpha_Re_l0_C_TR
+
+# #C_TR_predicted = C_TR_0 * TR_df['We_l0']**alpha_We_l0_C_TR * TR_df['Re_l0']**alpha_Re_l0_C_TR
+# C_TR_predicted = C_TR_0 * TR_df['We_l0']**alpha_We_l0_C_TR
+
+# #print 'C_TR R^2 =', coeff_of_determination(C_TR_predicted, C_TR_arr)
 
 Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0']
 #Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.)

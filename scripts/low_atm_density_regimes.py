@@ -102,9 +102,24 @@ regime_all_df = regime_all_df[regime_all_df['regime combined'].notnull()]
 assert(not('bursting' in regime_all_df['regime combined']))
 summary_table(regime_all_df)
 
+macros_regime.write(r'\newcommand{\regimekeysused}{\citep{')
+key_array = []
+for key in regime_all_df['key']:
+   if not(key in key_array):
+      key_array.append(key)
+      if len(key_array) == 1:
+         macros_regime.write(key)
+      else:
+         macros_regime.write(','+key)
+macros_regime.write('}}\n')
+
+macros_regime.write(r'\newcommand{\totalregimestudies}{\num{'+str(len(key_array))+'}}\n')
 macros_regime.write(r'\newcommand{\totalregimenum}{\num{'+str(len(regime_all_df))+'}}\n')
 macros_regime.write(r'\newcommand{\photoregimenum}{\num{'+str(len(regime_all_df[regime_all_df['regime photo'].notnull()]))+'}}\n')
 macros_regime.write(r'\newcommand{\xbavgregimenum}{\num{'+str(len(regime_all_df[regime_all_df['regime L_b'].notnull()]))+'}}\n')
+
+regime_no_trettel_df = regime_all_df[regime_all_df['key'] != 'trettel_turbulent_2020']
+macros_regime.write(r'\newcommand{\percentageold}{\num{'+str(np.round(1000. * float(len(regime_no_trettel_df)) / float(len(regime_all_df))) / 10.)+'}'+r'\%}'+'\n')
 
 # https://tex.stackexchange.com/a/273112/9945
 macros_regime.write(r'\newcommand{\Relorange}{\numrange[round-mode=places,round-precision=1,retain-zero-exponent=true]{'+'%.1E' % Decimal(np.amin(regime_all_df['Re_l0']))+'}{'+'%.1E' % Decimal(np.amax(regime_all_df['Re_l0']))+'}}\n')

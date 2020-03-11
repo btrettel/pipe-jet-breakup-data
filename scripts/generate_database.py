@@ -31,8 +31,6 @@ print
 # balewski_experimental_2010-1 discusses the effects of different threshold values
 # TODO: Give people photos and ask them to measure the spray angle. Use this as an estimate of the "inter-rater reliability".
 
-# TODO: Classify all photos as turbulent or laminar at the nozzle. Add assertion to check this.
-# TODO: Find surface transition location in all photos.
 # TODO: Double check all orientations.
 # TODO: List limits and number of data points for each dependent variable. Use these for the correlations developed.
 
@@ -2613,7 +2611,7 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_phinney_breakup_1973])
 # 1. Very hard to figure out which point is which in figure 2. I called the author on the phone and they could not remember if there's a NOL report with tabulated data from this. I am going to try filing a FOIA for that.
 # 2. 
 
-# TODO: Ask Dr. Phinney about the air and saline temperature. Assuming T_std for now.
+# CAN'T: Ask Dr. Phinney about the air and saline temperature. Assuming T_std for now.
 
 # p. 997L:
 # > The inside diameter of the cylinder is 28 cm; the length is 120 cm.
@@ -4635,11 +4633,15 @@ df_jet_breakup = pd.concat([df_jet_breakup, df_ruff_structure_1990])
 # 3. The We_l0 for the heptane data in wu_liquid_1992 seems inconsistent with the corresponding data in wu_onset_1995. It appears that wu_liquid_1992 has the correct Weber numbers.
 # 4. For wu_onset_1995, the new data points do not have any ambient gas information. It is assumed these points are in air at atmospheric pressure and temperature.
 # 5. No statistical/repeatability uncertainties are given for x_i, so the percentage error is assumed to be the same as for SMD.
+# 6. \Lambda for d = 9.5 mm in table B.5 is not equal to d_0/8. Does this affect x_\text{i}?
 
 # Uncertainty: p. 126 (pdf p. 143), p. 129 (pdf p. 146)
 # p. 126 gives minimum 2.3% for all quantities (which presumably includes x_i)
 
 # Tables: wu_liquid_1992 pp. 134-139 (pdf p. 151-139)
+
+# TODO: Change data to use tables rather than figure transcription where possible. Much of this seems to have been transcript from figures when the tables would be better.
+# TODO: Check for outliers. There are some data points that might be outliers obvious in the predicted vs. actual plots.
 
 wu_liquid_1992_csv = pd.read_csv('../data/wu_liquid_1992/wu_liquid_1992.csv', sep=',', header=0)
 
@@ -5507,7 +5509,7 @@ df_jet_breakup.to_csv('../outputs/data/'+data_file+'.csv', sep='\t', encoding='u
 
 macros_breakdown = open('../outputs/macros/breakdown.tex', 'w')
 
-macros_breakdown.write(r'\newcommand{\compilationcitations}{\cite{')
+macros_breakdown.write(r'\newcommand{\compilationcitations}{\citep{')
 
 key_array = []
 for key in df_jet_breakup['key']:

@@ -14,7 +14,7 @@ from jetbreakup import *
 #revno = lastchangedrevision[0:6]
 revno = None
 
-macros_reg = open('../outputs/macros/regression.tex', 'a')
+macros_reg = open('../outputs/macros/regression_2.tex', 'w')
 
 print
 
@@ -153,7 +153,7 @@ theta_df = theta_df[theta_df['Ma_g'] < 0.3]
 #theta_df = theta_df[theta_df['key'] == 'skrebkov_turbulentnyye_1963']
 #theta_df = theta_df[theta_df['rho_s'] > 500]
 
-macros_reg.write(r'\newcommand{\thetaikeysall}{\citet{')
+macros_reg.write(r'\newcommand{\thetaikeysall}{\citep{')
 key_array = []
 for key in theta_df['key']:
    if not(key in key_array):
@@ -217,9 +217,9 @@ print
 with open('../outputs/data/TSB_thetai.pickle', 'w') as f:
    pickle.dump([C_theta, alpha_We_l0_theta, alpha_Tubar_0_theta], f)
 
-macros_reg.write(r'\newcommand{\thetaikeysused}{\citet{')
+macros_reg.write(r'\newcommand{\thetaikeysused}{\citep{')
 key_array = []
-for key in theta_df['key']:
+for key in theta_df_1['key']:
    if not(key in key_array):
       key_array.append(key)
       if len(key_array) == 1:
