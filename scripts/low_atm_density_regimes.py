@@ -120,6 +120,7 @@ macros_regime.write(r'\newcommand{\xbavgregimenum}{\num{'+str(len(regime_all_df[
 
 regime_no_trettel_df = regime_all_df[regime_all_df['key'] != 'trettel_turbulent_2020']
 macros_regime.write(r'\newcommand{\percentageold}{\num{'+str(np.round(1000. * float(len(regime_no_trettel_df)) / float(len(regime_all_df))) / 10.)+'}'+r'\%}'+'\n')
+macros_regime.write(r'\newcommand{\percentagenew}{\num{'+str(np.round(1000. * (1. - float(len(regime_no_trettel_df)) / float(len(regime_all_df)))) / 10.)+'}'+r'\%}'+'\n')
 
 # https://tex.stackexchange.com/a/273112/9945
 macros_regime.write(r'\newcommand{\Relorange}{\numrange[round-mode=places,round-precision=1,retain-zero-exponent=true]{'+'%.1E' % Decimal(np.amin(regime_all_df['Re_l0']))+'}{'+'%.1E' % Decimal(np.amax(regime_all_df['Re_l0']))+'}}\n')

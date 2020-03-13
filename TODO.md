@@ -139,6 +139,7 @@
 - Check that all basic quantities (e.g., Re, Fr, etc.) are defined
 - Reject all laminar data that isn't fully developed.
 - Require increasing variables like pressure, velocity, Reynolds number, Weber number, etc. in each series. Do this for certain series, resetting when a new series is encountered?
+- Require a "series" for every data point. The velocity (or Reynolds number, etc.) for each successive data point here is required to be incrementing.
 
 # Database fields
 
