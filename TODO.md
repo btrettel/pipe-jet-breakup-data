@@ -93,6 +93,7 @@
 - skelland_jet_1974/johnson_jet_1973
 - van_de_sande_air_1974 fig III.13 (pdf p. 41), fig. III.15 (turbulent Rayleigh, pdf p. 43; also see van_de_sande_jet_1976 p. 221L), fig. III.17 (can't disambiguate, pdf p. 46, also van_de_sande_surface_1973 fig. 3); van_de_sande_air_1974 pdf p. "each value plotted is the arithmetic mean of at least five photographs"
 - lafrance_capillary_1975 (most experimental results are forced, but p. 78 has some earlier unforced data), lafrance_drop_1974 (droplet size and breakup length in laminar and turbulent Rayleigh regimes)
+- vliem_influence_1975/sterling_mechanisms_1981 (droplet size and breakup length for turbulent Rayleigh)
 - skelland_dispersed_1977
 - kitamura_influence_1978
   - fig. 8: \rhol/\rhog \approx 1.3, highest Re \approx 3000

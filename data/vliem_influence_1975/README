@@ -1,0 +1,10 @@
+Ask Henk Vliem (or Arthur Sterling if Henk is not responsive):
+TODO: How to convert from pulse height (V) to a droplet size (m)? Appendix 1 (pdf p. 42) does not give the constant, and it is unclear how the pulse interval is related to the voltage.
+   sterling_mechanisms_1981 p. I-4.3:
+      > Owing to deformation and overlapping of the drops in the light field, the correspondence between pulse height and drop diameter is not exact. However, we can calculate the average drop volume from the drop size distribution and the average drop frequency from the time interval distribution. The product of the average volume and average frequency is the flow rate. Since the flow rate can be easily measured independently, the drop size distribution can be corrected for pulse distortion.
+TODO: Check if the 5 mm cases are actually 5 mm and not 4 mm like the others.
+TODO: Find where Lissenberg says fully developed flow before the obstruction, and where Vliem says the same.
+TODO: How could \xbavg be the same for both rigid and elastic obstructions in the 4 mm tubes but when you switch to 5 mm the breakup length decreases in the elastic obstruction case? Ask Vliem.
+
+p. 9: > In order to ensure turbulence in the test section a screen of 1.5 mm meshsize (D = 0.25 mm) was placed at the beginning of the entrance tube of the test section, while the first 25 mm of the entrance tube were roughened by machining V shaped groves in the wall.
+p. 20: > the water temperature was held at 15$^\circ$C \pm $1^\circ$C
