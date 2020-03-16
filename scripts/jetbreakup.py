@@ -1103,9 +1103,9 @@ def We_l0_crit_TR(Tu_0):
    We_T_crit = 8.
    return We_T_crit * Tu_0**(-2.)
 
-def Re_l0_crit_DT(We_l0, Re_x_trans=1.7e5, C_LR=8.5):
+def Re_l0_crit_DT(We_l0, Re_lx_trans=1.7e5, C_LR=8.5):
    # TODO: Change this to use the Re_x_tr and C_LR values from the regressions.
-   return (Re_x_trans - 3. * C_LR * We_l0) / (C_LR * We_l0**(1./2.))
+   return (Re_lx_trans - 3. * C_LR * We_l0) / (C_LR * We_l0**(1./2.))
 
 def x_b_s(Tu_0_arr, We_l0_arr, rho_s):
    x_b_s_arr = np.array([])

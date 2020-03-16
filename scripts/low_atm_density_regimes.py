@@ -18,7 +18,7 @@ revno = None
 
 Sauerwein = False
 
-macros_regime = open('../outputs/macros/regime.tex', 'w')
+macros_regimes = open('../outputs/macros/regimes.tex', 'w')
 
 print
 
@@ -102,32 +102,33 @@ regime_all_df = regime_all_df[regime_all_df['regime combined'].notnull()]
 assert(not('bursting' in regime_all_df['regime combined']))
 summary_table(regime_all_df)
 
-macros_regime.write(r'\newcommand{\regimekeysused}{\citep{')
+macros_regimes.write(r'\newcommand{\regimekeysused}{\citep{')
 key_array = []
 for key in regime_all_df['key']:
    if not(key in key_array):
       key_array.append(key)
       if len(key_array) == 1:
-         macros_regime.write(key)
+         macros_regimes.write(key)
       else:
-         macros_regime.write(','+key)
-macros_regime.write('}}\n')
+         macros_regimes.write(','+key)
+macros_regimes.write('}}\n')
 
-macros_regime.write(r'\newcommand{\totalregimestudies}{\num{'+str(len(key_array))+'}}\n')
-macros_regime.write(r'\newcommand{\totalregimenum}{\num{'+str(len(regime_all_df))+'}}\n')
-macros_regime.write(r'\newcommand{\photoregimenum}{\num{'+str(len(regime_all_df[regime_all_df['regime photo'].notnull()]))+'}}\n')
-macros_regime.write(r'\newcommand{\xbavgregimenum}{\num{'+str(len(regime_all_df[regime_all_df['regime L_b'].notnull()]))+'}}\n')
+macros_regimes.write(r'\newcommand{\totalregimestudies}{\num{'+str(len(key_array))+'}}\n')
+macros_regimes.write(r'\newcommand{\totalregimenum}{\num{'+str(len(regime_all_df))+'}}\n')
+macros_regimes.write(r'\newcommand{\photoregimenum}{\num{'+str(len(regime_all_df[regime_all_df['regime photo'].notnull()]))+'}}\n')
+macros_regimes.write(r'\newcommand{\xbavgregimenum}{\num{'+str(len(regime_all_df[regime_all_df['regime L_b'].notnull()]))+'}}\n')
 
 regime_no_trettel_df = regime_all_df[regime_all_df['key'] != 'trettel_turbulent_2020']
-macros_regime.write(r'\newcommand{\percentageold}{\num{'+str(np.round(1000. * float(len(regime_no_trettel_df)) / float(len(regime_all_df))) / 10.)+'}'+r'\%}'+'\n')
-macros_regime.write(r'\newcommand{\percentagenew}{\num{'+str(np.round(1000. * (1. - float(len(regime_no_trettel_df)) / float(len(regime_all_df)))) / 10.)+'}'+r'\%}'+'\n')
+macros_regimes.write(r'\newcommand{\percentageold}{\num{'+str(np.round(1000. * float(len(regime_no_trettel_df)) / float(len(regime_all_df))) / 10.)+'}'+r'\%}'+'\n')
+macros_regimes.write(r'\newcommand{\percentagenew}{\num{'+str(np.round(1000. * (1. - float(len(regime_no_trettel_df)) / float(len(regime_all_df)))) / 10.)+'}'+r'\%}'+'\n')
 
 # https://tex.stackexchange.com/a/273112/9945
-macros_regime.write(r'\newcommand{\Relorange}{\numrange[round-mode=places,round-precision=1,retain-zero-exponent=true]{'+'%.1E' % Decimal(np.amin(regime_all_df['Re_l0']))+'}{'+'%.1E' % Decimal(np.amax(regime_all_df['Re_l0']))+'}}\n')
-macros_regime.write(r'\newcommand{\Welorange}{\numrange[round-mode=places,round-precision=1,retain-zero-exponent=true]{'+'%.1E' % Decimal(np.amin(regime_all_df['We_l0']))+'}{'+'%.1E' % Decimal(np.amax(regime_all_df['We_l0']))+'}}\n')
+macros_regimes.write(r'\newcommand{\Relorange}{\numrange[round-mode=places,round-precision=1,retain-zero-exponent=true]{'+'%.1E' % Decimal(np.amin(regime_all_df['Re_l0']))+'}{'+'%.1E' % Decimal(np.amax(regime_all_df['Re_l0']))+'}}\n')
+macros_regimes.write(r'\newcommand{\Welorange}{\numrange[round-mode=places,round-precision=1,retain-zero-exponent=true]{'+'%.1E' % Decimal(np.amin(regime_all_df['We_l0']))+'}{'+'%.1E' % Decimal(np.amax(regime_all_df['We_l0']))+'}}\n')
 
 df_key_turb = regime_all_df[regime_all_df['regime turb'] == 'turbulent']
-macros_regime.write(r'\newcommand{\Tuorange}{\numrange{'+str(round(np.amin(df_key_turb['I_0']), 3))+'}{'+str(round(np.amax(df_key_turb['I_0']), 3))+'}}\n')
+#macros_regimes.write(r'\newcommand{\Tuorange}{\numrange{'+str(round(np.amin(df_key_turb['I_0']), 3))+'}{'+str(round(np.amax(df_key_turb['I_0']), 3))+'}}\n')
+macros_regimes.write(r'\newcommand{\Tuorange}{\SIrange{'+str(round(100. * np.amin(df_key_turb['I_0']), 1))+'}{'+str(round(100. * np.amax(df_key_turb['I_0']), 1))+'}{\percent}}\n')
 
 regime_all_df_with_eisenklam = regime_all_df
 regime_all_df = regime_all_df[regime_all_df['key'] != 'eisenklam_flow_1958'] # Removed as it seems to have atypically high transition Reynolds numbers.
@@ -160,7 +161,7 @@ for regime in regime_all_df['regime combined']:
 
 N_regime_data_points = len(regime_all_df)
 print N_regime_data_points, 'data points with breakup regime classified (smooth pipe nozzles).'
-macros_regime.write(r'\newcommand{\smoothregimenum}{\num{'+str(len(regime_all_df))+'}}\n')
+macros_regimes.write(r'\newcommand{\smoothregimenum}{\num{'+str(len(regime_all_df))+'}}\n')
 
 #R2S_df = regime_all_df_with_trans[regime_all_df_with_trans['regime combined'] == 'R2S']
 #avgTu = np.average(R2S_df['I_0'])
@@ -188,7 +189,7 @@ if Sauerwein:
 #We_corner_RtoF = 1.e2
 # We_RtoF = np.logspace(np.log(We_corner_RtoF) / np.log(10.), 6., 1e2)
 # Re_RtoF = Re_trans * (We_RtoF / We_corner_RtoF)**(-0.5)
-#print 'Re_x_trans =', 13.4 * Re_trans * We_corner_RtoF**0.5 + 3. * We_corner_RtoF
+#print 'Re_lx_trans =', 13.4 * Re_trans * We_corner_RtoF**0.5 + 3. * We_corner_RtoF
 
 # Sterling
 #def We_crit_Sterling(We_l0, *data):
@@ -205,23 +206,23 @@ if Sauerwein:
 #Re_RtoF = 125 * We_RtoF**(-0.19)
 
 # new Feb. 2020 theory
-with open(root_dir+'outputs/data/Re_x_tr.pickle') as f:
-   Re_x_tr, Re_x_tr_implied = pickle.load(f)
-Re_x_trans  = Re_x_tr_implied
-C_LR        = C_LR_from_file()
-C_TR        = C_TR_from_file()
-We_low      = ((sqrt(Re_trans**2. - 12. * Re_x_trans / C_LR) - Re_trans) / 6.)**2.
-We_high     = Re_x_trans / (3. * C_LR)
-We_RtoF_all = np.logspace(np.log(We_low) / np.log(10.), np.log(We_high) / np.log(10.), 1e2)
-Re_RtoF_all = Re_l0_crit_DT(We_RtoF_all, Re_x_trans=Re_x_trans, C_LR=C_LR)
+with open(root_dir+'outputs/data/Re_lx_trans.pickle') as f:
+   Re_lx_trans, Re_lx_trans_implied = pickle.load(f)
+Re_lx_trans  = Re_lx_trans_implied
+C_LR         = C_LR_from_file()
+#C_TR         = C_TR_from_file()
+We_low       = ((sqrt(Re_trans**2. - 12. * Re_lx_trans / C_LR) - Re_trans) / 6.)**2.
+We_high      = Re_lx_trans / (3. * C_LR)
+We_RtoF_all  = np.logspace(np.log(We_low) / np.log(10.), np.log(We_high) / np.log(10.), 1e2)
+Re_RtoF_all  = Re_l0_crit_DT(We_RtoF_all, Re_lx_trans=Re_lx_trans, C_LR=C_LR)
 #plt.loglog(We_RtoF, Re_RtoF, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--') #, label=r'$\mathrm{We}_\text{T,crit}$')
 
-Re_stable = Re_x_trans / 1.e3
+Re_stable = Re_lx_trans / 1.e3
 We_stop = np.interp(Re_stable, Re_RtoF_all[::-1], We_RtoF_all[::-1])
 We_RtoF_obs = np.logspace(np.log(We_low) / np.log(10.), np.log(We_stop) / np.log(10.), 1e2)
 We_RtoF_far = np.logspace(np.log(We_stop) / np.log(10.), np.log(We_high) / np.log(10.), 1e2)
-Re_RtoF_obs = Re_l0_crit_DT(We_RtoF_obs, Re_x_trans=Re_x_trans, C_LR=C_LR)
-Re_RtoF_far = Re_l0_crit_DT(We_RtoF_far, Re_x_trans=Re_x_trans, C_LR=C_LR)
+Re_RtoF_obs = Re_l0_crit_DT(We_RtoF_obs, Re_lx_trans=Re_lx_trans, C_LR=C_LR)
+Re_RtoF_far = Re_l0_crit_DT(We_RtoF_far, Re_lx_trans=Re_lx_trans, C_LR=C_LR)
 
 plt.loglog(We_RtoF_obs, Re_RtoF_obs, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 plt.loglog(We_RtoF_far, Re_RtoF_far, marker=None, color='k', zorder=4, linewidth=0.5, linestyle=':')
@@ -267,9 +268,9 @@ plt.text(2.e0, 3.e1, 'dripping', backgroundcolor='w', rotation=90, verticalalign
 plt.text(np.exp(0.5 * (np.log(We_high) + np.log(4.))), lam_Re_center, 'laminar Rayleigh', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
 plt.text(np.exp(0.5 * (np.log(1.e0) + np.log(We_Rto2WI[0]))), turb_Re_center, 'turbulent Rayleigh', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
 plt.text(5.e4, np.exp(0.5 * (np.log(Re_trans) + np.log(Re_stable))), 'downstream transition', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
-plt.text(np.exp(0.5 * (np.log(We_high) + np.log(1.e6))), np.exp(0.5 * (np.log(3.e0) + np.log(Re_stable))), r'$\frac{x_\text{tr}}{d_0} > 10^3$', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
+plt.text(np.exp(0.5 * (np.log(We_high) + np.log(1.e6))), np.exp(0.5 * (np.log(3.e0) + np.log(Re_stable))), r'$\frac{x_\text{trans}}{d_0} > 10^3$', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
 plt.text(np.exp(0.5 * (np.log(We_2WItoA[0]) + np.log(1.e6))), turb_Re_center, 'atomization', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
-plt.text(1.e3, np.exp(0.5*(np.log(Re_trans) + np.log(Re_turb))), 'transitional at nozzle exit (critical $\mathrm{Re}_{\ell0}$ varies)', backgroundcolor='w', fontsize='small', verticalalignment='center', horizontalalignment='center', bbox=dict(boxstyle='square,pad=0.0',fc='white', ec='none'))
+plt.text(1.e3, np.exp(0.5*(np.log(Re_trans) + np.log(Re_turb))), r'transitional at nozzle exit ($\mathrm{Re}_{\ell0,\text{turb}}$ varies)', backgroundcolor='w', fontsize='small', verticalalignment='center', horizontalalignment='center', bbox=dict(boxstyle='square,pad=0.0',fc='white', ec='none'))
 plt.text(np.exp(0.5 * (np.log(We_Rto2WI[0]) + np.log(We_2WItoA[0]))), turb_Re_center, 'turbulent\nsurf.\ breakup', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='center')
 plt.text(1.3e6, turb_Re_center, 'turb.\ at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
 plt.text(1.3e6, lam_Re_center, 'laminar at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
@@ -548,7 +549,7 @@ regime_photo_df = regime_all_df[(regime_all_df['regime determination method'] ==
 
 N_photo_regime_data_points = len(regime_photo_df)
 print N_photo_regime_data_points, 'data points with breakup regime classified (smooth pipe nozzles, photos only).'
-macros_regime.write(r'\newcommand{\smoothregimephotonum}{\num{'+str(len(regime_photo_df))+'}}\n')
+macros_regimes.write(r'\newcommand{\smoothregimephotonum}{\num{'+str(len(regime_photo_df))+'}}\n')
 
 i = 0
 for regime in regime_array:
@@ -651,7 +652,7 @@ regime_xbavg_df = regime_all_df[(regime_all_df['regime determination method'] ==
 
 N_breakup_length_regime_data_points = len(regime_xbavg_df)
 print N_breakup_length_regime_data_points, 'data points with breakup regime classified (smooth pipe nozzles, xbavg only).'
-macros_regime.write(r'\newcommand{\smoothregimexbavgnum}{\num{'+str(len(regime_xbavg_df))+'}}\n')
+macros_regimes.write(r'\newcommand{\smoothregimexbavgnum}{\num{'+str(len(regime_xbavg_df))+'}}\n')
 #assert(N_regime_data_points == (N_photo_regime_data_points + N_breakup_length_regime_data_points))
 
 i = 0
@@ -751,4 +752,4 @@ plt.savefig('../outputs/figures/regime_diagram_low_atm_density_with_data_xbavg_o
 plt.close()
 
 # close TeX macros file
-macros_regime.close()
+macros_regimes.close()

@@ -19,7 +19,7 @@ macros_initially_laminar = open('../outputs/macros/initially_laminar.tex', 'w')
 print
 
 # TODO: Calculate Ohnesorge number range for laminar Rayleigh data to compare against those who claim C_LR is a function of the Ohnesorge number.
-# TODO: Write C_LR and Re_x_tr to a pickle file and use those values instead of hardcoding.
+# TODO: Write C_LR and Re_lx_trans to a pickle file and use those values instead of hardcoding.
 # TODO: Compare estimated downstream transition breakup length to data.
 
 with open('../outputs/data/'+data_file+'.pickle') as f:
@@ -89,12 +89,12 @@ photos_df = photos_df[photos_df['x_trans/d_0'].notnull()]
 
 #print photos_df['photo filename']
 #print photos_df['x_trans/d_0']
-Re_x_tr_arr = photos_df['Re_l0'] * photos_df['x_trans/d_0']
-#print Re_x_tr_arr
-Re_x_tr = np.average(Re_x_tr_arr)
-print 'Re_x_tr =', Re_x_tr
-print 'min Re_x_tr =', np.min(Re_x_tr_arr)
-print 'max Re_x_tr =', np.max(Re_x_tr_arr)
+Re_lx_trans_arr = photos_df['Re_l0'] * photos_df['x_trans/d_0']
+#print Re_lx_trans_arr
+Re_lx_trans = np.average(Re_lx_trans_arr)
+print 'Re_lx_trans =', Re_lx_trans
+print 'min Re_lx_trans =', np.min(Re_lx_trans_arr)
+print 'max Re_lx_trans =', np.max(Re_lx_trans_arr)
 
 photo_citation_keys   = []
 photo_citation_string = ''
@@ -107,14 +107,14 @@ photo_citation_string = photo_citation_string[1:]
 boundary_df         = boundary_df[boundary_df['regime L_b'] == 'R2F']
 boundary_df         = boundary_df[boundary_df['rho_s'] < 1500.]
 boundary_df         = boundary_df[boundary_df['key'] != 'sterling_instability_1975']
-Re_x_tr_implied_arr = C_LR * (boundary_df['Re_l0'] * boundary_df['We_l0']**(1./2.) + 3. * boundary_df['We_l0'])
-Re_x_tr_implied = np.average(Re_x_tr_implied_arr)
-print 'Re_x,tr,implied =', Re_x_tr_implied
-print 'min Re_x,tr,implied =', np.min(Re_x_tr_implied_arr)
-print 'max Re_x,tr,implied =', np.max(Re_x_tr_implied_arr)
-boundary_df['Re_x,tr implied'] = Re_x_tr_implied_arr
+Re_lx_trans_implied_arr = C_LR * (boundary_df['Re_l0'] * boundary_df['We_l0']**(1./2.) + 3. * boundary_df['We_l0'])
+Re_lx_trans_implied = np.average(Re_lx_trans_implied_arr)
+print 'Re_x,tr,implied =', Re_lx_trans_implied
+print 'min Re_x,tr,implied =', np.min(Re_lx_trans_implied_arr)
+print 'max Re_x,tr,implied =', np.max(Re_lx_trans_implied_arr)
+boundary_df['Re_x,tr implied'] = Re_lx_trans_implied_arr
 #print
-#print Re_x_tr_implied / Re_x_tr
+#print Re_lx_trans_implied / Re_lx_trans
 
 boundary_citation_keys   = []
 boundary_citation_string = ''
@@ -124,20 +124,20 @@ for key in boundary_df['key']:
       boundary_citation_string = boundary_citation_string + ',' + key
 boundary_citation_string = boundary_citation_string[1:]
 
-with open('../outputs/data/Re_x_tr.pickle', 'w') as f:
-   pickle.dump([Re_x_tr, Re_x_tr_implied], f)
+with open('../outputs/data/Re_lx_trans.pickle', 'w') as f:
+   pickle.dump([Re_lx_trans, Re_lx_trans_implied], f)
 
-macros_initially_laminar.write(r'\newcommand{\Rextrnum}{'+roundstr(Re_x_tr)+'}\n')
-macros_initially_laminar.write(r'\newcommand{\RextrN}{\num{'+str(len(Re_x_tr_arr))+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrcitep}{\citep{'+photo_citation_string+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrrange}{\numrange{'+roundstr(np.min(Re_x_tr_arr), num=False)+'}{'+roundstr(np.max(Re_x_tr_arr), num=False)+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrimpliednum}{'+roundstr(Re_x_tr_implied)+'}\n')
-macros_initially_laminar.write(r'\newcommand{\RextrimpliedN}{\num{'+str(len(Re_x_tr_implied_arr))+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrimpliedcitep}{\citep{'+boundary_citation_string+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrimpliedrange}{\numrange{'+roundstr(np.min(Re_x_tr_implied_arr), num=False)+'}{'+roundstr(np.max(Re_x_tr_implied_arr), num=False)+'}}\n')
-macros_initially_laminar.write(r'\newcommand{\Rextrratio}{'+roundstr(Re_x_tr_implied / Re_x_tr)+'}\n')
+macros_initially_laminar.write(r'\newcommand{\Relxtransnum}{'+roundstr(Re_lx_trans)+'}\n')
+macros_initially_laminar.write(r'\newcommand{\RelxtransN}{\num{'+str(len(Re_lx_trans_arr))+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Relxtranscitep}{\citep{'+photo_citation_string+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Relxtransrange}{\numrange{'+roundstr(np.min(Re_lx_trans_arr), num=False)+'}{'+roundstr(np.max(Re_lx_trans_arr), num=False)+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Relxtransimpliednum}{'+roundstr(Re_lx_trans_implied)+'}\n')
+macros_initially_laminar.write(r'\newcommand{\RelxtransimpliedN}{\num{'+str(len(Re_lx_trans_implied_arr))+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Relxtransimpliedcitep}{\citep{'+boundary_citation_string+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Relxtransimpliedrange}{\numrange{'+roundstr(np.min(Re_lx_trans_implied_arr), num=False)+'}{'+roundstr(np.max(Re_lx_trans_implied_arr), num=False)+'}}\n')
+macros_initially_laminar.write(r'\newcommand{\Relxtransratio}{'+roundstr(Re_lx_trans_implied / Re_lx_trans)+'}\n')
 
-# max_boundary_df = boundary_df[boundary_df['Re_x,tr implied'] == np.max(Re_x_tr_implied_arr)]
+# max_boundary_df = boundary_df[boundary_df['Re_x,tr implied'] == np.max(Re_lx_trans_implied_arr)]
 # print max_boundary_df['key']
 # print max_boundary_df['L_b/d_0']
 # print max_boundary_df['liquid']
@@ -156,7 +156,7 @@ macros_initially_laminar.write(r'\newcommand{\Rextrratio}{'+roundstr(Re_x_tr_imp
 # #delta_trs = 0. # additional jet surface deviation from transition ==> Doesn't seem to work right. The breakup length should not change when transition begins (\xtr = \xbavg), but it decreases abruptly when this is not zero.
 
 # def Ubar_0_crit_func(Ubar_0):
-   # return C_LR * ((rho_l * Ubar_0**2. * d_0 / sigma)**(1./2.) + 3. * rho_l * nu_l * Ubar_0 / sigma) - Re_x_tr * nu_l / (Ubar_0 * d_0)
+   # return C_LR * ((rho_l * Ubar_0**2. * d_0 / sigma)**(1./2.) + 3. * rho_l * nu_l * Ubar_0 / sigma) - Re_lx_trans * nu_l / (Ubar_0 * d_0)
 
 # Ubar_0_crit = fsolve(Ubar_0_crit_func, 1.5)[0]
 # print 'Ubar_0,crit =', Ubar_0_crit, 'm/s'
@@ -171,7 +171,7 @@ macros_initially_laminar.write(r'\newcommand{\Rextrratio}{'+roundstr(Re_x_tr_imp
 # We_l0_arr = (rho_l * nu_l**2.) / (sigma * d_0) * Re_l0_arr**2.
 
 # xbavgs_LR_arr = C_LR * (We_l0_arr**(1./2.) + 3. * We_l0_arr / Re_l0_arr)
-# x_trs_arr     = Re_x_tr / Re_l0_arr
+# x_trs_arr     = Re_lx_trans / Re_l0_arr
 # #xbavgs_arr    = x_trs_arr - (1./C_L) * (rho_l/rho_g)**(3./2.) * np.log(np.exp(C_LR * (x_trs_arr / xbavgs_LR_arr - 1.)) + delta_trs) * We_l0_arr**(-1.)
 # xbavgs_arr    = x_trs_arr + (C_LR/C_L) * (rho_l/rho_g)**(3./2.) * (1. - x_trs_arr / xbavgs_LR_arr) * We_l0_arr**(-1.)
 
@@ -193,7 +193,7 @@ macros_initially_laminar.write(r'\newcommand{\Rextrratio}{'+roundstr(Re_x_tr_imp
 # DTxbavgs_df = DTxbavgs_df[DTxbavgs_df['rho_s'] < 2000.]
 
 # xbavgs_LR = C_LR * (DTxbavgs_df['We_l0']**(1./2.) + 3. * DTxbavgs_df['We_l0'] / DTxbavgs_df['Re_l0'])
-# x_trs_DT  = Re_x_tr / DTxbavgs_df['Re_l0']
+# x_trs_DT  = Re_lx_trans / DTxbavgs_df['Re_l0']
 
 # print np.min(DTxbavgs_df['rho_s'])
 # print np.max(DTxbavgs_df['rho_s'])

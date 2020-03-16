@@ -78,6 +78,7 @@
 - christiansen_breakup_1957/christiansen_influence_1957
 - Add atomization regime markers from palmer_water_1962 fig. 2 (also see report by same author).
 - ryley_construction_1963
+- Replace Grant photos with higher quality versions from grant_newtonian_1965-photos.pdf
 - smirnov_effect_1965
 - meister_formation_1966/scheele_drop_1968/scheele_drop_1968-1/meister_drop_1969/meister_prediction_1969
 - rao_drop_1966 ("capillary" but what is its length?)
@@ -109,14 +110,14 @@
 - Add Ruff and Tseng data, which apparently has low \rhol/\rhog photographic regimes according to wu_effects_1995 p. 189, fig. 7 (pdf p. 15) / faeth_structure_1995 p. 117, fig. 1.5.
 - Based on the same figure as the previous line's TODO, so does wu_effects_1995.
 - Add amagai_frequency_1997/arai_surface_1999
-- leroux_break-up_1997
+- leroux_break-up_1997 (ask Prof. Dumouchel for data, redundant with leroux_stability_1996?)
 - mun_effects_1998 (L_0/d_0 = 25.6. Not long enough for laminar jets?)
 - rhim_measurement_1998 (breakup lengths)
 - Add tamaki_effects_1998
 - Add clanet_transition_1999
 - Add blaisot_determination_2000, godelle_phase_2000
 - Add godelle_symbolic_2000
-- Add malot_experimental_2001
+- Add malot_experimental_2001 (has a L_0/d_0 = 50 case; ask Prof. Dumouchel for data)
 - blaisot_instabilities_2003
 - tang_laminar_2003/tang_cylindrical_2004
 - aalburg_primary_2005/aalburg_deformation_2002 (has data with no cross-flow: fig. 4, figs. 7--9)
