@@ -105,6 +105,21 @@ summary_table(regime_all_df)
 macros_regimes.write(r'\newcommand{\regimekeysused}{\citep{')
 key_array = []
 for key in regime_all_df['key']:
+   if key == 'chen_mechanics_1962':
+      key = 'chen_disintegration_1964'
+   elif key == 'skrebkov_turbulentnyye_1963':
+      key = 'skrebkov_turbulent_1966'
+   elif key == 'grant_newtonian_1965':
+      key = 'grant_newtonian_1966'
+   elif key == 'kim_investigation_1983':
+      key = 'kim_condensation_1989'
+   elif key == 'wu_atomizing_1983':
+      key = 'wu_measurements_1983'
+   elif key == 'wu_liquid_1992':
+      key = 'wu_primary_1992'
+   elif key == 'sallam_properties_2002':
+      key = 'sallam_liquid_2002'
+   
    if not(key in key_array):
       key_array.append(key)
       if len(key_array) == 1:

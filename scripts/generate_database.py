@@ -5522,9 +5522,9 @@ for key in df_jet_breakup['key']:
       key = 'skrebkov_turbulent_1966'
    elif key == 'grant_newtonian_1965':
       key = 'grant_newtonian_1966'
-   elif key == 'kim_investigation_1983':
-      # removed due to not actually measuring \xiavg
-      continue
+   # elif key == 'kim_investigation_1983':
+      # # removed due to not actually measuring \xiavg
+      # continue
    elif key == 'wu_atomizing_1983':
       key = 'wu_measurements_1983'
    elif key == 'wu_liquid_1992':
