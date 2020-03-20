@@ -153,6 +153,9 @@ print 'C_We_l0I_03 = ', C_We_l0I_03
 #print 'C_I_0       = ', C_I_0
 #print 'C_rho_s     = ', C_rho_s
 
+with open('../outputs/data/TSB_xiavg.pickle', 'w') as f:
+   pickle.dump([C_x_i, C_We_l0I_03], f)
+
 x_is_df['x_i/d_0 predicted'] = C_x_i * (x_is_df['We_l0'] * x_is_df['I_0']**3)**C_We_l0I_03# * x_is_df['rho_s']**C_rho_s
 plot_with_keys(x_is_df, 'correlation', 'x_i/d_0 predicted', 'x_i/d_0', plot_type='loglog', add_line=True, revno=revno)
 print 'R^2 =', coeff_of_determination(x_is_df['x_i/d_0 predicted'], x_is_df['x_i/d_0'])
@@ -216,7 +219,7 @@ D_32_is_df = df_jet_breakup[df_jet_breakup['D_32/d_0'].notnull()]
 D_32_is_df = D_32_is_df[D_32_is_df['regime turb'] == 'turbulent']
 D_32_is_df = D_32_is_df[D_32_is_df['Re_l0'] > 5000]
 D_32_is_df = D_32_is_df[D_32_is_df['Ma_g'] < 0.4]
-D_32_is_df = D_32_is_df[D_32_is_df['rho_s'] > 500]
+#D_32_is_df = D_32_is_df[D_32_is_df['rho_s'] > 500]
 parameter_space_plots(D_32_is_df, 'D_32/d_0', revno=revno)
 latex_summary_table(D_32_is_df, 'D_32/d_0')
 
@@ -233,8 +236,12 @@ print 'C_We_l0I_02 = ', C_We_l0I_02
 
 D_32_is_df['D_32/d_0 predicted'] = C_D_32 * (D_32_is_df['We_l0'] * D_32_is_df['I_0']**2.)**C_We_l0I_02
 plot_with_keys(D_32_is_df, 'correlation', 'D_32/d_0 predicted', 'D_32/d_0', plot_type='loglog', add_line=True, revno=revno)
-print 'R^2 =', coeff_of_determination(D_32_is_df['D_32/d_0 predicted'], D_32_is_df['D_32/d_0'])
+D_32_is_R2 = coeff_of_determination(D_32_is_df['D_32/d_0 predicted'], D_32_is_df['D_32/d_0'])
+print 'R^2 =', D_32_is_R2
 print
+
+with open('../outputs/data/TSB_D_32_is.pickle', 'w') as f:
+   pickle.dump([C_D_32, C_We_l0I_02], f)
 
 macros_reg.write(r'\newcommand{\SMDreg}{\frac{D_{32}}{d_0} = '+roundstr(C_D_32)+r' \left(\Tubarexp{2} \Welo\right)^{'+roundstr(C_We_l0I_02)+'}}\n')
 macros_reg.write(r'\newcommand{\SMDregrsquared}{'+roundstr(coeff_of_determination(D_32_is_df['D_32/d_0 predicted'], D_32_is_df['D_32/d_0']))+'}\n')

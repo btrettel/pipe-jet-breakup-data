@@ -229,7 +229,7 @@ for key in theta_df_1['key']:
 macros_reg.write('}}\n')
 
 #macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Tubarexp{'+roundstr(C_I_0)+'} \Welo^{'+roundstr(alpha_We_l0_theta)+'}}\n')
-macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Welo^{'+roundstr(alpha_We_l0_theta)+r'} \Tubarexp{'+roundstr(alpha_Tubar_0_theta)+'}}\n')
+macros_reg.write(r'\newcommand{\thetaireg}{\tan\left(\frac{\thetai}{2}\right) = '+roundstr(C_theta)+r' \Tubarexp{'+roundstr(alpha_Tubar_0_theta)+'} \Welo^{'+roundstr(alpha_We_l0_theta)+r'}}\n')
 macros_reg.write(r'\newcommand{\thetairegrsquared}{'+roundstr(coeff_of_determination(theta_df_1['theta predicted'], theta_df_1['theta']))+'}\n')
 macros_reg.write(r'\newcommand{\thetairegN}{\num{'+str(len(theta_df_1))+'}}\n')
 macros_reg.write('\n')
