@@ -26,3 +26,4 @@ python initially_laminar.py # needs to run before low_atm_density_regimes.py
 python turbulent_rayleigh.py # needs to run before low_atm_density_regimes.py
 python low_atm_density_regimes.py
 python validation_problems_example.py
+python model_comparisons.py
