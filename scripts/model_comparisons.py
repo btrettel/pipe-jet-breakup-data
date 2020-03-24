@@ -14,7 +14,7 @@ from jetbreakup import *
 #revno = lastchangedrevision[0:6]
 revno = None
 
-# macros_model_comparisons = open('../outputs/macros/model_comparisons.tex', 'w')
+macros_model_comparisons = open('../outputs/macros/model_comparisons.tex', 'w')
 
 print
 
@@ -60,6 +60,12 @@ D_32_CDRSV_R2 = coeff_of_determination(D_32_is_predicted, D_32_is_df['D_32/d_0']
 print 'R^2 =', D_32_CDRSV_R2
 print
 
+macros_model_comparisons.write(r'\newcommand{\CSMD}{'+roundstr(C_D_32_CDRSV)+'}\n')
+macros_model_comparisons.write(r'\newcommand{\CSMDRsquared}{'+roundstr(D_32_CDRSV_R2)+'}\n\n')
+
+D_32_is_df['D_32/d_0 predicted'] = D_32_is_predicted
+plot_with_keys(D_32_is_df, 'CDRSV', 'D_32/d_0 predicted', 'D_32/d_0', plot_type='loglog', add_line=True, revno=revno)
+
 with open('../outputs/data/TSB_D_32_is.pickle') as f:
    C_D_32, C_We_l0I_02 = pickle.load(f)
 D_32_is_predicted = C_D_32*(D_32_is_df['I_0']**(2.)*D_32_is_df['We_l0'])**(C_We_l0I_02)
@@ -98,6 +104,12 @@ print 'C_xiavg_CDRSV =', C_xiavg_CDRSV
 xiavgs_CDRSV_R2 = coeff_of_determination(xiavgs_predicted, xiavgs_df['x_i/d_0'])
 print 'R^2 =', xiavgs_CDRSV_R2
 print
+
+macros_model_comparisons.write(r'\newcommand{\Cxiavg}{'+roundstr(C_xiavg_CDRSV)+'}\n')
+macros_model_comparisons.write(r'\newcommand{\CxiavgRsquared}{'+roundstr(xiavgs_CDRSV_R2)+'}\n\n')
+
+xiavgs_df['x_i/d_0 predicted'] = xiavgs_predicted
+plot_with_keys(xiavgs_df, 'CDRSV', 'x_i/d_0 predicted', 'x_i/d_0', plot_type='loglog', add_line=True, revno=revno)
 
 with open('../outputs/data/TSB_xiavg.pickle') as f:
    C_x_i, C_We_l0I_03 = pickle.load(f)
@@ -150,6 +162,12 @@ print 'C_xbavg_CDRSV =', C_xbavg_CDRSV
 xbavg_CDRSV_R2 = coeff_of_determination(xbavgs_predicted, xbavgs_df_more['L_b/d_0'])
 print 'R^2 =', xbavg_CDRSV_R2
 print
+
+macros_model_comparisons.write(r'\newcommand{\Cxbavg}{'+roundstr(C_xbavg_CDRSV)+'}\n')
+macros_model_comparisons.write(r'\newcommand{\CxbavgRsquared}{'+roundstr(xbavg_CDRSV_R2)+'}\n\n')
+
+xbavgs_df_more['L_b/d_0 predicted'] = xbavgs_predicted
+plot_with_keys(xbavgs_df_more, 'CDRSV', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno)
 
 with open('../outputs/data/TSB_xbavg.pickle') as f:
    C_TSB, alpha_We, alpha_Re_l0_2WI, alpha_Tu_2WI, alpha_rho_s_2WI = pickle.load(f)
@@ -208,6 +226,9 @@ thetai_CDRSV_R2 = coeff_of_determination(thetai_predicted, thetai_df['theta'])
 print 'R^2 =', thetai_CDRSV_R2
 print
 
+macros_model_comparisons.write(r'\newcommand{\Cthetai}{'+roundstr(C_thetai_CDRSV)+'}\n')
+macros_model_comparisons.write(r'\newcommand{\CthetaiRsquared}{'+roundstr(thetai_CDRSV_R2)+'}\n')
+
 with open('../outputs/data/TSB_thetai.pickle') as f:
    C_theta, alpha_We_l0_theta, alpha_Tubar_0_theta = pickle.load(f)
 thetai_predicted = 2. * np.arctan(C_theta*thetai_df['I_0']**alpha_Tubar_0_theta*thetai_df['We_l0']**alpha_We_l0_theta)
@@ -217,38 +238,26 @@ print 'R^2 =', thetai_reg_R2
 print
 print
 
-f = open('../outputs/tables/model_coefficient_table.tex', 'w')
+f = open('../outputs/tables/model_coefficient_and_r2_table.tex', 'w')
 f.write(r'\begin{table}'+'\n')
 f.write(r'\centering'+'\n')
-f.write(r'\begin{tabular}{r|ccccc}'+'\n')
-f.write(r' & $D_{ij}$ & $\xiavg$ & $\xbavg$ & $\thetai$ \\'+'\n')
+f.write(r'\begin{tabular}{r|cccc|cccc}'+'\n')
+f.write(r' & \multicolumn{4}{c}{coefficients} & \multicolumn{4}{|c}{$R^2$} \\'+'\n')
+f.write(r' & $D_{ij}$ & $\xiavg$ & $\xbavg$ & $\thetai$ & $D_{ij}$ & $\xiavg$ & $\xbavg$ & $\thetai$ \\'+'\n')
 f.write(r'\hline'+'\n')
-f.write(r'Faeth & '+roundstr(C_D_32_CDRSV)+' & '+roundstr(C_xiavg_Faeth)+' & '+roundstr(C_xbavg_Faeth)+' & '+'---'+r' \\'+'\n')
-f.write(r'Huh & '+roundstr(C_D_32_Huh)+' & '+'---'+' & '+'---'+' & '+roundstr(C_thetai_Huh)+r' \\'+'\n')
-f.write(r'KH-RT & '+roundstr(C_D_32_KHRT)+' & '+'---'+' & '+roundstr(C_xbavg_KHRT)+' & '+roundstr(C_thetai_KHRT)+r' \\'+'\n')
-f.write(r'CDRSV & '+roundstr(C_D_32_CDRSV)+' & '+roundstr(C_xiavg_CDRSV)+' & '+roundstr(C_xbavg_CDRSV)+' & '+roundstr(C_thetai_CDRSV)+r' \\'+'\n')
+f.write(r'Faeth & '+roundstr(C_D_32_CDRSV)+' & '+roundstr(C_xiavg_Faeth)+' & '+roundstr(C_xbavg_Faeth)+' & '+'---'+r' & '+roundstr(D_32_CDRSV_R2)+' & '+roundstr(xiavgs_Faeth_R2)+' & '+roundstr(xbavg_Faeth_R2)+' & '+'---'+r' \\'+'\n')
+f.write(r'Huh & '+roundstr(C_D_32_Huh)+' & '+'---'+' & '+'---'+' & '+roundstr(C_thetai_Huh)+r' & '+roundstr(D_32_Huh_R2)+' & '+'---'+' & '+'---'+' & '+roundstr(thetai_Huh_R2)+r' \\'+'\n')
+f.write(r'KH-RT & '+roundstr(C_D_32_KHRT)+' & '+'---'+' & '+roundstr(C_xbavg_KHRT)+' & '+roundstr(C_thetai_KHRT)+r' & '+roundstr(D_32_KHRT_R2)+' & '+'---'' & '+roundstr(xbavg_KHRT_R2)+' & '+roundstr(thetai_KHRT_R2)+r' \\'+'\n')
+f.write(r'CDRSV & '+roundstr(C_D_32_CDRSV)+' & '+roundstr(C_xiavg_CDRSV)+' & '+roundstr(C_xbavg_CDRSV)+' & '+roundstr(C_thetai_CDRSV)+r' & '+roundstr(D_32_CDRSV_R2)+' & '+roundstr(xiavgs_CDRSV_R2)+' & '+roundstr(xbavg_CDRSV_R2)+' & '+roundstr(thetai_CDRSV_R2)+r' \\'+'\n')
+f.write(r'regression & --- & --- & --- & --- & '+roundstr(D_32_reg_R2)+' & '+roundstr(xiavgs_reg_R2)+' & '+roundstr(xbavg_reg_R2)+' & '+roundstr(thetai_reg_R2)+r' \\'+'\n')
 f.write(r'\end{tabular}'+'\n')
-f.write(r'\caption{Calibrated model coefficients for multiple models.}'+'\n')
+f.write(r'\caption{Calibrated model coefficients for multiple models and associated correlation coefficients ($R^2$).}'+'\n')
 f.write(r'\label{tab:model-coefficient-table}'+'\n')
 f.write(r'\end{table}'+'\n')
 f.close()
 
-f = open('../outputs/tables/model_r2_table.tex', 'w')
-f.write(r'\begin{table}'+'\n')
-f.write(r'\centering'+'\n')
-f.write(r'\begin{tabular}{r|ccccc}'+'\n')
-f.write(r' & $D_{ij}$ & $\xiavg$ & $\xbavg$ & $\thetai$ \\'+'\n')
-f.write(r'\hline'+'\n')
-f.write(r'Faeth & '+roundstr(D_32_CDRSV_R2)+' & '+roundstr(xiavgs_Faeth_R2)+' & '+roundstr(xbavg_Faeth_R2)+' & '+'---'+r' \\'+'\n')
-f.write(r'Huh & '+roundstr(D_32_Huh_R2)+' & '+'---'+' & '+'---'+' & '+roundstr(thetai_Huh_R2)+r' \\'+'\n')
-f.write(r'KH-RT & '+roundstr(D_32_KHRT_R2)+' & '+'---'' & '+roundstr(xbavg_KHRT_R2)+' & '+roundstr(thetai_KHRT_R2)+r' \\'+'\n')
-f.write(r'CDRSV & '+roundstr(D_32_CDRSV_R2)+' & '+roundstr(xiavgs_CDRSV_R2)+' & '+roundstr(xbavg_CDRSV_R2)+' & '+roundstr(thetai_CDRSV_R2)+r' \\'+'\n')
-f.write(r'regression & '+roundstr(D_32_reg_R2)+' & '+roundstr(xiavgs_reg_R2)+' & '+roundstr(xbavg_reg_R2)+' & '+roundstr(thetai_reg_R2)+r' \\'+'\n')
-f.write(r'\end{tabular}'+'\n')
-f.write(r'\caption{Coefficients of determination ($R^2$) for each model with calibrated model coefficients.}'+'\n')
-f.write(r'\label{tab:model-r2-table}'+'\n')
-f.write(r'\end{table}'+'\n')
-f.close()
+# close macros file
+macros_model_comparisons.close()
 
-# # close macros file
-# macros_model_comparisons.close()
+# TODO: Fix this hack that gets citations working in the legends.
+os.system("cd ../outputs/figures/ ; for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")
