@@ -1,7 +1,7 @@
 # TODO
 
 - Update to Python 3
-- Convert variable names to be consistent with papers (e.g., L_b ==> x_b, I_0 ==> Tubar_0)
+- Convert variable names to be consistent with papers (e.g., L_b ==> x_b, I_0 ==> Tubar_0, v_d_bar ==> vdavg)
 - Change regime names to be consistent with papers and not archaic
 - Add more data validation checks (see section below)
 - Add type hinting (both function and variable annotation, with latest syntax). Some links:

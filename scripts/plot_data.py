@@ -269,7 +269,7 @@ v_d_bar_is = df_jet_breakup[df_jet_breakup['v_d_bar/vp'].notnull()]
 v_d_bar_is = v_d_bar_is[v_d_bar_is['regime turb'] == 'turbulent']
 v_d_bar_is = v_d_bar_is[v_d_bar_is['Re_l0'] > 5000]
 v_d_bar_is = v_d_bar_is[v_d_bar_is['Ma_g'] < 0.4]
-v_d_bar_is = v_d_bar_is[v_d_bar_is['rho_s'] > 500]
+#v_d_bar_is = v_d_bar_is[v_d_bar_is['rho_s'] > 500]
 parameter_space_plots(v_d_bar_is, 'v_d_bar/vp', revno=revno)
 latex_summary_table(v_d_bar_is, 'v_d_bar/vp')
 
@@ -291,7 +291,7 @@ print
 
 macros_reg.write(r'\newcommand{\vdavgreg}{\frac{\vdavg}{\vprimebar{0}} = '+roundstr(C_v_d_bar)+r' \left(\Tubarexp{2} \Welo\right)^{'+roundstr(C_We_l0I_02)+'}}\n')
 macros_reg.write(r'\newcommand{\vdavgregrsquared}{'+roundstr(coeff_of_determination(v_d_bar_is['v_d_bar/vp predicted'], v_d_bar_is['v_d_bar/vp']))+'}\n')
-macros_reg.write(r'\newcommand{\vdbarregN}{\num{'+str(len(v_d_bar_is))+'}}\n')
+macros_reg.write(r'\newcommand{\vdavgregN}{\num{'+str(len(v_d_bar_is))+'}}\n')
 macros_reg.write('\n')
 
 # set the exponent manually to get C_{v_\text{d}} consistent with theory

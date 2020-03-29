@@ -75,6 +75,29 @@ print 'R^2 =', D_32_reg_R2
 print
 print
 
+#########################################
+# droplet velocity ($\vdavg/\vprime_0$) #
+#########################################
+
+print 'Droplet velocity:'
+print
+
+v_d_bar_is_df = df_jet_breakup[df_jet_breakup['v_d_bar/vp'].notnull()]
+v_d_bar_is_df = v_d_bar_is_df[v_d_bar_is_df['regime turb'] == 'turbulent']
+v_d_bar_is_df = v_d_bar_is_df[v_d_bar_is_df['Re_l0'] > 5000]
+v_d_bar_is_df = v_d_bar_is_df[v_d_bar_is_df['Ma_g'] < 0.4]
+
+CDRSV_func = v_d_bar_is_df['I_0']**(-2./5.)*v_d_bar_is_df['We_l0']**(-1./5.)
+C_v_d_bar_CDRSV = CDRSV_func.dot(v_d_bar_is_df['v_d_bar/vp']) / CDRSV_func.dot(CDRSV_func)
+v_d_bar_is_predicted = C_v_d_bar_CDRSV * CDRSV_func
+print 'C_v_d_bar_CDRSV =', C_v_d_bar_CDRSV, '(same for Faeth)'
+v_d_bar_CDRSV_R2 = coeff_of_determination(v_d_bar_is_predicted, v_d_bar_is_df['v_d_bar/vp'])
+print 'R^2 =', v_d_bar_CDRSV_R2
+print
+
+macros_model_comparisons.write(r'\newcommand{\Cvdavg}{'+roundstr(C_v_d_bar_CDRSV)+'}\n')
+macros_model_comparisons.write(r'\newcommand{\CvdavgRsquared}{'+roundstr(v_d_bar_CDRSV_R2)+'}\n\n')
+
 #######################################
 # breakup onset location (\xiavg/d_0) #
 #######################################
