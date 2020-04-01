@@ -71,10 +71,10 @@ C_b = exp(a)
 print 'C_b =', C_b
 print 'C_We_l0 =', C_We_l0
 
-L_bs_df['L_b/d_0 predicted'] = C_b * L_bs_df['We_l0']**C_We_l0
-Rsquared = coeff_of_determination(L_bs_df['L_b/d_0 predicted'], L_bs_df['L_b/d_0'])
-parameter_space_plots(L_bs_df, 'L_b/d_0', revno=revno, filename_extra='_We')
-plot_with_keys(L_bs_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_We')
+L_bs_df_more['L_b/d_0 predicted'] = C_b * L_bs_df_more['We_l0']**C_We_l0
+Rsquared = coeff_of_determination(L_bs_df_more['L_b/d_0 predicted'], L_bs_df_more['L_b/d_0'])
+parameter_space_plots(L_bs_df_more, 'L_b/d_0', revno=revno, filename_extra='_We')
+plot_with_keys(L_bs_df_more, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_We')
 print 'R^2 =', Rsquared
 print
 
@@ -94,8 +94,8 @@ a, C_Re_l0, C_We_l0, C_I_0 = result
 
 C_b = exp(a)
 
-L_bs_df['L_b/d_0 predicted'] = C_b * L_bs_df['Re_l0']**C_Re_l0 * L_bs_df['We_l0']**C_We_l0 * L_bs_df['I_0']**C_I_0
-Rsquared = coeff_of_determination(L_bs_df['L_b/d_0 predicted'], L_bs_df['L_b/d_0'])
+L_bs_df_more['L_b/d_0 predicted'] = C_b * L_bs_df_more['Re_l0']**C_Re_l0 * L_bs_df_more['We_l0']**C_We_l0 * L_bs_df_more['I_0']**C_I_0
+Rsquared = coeff_of_determination(L_bs_df_more['L_b/d_0 predicted'], L_bs_df_more['L_b/d_0'])
 
 delta_C_Re_l0 = scipy.stats.t.ppf(1 - (1 - interval_probability_level) / 2, len(L_bs_df) - 1) * (C_Re_l0 / sqrt(len(L_bs_df) - 2)) * sqrt(1 / Rsquared - 1)
 
@@ -107,8 +107,8 @@ print 'C_I_0   =', C_I_0
 macros_validation = open('../outputs/macros/validation.tex', 'w')
 macros_validation.write(r'\newcommand{\CRelowithuncertainty}{'+roundstr(C_Re_l0)+r' \pm \num{'+str(round(10000. * delta_C_Re_l0) / 10000.)+'}}\n')
 
-parameter_space_plots(L_bs_df, 'L_b/d_0', revno=revno, filename_extra='_all')
-plot_with_keys(L_bs_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_all')
+parameter_space_plots(L_bs_df_more, 'L_b/d_0', revno=revno, filename_extra='_all')
+plot_with_keys(L_bs_df_more, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_all')
 print 'R^2 =', Rsquared
 print
 
@@ -134,10 +134,10 @@ print 'C_We_l0 =', C_We_l0
 #print 'C_Re_l0 =', C_Re_l0
 print 'C_I_0   =', C_I_0
 
-L_bs_df['L_b/d_0 predicted'] = C_b * L_bs_df['We_l0']**C_We_l0 * L_bs_df['I_0']**C_I_0
-Rsquared = coeff_of_determination(L_bs_df['L_b/d_0 predicted'], L_bs_df['L_b/d_0'])
-parameter_space_plots(L_bs_df, 'L_b/d_0', revno=revno, filename_extra='_WeTu')
-plot_with_keys(L_bs_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_WeTu')
+L_bs_df_more['L_b/d_0 predicted'] = C_b * L_bs_df_more['We_l0']**C_We_l0 * L_bs_df_more['I_0']**C_I_0
+Rsquared = coeff_of_determination(L_bs_df_more['L_b/d_0 predicted'], L_bs_df_more['L_b/d_0'])
+parameter_space_plots(L_bs_df_more, 'L_b/d_0', revno=revno, filename_extra='_WeTu')
+plot_with_keys(L_bs_df_more, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_WeTu')
 print 'R^2 =', Rsquared
 print
 
@@ -160,10 +160,10 @@ C_b = exp(a)
 print 'C_b =', C_b
 print 'C_Re_l0 =', C_Re_l0
 
-L_bs_df['L_b/d_0 predicted'] = C_b * L_bs_df['Re_l0']**C_Re_l0
-Rsquared = coeff_of_determination(L_bs_df['L_b/d_0 predicted'], L_bs_df['L_b/d_0'])
-parameter_space_plots(L_bs_df, 'L_b/d_0', revno=revno, filename_extra='_Re')
-plot_with_keys(L_bs_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_Re')
+L_bs_df_more['L_b/d_0 predicted'] = C_b * L_bs_df_more['Re_l0']**C_Re_l0
+Rsquared = coeff_of_determination(L_bs_df_more['L_b/d_0 predicted'], L_bs_df_more['L_b/d_0'])
+parameter_space_plots(L_bs_df_more, 'L_b/d_0', revno=revno, filename_extra='_Re')
+plot_with_keys(L_bs_df_more, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_Re')
 print 'R^2 =', Rsquared
 print
 
