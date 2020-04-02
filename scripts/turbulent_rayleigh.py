@@ -56,11 +56,18 @@ Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df[
 #Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.)
 C_TR = Rayleigh_Weber_half_pow.dot(TR_df['L_b/d_0']) / Rayleigh_Weber_half_pow.dot(Rayleigh_Weber_half_pow)
 
+TR_RHS = 1./np.sinh(TR_df['L_b/d_0'] / TR_df['We_l0']**(1./2.))
+f      = friction_factor_smooth_array(TR_df['Re_l0'])
+TR_LHS = (f*TR_df['We_l0']/8.)**(1./2.)
+C_v    = TR_LHS.dot(TR_RHS)/TR_LHS.dot(TR_LHS)
+
+print 'C_v =', C_v
+
 summary_table(TR_df)
 
 avgTubar_0 = np.average(TR_df['I_0'])
 print 'Tubar =', avgTubar_0
-print 'ln(a/delta_0) model =', np.log((2./3.) * avgTubar_0**(-2.))
+print 'old ln(a/delta_0) model =', np.log((2./3.) * avgTubar_0**(-2.))
 # LATER: Would be nice to include the uncertainty from Tubar being estimated.
 
 # mansour_effect_1994 p. 134: "All breakup length data reported an average over 20 frames or more." The standard deviation of the breakup length is estimated from phinney_breakup_1973.
@@ -71,11 +78,17 @@ print 'ln(a/delta_0) Mansour      =', coefficient_Mansour
 print
 print 'ln(a/delta_0) regression   =', C_TR
 
+delta_0_s = 1./(2.*np.cosh(C_TR))
+delta_0_s = 1./(2.*np.exp(C_TR))
+print 'delta_0/d_0 regression =', format(delta_0_s, ".2e")
+
 # WON'T: Add statistical error from R^2
 
 #TR_df['L_b/d_0 predicted'] = np.log((2./3.) * TR_df['I_0']**(-2.)) * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0'])
 #TR_df['L_b/d_0 predicted'] = C_TR * TR_df['We_l0']**(1./2.)
-TR_df['L_b/d_0 predicted'] = C_TR * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0'])
+#TR_df['L_b/d_0 predicted'] = C_TR * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0'])
+#TR_df['L_b/d_0 predicted'] = np.arcsinh(1./(C_v * TR_df['I_0'] * TR_df['We_l0']**(1./2.))) * TR_df['We_l0']**(1./2.)
+TR_df['L_b/d_0 predicted'] = np.arcsinh(1./(C_v * (f*TR_df['We_l0']/8.)**(1./2.))) * TR_df['We_l0']**(1./2.)
 print 'R^2 =', coeff_of_determination(TR_df['L_b/d_0 predicted'], TR_df['L_b/d_0'])
 plot_with_keys(TR_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_turbulent_Rayleigh')
 
@@ -84,6 +97,7 @@ with open('../outputs/data/TR_xbavg.pickle', 'w') as f:
 
 macros_TR.write(r'\newcommand{\CTRtheory}{'+roundstr(np.log((2./3.) * avgTubar_0**(-2.)))+'}\n')
 macros_TR.write(r'\newcommand{\CTRnum}{'+roundstr(C_TR)+'}\n')
+macros_TR.write(r'\newcommand{\CvTR}{'+roundstr(C_v)+'}\n')
 macros_TR.write(r'\newcommand{\CTRrsquared}{'+roundstr(coeff_of_determination(TR_df['L_b/d_0 predicted'], TR_df['L_b/d_0']))+'}\n')
 macros_TR.write(r'\newcommand{\CTRN}{\num{'+str(len(TR_df))+'}}\n')
 

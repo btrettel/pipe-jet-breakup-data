@@ -274,7 +274,7 @@ f.write(r'KH-RT & '+roundstr(C_D_32_KHRT)+' & '+'---'+' & '+roundstr(C_xbavg_KHR
 f.write(r'CDRSV & '+roundstr(C_D_32_CDRSV)+' & '+roundstr(C_xiavg_CDRSV)+' & '+roundstr(C_xbavg_CDRSV)+' & '+roundstr(C_thetai_CDRSV)+r' & '+roundstr(D_32_CDRSV_R2)+' & '+roundstr(xiavgs_CDRSV_R2)+' & '+roundstr(xbavg_CDRSV_R2)+' & '+roundstr(thetai_CDRSV_R2)+r' \\'+'\n')
 f.write(r'regression & --- & --- & --- & --- & '+roundstr(D_32_reg_R2)+' & '+roundstr(xiavgs_reg_R2)+' & '+roundstr(xbavg_reg_R2)+' & '+roundstr(thetai_reg_R2)+r' \\'+'\n')
 f.write(r'\end{tabular}'+'\n')
-f.write(r'\caption{Calibrated model coefficients for multiple models and associated correlation coefficients ($R^2$).}'+'\n')
+f.write(r'\caption{Calibrated model coefficients for multiple models and associated coefficients of determination ($R^2$).}'+'\n')
 f.write(r'\label{tab:model-coefficient-table}'+'\n')
 f.write(r'\end{table}'+'\n')
 f.close()

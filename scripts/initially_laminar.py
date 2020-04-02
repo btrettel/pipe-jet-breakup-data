@@ -42,6 +42,9 @@ C_LR = Rayleigh_Weber_half_pow.dot(LR_df['L_b/d_0']) / Rayleigh_Weber_half_pow.d
 
 print 'C_LR = ', C_LR
 
+delta_0_s = 1./(2.*np.cosh(C_LR))
+print 'delta_0/d_0 =', format(delta_0_s, ".2e")
+
 LR_df['L_b/d_0 predicted'] = C_LR * (LR_df['We_l0']**(1./2.) + 3. * LR_df['We_l0'] / LR_df['Re_l0'])
 plot_with_keys(LR_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_laminar_Rayleigh')
 print 'R^2 =', coeff_of_determination(LR_df['L_b/d_0 predicted'], LR_df['L_b/d_0'])
