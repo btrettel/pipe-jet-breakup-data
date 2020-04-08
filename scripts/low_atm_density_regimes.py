@@ -285,10 +285,10 @@ plt.text(np.exp(0.5 * (np.log(1.e0) + np.log(We_Rto2WI[0]))), turb_Re_center, 't
 plt.text(5.e4, np.exp(0.5 * (np.log(Re_trans) + np.log(Re_stable))), 'downstream transition', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
 plt.text(np.exp(0.5 * (np.log(We_high) + np.log(1.e6))), np.exp(0.5 * (np.log(3.e0) + np.log(Re_stable))), r'$\frac{x_\text{trans}}{d_0} > 10^3$', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
 plt.text(np.exp(0.5 * (np.log(We_2WItoA[0]) + np.log(1.e6))), turb_Re_center, 'atomization', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
-plt.text(1.e3, np.exp(0.5*(np.log(Re_trans) + np.log(Re_turb))), r'transitional at nozzle exit ($\mathrm{Re}_{\ell0,\text{turb}}$ varies)', backgroundcolor='w', fontsize='small', verticalalignment='center', horizontalalignment='center', bbox=dict(boxstyle='square,pad=0.0',fc='white', ec='none'))
+plt.text(1.e3, np.exp(0.5*(np.log(Re_trans) + np.log(Re_turb))), r'transitional at nozzle outlet ($\mathrm{Re}_{\ell0,\text{turb}}$ varies)', backgroundcolor='w', fontsize='small', verticalalignment='center', horizontalalignment='center', bbox=dict(boxstyle='square,pad=0.0',fc='white', ec='none'))
 plt.text(np.exp(0.5 * (np.log(We_Rto2WI[0]) + np.log(We_2WItoA[0]))), turb_Re_center, 'turbulent\nsurf.\ breakup', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='center')
-plt.text(1.3e6, turb_Re_center, 'turb.\ at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
-plt.text(1.3e6, lam_Re_center, 'laminar at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, turb_Re_center, 'turb.\ at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, lam_Re_center, 'laminar at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
 plt.text(1.e3, 1.5e0, r'\textbf{do not use to determine regime}', backgroundcolor='w', verticalalignment='bottom', horizontalalignment='center', color='#777777')
 plt.xlabel(r'$\mathrm{We}_{\ell0}$')
 plt.ylabel(r'$\mathrm{Re}_{\ell0}$')
@@ -423,8 +423,8 @@ We_lo_arr = np.append(We_lo_arr, 1.)
 
 plt.loglog(We_lo_arr, Re_lo_arr, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 
-plt.text(1.3e6, turb_Re_center, 'turb.\ at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
-plt.text(1.3e6, lam_Re_center, 'laminar at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, turb_Re_center, 'turb.\ at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, lam_Re_center, 'laminar at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
 
 plt.text(1.e3, 1.5e0, r'\textbf{do not use to determine regime}', backgroundcolor='w', verticalalignment='bottom', horizontalalignment='center', color='#777777')
 
@@ -541,9 +541,9 @@ Oh_ItoII   = 135. * Re_0_arr**(-1.27)
 Oh_IItoIII = 741. * Re_0_arr**(-1.22)
 plt.loglog(Re_0_arr, Oh_ItoII, color='k', linewidth=0.8, linestyle='--')
 plt.loglog(Re_0_arr, Oh_IItoIII, color='k', linewidth=0.8, linestyle='--')
-plt.text(1.e2, 1.e-1, 'I', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
-plt.text(7.e2, 1.e-1, 'II', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
-plt.text(5.e3, 1.e-1, 'III', backgroundcolor='w', verticalalignment='center', horizontalalignment='center')
+plt.text(1.e2, 1.e-1, 'I', backgroundcolor='w', verticalalignment='center', horizontalalignment='center', bbox=dict(boxstyle='square,pad=0.0',fc='white', ec='none'))
+plt.text(7.e2, 1.e-1, 'II', backgroundcolor='w', verticalalignment='center', horizontalalignment='center', bbox=dict(boxstyle='square,pad=0.0',fc='white', ec='none'))
+plt.text(5.e3, 1.e-1, 'III', backgroundcolor='w', verticalalignment='center', horizontalalignment='center', bbox=dict(boxstyle='square,pad=0.0',fc='white', ec='none'))
 plt.xlabel(r'$\mathrm{Re}_{\ell0}$')
 plt.ylabel(r'$\mathrm{Oh}_{\ell0}$')
 plt.grid()
@@ -624,8 +624,8 @@ We_lo_arr = np.append(We_lo_arr, 1.)
 
 plt.loglog(We_lo_arr, Re_lo_arr, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 
-plt.text(1.3e6, turb_Re_center, 'turb.\ at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
-plt.text(1.3e6, lam_Re_center, 'laminar at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, turb_Re_center, 'turb.\ at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, lam_Re_center, 'laminar at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
 
 plt.text(1.e3, 1.5e0, r'\textbf{do not use to determine regime}', backgroundcolor='w', verticalalignment='bottom', horizontalalignment='center', color='#777777')
 
@@ -728,8 +728,8 @@ We_lo_arr = np.append(We_lo_arr, 1.)
 
 plt.loglog(We_lo_arr, Re_lo_arr, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
 
-plt.text(1.3e6, turb_Re_center, 'turb.\ at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
-plt.text(1.3e6, lam_Re_center, 'laminar at nozzle exit', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, turb_Re_center, 'turb.\ at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
+plt.text(1.3e6, lam_Re_center, 'laminar at noz.\ outlet', backgroundcolor='w', rotation=90, verticalalignment='center', horizontalalignment='left')
 
 plt.text(1.e3, 1.5e0, r'\textbf{do not use to determine regime}', backgroundcolor='w', verticalalignment='bottom', horizontalalignment='center', color='#777777')
 

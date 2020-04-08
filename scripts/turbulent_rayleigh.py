@@ -52,13 +52,17 @@ TR_df = TR_df[TR_df['key'] != 'mansour_effect_1994'] # Removing because it is in
 
 # #print 'C_TR R^2 =', coeff_of_determination(C_TR_predicted, C_TR_arr)
 
-Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0']
-#Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.)
+#Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0']
+Rayleigh_Weber_half_pow = TR_df['We_l0']**(1./2.)
 C_TR = Rayleigh_Weber_half_pow.dot(TR_df['L_b/d_0']) / Rayleigh_Weber_half_pow.dot(Rayleigh_Weber_half_pow)
 
+# TR_RHS = 1./np.sinh(TR_df['L_b/d_0'] / TR_df['We_l0']**(1./2.))
+# f      = friction_factor_smooth_array(TR_df['Re_l0'])
+# TR_LHS = (f*TR_df['We_l0']/8.)**(1./2.)
+# C_v    = TR_LHS.dot(TR_RHS)/TR_LHS.dot(TR_LHS)
+
 TR_RHS = 1./np.sinh(TR_df['L_b/d_0'] / TR_df['We_l0']**(1./2.))
-f      = friction_factor_smooth_array(TR_df['Re_l0'])
-TR_LHS = (f*TR_df['We_l0']/8.)**(1./2.)
+TR_LHS = TR_df['I_0']*TR_df['We_l0']**(1./2.)
 C_v    = TR_LHS.dot(TR_RHS)/TR_LHS.dot(TR_LHS)
 
 print 'C_v =', C_v
@@ -86,51 +90,27 @@ print 'delta_0/d_0 regression =', format(delta_0_s, ".2e")
 
 #TR_df['L_b/d_0 predicted'] = np.log((2./3.) * TR_df['I_0']**(-2.)) * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0'])
 #TR_df['L_b/d_0 predicted'] = C_TR * TR_df['We_l0']**(1./2.)
+const_CTR_R2 = coeff_of_determination(C_TR * TR_df['We_l0']**(1./2.), TR_df['L_b/d_0'])
+
 #TR_df['L_b/d_0 predicted'] = C_TR * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0'])
-#TR_df['L_b/d_0 predicted'] = np.arcsinh(1./(C_v * TR_df['I_0'] * TR_df['We_l0']**(1./2.))) * TR_df['We_l0']**(1./2.)
-TR_df['L_b/d_0 predicted'] = np.arcsinh(1./(C_v * (f*TR_df['We_l0']/8.)**(1./2.))) * TR_df['We_l0']**(1./2.)
+TR_df['L_b/d_0 predicted'] = np.arcsinh(1./(C_v * TR_df['I_0'] * TR_df['We_l0']**(1./2.))) * TR_df['We_l0']**(1./2.)
+#TR_df['L_b/d_0 predicted'] = np.arcsinh(1./(C_v * (f*TR_df['We_l0']/8.)**(1./2.))) * TR_df['We_l0']**(1./2.)
 print 'R^2 =', coeff_of_determination(TR_df['L_b/d_0 predicted'], TR_df['L_b/d_0'])
 plot_with_keys(TR_df, 'correlation', 'L_b/d_0 predicted', 'L_b/d_0', plot_type='linear', add_line=True, revno=revno, filename_extra='_turbulent_Rayleigh')
 
 with open('../outputs/data/TR_xbavg.pickle', 'w') as f:
-   pickle.dump(C_TR, f)
+   pickle.dump([C_TR, C_v], f)
 
 macros_TR.write(r'\newcommand{\CTRtheory}{'+roundstr(np.log((2./3.) * avgTubar_0**(-2.)))+'}\n')
 macros_TR.write(r'\newcommand{\CTRnum}{'+roundstr(C_TR)+'}\n')
 macros_TR.write(r'\newcommand{\CvTR}{'+roundstr(C_v)+'}\n')
 macros_TR.write(r'\newcommand{\CTRrsquared}{'+roundstr(coeff_of_determination(TR_df['L_b/d_0 predicted'], TR_df['L_b/d_0']))+'}\n')
-macros_TR.write(r'\newcommand{\CTRN}{\num{'+str(len(TR_df))+'}}\n')
-
-# A = np.column_stack([np.ones(len(TR_df)), Rayleigh_Weber_half_pow])
-# B = TR_df['L_b/d_0']
-
-# result, _, _, _ = np.linalg.lstsq(A, B)
-# a, C_TR_2 = result
-
-# print
-# print 'intercept =', a
-# print 'ln(a/delta_0) regression (2) =', C_TR_2
-# print 'R^2 (alt) =', coeff_of_determination(a + C_TR_2 * (TR_df['We_l0']**(1./2.) + 3. * TR_df['We_l0'] / TR_df['Re_l0']), TR_df['L_b/d_0'])
-# print
-
-# A = np.column_stack([np.ones(len(TR_df)), np.log(TR_df['We_l0'])])
-# B = np.log(TR_df['L_b/d_0'])
-
-# result, _, _, _ = np.linalg.lstsq(A, B)
-# a, C_We_TR = result
-
-# C_TR_3 = np.exp(a)
-
-# print
-# print 'C_TR_3 =', a
-# print 'C_We_TR =', C_We_TR
-# print 'R^2 (alt) =', coeff_of_determination(C_TR_3 * TR_df['We_l0']**C_We_TR, TR_df['L_b/d_0'])
-# print
+macros_TR.write(r'\newcommand{\constCTRrsquared}{'+roundstr(const_CTR_R2)+'}\n')
+macros_TR.write(r'\newcommand{\CTRN}{\num{'+str(len(TR_df))+'}}\n\n')
 
 print 'R^2 (TSB regression) =', coeff_of_determination(breakup_length(TR_df['I_0'], TR_df['We_l0']), TR_df['L_b/d_0'])
-# 2020-02-25: Given the poor fit with the data, I thought about trying the TSB regression. At least this is lower than what I have above! That indicates that the turbulent Rayleigh regime can't be best modeled like the TSB regime. The two do appear quite different in their extreme forms, but near the border determining which is which is difficult. I suspect that some sort of "random jump" model may reproduce a non-Rayleigh scaling and fit the turbulent Rayleigh data better.
 
-# TODO: Determine \Welocritinfty from data.
+# TODO: Determine \Welocrit from data.
 
 i = 0
 combined_regime_array = []
@@ -325,6 +305,42 @@ plt.close()
 #plt.grid()
 #plt.savefig('../outputs/figures/Rto2WI_function_approximation.png')
 #plt.close()
+
+# Analyze vliem_influence_1975 data.
+# "Vliem" case is the one with the highest Tu, restriction number 1 with L_0/d_0 = 10.
+
+print
+
+Tu_pipe_centerline  = np.sqrt(0.00224)
+Tu_Vliem_centerline = np.sqrt(0.0095)
+
+print Tu_pipe_centerline, Tu_Vliem_centerline, Tu_Vliem_centerline/Tu_pipe_centerline
+
+T_Vliem           = 15 # C, p. 20
+Re_l0_Vliem       = 5000.
+Ubar_0_Vliem      = 1.25 # m/s, p. 42
+sigma_Vliem       = 73e-3 # N/m, p. 42
+rho_l_Vliem       = 1000. # kg/m^3, p. 42
+d_0_Vliem         = 4.e-3 # m
+pipe_u_prime_plus = 2.65546295174 # approximate value at r/r_0 = 0.901313801666
+pipe_max_u_prime  = pipe_u_prime_plus * np.sqrt(friction_factor_smooth(Re_l0_Vliem) / 8.)
+Vliem_max_u_prime = np.sqrt(0.048)
+We_l0_Vliem       = rho_l_Vliem * Ubar_0_Vliem**2. * d_0_Vliem / sigma_Vliem
+C_TR_Vliem        = 0.19 / (d_0_Vliem * We_l0_Vliem**0.5)
+# Seems that Vliem is among those with a higher value of C_TR.
+
+Tubar_0_pipe      = I_fully_developed(friction_factor_smooth(Re_l0_Vliem))
+Tubar_0_Vliem_est = Tubar_0_pipe * (Vliem_max_u_prime / pipe_max_u_prime)
+print Tubar_0_pipe, Tubar_0_Vliem_est, Tubar_0_Vliem_est/Tubar_0_pipe
+
+C_TR_pipe  = C_TR_from_file(Tubar_0_pipe, We_l0_Vliem)
+C_TR_Vliem = C_TR_from_file(Tubar_0_Vliem_est, We_l0_Vliem)
+print C_TR_pipe, C_TR_Vliem, C_TR_Vliem/C_TR_pipe
+
+macros_TR.write(r'\newcommand{\Vliemcenterlinefactor}{'+roundstr(Tu_Vliem_centerline/Tu_pipe_centerline, 2)+'}\n')
+macros_TR.write(r'\newcommand{\Vliempeakfactor}{'+roundstr(Vliem_max_u_prime / pipe_max_u_prime, 2)+'}\n')
+macros_TR.write(r'\newcommand{\Vliembarfactor}{'+roundstr(Tubar_0_Vliem_est/Tubar_0_pipe, 2)+'}\n')
+macros_TR.write(r'\newcommand{\VliemCTRfactor}{'+roundstr(C_TR_Vliem/C_TR_pipe, 2)+'}\n')
 
 # TODO: Fix this hack that gets citations working in the legends.
 os.system("cd ../outputs/figures/ ; for i in *.pgf; do sed -i 's/TdTEi/\_/g' $i; done")

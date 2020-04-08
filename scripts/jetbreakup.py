@@ -1073,10 +1073,11 @@ def C_LR_from_file():
       C_LR = pickle.load(f)
       return C_LR
 
-def C_TR_from_file():
+def C_TR_from_file(Tubar_0, We_l0):
    with open(root_dir+'outputs/data/TR_xbavg.pickle') as f:
-      C_TR = pickle.load(f)
-      return C_TR
+      C_TR, C_v = pickle.load(f)
+      #return C_TR
+      return np.arcsinh(1./(C_v * Tubar_0 * We_l0**(1./2.)))
 
 def atoi(text):
    return int(text) if text.isdigit() else text
@@ -1209,7 +1210,7 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
    xbavg_center = 4.e1
    
    C_LR = C_LR_from_file()
-   C_TR = C_TR_from_file()
+   #C_TR = C_TR_from_file()
    
    K = 0.37 # clanet_transition_1999
    t = 0.   # tube thickness
@@ -1270,7 +1271,7 @@ def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
             
             if We < We_l0_crit_TR(Tu):
                # turbulent Rayleigh
-               xbavgs = C_TR * (We**0.5 + 3. * We / Re)
+               xbavgs = C_TR_from_file(Tu, We) * (We**0.5 + 3. * We / Re)
                if not(TR_bool):
                   TR_bool = True
                   plt.axvline(We, marker=None, color='k', zorder=4, linewidth=0.8, linestyle='--')
