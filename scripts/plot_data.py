@@ -119,6 +119,18 @@ macros_reg.write(r'\newcommand{\xbavgregNstudies}{\num{'+str(len(key_array))+'}}
 macros_reg.write(r'\newcommand{\xbavgTurange}{$\num{'+str(round(100.*np.amin(L_bs_df_more['I_0']), 1))+r'}\% \leq \Tubar_0 \leq \num{'+str(round(100.*np.amax(L_bs_df_more['I_0']), 1))+'}\%$}\n')
 macros_reg.write('\n')
 
+TR_RHS = 1./np.sinh(L_bs_df['L_b/d_0'] / L_bs_df['We_l0']**(1./2.))
+TR_LHS = L_bs_df['I_0']*L_bs_df['We_l0']**(1./2.)
+C_v    = TR_LHS.dot(TR_RHS)/TR_LHS.dot(TR_LHS)
+
+print 'C_v =', C_v
+
+L_bs_df['L_b/d_0 predicted Weber'] = np.arcsinh(1./(C_v * L_bs_df['I_0'] * L_bs_df['We_l0']**(1./2.))) * L_bs_df['We_l0']**(1./2.)
+print 'R^2 for C_v =', coeff_of_determination(L_bs_df['L_b/d_0 predicted Weber'], L_bs_df['L_b/d_0'])
+
+macros_reg.write(r'\newcommand{\CvTSB}{'+roundstr(C_v)+'}\n')
+macros_reg.write(r'\newcommand{\CvTSBrsquared}{'+roundstr(coeff_of_determination(L_bs_df['L_b/d_0 predicted Weber'], L_bs_df['L_b/d_0']))+'}\n\n')
+
 ######################################
 # initial breakup location (x_i/d_0) #
 ######################################
