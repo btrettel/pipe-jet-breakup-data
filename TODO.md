@@ -132,6 +132,7 @@
 - rajendran_experimental_2017/rajendran_experimental_2012
 - kiaoulias_evaluation_2019 (has pressure drop so I can better estimate f!)
 - patrascu_dominant-wavelength_2019 (unclear on length of nozzle)
+- torregrosa_study_2020 (See section 2.5. This is DNS, but does not report any breakup quantities.)
 
 # Data validation
 

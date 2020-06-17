@@ -338,7 +338,7 @@ nu_l  = nu_water(T_std)
 sigma = sigma_water(T_std)
 Re_0_arr = np.logspace(0., 6., 1e2)
 We_0_arr = (rho_l * nu_l**2.) / (sigma * d_0) * Re_0_arr**2.
-plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r'$d_0 =$ 7~mm, water', zorder=1)
+plt.loglog(We_0_arr, Re_0_arr, linestyle='dashdot', marker=None, label=r'$d_0 =$ 7~mm, water', zorder=1, color='k', linewidth=0.8)
 
 # "conventional" case
 # # n-dodecane
@@ -363,7 +363,7 @@ sigma = 21.74e-3 # N/m
 Re_0_arr = np.logspace(0., 6., 1e2)
 We_0_arr = (rho_l * nu_l**2.) / (sigma * d_0) * Re_0_arr**2.
 #plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r"$d_0 =$ 3~mm, $n$-dodecane (``conventional'' progression)", zorder=1)
-plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r"$d_0 =$ 1~mm, isopropyl alcohol (``conventional'' progression)", zorder=1)
+plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r"$d_0 =$ 1~mm, isopropyl alcohol (``conventional'' progression)", zorder=1, color='k', linewidth=0.8)
 
 # Spray A
 #d_0 = 90.e-6 # m, https://ecn.sandia.gov/diesel-spray-combustion/target-condition/spray-ab/
@@ -373,7 +373,7 @@ nu_l  = 1.34e-3 / rho_l # m^2/s, https://en.wikipedia.org/wiki/Dodecane
 sigma = 25.35e-3 # N/m, http://www.surface-tension.de/
 Re_0_arr = np.logspace(0., 6., 1e2)
 We_0_arr = (rho_l * nu_l**2.) / (sigma * d_0) * Re_0_arr**2.
-plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r'$d_0 =$ 50~$\mu$m, $n$-dodecane', zorder=1)
+plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r'$d_0 =$ 50~$\mu$m, $n$-dodecane', zorder=1, color='gray', linewidth=0.8)
 #plt.loglog(We_0_arr, Re_0_arr, linestyle='-', marker=None, label=r'Spray A, diesel', zorder=1)
 
 ## Like Reitz (1978)
