@@ -969,7 +969,7 @@ def parameter_space_plots(df_variable, variable, revno=None, trajectory=False, f
       plot_with_keys(df_variable, 'parameter_space_'+variable+filename_extra, 'Re_l0', 'I_0', plot_type='semilogx', revno=revno)
    else:
       plot_with_keys(df_variable, 'parameter_space_'+variable+filename_extra, 'We_l0', 'Re_l0', revno=revno, label_with_nozzle_type=True)
-      plot_with_keys(df_variable, 'parameter_space_'+variable+filename_extra, 'Fr_0', 'avg_x_b/d_0', plot_type='linear', revno=revno, label_with_nozzle_type=True)
+      plot_with_keys(df_variable, 'parameter_space_'+variable+filename_extra, 'Fr_0', 'xbavg/d_0', plot_type='linear', revno=revno, label_with_nozzle_type=True)
       plot_with_keys(df_variable, 'parameter_space_'+variable+filename_extra, 'Fr_h_0', 'theta_0', plot_type='semilogx', revno=revno, label_with_nozzle_type=True)
 
 def escape_key(key):
@@ -1048,9 +1048,9 @@ def spray_angle(Tu_0, We_l0):
       #return 2. * np.arctan(C_theta * Tu_0**C_I_0 * We_l0**C_We_l0)
    
    with open(root_dir+'outputs/data/TSB_thetai.pickle') as f:
-      C_theta, C_We_l0 = pickle.load(f)
+      C_theta, alpha_We_l0_theta, alpha_Tubar_0_theta = pickle.load(f)
       
-      return 2. * np.arctan(C_theta * We_l0**C_We_l0)
+      return 2. * np.arctan(C_theta * We_l0**alpha_We_l0_theta * Tu_0**alpha_Tubar_0_theta)
 
 def breakup_length(Tu_0, We_l0):
    #return 3.5453 * Tu_0**(-0.2623) * We_l0**0.3387
@@ -1123,17 +1123,6 @@ def D_32_s(x_s, We_l0):
    # see 2018-08-30 handwritten notes for the derivation
    return 0.54 * (x_s / We_l0**0.54)**0.57
 
-def eta_max_func(C_d, rho_s, Fr_0, D_max_s, avg_x_b_s, theta_0, Fr_h_0, alpha):
-   C_d_s = (3. / 2.) * (C_d / rho_s) * (Fr_0 / D_max_s) * (1. - alpha)**2.
-   
-   a = 1. + ((avg_x_b_s / Fr_0) * np.sin(theta_0) - 0.5 * (avg_x_b_s / Fr_0)**2. + 1. / Fr_h_0) * (C_d_s * np.cos(theta_0))**2.
-   b = 1. + C_d_s * (np.sin(theta_0) - avg_x_b_s / Fr_0) * np.cos(theta_0)
-   
-   eta_max_max_s_analytical = (-a/b - np.real(lambertw(-np.exp(-a/b)/b, -1))) / C_d_s + avg_x_b_s * np.cos(theta_0) / Fr_0;
-   eta_max_max_analytical   = eta_max_max_s_analytical / np.sqrt(1. + 2. / Fr_h_0)
-   
-   return eta_max_max_analytical
-
 def m_to_in(d):
    return d / 25.4e-3
 
@@ -1155,41 +1144,6 @@ def K_c(P_out, P_v, rho_l, Ubar_0, K_L, f, L_0s):
    # (P_in - P_v) / (0.5 * rho_l * Ubar_0**2)
    # P_in is rarely provided so instead I estimate it.
    return (P_out - P_v) / (0.5 * rho_l * Ubar_0**2) + 1 + K_L + f * L_0s
-
-def f_FDS(D, D_FDS, gamma, sigma=None):
-   if D <= D_FDS:
-      if sigma is None:
-         sigma = 2. / (sqrt(2. * np.pi) * log(2.) * gamma)
-      f = (1. / (D * sigma * sqrt(2. * np.pi))) * exp(-0.5 * (log(D / D_FDS) / sigma)**2.)
-   else:
-      f = 0.693 * gamma * D_FDS**(-gamma) * D**(gamma - 1.) * exp(-0.693 * (D / D_FDS)**gamma)
-   
-   return f
-
-def integrand(D, p, D_FDS, gamma, sigma=None):
-   return D**p * f_FDS(D, D_FDS, gamma, sigma=sigma)
-
-def charD(p, q, D_FDS, gamma, D_max=np.inf, sigma=None):
-   numerator   = quad(integrand, 0., D_max, args=(p, D_FDS, gamma, sigma))[0]
-   denominator = quad(integrand, 0., D_max, args=(q, D_FDS, gamma, sigma))[0]
-   return (numerator / denominator)**(1./(p - q))
-
-def f_lognormal(D, D_FDS, sigma):
-   f = (1. / (D * sigma * sqrt(2. * np.pi))) * exp(-0.5 * (log(D / D_FDS) / sigma)**2.)
-   
-   return f
-
-def integrand_lognormal(D, p, D_FDS, sigma):
-   return D**p * f_lognormal(D, D_FDS, sigma)
-
-def charD_lognormal(p, q, D_FDS, sigma, D_max=np.inf):
-   numerator   = quad(integrand_lognormal, 1.e-3, D_max, args=(p, D_FDS, sigma))[0]
-   denominator = quad(integrand_lognormal, 1.e-3, D_max, args=(q, D_FDS, sigma))[0]
-   #print denominator
-   return (numerator / denominator)**(1./(p - q))
-
-def Wu_D32s(xs, We_l0):
-   return 0.54 * (xs / (We_l0**(0.54)))**(0.57)
 
 def stability_curve(d_0, rho_l, nu_l, sigma, filename, output_dir=root_dir):
    We_corner_FtoS = 1.e2
