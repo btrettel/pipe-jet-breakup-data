@@ -1019,7 +1019,7 @@ def convert_variable_to_latex(variable):
    elif variable == 'v_d_bar/vp':
       return r'$\langle v_\text{d} \rangle / \overline{v^\prime_0}$'+extra
    elif variable == 'eta_R_max':
-      return r'$\eta_\text{max}$'+extra
+      return r'$\eta_R$'+extra
    elif variable == 'theta_0':
       return r'$\theta_0$'+extra
    elif variable == 'xbavg/d_0':
