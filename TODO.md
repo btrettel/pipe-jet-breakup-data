@@ -102,7 +102,10 @@
   - fig. 9: \rhol/\rhog \approx 0.8, highest Re \approx 1500
 - van_den_akker_spontaneous_1980 (long enough for laminar fully developed flow?)
 - abbott_analysis_1982
+- bright_minimum_1985/bright_continuous_1983: See 1985 p. 60R: > hypodermic needle
 - eroglu_coaxial_1991/eroglu_initial_1991/eroglu_wave_1991/farago_morphological_1992/farago_parametric_1990
+- tadrist_experimental_1991
+- sakai_relation_1992
 - Add breakup lengths from sauerwein_theoretische_1992 pp. 121--122? Not clear without translation if this is fully developed
 - mayer_zur_1993/mayer_coaxial_1994/mayer_rocket_1995
 - olinger_lock-states_1993 (forced dripping)
@@ -112,6 +115,7 @@
 - Based on the same figure as the previous line's TODO, so does wu_effects_1995.
 - Add amagai_frequency_1997/arai_surface_1999
 - leroux_break-up_1997 (ask Prof. Dumouchel for data, redundant with leroux_stability_1996?)
+- han_characterization_1998 (p. 8500R: "Then the water is directed to a vertical metallic pipe with a length of 500 mm and an internal diameter of 600 mm.")
 - mun_effects_1998 (L_0/d_0 = 25.6. Not long enough for laminar jets?)
 - rhim_measurement_1998 (breakup lengths)
 - Add tamaki_effects_1998
@@ -120,9 +124,12 @@
 - Add godelle_symbolic_2000
 - Add malot_experimental_2001 (has a L_0/d_0 = 50 case; ask Prof. Dumouchel for data)
 - blaisot_instabilities_2003
+- cossali_new_1993 (p. 238L: "hypodermic needles", laminar Rayleigh only based on table 1)
 - tang_laminar_2003/tang_cylindrical_2004
 - aalburg_primary_2005/aalburg_deformation_2002 (has data with no cross-flow: fig. 4, figs. 7--9)
 - badens_laminar_2005
+- zhu_study_2007
+- wan_experiment_2008
 - Add spray angle from osta_effect_2010 pdf p. 70
 - Add salyers_spray_2010
 - umemura_two-valued_2011
@@ -134,6 +141,9 @@
 - patrascu_dominant-wavelength_2019 (unclear on length of nozzle)
 - torregrosa_study_2020 (See section 2.5. This is DNS, but does not report any breakup quantities.)
 - felis_experimental_2020
+- wang_experimental_2020
+- de_la_torre_experiments_2020
+- watanabe_evaluation_2020
 
 # Data validation
 
