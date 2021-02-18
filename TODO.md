@@ -72,6 +72,7 @@
 - Get more spray angles from photos.
 - Add more data from Phinney for various atmospheric densities. (Not sure what I meant by this. I'll check if all of Phinney's data has been added.)
 - Re-add data from wu_liquid_1992. Type raw data in and process to produce the Weber number, e.g., table B.5 has velocities not entered in the spreadsheet. Compare this against the one in there right now, which I believe was produced from figures? Also check that the Weber and Reynolds numbers are actually higher than 1e6 as this is the only data I have that high.
+- smith_experiments_1917/tyler_characteristic_1924/tyler_experiments_1932/tyler_instability_1933 (I guess these all use pipe nozzles. The breakup length might not correspond precisely to the definition I use, but should be useful to determine the breakup length regime. The mercury data is fairly unique and could indicate there's a different regime for laminar jets at low We but relatively high Re. This would also imply that the downstream transition regime extends to much lower Weber numbers than I expected.)
 - duffie_factors_1953/duffie_factors_1951
 - richardson_mechanism_1954
 - keith_liquid-liquid_1955/keith_drop_1951
@@ -87,7 +88,7 @@
 - kroesser_stability_1968, kroesser_viscoelastic_1969
 - takahashi_effect_1969, takahashi_laminar_1971/kitamura_stability_1986, takahashi_stability_1972/takahashi_breakup_1972/takahashi_laminar_1971, kitamura_stability_1982
 - Add fenn_newtonian_1969/fenn_ambient_1968 (Should be useful to examine density ratio effects on LR-DT boundary.)
-- rutland_theoretical_1970 (see p. 1692R: 4 mm diameter, 30 cm length nozzle)
+- rutland_theoretical_1970/rutland_liquid_1970/rutland_non-linear_1971 (forced jets; see p. 1692R: 4 mm diameter, 30 cm length nozzle)
 - skelland_dispersed_1971/minhas_dispersed_1969
 - gordon_non-newtonian_1973 (both Newtonian and non-Newtonian fluids)
 - parkin_production_1973 (p. 67: nozzle not long enough)
@@ -134,6 +135,7 @@
 - Add salyers_spray_2010
 - umemura_two-valued_2011
 - Add walker_effect_2012
+- wegener_formation_2014 (L_0/d_0 = 15; see p. 145R)
 - moallemi_breakup_2016 (see pdf p. 10)
 - omocea_breakup_2016 (unclear on length of nozzle)
 - rajendran_experimental_2017/rajendran_experimental_2012

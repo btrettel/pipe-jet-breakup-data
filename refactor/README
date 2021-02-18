@@ -1,0 +1,86 @@
+For tabular data, add columns for whether the number was double-checked like in the PB-AD index.
+
+Split compilation script into multiple files. generate_database.py calls a series of individual files, one for each study. Each individual file contains a function that modifies the database file.
+
+Add new columns to the database for the column number and file that the data originally came from.
+
+Have a function to more easily check if certain numbers are identical. E.g., use to check consistency with redundant data.
+
+Make functions to compute Reynolds, Weber, Ohnesorge, etc. numbers for consistency. Have assertions on liquid and gas properties to make sure that the appropriate properties are used.
+
+Make functions to convert between Reynolds, Weber, and the Ohnesorge number given two of them.
+
+Use Pint Python package to do unit conversions to keep these consistent.
+
+Use functions to check if liquid properties provided are plausible. E.g., assert(nu_is_plausible('water', nu_water))
+Check both values and dimensions.
+This is particularly good for surface tension as surface tension takes relatively narrow values, and I sometimes can't remember the dimensions.
+
+Use functions to add data rather than running SQL commands. Pass the connection as an argument? Make these functions have standard assertions.
+
+Have a test script. Try to load faulty data (out of bounds, etc.) to check if the assertions, database constraints, etc., work. Have unit tests for every function (obviously not including the data functions). Try fuzz testing?
+   https://docs.python-guide.org/writing/tests/
+   https://pytest-cov.readthedocs.io/en/latest/readme.html#usage
+
+Make the test script load dummy data for testing purposes for each study. The dummy data should all return the same database so you can test that. This will test whether the script is reading and converting the data correctly.
+
+Use docstrings and docstring tests.
+
+Do a sensitivity analysis on the data. Randomly perturb every data point and see which perturbations change the results of an analysis the most.
+
+Check for duplicate data.
+
+Check that all data points from the file are loaded.
+
+Have a log file for things that are unusual but not fatal.
+
+Output the most extreme value in each variable (large and small) to the log file.
+
+Use functions to read data from the database and automatically associate the uncertainty with each data point.
+
+Have standard functions to perform regression. Functions for power law, single coefficient, linear. Switch later to Bayesian regression factoring in the uncertainty?
+
+Calculate AIC.
+
+Check hash of raw data for each file.
+
+https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
+   https://news.ycombinator.com/item?id=23336050
+
+setup.py or something similar?
+   https://news.ycombinator.com/item?id=23380113
+   https://docs.python.org/3/distutils/setupscript.html
+   https://lobste.rs/s/q6ymgl/new_python_project_starter_tool_with
+   https://lobste.rs/s/c5cpd0/ultimate_setup_for_your_next_python
+
+https://andreacensi.github.io/contracts/
+   https://www.reddit.com/r/Python/comments/49yrtp/defensive_programming_in_python/d0w4hvv/
+
+https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html
+https://www.pluralsight.com/guides/defensive-programming-in-python
+https://www.reddit.com/r/Python/comments/49yrtp/defensive_programming_in_python/
+https://levelup.gitconnected.com/preventing-and-handling-bugs-with-python-562c78568166
+   logging module
+https://news.ycombinator.com/item?id=23386537
+
+https://lobste.rs/s/rramoc/fil_new_python_memory_profiler_for_data
+
+require keyword arguments
+   https://lobste.rs/s/bcdstd/keyword_only_arguments_python
+
+type hints
+   https://hernandigiorgi.com/how-to-gradually-start-adding-type-hints-to-a-python-project/
+
+static analysis
+   https://lobste.rs/s/k5umvd/crosshair_static_analysis_tool_for
+
+https://drewdevault.com/2020/06/06/Add-a-contrib-directory.html
+   https://news.ycombinator.com/item?id=23440865
+
+https://www.software.ac.uk/resources/online-sustainability-evaluation
+
+https://dmerej.info/blog/post/python-tests-tips/
+
+https://dmerej.info/blog/post/crafting-command-line-outputs/
+
+https://grst.github.io/bioinformatics/2020/07/16/hallmarks-scientific-software.html
