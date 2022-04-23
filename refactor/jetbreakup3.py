@@ -46,7 +46,18 @@ lastchangeddate     = datetime.utcfromtimestamp(headcommit.authored_date).strfti
 
 # Configure Pint
 
-ureg = pint.UnitRegistry(system='mks',  auto_reduce_dimensions=True)
+ureg = pint.UnitRegistry(system='mks', auto_reduce_dimensions=True)
 ureg.setup_matplotlib()
 
-# TODO: CSV reader function which has a similar user interface to Pandas (i.e., df['name']) but in this case also handles units automatically obtained from the header.
+# TODO: CSV reader function which has a similar user interface to Pandas (i.e., df['name']) but in this case also handles units automatically obtained from the header and uncertainties in a standardized way.
+
+# constants
+# TODO: Add uncertainties and units
+# TODO: For g and P_atm, it would be wise to add uncertanties based on how likely these are to be near the standard value. I'd expect both to vary a bit.
+# TODO: https://en.wikipedia.org/wiki/Gravitational_acceleration#Gravity_model_for_Earth
+g      = 9.80665 # m/s, <https://en.wikipedia.org/wiki/Standard_gravity>
+MW_air = 28.97   # kg/kmol
+MW_N2  = 2*14.007  # kg/kmol
+P_atm  = 101325.  # Pa
+Rbar  = 8.31446261815324e3  # J/(kmol*K), <https://en.wikipedia.org/wiki/Gas_constant>
+T_zero = 273.15  # K

@@ -29,6 +29,8 @@
 - Test all functions used. Start with assertions on all inputs and outputs (test bounds and dimensions), [Hypothesis for property testing](https://datascience.blog.wzb.eu/2019/11/08/property-based-testing-for-scientific-code-in-python/) and [doctest](https://en.wikipedia.org/wiki/Doctest).
 - [Require keyword arguments](http://www.jefftk.com/p/require-keyword-arguments)
 - Start using Pylint regularly.
+- Use AIC in addition to R^2 in model comparisons.
+- Add transcription error to all data
 
 # Output data format
 
@@ -63,7 +65,7 @@
 ### Disadvantages 
 
 - Doesn't support booleans (but 0 and 1 are okay)
-- Harder run queries than pandas in most cases
+- Harder-to-run queries than pandas in most cases
 
 # Data sources to add
 
@@ -90,6 +92,7 @@
 - Add fenn_newtonian_1969/fenn_ambient_1968 (Should be useful to examine density ratio effects on LR-DT boundary.)
 - rutland_theoretical_1970/rutland_liquid_1970/rutland_non-linear_1971 (forced jets; see p. 1692R: 4 mm diameter, 30 cm length nozzle)
 - skelland_dispersed_1971/minhas_dispersed_1969
+- butler_production_1972
 - gordon_non-newtonian_1973 (both Newtonian and non-Newtonian fluids)
 - parkin_production_1973 (p. 67: nozzle not long enough)
 - skelland_jet_1974/johnson_jet_1973
@@ -103,6 +106,7 @@
   - fig. 9: \rhol/\rhog \approx 0.8, highest Re \approx 1500
 - van_den_akker_spontaneous_1980 (long enough for laminar fully developed flow?)
 - abbott_analysis_1982
+- snyder_new_1982
 - bright_minimum_1985/bright_continuous_1983: See 1985 p. 60R: > hypodermic needle
 - eroglu_coaxial_1991/eroglu_initial_1991/eroglu_wave_1991/farago_morphological_1992/farago_parametric_1990
 - tadrist_experimental_1991
@@ -115,6 +119,7 @@
 - Add Ruff and Tseng data, which apparently has low \rhol/\rhog photographic regimes according to wu_effects_1995 p. 189, fig. 7 (pdf p. 15) / faeth_structure_1995 p. 117, fig. 1.5.
 - Based on the same figure as the previous line's TODO, so does wu_effects_1995.
 - Add amagai_frequency_1997/arai_surface_1999
+- karasawa_determining_1997
 - leroux_break-up_1997 (ask Prof. Dumouchel for data, redundant with leroux_stability_1996?)
 - han_characterization_1998 (p. 8500R: "Then the water is directed to a vertical metallic pipe with a length of 500 mm and an internal diameter of 600 mm.")
 - mun_effects_1998 (L_0/d_0 = 25.6. Not long enough for laminar jets?)
@@ -133,19 +138,28 @@
 - wan_experiment_2008
 - Add spray angle from osta_effect_2010 pdf p. 70
 - Add salyers_spray_2010
+- cordero_quantitative_2011
 - umemura_two-valued_2011
 - Add walker_effect_2012
 - wegener_formation_2014 (L_0/d_0 = 15; see p. 145R)
 - moallemi_breakup_2016 (see pdf p. 10)
+- neumann_influencing_2016
 - omocea_breakup_2016 (unclear on length of nozzle)
 - rajendran_experimental_2017/rajendran_experimental_2012
 - kiaoulias_evaluation_2019 (has pressure drop so I can better estimate f!)
 - patrascu_dominant-wavelength_2019 (unclear on length of nozzle)
 - torregrosa_study_2020 (See section 2.5. This is DNS, but does not report any breakup quantities.)
+   - salvador_study_2021
+   - crialesi-esposito_effects_2021 (has more on breakup, could be useful)
 - felis_experimental_2020
 - wang_experimental_2020
 - de_la_torre_experiments_2020
+- sadek_etude_2020 (liquid metal, L_0/d_0 = 20 for one case as mentioned on p. 49)
 - watanabe_evaluation_2020
+- liu_penzui_2021
+- chen_transition_2021 (maybe; nozzle is not described)
+- sinha_effect_2021 (jet in crossflow)
+- daskiran_impact_2022
 
 # Data validation
 
