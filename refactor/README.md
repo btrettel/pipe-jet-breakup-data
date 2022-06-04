@@ -1,0 +1,39 @@
+- Add LaTeX definition of many quantities in the JSON file, for example: $\mathrm{We}_{\text{j}0} \equiv \rho_\text{j} \overline{U}_0^2 d_0 / sigma$.
+- For tabular data, add columns for whether the number was double-checked like in the PB-AD index.
+- Split compilation script into multiple files. generate_database.py calls a series of individual files, one for each study. Each individual file contains a function that modifies the database file.
+- Make functions to compute Reynolds, Weber, Ohnesorge, etc. numbers for consistency. Have assertions on liquid and gas properties to make sure that the appropriate properties are used.
+- Make functions to convert between Reynolds, Weber, and the Ohnesorge number given two of them.
+- Use functions to check if liquid properties provided are plausible. E.g., assert(nu_is_plausible('water', nu_water)). Check both values and dimensions. This is particularly good for surface tension as surface tension takes relatively narrow values, and I sometimes can't remember the dimensions.
+- Do a sensitivity analysis on the data. Randomly perturb every data point and see which perturbations change the results of an analysis the most.
+- pytest
+- logging
+- Use Make rather than having people guess what script to run.
+- Issue: estimating uncertainty for Kusui's turbulence intensity. Might be better to exclude Kusui and use newer data as it comes in. Could add an option to the Makefile to ignore certain citation keys.
+- Look at cavitation model from edge_scaling_2009 for cavitation criteria to use.
+- Knudsen number:
+    - <https://en.wikipedia.org/wiki/Knudsen_number>
+    - gad-el-hak_fluid_1999 p. 8R:
+        - Navier-Stokes equations with no-slip boundary conditions: $\mathrm{Kn} \leq 10^{-3}$
+        - Navier-Stokes equations with slip boundary conditions: $10^{-3} \leq \mathrm{Kn} \leq 10^{-1}$
+    - mean free path for liquids:
+        - see 2022-06-01 handwritten notes for simple estimate: \lambda \approx (MW_j / (N_A * rho_j))^(1/3)
+        - kirby_micro-_2013
+            - p. 31: > For liquids such as water, the mean free path is of the order of 0.2 Å
+            - p. 484: > For liquid flows, the mean free path of molecules is of the order of 0.2 times the diameter of the molecule. Thus the continuum approximation is quite sound for length scales greater than about ten molecular diameters, approximately 2–5 nm for water.
+        - <https://www.researchgate.net/post/In-the-laminar-flow-of-a-nanofluid-with-a-liquid-base-fluid-can-we-use-Knudsen-number-to-show-that-the-liquid-phase-can-be-treated-as-a-continuum>
+        - <https://physics.stackexchange.com/questions/619485/infering-the-mean-distance-from-density>
+        - <https://books.google.com/books?id=_gdEDwAAQBAJ&pg=PT55&dq=liquid+%22mean+free+path%22&hl=en&newbks=1&newbks_redir=0#v=onepage&q=liquid%20%22mean%20free%20path%22&f=false>
+            - > [...] the diameter of the N$_2$ molecule is only 0.31 nm [...] The mean free path for N$_2$ molecules in the liquid phase [...] is 0.39 nm, which is only slightly larger than the molecule diameter.
+- Add percentage in each regime to summary table
+- Change ranges on prepare_data.py to use scientific notation as appropriate
+- Upper case variable names are constants like Rbar, MW, temperature, etc.
+
+Stages:
+
+- Phinney breakup length standard deviation derivation (including uncertainty)
+- pipe turbulence intensity regression
+    - add more data
+        - Add additional data from lawn_application_1970 and DNS studies to turbulence intensity correlation
+    - compute \overline{k} given u', v', and w' fields
+    - estimating missing velocity direction given other two
+- jet breakup data compilation

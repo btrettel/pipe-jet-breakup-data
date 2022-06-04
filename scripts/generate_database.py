@@ -40,13 +40,6 @@ print
 
 # TODO: Does Pandas automatically treat the missing data in D_10 correctly?
 
-# TODO: Add ECN conditions:
-# https://ecn.sandia.gov/diesel-spray-combustion/target-condition/spray-ab/
-# https://ecn.sandia.gov/diesel-spray-combustion/experimental-diagnostics/
-# https://ecn.sandia.gov/workshop/ECN2/SprayDev&Vap%20-%20Abstract.pdf
-# TODO: Range testing nuisance variables. http://www.artofsoaking.com/2017/04/28/thoughts-on-water-gun-water-blaster-range-testing-2017/ : > As noted above, beyond the wind variable, I became more acutely aware of two other variables that can adversely affect stream performance: nozzle jitters and water gas content.
-# Other nuisance variables: alberdi_strategies_2011 ("the fluid storage and delivery apparatus should not be treated as an afterthought [Alberdi et al. [2011], Ramesh et al. [2004]" from rouly_design_2015), bardi_engine_2012, meijer_engine_2012, payri_engine_2014, pei_engine_2015
-
 # Can't disambiguate variables.
 # CAN'T: See if you can convert van_de_sande_surface_1973 fig. 3 data to spray angle.
 # CAN'T: Add branam_injection_2002 fig. 25 p. 8 if this is possible. Might not be able to get unambiguous Re, We, etc. values.
@@ -995,7 +988,7 @@ df_chen_mechanics_1962['roughness']     = 'rough'
 df_chen_mechanics_1962['f page fig']    = 'p. 75, fig. 23'
 df_chen_mechanics_1962['pipe material'] = 'PVC pipe' # p. 31: > Four sizes of smooth Kraloy rigid unplasticized polyvinyl chloride pipe
 df_chen_mechanics_1962['est f']         = False
-df_chen_mechanics_1962['check FD']      = True # p. 26: > A part of this study thus involved measurement of the pressure distribution along the longitudinal axis of the pipe in order to insure that fulyl developed turbulent flow existed prior to the discharge from the pipe.
+df_chen_mechanics_1962['check FD']      = True # p. 26: > A part of this study thus involved measurement of the pressure distribution along the longitudinal axis of the pipe in order to insure that fully developed turbulent flow existed prior to the discharge from the pipe.
 # p. 33: > This was confirmed through indirect observation of the pressure fluctuations, hydraulic gradient along the test pipe and also by periodic gravimetric measurement of the flow.
 
 df_chen_mechanics_1962['t/d_0']       = np.nan # TODO Check photo 4.

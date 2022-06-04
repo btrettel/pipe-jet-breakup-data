@@ -1,0 +1,650 @@
+{
+    "variables": [
+        {
+            "variable": "citation_key",
+            "datatype": "str",
+            "description": "citation key",
+            "not_null": true
+        },
+        {
+            "variable": "alt_citation_key",
+            "datatype": "str",
+            "description": "alternative citation key",
+        },
+        {
+            "variable": "jet_fluid",
+            "datatype": "str",
+            "description": "jet fluid",
+            "not_null": true
+        },
+        {
+            "variable": "jet_fluid_phase",
+            "datatype": "str",
+            "description": "jet fluid phase",
+            "not_null": true,
+            "set": ["liquid", "gas", "supercritical"]
+        },
+        {
+            "variable": "ambient_fluid",
+            "datatype": "str",
+            "description": "ambient fluid",
+            "not_null": true
+        },
+        {
+            "variable": "ambient_fluid_phase",
+            "datatype": "str",
+            "description": "ambient fluid phase",
+            "not_null": true,
+            "set": ["liquid", "gas", "supercritical"]
+        },
+        {
+            "variable": "degas",
+            "datatype": "bool",
+            "description": "ambient fluid"
+        },
+        {
+            "variable": "regulation",
+            "datatype": "str",
+            "description": "what sort of pressure regulation was used"
+        },
+        {
+            "variable": "bend",
+            "datatype": "bool",
+            "description": "whether a bend was used before the nozzle"
+        },
+        {
+            "variable": "flow_straightener",
+            "datatype": "bool",
+            "description": "whether a flow straightener was used before the nozzle"
+        },
+        {
+            "variable": "screen",
+            "datatype": "bool",
+            "description": "whether a flow screen was used before the nozzle"
+        },
+        {
+            "variable": "contraction_shape",
+            "datatype": "str",
+            "description": "shape of the contraction before the nozzle",
+            "set": ["smooth", "re-entrant", "sudden", "somewhat sudden", "mostly sudden", "rough"]
+        },
+        {
+            "variable": "diameter_contraction_ratio",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$c_\\text{d}$",
+            "description": "ratio of upstream diameter to downstream diameter of the contraction before the nozzle",
+            "not_null": true,
+            "lower_bound": 0
+        },
+        {
+            "variable": "trip",
+            "datatype": "bool",
+            "description": "whether a turbulence trip is present before the nozzle"
+        },
+        {
+            "variable": "L_r/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$L_\\text{r}/d_0$",
+            "description": "length of rough section",
+            "lower_bound": 0
+        },
+        {
+            "variable": "eps_r/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\epsilon_\\text{r}/d_0$",
+            "description": "length of rough section",
+            "lower_bound": 0
+        },
+        {
+            "variable": "L_0/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$L_0/d_0$",
+            "description": "length of nozzle",
+            "lower_bound": 0
+        },
+        {
+            "variable": "roughness",
+            "datatype": "str",
+            "description": "roughness of the nozzle",
+            "not_null": true,
+            "set": ["smooth", "rough"]
+        },
+        {
+            "variable": "f_page_fig",
+            "datatype": "str",
+            "description": "page and/or figure describing the roughness of the nozzle"
+        },
+        {
+            "variable": "pipe_material",
+            "datatype": "str",
+            "description": "material the nozzle is made of"
+        },
+        {
+            "variable": "est_f",
+            "datatype": "bool",
+            "description": "whether the friction factor was estimated or not"
+        },
+        {
+            "variable": "checked_FD",
+            "datatype": "bool",
+            "description": "whether the flow was checked to be fully developed"
+        },
+        {
+            "variable": "t/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$t/d_0$",
+            "description": "thickness of the nozzle outlet",
+            "lower_bound": 0
+        },
+        {
+            "variable": "L_tip/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$L_\\text{tip}/d_0$",
+            "description": "length of the smooth section at the nozzle outlet",
+            "lower_bound": 0
+        },
+        {
+            "variable": "end_checked",
+            "datatype": "bool",
+            "description": "whether the outlet of the nozzle was checked for irregularities or protuberances / is square"
+        },
+        {
+            "variable": "orientation",
+            "datatype": "str",
+            "description": "the direction of the nozzle with respect to gravity",
+            "set": ["down", "horizontal", "angled", "up"]
+        },
+        {
+            "variable": "vibration_isolation",
+            "datatype": "bool",
+            "description": "whether the experimental apparatus is isolated from uncontrolled vibrations"
+        },
+        {
+            "variable": "d_chamber/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$d_\\text{chamber}/d_0$",
+            "description": "diameter of the chamber the jet is in",
+            "lower_bound": 0
+        },
+        {
+            "variable": "We_j0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{We}_{\\text{j}0}$",
+            "description": "jet bulk Weber number",
+            "not_null": true,
+            "lower_bound": 0
+        },
+        {
+            "variable": "Re_j0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Re}_{\\text{j}0}$",
+            "description": "jet bulk Reynolds number",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 1e8
+        },
+        {
+            "variable": "Tubar_j0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\overline{\\mathrm{Tu}}_{\text{j}0}$",
+            "description": "jet plane-averaged turbulence intensity",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 0.2
+        },
+        {
+            "variable": "We_a0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{We}_{\\text{a}0}$",
+            "description": "ambient co-flow bulk Weber number",
+            "not_null": true,
+            "lower_bound": 0
+        },
+        {
+            "variable": "Re_a0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Re}_{\\text{a}0}$",
+            "description": "ambient co-flow bulk Reynolds number",
+            "not_null": true,
+            "lower_bound": 0
+        },
+        {
+            "variable": "Tubar_a0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\overline{\\mathrm{Tu}}_{\text{a}0}$",
+            "description": "ambient co-flow plane-averaged turbulence intensity",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 0.2
+        },
+        {
+            "variable": "We_ax0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{We}_{\\text{ax}0}$",
+            "description": "ambient cross-flow bulk Weber number",
+            "not_null": true,
+            "lower_bound": 0
+        },
+        {
+            "variable": "Re_ax0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Re}_{\\text{ax}0}$",
+            "description": "ambient cross-flow bulk Reynolds number",
+            "not_null": true,
+            "lower_bound": 0
+        },
+        {
+            "variable": "Tubar_ax0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\overline{\\mathrm{Tu}}_{\text{ax}0}$",
+            "description": "ambient cross-flow plane-averaged turbulence intensity",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 0.2
+        },
+        {
+            "variable": "Fr_j0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Fr}_{\text{j}0}$",
+            "description": "jet bulk Froude number",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 1e5
+        },
+        {
+            "variable": "rho_s",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\rho_\\text{j}/\\rho_\\text{a}$",
+            "description": "jet-to-ambient density ratio",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 1e5
+        },
+        {
+            "variable": "est_rho_s",
+            "datatype": "bool",
+            "description": "whether the density ratio was estimated or not",
+            "not_null": true
+        },
+        {
+            "variable": "nu_s",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\nu_\\text{j}/\\nu_\\text{a}$",
+            "description": "jet-to-ambient kinematic viscosity ratio",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 100
+        },
+        {
+            "variable": "est_nu_s",
+            "datatype": "bool",
+            "description": "whether the kinematic viscosity ratio was estimated or not",
+            "not_null": true
+        },
+        {
+            "variable": "K_c",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$K_\\text{c}$",
+            "description": "cavitation number",
+            "not_null": true
+        },
+        {
+            "variable": "Ja_j",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Ja}_\\text{j}$",
+            "description": "Jakob number",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 1e4
+        },
+        {
+            "variable": "B",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$B$",
+            "description": "$B$ from siebers_scaling_1999 eq. 7",
+            "not_null": true,
+            "lower_bound": 0
+        },
+        {
+            "variable": "Ma_a",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Ma}_\\text{a}$",
+            "description": "ambient fluid Mach number; $\\equiv \\overline{U}_0/c_\\text{a}$, where $c_\\text{a}$ is the speed of sound of the ambient fluid",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 5
+        },
+        {
+            "variable": "Ma_j",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Ma}_\\text{j}$",
+            "description": "jet fluid Mach number; $\\equiv \\overline{U}_0/c_\\text{j}$, where $c_\\text{j}$ is the speed of sound of the jet fluid",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 5
+        },
+        {
+            "variable": "Lambda_r_s",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\Lambda_\\text{r}/d_0$",
+            "description": "dimensionless jet fluid radial integral scale",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 1
+        },
+        {
+            "variable": "Kn_j0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Kn}_{\\text{j}0}$",
+            "description": "jet fluid Knudsen number; $\\equiv \\mathcal{L}_\\text{j}/d_0$, where $\\mathcal{L}_\\text{h}$ is the mean free path of the jet fluid",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 1
+        },
+        {
+            "variable": "Kn_a0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\mathrm{Kn}_{\\text{j}0}$",
+            "description": "ambient fluid Knudsen number; $\\equiv \\mathcal{L}_\\text{a}/d_0$, where $\\mathcal{L}_\\text{a}$ is the mean free path of the ambient fluid",
+            "not_null": true,
+            "lower_bound": 0,
+            "upper_bound": 1
+        },
+        {
+            "variable": "regime_image",
+            "datatype": "str",
+            "description": "regime determined from images",
+            "set": ["D", "D/LR", "D/TR", "LR", "LR/DT", "LR/TR", "LR/TSB", "DT", "DT/TR", "DT/TSB", "DT/A", "TR", "TR/TSB", "TR/A", "TSB",, "TSB/A", "A"]
+        },
+        {
+            "variable": "regime_xbavg",
+            "datatype": "str",
+            "description": "regime determined from breakup length",
+            "set": ["D", "D/LR", "D/TR", "LR", "LR/DT", "LR/TR", "LR/TSB", "DT", "DT/TR", "DT/TSB", "DT/A", "TR", "TR/TSB", "TR/A", "TSB",, "TSB/A", "A"]
+        },
+        {
+            "variable": "regime_turb",
+            "datatype": "str",
+            "description": "turbulent/laminar regime",
+            "not_null": true,
+            "set": ["laminar", "transitional", "turbulent"]
+        },
+        {
+            "variable": "is_cavitating",
+            "datatype": "bool",
+            "description": "whether the flow is cavitating"
+        },
+        {
+            "variable": "xbavg/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\langle x_\text{b} \rangle / d_0$",
+            "description": "dimensionless average jet breakup length",
+            "lower_bound": 0,
+            "upper_bound": 2000,
+            "related_variables": true
+        },
+        {
+            "variable": "xbavg_method",
+            "datatype": "str",
+            "description": "average jet breakup length measurement method",
+            "set": ["photographic", "electrical conductivity", "internally-illuminated jet", "other imaging"]
+        },
+        {
+            "variable": "theta_i",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\theta_\text{i}$",
+            "description": "spray angle; full spray angle, not half spray angle, in radians",
+            "lower_bound": 0,
+            "upper_bound": 0.79,
+            "related_variables": true
+        },
+        {
+            "variable": "D_10/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$D_{10}/d_0$",
+            "description": "dimensionless arithmetic mean droplet diameter",
+            "lower_bound": 0,
+            "upper_bound": 0.5,
+            "related_variables": true
+        },
+        {
+            "variable": "D_30/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$D_{30}/d_0$",
+            "description": "dimensionless mass/volume mean droplet diameter",
+            "lower_bound": 0,
+            "upper_bound": 0.5,
+            "related_variables": true
+        },
+        {
+            "variable": "D_32/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$D_{32}/d_0$",
+            "description": "dimensionless Sauter mean droplet diameter",
+            "lower_bound": 0,
+            "upper_bound": 0.5,
+            "related_variables": true
+        },
+        {
+            "variable": "D_mode/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$D_\text{mode}/d_0$",
+            "description": "most common droplet diameter",
+            "lower_bound": 0,
+            "upper_bound": 0.5,
+            "related_variables": true
+        },
+        {
+            "variable": "droplet_x/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$x/d_0$",
+            "description": "location of droplet diameter measurement",
+            "lower_bound": 0,
+            "upper_bound": 1000,
+            "related_variables": true
+        },
+        {
+            "variable": "droplet_method",
+            "datatype": "str",
+            "description": "droplet diameter measurement method",
+            "set": ["photographic", "electrical", "optical disdrometer", "stain method", "wax method"]
+        },
+        {
+            "variable": "v_d_bar/vp",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\\langle v_\\text{d} \\rangle / \\overline{v^\\prime_0}$",
+            "description": "",
+            "lower_bound": 0,
+            "upper_bound": 10,
+            "related_variables": true
+        },
+        {
+            "variable": "e_p",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$e_\\text{p}$",
+            "description": "droplet ellipticity",
+            "lower_bound": 0,
+            "related_variables": true
+        },
+        {
+            "variable": "x_trans/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$x_\\text{trans}/d_0$",
+            "description": "dimensionless turbulence transition location",
+            "lower_bound": 0,
+            "upper_bound": 1000,
+            "related_variables": true
+        },
+        {
+            "variable": "xiavg/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\langle x_\\text{i} \rangle/d_0$",
+            "description": "dimensionless breakup onset location",
+            "lower_bound": 0,
+            "upper_bound": 1000,
+            "related_variables": true
+        },
+        {
+            "variable": "xeavg/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\langle x_\\text{e} \rangle/d_0$",
+            "description": "dimensionless breakup end location",
+            "lower_bound": 0,
+            "upper_bound": 1000,
+            "related_variables": true
+        },
+        {
+            "variable": "image_filename",
+            "datatype": "str",
+            "description": "filename for a image of the jet condition"
+        },
+        {
+            "variable": "image_page_fig",
+            "datatype": "str",
+            "description": "page and/or figure of image"
+        },
+        {
+            "variable": "exposure_time",
+            "datatype": "float",
+            "units": "second",
+            "latex": "$t_\\text{exposure}$",
+            "description": "exposure time",
+            "lower_bound": 0,
+            "upper_bound": 1000,
+            "related_variables": true
+        },
+        {
+            "variable": "flash",
+            "datatype": "bool",
+            "description": "whether a flash was used or not"
+        },
+        {
+            "variable": "x_low/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$x_\\text{low}/d_0$",
+            "description": "spatial location of lower end of image",
+            "lower_bound": 0,
+            "upper_bound": 2000
+        },
+        {
+            "variable": "x_mid/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$x_\\text{mid}/d_0$",
+            "description": "spatial location of middle of image",
+            "lower_bound": 0,
+            "upper_bound": 2000
+        },
+        {
+            "variable": "x_high/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$x_\\text{high}/d_0$",
+            "description": "spatial location of high end of image",
+            "lower_bound": 0,
+            "upper_bound": 2000
+        },
+        {
+            "variable": "spectrum",
+            "datatype": "str",
+            "description": "image spectrum",
+            "set": ["visible", "IR"]
+        },
+        {
+            "variable": "lighting",
+            "datatype": "str",
+            "description": "type of lighting used",
+            "set": ["diffuse background", "diffuse background and front", "front", "background", "stroboscope", "ambient, outdoors"]
+        },
+        {
+            "variable": "background_color",
+            "datatype": "str",
+            "description": "color of the image background",
+            "set": ["light", "black"]
+        },
+        {
+            "variable": "grid",
+            "datatype": "bool",
+            "description": "whether a grid was used or not"
+        },
+        {
+            "variable": "distance",
+            "datatype": "float",
+            "units": "meter",
+            "latex": "$d_\text{image}$",
+            "description": "distance between jet and camera lens",
+            "lower_bound": 0
+        },
+        {
+            "variable": "f-stop",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$F$",
+            "description": "f-stop of camera lens",
+            "lower_bound": 0
+        },
+        {
+            "variable": "focal_length",
+            "datatype": "float",
+            "units": "millimeter",
+            "latex": "$f$",
+            "description": "focal length of camera lens",
+            "lower_bound": 0
+        },
+        {
+            "variable": "camera_model",
+            "datatype": "str",
+            "description": "specific model of camera used"
+        },
+        {
+            "variable": "sensor",
+            "datatype": "str",
+            "description": "type of image sensor used"
+        },
+        {
+            "variable": "motion_compensation",
+            "datatype": "bool",
+            "description": "whether the image was motion-compensated or not"
+        }
+    ]
+}

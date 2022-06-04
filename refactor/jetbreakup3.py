@@ -19,7 +19,7 @@ import os
 from scipy import interpolate
 
 # Configuration
-data_file = 'pipe-jet-breakup-data'
+db_file = 'pipe-jet-breakup-data.sqlite'
 
 # determine root_dir
 repo = Repo(str(__file__), search_parent_directories=True)
@@ -49,12 +49,10 @@ lastchangeddate     = datetime.utcfromtimestamp(headcommit.authored_date).strfti
 ureg = pint.UnitRegistry(system='mks', auto_reduce_dimensions=True)
 ureg.setup_matplotlib()
 
-# TODO: CSV reader function which has a similar user interface to Pandas (i.e., df['name']) but in this case also handles units automatically obtained from the header and uncertainties in a standardized way.
-
 # constants
 # TODO: Add uncertainties and units
-# TODO: For g and P_atm, it would be wise to add uncertanties based on how likely these are to be near the standard value. I'd expect both to vary a bit.
-# TODO: https://en.wikipedia.org/wiki/Gravitational_acceleration#Gravity_model_for_Earth
+# TODO: For g and P_atm, it would be wise to add uncertainties based on how likely these are to be near the standard value. I'd expect both to vary a bit.
+# TODO: https://en.wikipedia.org/wiki/Theoretical_gravity#Somigliana_equation
 g      = 9.80665 # m/s, <https://en.wikipedia.org/wiki/Standard_gravity>
 MW_air = 28.97   # kg/kmol
 MW_N2  = 2*14.007  # kg/kmol

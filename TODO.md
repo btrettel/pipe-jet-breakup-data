@@ -74,6 +74,8 @@
 - Get more spray angles from photos.
 - Add more data from Phinney for various atmospheric densities. (Not sure what I meant by this. I'll check if all of Phinney's data has been added.)
 - Re-add data from wu_liquid_1992. Type raw data in and process to produce the Weber number, e.g., table B.5 has velocities not entered in the spreadsheet. Compare this against the one in there right now, which I believe was produced from figures? Also check that the Weber and Reynolds numbers are actually higher than 1e6 as this is the only data I have that high.
+- Add missing xiavg, D, etc. data from Sallam
+
 - smith_experiments_1917/tyler_characteristic_1924/tyler_experiments_1932/tyler_instability_1933 (I guess these all use pipe nozzles. The breakup length might not correspond precisely to the definition I use, but should be useful to determine the breakup length regime. The mercury data is fairly unique and could indicate there's a different regime for laminar jets at low We but relatively high Re. This would also imply that the downstream transition regime extends to much lower Weber numbers than I expected.)
 - duffie_factors_1953/duffie_factors_1951
 - richardson_mechanism_1954
@@ -88,7 +90,7 @@
 - dotson_study_1967
 - newman_preliminary_1967
 - kroesser_stability_1968, kroesser_viscoelastic_1969
-- takahashi_effect_1969, takahashi_laminar_1971/kitamura_stability_1986, takahashi_stability_1972/takahashi_breakup_1972/takahashi_laminar_1971, kitamura_stability_1982
+- (could be useful for turbulent regimes paper) takahashi_effect_1969, takahashi_laminar_1971/kitamura_stability_1986, takahashi_stability_1972/takahashi_breakup_1972/takahashi_laminar_1971, kitamura_stability_1982/kitamura_stability_1986, takahashi_laminar_1972-1/kitamura_stability_1986
 - Add fenn_newtonian_1969/fenn_ambient_1968 (Should be useful to examine density ratio effects on LR-DT boundary.)
 - rutland_theoretical_1970/rutland_liquid_1970/rutland_non-linear_1971 (forced jets; see p. 1692R: 4 mm diameter, 30 cm length nozzle)
 - skelland_dispersed_1971/minhas_dispersed_1969
@@ -96,24 +98,29 @@
 - gordon_non-newtonian_1973 (both Newtonian and non-Newtonian fluids)
 - parkin_production_1973 (p. 67: nozzle not long enough)
 - skelland_jet_1974/johnson_jet_1973
-- van_de_sande_air_1974 fig III.13 (pdf p. 41), fig. III.15 (turbulent Rayleigh, pdf p. 43; also see van_de_sande_jet_1976 p. 221L), fig. III.17 (can't disambiguate, pdf p. 46, also van_de_sande_surface_1973 fig. 3); van_de_sande_air_1974 pdf p. "each value plotted is the arithmetic mean of at least five photographs"
+- (*) van_de_sande_air_1974 fig III.13 (pdf p. 41), fig. III.15 (turbulent Rayleigh, pdf p. 43; also see van_de_sande_jet_1976 p. 221L), fig. III.17 (can't disambiguate, pdf p. 46, also van_de_sande_surface_1973 fig. 3); van_de_sande_air_1974 pdf p. "each value plotted is the arithmetic mean of at least five photographs"
 - dunn_high_1975/dunn_stability_1974
-- lafrance_capillary_1975 (most experimental results are forced, but p. 78 has some earlier unforced data), lafrance_drop_1974 (droplet size and breakup length in laminar and turbulent Rayleigh regimes)
+- (*) lafrance_capillary_1975 (most experimental results are forced, but p. 78 has some earlier unforced data), lafrance_drop_1974 (droplet size and breakup length in laminar and turbulent Rayleigh regimes)
 - vliem_influence_1975/sterling_mechanisms_1981 (droplet size and breakup length for turbulent Rayleigh)
+- nurick_orifice_1976 (cavitation)
 - skelland_dispersed_1977
 - kitamura_influence_1978
   - fig. 8: \rhol/\rhog \approx 1.3, highest Re \approx 3000
   - fig. 9: \rhol/\rhog \approx 0.8, highest Re \approx 1500
+- chow_experimental_1980/sterling_mechanisms_1981 (same experimental setup in drawing); chow_experimental_1980 p. 33: when the jet becomes turbulent
 - van_den_akker_spontaneous_1980 (long enough for laminar fully developed flow?)
 - abbott_analysis_1982
 - snyder_new_1982
 - bright_minimum_1985/bright_continuous_1983: See 1985 p. 60R: > hypodermic needle
+- kitamura_critical_1986
 - eroglu_coaxial_1991/eroglu_initial_1991/eroglu_wave_1991/farago_morphological_1992/farago_parametric_1990
 - tadrist_experimental_1991
 - sakai_relation_1992
 - Add breakup lengths from sauerwein_theoretische_1992 pp. 121--122? Not clear without translation if this is fully developed
+- (*) Add downstream droplet size data from Wu
 - mayer_zur_1993/mayer_coaxial_1994/mayer_rocket_1995
 - olinger_lock-states_1993 (forced dripping)
+- woodward_primary_1993
 - hardalupas_characteristics_1994
 - engelbert_breakup_1995
 - Add Ruff and Tseng data, which apparently has low \rhol/\rhog photographic regimes according to wu_effects_1995 p. 189, fig. 7 (pdf p. 15) / faeth_structure_1995 p. 117, fig. 1.5.
@@ -131,9 +138,11 @@
 - Add malot_experimental_2001 (has a L_0/d_0 = 50 case; ask Prof. Dumouchel for data)
 - blaisot_instabilities_2003
 - cossali_new_1993 (p. 238L: "hypodermic needles", laminar Rayleigh only based on table 1)
+- cramer_liquid_2002
 - tang_laminar_2003/tang_cylindrical_2004
 - aalburg_primary_2005/aalburg_deformation_2002 (has data with no cross-flow: fig. 4, figs. 7--9)
-- badens_laminar_2005
+- badens_laminar_2005 p. 84R: > The disperse phase was introduced through a capillary tube whose internal diameter was 150 μm.
+- sankarakrishnan_effects_2005
 - zhu_study_2007
 - wan_experiment_2008
 - Add spray angle from osta_effect_2010 pdf p. 70
@@ -155,40 +164,54 @@
 - wang_experimental_2020
 - de_la_torre_experiments_2020
 - sadek_etude_2020 (liquid metal, L_0/d_0 = 20 for one case as mentioned on p. 49)
+- speirs_jet_2020 (tons of high-quality data); p. 7: L_0/d_0 = 60.
 - watanabe_evaluation_2020
 - liu_penzui_2021
 - chen_transition_2021 (maybe; nozzle is not described)
 - sinha_effect_2021 (jet in crossflow)
+- chen_experimental_2022: fig. 2 looks like it has a long pipe as the nozzle
 - daskiran_impact_2022
+- shaw_orifice_2022 (jet in crossflow)
+- TODO: Add single-phase jet data, say We = \infty
+
+## Cavitation data
+
+- TODO: Find more.
+- TODO: Search for cavitation in submerged jet nozzles.
+- griebe_two_1968/griebe_improved_1968
+    - pearce_discharge_1971 p. D2-19 mentions some issues.
+- nurick_orifice_1976: L/d = 20
+- reitz_atomization_1978 (e.g., p. 230 suggests K_crit is not defined for long tubes)
+    - also see reitz_dependence_1979
+- ruff_structure_1990 p. 11: > no evidence of cavitation within the passage was observed
+- woodward_primary_1993 p. 81-: suggests cavitation might be occurring; pp. 89-90 discusses the critical cavitation number; also discusses on p. 93 how the smoothed out inlet reduces the probability of cavitation; p. 39: L/d = 21.3 for injector B, and arguably L/d = 50 for injector B
+- ramamurthi_characteristics_1999
+- ahn_effects_2006: Cavitation is visible at L_0/d_0 = 20 in fig. 2.
+- osta_effect_2010 p. 48 suggests the longest nozzle did not cavitate
+
+### Related
+
+- non-pipe: bergwerk_flow_1959, ruiz_design_1990, he_effect_1995
+- pearce_discharge_1971: check citations
+- arai_physics_2012 p. 5: > The higher the back pressure (ambient pressure Pa) and the longer the L/D of nozzle, cavitation number increased more. It meant a suppression of cavitation.
+- osta_study_2012 pp. 91R--93L
 
 # Data validation
 
-- bounds on as many variables as possible
-- SQLite constraints
 - if known liquid, check that provided fluid properties are near what is expected
 - Can K_c be negative?
-- Check that all basic quantities (e.g., Re, Fr, etc.) are defined
 - Reject all laminar data that isn't fully developed.
 - Require increasing variables like pressure, velocity, Reynolds number, Weber number, etc. in each series. Do this for certain series, resetting when a new series is encountered?
-- Require a "series" for every data point. The velocity (or Reynolds number, etc.) for each successive data point here is required to be incrementing.
+- Double check all bounds on quantities in case you missed a bound.
 
 # Database fields
 
-- Add D_mode (most common droplet size) to database
-- chow_experimental_1980 doesn't have many data points but discusses many things done to have a high quality experiment. Add some more database fields inspired by this.
-- Add motion compensation key for photos. thorne_effect_1978, taylor_water_1983 (I later read that Hoyt and Taylor had two different setups with different methods of motion compensation?)
-- Add transcription error. Break into error from image resolution, error from not knowing the center of the point due to its odd shape, and error from imprecise placement of the points.
-- Add Knudsen number. https://en.wikipedia.org/wiki/Knudsen_number
-- Look into papers on scale effects in hydraulic structures for other ideas.
-- Add whether the flow is cavitating or not.
+- DONE: Add motion compensation key for photos. thorne_effect_1978, taylor_water_1983 (I later read that Hoyt and Taylor had two different setups with different methods of motion compensation?)
 - Add field to mark as true when data for the wrong fluid was used due to the correct data being unavailable or otherwise.
 - Add duration of jet in time.
-- Add Jacob number for evaporation/flashing. See Incropera p. 376, kitamura_critical_1986, cleary_flashing_2007. Alternative: how close the temperature is to boiling. nezgada_effect_1970, nezgada_effect_1970-1
+- DONE: Add Jakob number for flashing. See Incropera p. 376, kitamura_critical_1986, cleary_flashing_2007. Alternative: how close the temperature is to boiling. nezgada_effect_1970, nezgada_effect_1970-1. siebers_scaling_1999 eq. 7 is another approach. Vapor pressure / ambient pressure is another approach (which is similar to the cavitation number...).
 - Check whether spray angles are for the near or far fields.
 - Characterize velocity profile. logan_flow_1963
 - Add index of refraction. corey_droplet_1969 pdf p. 37, balewski_experimental_2008
 - MAYBE: Add information about cavitation inception. History of water? keller_influence_1980, ooi_scale_1985 (dissolved air content in ppm), brennen_cavitation_2013 p. 22
-- MAYBE: Add other Mach number: U_0/c_l.
 - MAYBE: Add distance to flat plate divided by nozzle diameter for breakup measurements. See takahashi_stability_1972 p. 75. li_study_2007 seems to be on the same topic, but I don't know if they come to the same conclusion.
-- MAYBE: birkhoff_jets_1957 p. 330: > Also, dust in the air, the chemistry of the surrounding gas, and electrification may affect the final behavior decisively, by determining whether colliding drops amalgamate or rebound.
-- MAYBE: Electrically ground the nozzle?
