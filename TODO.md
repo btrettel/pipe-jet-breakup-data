@@ -10,11 +10,7 @@
   - https://stackoverflow.com/questions/32557920/what-are-type-hints-in-python-3-5
 - Make many loops use zip rather than indexing
 - Add data and script for pipe turbulence statistics
-- Add dimension checks via a Python package that does dimensional analysis (via [Pint](https://github.com/hgrecco/pint)); use for unit conversions as well, e.g., make the raw CSV spreadsheets in the units as printed and convert rather than putting the raw CSV spreadsheets in SI units
-- Use the [uncertainties](https://github.com/lebigot/uncertainties) package to track uncertainties.
-- Require quantified uncertainty for all quantities
 - Use one file for each study to make editing the code easier.
-- Don't make queries directly to the database and instead use OOP or functions. This would allow you to switch between pandas and SQLite if you want to.
 - "codebook" per http://datacolada.org/69
 - standardized input CSV file form?
 - Have Gnumeric spreadsheets for every CSV file, and use [data validation](http://www.fifi.org/doc/gnumeric-doc/html/C/protectionandvalidation.html) in the spreadsheets
@@ -31,41 +27,8 @@
 - Start using Pylint regularly.
 - Use AIC in addition to R^2 in model comparisons.
 - Add transcription error to all data
-
-# Output data format
-
-## pandas
-
-### Advantages
-
-- Already used (though probably poorly)
-- Integrates with Pint
-- Simple syntax in most cases eases data exploration
-
-### Disadvantages
-
-- Python-only
-- Data file (Pickle file) is also Python only
-- Pickle files are not a recognized archival standard (Indeed, I have had trouble loading Pickle files after upgrading Python)
-- Slow, though not at the size of the current database
-- New: started in 2008
-- Constraints seem irritating to add
-
-## SQLite
-
-### Advantages
-
-- [A LOC recommended archival standard](https://www.loc.gov/preservation/resources/rfs/data.html)
-- Fast
-- Can readily be used in other programming languages
-- [Wide support](https://en.wikipedia.org/wiki/Sqlite)
-- Older than pandas: started in 2000
-- [Constraints](https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm) are easy
-
-### Disadvantages 
-
-- Doesn't support booleans (but 0 and 1 are okay)
-- Harder-to-run queries than pandas in most cases
+- Better development length equations:
+    - laminar: durst_development_2005, check others in same directory
 
 # Data sources to add
 
@@ -75,6 +38,7 @@
 - Add more data from Phinney for various atmospheric densities. (Not sure what I meant by this. I'll check if all of Phinney's data has been added.)
 - Re-add data from wu_liquid_1992. Type raw data in and process to produce the Weber number, e.g., table B.5 has velocities not entered in the spreadsheet. Compare this against the one in there right now, which I believe was produced from figures? Also check that the Weber and Reynolds numbers are actually higher than 1e6 as this is the only data I have that high.
 - Add missing xiavg, D, etc. data from Sallam
+- TODO: Add single-phase jet data, say We = \infty
 
 - smith_experiments_1917/tyler_characteristic_1924/tyler_experiments_1932/tyler_instability_1933 (I guess these all use pipe nozzles. The breakup length might not correspond precisely to the definition I use, but should be useful to determine the breakup length regime. The mercury data is fairly unique and could indicate there's a different regime for laminar jets at low We but relatively high Re. This would also imply that the downstream transition regime extends to much lower Weber numbers than I expected.)
 - duffie_factors_1953/duffie_factors_1951
@@ -88,7 +52,7 @@
 - meister_formation_1966/scheele_drop_1968/scheele_drop_1968-1/meister_drop_1969/meister_prediction_1969
 - rao_drop_1966 ("capillary" but what is its length?)
 - dotson_study_1967
-- newman_preliminary_1967
+- newman_preliminary_1967: p. 20: "Three different size capillary tubes were used in this study; .006", 0.012" and .024", inside diameter and 0.5 cm long." The smallest diameter one has L/d = 32.8
 - kroesser_stability_1968, kroesser_viscoelastic_1969
 - (could be useful for turbulent regimes paper) takahashi_effect_1969, takahashi_laminar_1971/kitamura_stability_1986, takahashi_stability_1972/takahashi_breakup_1972/takahashi_laminar_1971, kitamura_stability_1982/kitamura_stability_1986, takahashi_laminar_1972-1/kitamura_stability_1986
 - Add fenn_newtonian_1969/fenn_ambient_1968 (Should be useful to examine density ratio effects on LR-DT boundary.)
@@ -113,11 +77,13 @@
 - snyder_new_1982
 - bright_minimum_1985/bright_continuous_1983: See 1985 p. 60R: > hypodermic needle
 - kitamura_critical_1986
+- blazhenkov_monodisperse_1988 (forced): "ranging from a die with ratio of duct length to diameter $L_\text{N}/D_\text{N} \sim 1$ to capillary tubes with  $L_\text{N}/D_\text{N} \sim 80$"
 - eroglu_coaxial_1991/eroglu_initial_1991/eroglu_wave_1991/farago_morphological_1992/farago_parametric_1990
 - tadrist_experimental_1991
 - sakai_relation_1992
 - Add breakup lengths from sauerwein_theoretische_1992 pp. 121--122? Not clear without translation if this is fully developed
 - (*) Add downstream droplet size data from Wu
+- cossali_new_1993 (p. 238L: "hypodermic needles", laminar Rayleigh only based on table 1)
 - mayer_zur_1993/mayer_coaxial_1994/mayer_rocket_1995
 - olinger_lock-states_1993 (forced dripping)
 - woodward_primary_1993
@@ -125,9 +91,11 @@
 - engelbert_breakup_1995
 - Add Ruff and Tseng data, which apparently has low \rhol/\rhog photographic regimes according to wu_effects_1995 p. 189, fig. 7 (pdf p. 15) / faeth_structure_1995 p. 117, fig. 1.5.
 - Based on the same figure as the previous line's TODO, so does wu_effects_1995.
+- fetisov_experimental_1996
 - Add amagai_frequency_1997/arai_surface_1999
 - karasawa_determining_1997
 - leroux_break-up_1997 (ask Prof. Dumouchel for data, redundant with leroux_stability_1996?)
+- tadrist_analysis_1997
 - han_characterization_1998 (p. 8500R: "Then the water is directed to a vertical metallic pipe with a length of 500 mm and an internal diameter of 600 mm.")
 - mun_effects_1998 (L_0/d_0 = 25.6. Not long enough for laminar jets?)
 - rhim_measurement_1998 (breakup lengths)
@@ -136,10 +104,11 @@
 - Add blaisot_determination_2000, godelle_phase_2000
 - Add godelle_symbolic_2000
 - Add malot_experimental_2001 (has a L_0/d_0 = 50 case; ask Prof. Dumouchel for data)
-- blaisot_instabilities_2003
-- cossali_new_1993 (p. 238L: "hypodermic needles", laminar Rayleigh only based on table 1)
 - cramer_liquid_2002
+- dinnocenzo_experimental_2002
+- blaisot_instabilities_2003
 - tang_laminar_2003/tang_cylindrical_2004
+- cramer_drop_2004
 - aalburg_primary_2005/aalburg_deformation_2002 (has data with no cross-flow: fig. 4, figs. 7--9)
 - badens_laminar_2005 p. 84R: > The disperse phase was introduced through a capillary tube whose internal diameter was 150 μm.
 - sankarakrishnan_effects_2005
@@ -154,7 +123,7 @@
 - moallemi_breakup_2016 (see pdf p. 10)
 - neumann_influencing_2016
 - omocea_breakup_2016 (unclear on length of nozzle)
-- rajendran_experimental_2017/rajendran_experimental_2012
+- rajendran_experimental_2017/rajendran_experimental_2012 (turbulent Rayleigh?)
 - kiaoulias_evaluation_2019 (has pressure drop so I can better estimate f!)
 - patrascu_dominant-wavelength_2019 (unclear on length of nozzle)
 - torregrosa_study_2020 (See section 2.5. This is DNS, but does not report any breakup quantities.)
@@ -168,11 +137,16 @@
 - watanabe_evaluation_2020
 - liu_penzui_2021
 - chen_transition_2021 (maybe; nozzle is not described)
+- scott_using_2021 ("hypodermic needle"; ask corresponding author)
 - sinha_effect_2021 (jet in crossflow)
 - chen_experimental_2022: fig. 2 looks like it has a long pipe as the nozzle
 - daskiran_impact_2022
+- kasmaiee_influence_2022 (jet in crossflow), p. 4R: > The length-to-diameter ratio of the nozzle was also chosen to have fully developed flow in the nozzle.
+- lee_micro-droplet_2022: L/d = 24.9 (p. 4)
 - shaw_orifice_2022 (jet in crossflow)
-- TODO: Add single-phase jet data, say We = \infty
+- machicoane_regimes_2023
+- tolfts_statistics_2023
+- zhang_effect_2023
 
 ## Cavitation data
 
@@ -180,6 +154,7 @@
 - TODO: Search for cavitation in submerged jet nozzles.
 - griebe_two_1968/griebe_improved_1968
     - pearce_discharge_1971 p. D2-19 mentions some issues.
+- anderson_hydraulics_1971
 - nurick_orifice_1976: L/d = 20
 - reitz_atomization_1978 (e.g., p. 230 suggests K_crit is not defined for long tubes)
     - also see reitz_dependence_1979
@@ -188,6 +163,7 @@
 - ramamurthi_characteristics_1999
 - ahn_effects_2006: Cavitation is visible at L_0/d_0 = 20 in fig. 2.
 - osta_effect_2010 p. 48 suggests the longest nozzle did not cavitate
+- shaw_orifice_2022
 
 ### Related
 

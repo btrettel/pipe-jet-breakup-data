@@ -30,12 +30,12 @@ sigma = 72.e-3 * ureg.newton/ureg.meter
 # TODO: Make function to compute velocity from Weber number
 Ubar_0 = np.sqrt(We_l0 * sigma / (rho_l * d_0))
 print(Ubar_0.to_base_units())
-assert(Ubar_0.check('[length]/[time]'))
+assert Ubar_0.check('[length]/[time]')
 
 # #freq_of_first_zero = (np.pi / (x_s * d_0))**(2./3.) * Ubar_0**(5./3.) * (rho_l/sigma)**(1./3.)
 # freq_of_first_zero = ((np.pi / (x_s * d_0))**2. * Ubar_0**5. * (rho_l/sigma))**(1./3.)
 # print(freq_of_first_zero.to_base_units())
-# assert(freq_of_first_zero.check('1/[time]'))
+# assert freq_of_first_zero.check('1/[time]')
 
 f_arr = np.array([])
 G_arr = np.array([])

@@ -405,7 +405,7 @@
             "variable": "xbavg/d_0",
             "datatype": "float",
             "units": "[]",
-            "latex": "$\langle x_\text{b} \rangle / d_0$",
+            "latex": "$\\langle x_\\text{b} \\rangle / d_0$",
             "description": "dimensionless average jet breakup length",
             "lower_bound": 0,
             "upper_bound": 2000,
@@ -421,7 +421,7 @@
             "variable": "theta_i",
             "datatype": "float",
             "units": "[]",
-            "latex": "$\theta_\text{i}$",
+            "latex": "$\\theta_\\text{i}$",
             "description": "spray angle; full spray angle, not half spray angle, in radians",
             "lower_bound": 0,
             "upper_bound": 0.79,
@@ -461,8 +461,28 @@
             "variable": "D_mode/d_0",
             "datatype": "float",
             "units": "[]",
-            "latex": "$D_\text{mode}/d_0$",
+            "latex": "$D_\\text{mode}/d_0$",
             "description": "most common droplet diameter",
+            "lower_bound": 0,
+            "upper_bound": 0.5,
+            "related_variables": true
+        },
+        {
+            "variable": "D_min/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$D_\\text{min}/d_0$",
+            "description": "minimum droplet diameter",
+            "lower_bound": 0,
+            "upper_bound": 0.5,
+            "related_variables": true
+        },
+        {
+            "variable": "D_max/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$D_\\text{max}/d_0$",
+            "description": "maximum droplet diameter",
             "lower_bound": 0,
             "upper_bound": 0.5,
             "related_variables": true
@@ -513,10 +533,30 @@
             "related_variables": true
         },
         {
+            "variable": "lambda_trans/d_0",
+            "datatype": "float",
+            "units": "[]",
+            "latex": "$\lambda_\\text{trans}/d_0$",
+            "description": "dimensionless turbulence transition wavelength",
+            "lower_bound": 0,
+            "upper_bound": 1,
+            "related_variables": true
+        },
+        {
+            "variable": "symmetric_transition_waves",
+            "datatype": "bool",
+            "description": "whether the transition waves are symmetric (true) or asymmetric (false)"
+        },
+        {
+            "variable": "bursting",
+            "datatype": "bool",
+            "description": "whether the breakup is \"bursting breakup\"."
+        },
+        {
             "variable": "xiavg/d_0",
             "datatype": "float",
             "units": "[]",
-            "latex": "$\langle x_\\text{i} \rangle/d_0$",
+            "latex": "$\\langle x_\\text{i} \\rangle/d_0$",
             "description": "dimensionless breakup onset location",
             "lower_bound": 0,
             "upper_bound": 1000,
@@ -526,7 +566,7 @@
             "variable": "xeavg/d_0",
             "datatype": "float",
             "units": "[]",
-            "latex": "$\langle x_\\text{e} \rangle/d_0$",
+            "latex": "$\\langle x_\\text{e} \\rangle/d_0$",
             "description": "dimensionless breakup end location",
             "lower_bound": 0,
             "upper_bound": 1000,
@@ -611,7 +651,7 @@
             "variable": "distance",
             "datatype": "float",
             "units": "meter",
-            "latex": "$d_\text{image}$",
+            "latex": "$d_\\text{image}$",
             "description": "distance between jet and camera lens",
             "lower_bound": 0
         },

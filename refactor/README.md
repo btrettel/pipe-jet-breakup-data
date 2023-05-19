@@ -27,10 +27,25 @@
 - Add percentage in each regime to summary table
 - Change ranges on prepare_data.py to use scientific notation as appropriate
 - Upper case variable names are constants like Rbar, MW, temperature, etc.
+- PyTorch for automated regime classification. Could be useful as a check.
+    - <https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html>
+    - <https://pytorch.org/tutorials/beginner/basics/intro.html>
+- These can only be defined if laminar: x_trans/d_0, lambda_trans/d_0, symmetric_transition_waves, bursting
+- TODO: Add non-Newtonian effects to pipe-jet-breakup-data. https://en.wikipedia.org/wiki/Weissenberg_number https://en.wikipedia.org/wiki/Deborah_number
+- TODO: Add electric field strength.
+- TODO: Add magnetic field strength.
+- TODO: Add forcing
+- Sqlite trigger for more complex constraints
+- bounds for specific experiment that are tigher than the database field bounds
+- run jsonlint on the JSON file
+- Estimate average breakup length error better. See rough pipe notes file *goals.txt* section "Uncertainty quantification".
+- Consider temperature variation in surface tension if you didn't do so before. palmer_effect_1976
+- Fortran rewrite: Have separate executable for each study and separate targets in the Makefile for each. Then only what needs to be updated will be when compiling.
 
 Stages:
 
 - Phinney breakup length standard deviation derivation (including uncertainty)
+    - Estimate standard deviation of breakup length from data from Phinney, Yanaida, any other data I have; How do I calculate the uncertainty of the mean of a list of values with uncertainties?
 - pipe turbulence intensity regression
     - add more data
         - Add additional data from lawn_application_1970 and DNS studies to turbulence intensity correlation
